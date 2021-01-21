@@ -1,0 +1,23 @@
+{
+  "name": "benjamin.parry.is",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminparry/benjamin.parry.is.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminparry/benjamin.parry.is/issues"
+  },
+  "homepage": "https://github.com/benjaminparry/benjamin.parry.is#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}
