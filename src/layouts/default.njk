@@ -6,7 +6,11 @@
     <title>{{ title }}</title>
   </head>
   <body>
+    <header>
+      {% include "navigation.njk" %}
+    </header>
+
     {{ content | safe }}
+    <footer>footer</footer>
   </body>
-  <footer>footer</footer>
 </html>

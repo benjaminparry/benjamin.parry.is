@@ -8,7 +8,8 @@ module.exports = function(eleventyConfig) {
       input: "src",
       output: "www",
       includes: 'includes',
-      layouts: 'layouts'
+      layouts: 'layouts',
+      data: 'data'
     },
     templateFormats: ['njk', 'md']
   };
