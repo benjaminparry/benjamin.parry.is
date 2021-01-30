@@ -1,14 +1,22 @@
-[
-  {
-    "label": "Writings",
-    "url": "/writings/"
-  },
-  {
-    "label": "Collecting",
-    "url": "/collecting/"
-  },
-  {
-    "label": "Tagging",
-    "url": "/tagging/"
+{
+  "primary":[
+    {
+      "label": "Writing",
+      "url": "/writing/"
+    },
+    {
+      "label": "Collecting",
+      "url": "/collecting/"
+    },
+    {
+      "label": "Tagging",
+      "url": "/tagging/"
     }
-]
+  ],
+  "social":[
+    {
+      "label": "Strava",
+      "url": "#"
+    }
+  ]
+}

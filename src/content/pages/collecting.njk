@@ -1,0 +1,16 @@
+---
+title: Collecting
+permalink: /collecting/
+---
+
+<p>I collect <a href="/collecting/links">links</a>, <a href="/collecting/thoughts">thoughts</a> and <a href="/collecting/lists">lists</a>.</p>
+
+<ul>
+{% for post in collections.collecting | reverse %}
+  <li>
+    <a href="{{ post.url | url }}">
+      {{ post.data.title }}
+    </a>
+  </li>
+{% endfor %}
+</ul>

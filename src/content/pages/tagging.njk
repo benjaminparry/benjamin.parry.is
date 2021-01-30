@@ -1,0 +1,12 @@
+---
+title: Tagging
+permalink: /tagging/
+---
+
+<ul>
+{%- for tag in tags %}
+  <li>
+    <a href="/tagging/{{ tag | slug }}">{{ tag }}</a>
+  </li>
+{%- endfor -%}
+</ul>

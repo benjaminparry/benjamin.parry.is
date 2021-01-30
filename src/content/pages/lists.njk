@@ -1,0 +1,14 @@
+---
+title: Lists
+permalink: /collecting/lists/
+---
+
+<ul>
+{% for post in collections.lists | reverse %}
+  <li>
+    <a href="{{ post.url | url }}">
+      {{ post.data.title }}
+    </a>
+  </li>
+{% endfor %}
+</ul>

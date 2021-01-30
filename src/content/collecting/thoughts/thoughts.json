@@ -1,0 +1,4 @@
+{
+  "layout": "default",
+  "permalink": "/collecting/thoughts/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}/"
+}

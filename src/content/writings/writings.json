@@ -1,0 +1,4 @@
+{
+  "layout": "default",
+  "permalink": "/writing/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}/"
+}
