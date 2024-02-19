@@ -1,0 +1,8 @@
+
+{% set anchor = link %}
+
+{% if anchorCustom %} 
+  {% set anchor = anchorCustom %}
+{% endif %}
+
+<a href="{{ anchor.url }}" class="{{ anchor.class }}">{{ anchor.cta }}</a>

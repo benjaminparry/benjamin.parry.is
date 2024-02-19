@@ -1,0 +1,31 @@
+{
+  "timeline": [
+    {
+      "name": "The future of remote learning",
+      "year": "2023",
+      "duration": "6 weeks",
+      "methods": [
+        {
+          "method": "Usability Testing"
+        }
+      ],
+      "client": "Open University",
+      "clientURL": "Open University",
+      "clientImage": "Open University",
+      "employer": "Clearleft",
+      "employerURL": "Clearleft"
+    },
+    {
+      "name": "Project name",
+      "year": "2023",
+      "duration": "4 weeks",
+      "client": "JPMC"
+    },
+    {
+      "name": "Project name",
+      "year": "2023",
+      "duration": "4 weeks",
+      "client": "JPMC"
+    }
+  ]
+}

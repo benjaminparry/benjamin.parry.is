@@ -1,0 +1,102 @@
+{
+	"playlist": [
+            {
+                  "titleNative": "",
+                  "titleLiterally": "",
+                  "titleEnglish": "Nine Ballads Of The ’80",
+                  "artistEnglish": "Shigeru Izumiya",
+                  "originCountry": "Japan️",
+                  "originFlag": "🇯🇵️",
+                  "artwork": "/nine-ballads-of-the-80.jpg",
+                  "artworkDescription": "",
+                  "genre": "folk rock",
+                  "year": "1978",
+                  "rating": "4",
+                  "status": "⏯️ Occasional play"
+            },
+            {
+                  "titleNative": "",
+                  "titleLiterally": "",
+                  "titleEnglish": "A N D",
+                  "artistEnglish": "Tricot",
+                  "originCountry": "Japan️",
+                  "originFlag": "🇯🇵️",
+                  "artwork": "/a-n-d.jpg",
+                  "artworkDescription": "",
+                  "genre": "alternative rock, rock",
+                  "year": "2015",
+                  "rating": "3",
+                  "status": "⏯️ Occasional play"
+            },
+            {
+                  "titleNative": "",
+                  "titleLiterally": "",
+                  "titleEnglish": "Promate Original Soundtrack",
+                  "artistEnglish": "Hiroyuki Sawano",
+                  "originCountry": "Japan️",
+                  "originFlag": "🇯🇵️",
+                  "artwork": "/promare.jpg",
+                  "artworkDescription": "",
+                  "genre": "-",
+                  "year": "2020",
+                  "rating": "5",
+                  "status": "🔁 On repeat"
+            },
+            {
+                  "titleNative": "",
+                  "titleLiterally": "",
+                  "titleEnglish": "MASS OF THE FERMENTING DREGS",
+                  "artistEnglish": "MASS OF THE FERMENTING DREGS",
+                  "originCountry": "Japan️",
+                  "originFlag": "🇯🇵️",
+                  "artwork": "/mass-of-the-fermenting-dregs.jpg",
+                  "artworkDescription": "",
+                  "genre": "indie rock, rock, j-rock, shoegaze",
+                  "year": "2008",
+                  "rating": "5",
+                  "status": "🔁 On repeat"
+            },
+            {
+                  "titleNative": "",
+                  "titleLiterally": "",
+                  "titleEnglish": "Summer Wars Original Soundtrack",
+                  "artistEnglish": "Akihiko Matsumoto",
+                  "originCountry": "Japan️",
+                  "originFlag": "🇯🇵️",
+                  "artwork": "/summer-wars-original-soundtrack.jpg",
+                  "artworkDescription": "",
+                  "genre": "-",
+                  "year": "2009",
+                  "rating": "5",
+                  "status": "🔁 On repeat"
+            },
+            {
+                  "titleNative": "",
+                  "titleLiterally": "",
+                  "titleEnglish": "A Letter From Slowboat",
+                  "artistEnglish": "Ryo Fukui",
+                  "originCountry": "Japan️",
+                  "originFlag": "🇯🇵️",
+                  "artwork": "/a-letter-from-slowboat.jpg",
+                  "artworkDescription": "",
+                  "genre": "jazz, contemporary jazz",
+                  "year": "2016",
+                  "rating": "5",
+                  "status": "🔁 On repeat"
+            },
+		{
+                  "titleNative": "",
+                  "titleLiterally": "",
+                  "titleEnglish": "Hosono House",
+                  "artistEnglish": "Haruomi Hosono",
+                  "originCountry": "Japan️",
+                  "originFlag": "🇯🇵️",
+                  "artwork": "/hosono-house.jpg",
+                  "artworkDescription": "",
+                  "genre": "exotica, folk, folk rock, jazz, jazz fusion",
+                  "year": "1973",
+                  "rating": "5",
+                  "status": "🔁 On repeat"
+		}
+	]
+}

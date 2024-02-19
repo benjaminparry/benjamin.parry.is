@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/working/{{ page | yearOnly }}/{{ client | slug }}-{{ title | slug }}/index.html",
+  "category": "Working",
+  "verb": "Done/Completed"
+}

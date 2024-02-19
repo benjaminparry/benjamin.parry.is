@@ -1,0 +1,39 @@
+<h2>Currently reading</h2>
+
+<ul class="reset-list grid grid--6">
+{% for read in readlist.reading %}
+<li>
+    <img src="/assets/images/reading/{{ read.artwork }}" alt="artworkDescription">
+    <p style="margin-top: 0;">{{ read.titleEnglish }}</p>
+</li>
+{% endfor %}
+</ul>
+
+<h2>Read</h2>
+
+<ul class="reset-list list list--divided">
+{% for read in readlist.read %}
+<li class="list-group-item">
+    {% if read.titleNative %}
+    <h1>{{ read.originFlag }} {{ read.titleNative }}</h1>
+    <p>{{ read.titleLiterally }}, aka {{ read.titleEnglish }}</p>
+    {% else %}
+    <h1>{{ read.titleEnglish }}</h1>
+    {% endif %}
+
+    <img src="/assets/images/reading/{{ read.artwork }}" alt="artworkDescription" style="max-width: 330px;">
+
+    <p style="font-size: 1.5rem;">{{ read.summary }}</p>
+
+    {% if read.warning %}
+    <p class="alert alert--warning"><strong class="alert__type">Trigger warning</strong><br/>Themes may be triggering for some people; {{ read.warning }}.</p>
+    {% endif %}
+    <ul class="reset-list" style="font-size: .9rem;">
+        <li>Type: {{ read.type }}</li>
+        <li>Read: {{ read.date }}</li>
+        <li>Rating: {% if read.rating == '0' %}&star;&star;&star;&star;&star;{% elseif read.rating == '1' %}&starf;&star;&star;&star;&star;{% elseif read.rating == '2' %}&starf;&starf;&star;&star;&star;{% elseif read.rating == '3' %}&starf;&starf;&starf;&star;&star;{% elseif read.rating == '4' %}&starf;&starf;&starf;&starf;&star;{% elseif read.rating == '5' %}&starf;&starf;&starf;&starf;&starf;{% endif %}</li>
+        <li>Origin: {{ read.originFlag }} {{ read.originCountry }}</li>
+    </ul>
+</li>
+{% endfor %}
+</ul>

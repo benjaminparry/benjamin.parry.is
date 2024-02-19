@@ -1,0 +1,19 @@
+<ul class="reset-list grid grid--3">
+{% for play in playlist.playlist %}
+<li style="border: 1px solid #ccc;background-color: #fff;" class="list-group-item">
+<img src="/assets/images/listening/{{ play.artwork }}" alt="artworkDescription">
+{% if play.titleNative %}
+<h1>{{ play.originFlag }} {{ play.titleNative }}</h1>
+<p>{{ play.titleLiterally }}, aka {{ play.titleEnglish }}</p>{% endif %}
+<ul class="reset-list" style="font-size: .8rem;padding: .5rem;">
+    <li style="font-size: 1.5rem;"><strong>{{ play.titleEnglish }}</strong></li>
+    <li style="font-size: 1rem;margin-bottom: .5rem;"><strong>{{ play.artistEnglish }}</strong></li>
+    <li>Released: {{ play.year }}</li>
+    <li>Origin: {{ play.originFlag }} {{ play.originCountry }}</li>
+    <li>Rating: {% if play.rating == '0' %}&star;&star;&star;&star;&star;{% elseif play.rating == '1' %}&starf;&star;&star;&star;&star;{% elseif play.rating == '2' %}&starf;&starf;&star;&star;&star;{% elseif play.rating == '3' %}&starf;&starf;&starf;&star;&star;{% elseif play.rating == '4' %}&starf;&starf;&starf;&starf;&star;{% elseif play.rating == '5' %}&starf;&starf;&starf;&starf;&starf;{% endif %}</li>
+    <li>Status: {{ play.status }}</li>
+    <li>Genre: {{ play.genre }}</li>
+</ul>
+</li>
+{% endfor %}
+</ul>

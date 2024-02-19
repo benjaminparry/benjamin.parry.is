@@ -1,0 +1,19 @@
+{
+	"items": [
+		{
+			"text": "Watching",
+            "emoji": "📺️",
+			"url": "/watching/"
+		},
+		{
+			"text": "Listening",
+            "emoji": "🎵️",
+			"url": "/listening/"
+		},
+		{
+			"text": "Reading",
+            "emoji": "📚️",
+			"url": "/reading/"
+		}
+	]
+}

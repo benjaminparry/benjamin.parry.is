@@ -1,0 +1,39 @@
+{% if postListHeadline %}
+<h2 class="[ headline ] [ measure-micro ]" data-highlight="primary">
+  {{ postListHeadline }}
+</h2>
+{% endif %}
+
+<ol class="reset-list list--divided">
+  {% for item in postListItems %}
+  <li>
+    <article class="h-entry">
+      <h1 class="p-description">
+        {% if item.data.bookmark %}
+        <a class="u-url u-syndication" href="{{ item.data.bookmark }}" rel="syndication" target="_blank">{{ item.data.title }}</a>
+        {% else %}
+        <a class="u-url u-syndication" href="{{ item.url }}" rel="syndication">{{ item.data.title }}</a>
+        {% endif %}
+      </h1>
+      <p class="p-name e-content posse">{{ item.data.posse }}</p>
+      <footer class="utility-font-size-80">
+        <ul class="meta">
+          <li>
+            Filed under: <a href="{{ item.data.categoryURL }}">{{ item.data.category }}</a>
+          </li>
+          {% if item.data.tags.length %}
+          <li>Tagged with:
+            <ul class="reset-list list list--inline list--csv">
+              {% for tag in item.data.tags %}
+              <li><a href="/tagging/{{ tag | slug }}" class="tag">{{ tag | title }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endif %}
+          <li>{{ item.data.verb }}: <a class="u-url" rel="bookmark" href="{{ item.url }}"><time class="dt-published" datetime="{{ item.date }}">{{ item.date | dateFilter }}</time></a></li>
+        </ul>
+      </footer>
+    </article>
+  </li>
+  {% endfor %}
+</ol>

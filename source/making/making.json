@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/making/{{ title | slug }}/index.html",
+  "category": "Making",
+  "categoryURL": "/making/",
+  "verb": "Made"
+}

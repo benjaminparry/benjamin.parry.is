@@ -1,0 +1,90 @@
+{
+    "watching": [
+        {
+            "type": "TV",
+            "titleNative": "プルートウ, Pluto",
+            "titleLiterally": "",
+            "titleEnglish": "Pluto",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "/pluto.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        }
+    ],
+	"watched": [
+        {
+            "type": "Film",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "The Hunger Games",
+            "originCountry": "United States",
+            "originFlag": "🇺🇸️",
+			"summary": "Muttering “It’s no Battle Royale!” to myself throughout. Some interesting blending of new/old aesthetics though. Meh, wouldn’t watch again.",
+            "warning": "",
+            "artwork": "/the-hunger-games.jpg",
+            "artworkDescription": "",
+            "rating": "3",
+            "date": "2024-02-16"
+        },
+        {
+            "type": "Theatre",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "My Neighbour Totoro",
+            "originCountry": "United Kingdom",
+            "originFlag": "🇬🇧️",
+			"summary": "Exceeded all of my expectations. An absolute treat for any Totoro or Ghibli fan. Worth every penny if you can afford the price tag. Pure magic.",
+            "warning": "",
+            "artwork": "/my-neighbour-totoro-rsc.jpg",
+            "artworkDescription": "",
+            "rating": "5",
+            "date": "2024-02-10"
+        },
+        {
+            "type": "Film",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Avatar",
+            "originCountry": "United States",
+            "originFlag": "🇺🇸️",
+			"summary": "Ethically and loyalty-challenged veteran bumbles between a scientist-military-bigCorp-indigenous love-hate tree-felling trapezium of grand proportions. The CGI still hold up strong in 2024.",
+            "warning": "",
+            "artwork": "/avatar.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "date": "2024-02-09"
+        },
+        {
+            "type": "TV",
+            "titleNative": "チェンソーマン, Chensō Man",
+            "titleLiterally": "",
+            "titleEnglish": "Chainsaw Man",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": "The first four arcs of Tatsuki Fujimoto’s splatterfest manga Chainsaw Man leaps off the page an onto the screen. MAPPA studio did a fantastic job on the animation. Season two will be released as a film, I can’t wait!",
+            "warning": "gore, violence, death",
+            "artwork": "/chainsaw-man.jpg",
+            "artworkDescription": "",
+            "rating": "5",
+            "date": "2024-02-09"
+        },
+		{
+			"type": "Film",
+            "titleNative": "竜とそばかすの姫, Ryū to Sobakasu no Hime",
+            "titleLiterally": "The Dragon and the Freckled Princess",
+            "titleEnglish": "Belle",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": "A visually stunning and at times hard-hitting retelling of Beauty and the Beast in the digital age. Mamoru Hosoda masterfully navigates themes such as childhood, identity, social networks, AI, accompanied by a moving soundtrack.",
+            "warning": "loss, death, child abuse",
+            "artwork": "/belle.jpg",
+            "artworkDescription": "A teenage girl floating in a digital landscape held by the silhouette of a beast-like creature",
+            "rating": "4",
+            "date": "2024-01-28"
+		}
+	]
+}

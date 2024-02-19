@@ -1,0 +1,7 @@
+{% for item in collections.featuredWork %}
+<h3>{{ item.data.artist }} {{ item.data.title }}</h3>
+
+<p>{{ item.data.notes }}</p>
+
+<p><a href="{{ item.data.url }}">{{ item.data.cta }}</a></p>
+{% endfor %}

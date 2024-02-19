@@ -1,0 +1,36 @@
+{
+	"items": [
+		{
+			"text": "Benjamin Parry",
+			"url": "/benjamin-parry"
+		},
+		{
+			"text": "Writing",
+			"url": "/writing"
+		},
+		{
+			"text": "Working",
+			"url": "/working"
+		},
+		{
+			"text": "Making",
+			"url": "/making"
+		},
+		{
+			"text": "Collecting",
+			"url": "/collecting"
+		},
+		{
+			"text": "Links",
+			"url": "/collecting/links"
+		},
+		{
+			"text": "Thoughts",
+			"url": "/collecting/thoughts"
+		},
+		{
+			"text": "Tagging",
+			"url": "/tagging"
+		}
+	]
+}

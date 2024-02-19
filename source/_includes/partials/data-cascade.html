@@ -1,0 +1,7 @@
+{% set dc = dcFoo %}
+
+{% if dcBar %} 
+  {% set dc = dcBar %}
+{% endif %}
+
+<p>I {{ dc.emotion }} {{dc.noun}}</p>

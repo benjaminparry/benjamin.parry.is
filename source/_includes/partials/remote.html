@@ -1,0 +1,26 @@
+{% if remote.length %}
+<article class="[ remote-feed ] [ dot-shadow panel ] [ bg-tertiary-glare ]">
+  <div class="[ wrapper ] [ flow flow-space-300 ]">
+    <h2
+      class="[ remote-feed__heading ] [ headline ] [ md:measure-micro ]"
+      data-highlight="secondary"
+    >
+      {{ remoteFeed.title }}
+    </h2>
+    <div class="[ remote-feed__items ] [ flow-space-700 ]">
+      <ul class="remote-feed__list">
+        {% for item in remote %}
+        <li>
+          <img
+            src="{{ item.medium }}"
+            alt="{{ item.alt }}"
+            draggable="false"
+            class="radius"
+          />
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</article>
+{% endif %}

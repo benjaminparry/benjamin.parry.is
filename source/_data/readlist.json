@@ -1,0 +1,117 @@
+{
+    "reading": [
+        {
+            "type": "Novel",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "If Cats Disappeared from the World",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": "Genki Kawamura.",
+            "warning": "",
+            "artwork": "if-cats-disappeared-from-the-world.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },{
+            "type": "Manga",
+            "titleNative": "怪獣8号",
+            "titleLiterally": "Kaijū 8-gou",
+            "titleEnglish": "Kaiju No. 8",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "kaiju-no-8.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
+            "type": "Novel",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Rashomon and Other Stories",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "rashomon-and-other-stories.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
+            "type": "Manga",
+            "titleNative": "光が死んだ夏",
+            "titleLiterally": "Hikaru ga Shinda Natsu",
+            "titleEnglish": "The Summer Hikaru Died",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "the-summer-hikaru-died.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
+            "type": "Manga",
+            "titleNative": "極主夫道",
+            "titleLiterally": "Gokushufudou",
+            "titleEnglish": "The Way of the Househusband",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "way-of-the-househusband.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
+            "type": "Manga",
+            "titleNative": "うずまき",
+            "titleLiterally": "Uzumaki",
+            "titleEnglish": "Uzumaki: Spiral into Horror",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "uzumaki.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        }
+    ],
+	"read": [
+		{
+            "type": "Novel",
+            "titleNative": "日本沈没",
+            "titleLiterally": "Nippon Chinbotsu",
+            "titleEnglish": "Japan Sinks",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": "Sakyo Komatsu’s award winning book about a natural disaster that eventually sinks Japan. A bit of a slog.  It reminded me of the same satirical theme of Shin Godzilla but told at a glacial pace. It felt like I put it down more than I picked it up. The payoff at the end was worth it brought even more to life by the reality of the 2024 Noto earthquake aftermath.",
+            "warning": "",
+            "artwork": "japan-sinks.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "date": "2024-02-15"
+        },
+        {
+			"type": "Manga",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Pluto: Urasawa x Tezuka",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵",
+			"summary": "Naoki Urasawa’s sci-fi noir retelling of Osamu Tezuka's Tetsuwan Atom is even more relevant today as humanity come to grips with AI filters into every facet of our digital lives. A moving and gripping story from start to finish.",
+            "warning": "",
+            "artwork": "pluto.jpg",
+            "artworkDescription": "",
+            "rating": "5",
+            "date": "2023-12-13"
+		}
+	]
+}

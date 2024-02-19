@@ -1,0 +1,42 @@
+<ol class="reset-list tiles">
+{% for item in collections.working %}
+{% if item.data.displayType != 'ommit' %}
+<li class="tiles__item{% if item.data.featured %} featured{% endif %}{% if item.data.caseStudyURL.length %} caseStudyURL{% endif %}">
+<ul class="reset-list">
+<li><h1 class="heading heading--beta">{{ item.data.title }} with <strong>{{ item.data.client }}</strong></h1></li>
+<li><img src="/assets/images/clients/{{ item.data.client |slug }}-logo.png" alt="{{ item.data.client }}" loading="lazy"></li>
+{% if item.data.caseStudyURL.length %}
+<li><a href="{{ item.data.caseStudyURL }}" taget="_blank">{{ item.data.cta }}</a> on the {{ item.data.employer }} website.</li>
+{% else %}
+<li><em>Case study coming soon.</em></li>
+<!-- <li><a href="{{ item.url }}">{{ item.data.cta }}</a></li> -->
+{% endif %}
+<!-- {% if item.data.featured %}
+<li><p class="posse">{{ item.data.posse }}</p></li>
+<li>
+<footer>
+<ul class="reset-list list">
+<li>Tagged with:
+<ul class="reset-list list list--inline list--csv">
+{% for tag in item.data.tags %}
+<li><a href="/tagging/{{ tag | slug}}" class="tag">{{ tag }}</a></li>
+{% endfor %}
+</ul>
+</li>
+</ul>
+</footer>
+</li>
+{% endif %} -->
+<li class="utility-font-size-80 band">Sector:
+<ul class="reset-list list list--inline list--csv">
+{% for sector in item.data.sector %}
+<li>{{ sector }}</li>
+{% endfor %}
+</ul>
+</li>
+<!-- <li><strong>{{ item.data.employer }}</strong>: {{ item.data.date | dateFilter }} / {{ item.data.duration }}</li> -->
+</ul>
+</li>
+{% endif %}
+{% endfor %}
+</ol>

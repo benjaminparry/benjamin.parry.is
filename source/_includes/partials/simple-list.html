@@ -1,0 +1,18 @@
+{% if postListHeadline %}
+<strong>{{ postListHeadline }}:</strong>
+{% endif %}
+
+<ul class="meta">
+  {% for item in postListItems %}
+  <li>
+    <article class="h-entry p-description">
+        {% if item.data.bookamrk %}
+        <a class="u-url u-syndication" href="{{ item.data.bookmark }}" rel="syndication" target="_blank">{{ item.data.title }}</a>
+        {% else %}
+        <a class="u-url u-syndication" href="{{ item.url }}" rel="syndication">{{ item.data.title }}</a>
+        {% endif %}
+      <!-- <p class="p-name e-content posse">{{ item.data.posse }}</p> -->
+    </article>
+  </li>
+  {% endfor %}
+</ul>

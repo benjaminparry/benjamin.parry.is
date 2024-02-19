@@ -1,0 +1,25 @@
+{
+  "name": "benjamin.parry.is",
+  "version": "1.0.0",
+  "description": "Personal website of Benjamin Parry",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "npx eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminparry/benjamin.parry.is.git"
+  },
+  "keywords": [],
+  "author": "Benjamin Parry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminparry/benjamin.parry.is/issues"
+  },
+  "homepage": "https://github.com/benjaminparry/benjamin.parry.is#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "moment": "^2.29.4"
+  }
+}

@@ -1,0 +1,62 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+
+{# Grab other posts that aren’t this one for the 'more from the blog' feed #}
+{% set recommendedPosts = helpers.getSiblingContent(collections.writing, page) %}
+
+{% block content %}
+<article class="h-entry">    
+  {% include "partials/page-header.html" %}
+
+  {% if bookmark %}
+  <a href="{{ bookmark }}">{{ title }}</a>
+  {% endif %}
+
+  {% if posse %}
+  <p class="p-description posse p-summary">{{ posse }}</p>
+  {% endif %}
+
+  <div class="e-content">
+  {{ content | safe }}
+  </div>
+
+  <!--
+  Repetition here, would prefer to use below a partial
+  -->
+  <footer class="page-footer">
+
+    <ul class="meta">
+      <li>
+        Filed under: <a class="p-category" href="{{ categoryURL }}">{{ category }}</a>
+      </li>
+
+      {% if tags %}
+      <li>Tagged with:
+        <ul class="reset-list list list--inline list--csv" aria-describedby="tags-desc">
+          {% for tag in tags %}
+          <li><a href="/tagging/{{ tag | slug }}/" class="tag">{{ tag | title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endif %}
+
+      <li>
+        {{ verb }}: <a class="u-url" href="{{ url }}"><time class="dt-published" datetime="">{{ item.date | dateFilter }}</time></a>
+      </li>
+      <li>
+        Author: <a href="/benjamin-parry/" rel="author" class="p-author h-card">Benjamin Parry</a>
+      </li>
+    </ul>
+    {% if recommendedPosts %}
+      {% set postListItems = recommendedPosts %}
+      {% set postListHeadline = 'More content' %}
+      {% include "partials/simple-list.html" %}
+    {% endif %}
+  </footer>
+
+</article>
+  
+
+
+{% endblock %}

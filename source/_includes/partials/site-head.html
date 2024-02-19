@@ -1,0 +1,17 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header role="banner" class="site-banner">
+  <nav role="navigation">
+    <a class="heading heading--alpha logo" href="/">
+      <span>b</span><span>e</span><span>n</span><span>j</span><span>a</span><span>m</span><span>i</span><span>n</span><span style="color:#989898;">.</span><span>p</span><span>a</span><span>r</span><span>r</span><span>y</span><span style="color:#989898;">.</span><span style="color:#989898;">i</span><span style="color:#989898;">s</span></a>
+    <ul class="reset-list list list--standard">
+      {% for item in navigation.items %}
+      <li class="list__item">
+        {# permalink: false causes errors so adding an if check for urls set to false https://github.com/11ty/eleventy/issues/1696#issuecomment-802395708 #}
+        {% if page.url != false %}
+        <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}><span>{{ item.text }}</span></a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

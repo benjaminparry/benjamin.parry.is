@@ -1,0 +1,11 @@
+<ul class="reset-list tags">
+{% for tag in collections.tagsList %}
+<li class="list-group-item">
+<a href="/tagging/{{ tag | slug }}">{{tag}}</a>
+<small>
+<span class="tags__size">{{ collections[tag].length }}</span>
+<span class="tags__visualisation" style="width: {{ collections[tag].length }}%;"></span>
+</small>
+</li>
+{% endfor %}
+</ul>
