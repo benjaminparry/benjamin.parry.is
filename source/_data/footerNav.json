@@ -3,17 +3,26 @@
 		{
 			"text": "Watching",
             "emoji": "📺️",
-			"url": "/watching/"
+			"url": "/watching/",
+			"divider": false
 		},
 		{
 			"text": "Listening",
             "emoji": "🎵️",
-			"url": "/listening/"
+			"url": "/listening/",
+			"divider": false
 		},
 		{
 			"text": "Reading",
             "emoji": "📚️",
-			"url": "/reading/"
+			"url": "/reading/",
+			"divider": false
+		},
+		{
+			"text": "Focused",
+            "emoji": "🔖️",
+			"url": "/focused/",
+			"divider": true
 		}
 	]
 }
