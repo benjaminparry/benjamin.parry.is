@@ -15,6 +15,7 @@ A place for my regular visited websites and some meaningful distractions.
     - [Drive](https://drive.google.com)
 - [Miro](https://miro.com)
 - [Dovetail](https://dovetail.com)
+- [LinkedIn](https://www.linkedin.com/)
 
 ## Personal
 
