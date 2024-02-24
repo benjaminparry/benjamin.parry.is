@@ -18,6 +18,22 @@
 	"watched": [
         {
             "type": "Film",
+            "location": "Cinema",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Perfect Days",
+            "originCountry": "Germany, Japan",
+            "originFlag": "🇩🇪🇯🇵",
+			"summary": "Wim Wenders’s mediative film about personal perspective and the pursuit of happiness. Exploring themes of class, acceptance, routine and change. Beautifully shot with elements of wabi-sabi weaved into its visual storytelling, especially the komorebi themed dream sequences. Perfect indeed.",
+            "warning": "",
+            "artwork": "/perfect-days.jpg",
+            "artworkDescription": "",
+            "rating": "5",
+            "date": "2024-02-24"
+        },
+        {
+            "type": "Film",
+            "location": "Sofa",
             "titleNative": "",
             "titleLiterally": "",
             "titleEnglish": "The Hunger Games",
@@ -32,6 +48,7 @@
         },
         {
             "type": "Theatre",
+            "location": "Theatre",
             "titleNative": "",
             "titleLiterally": "",
             "titleEnglish": "My Neighbour Totoro",
@@ -46,6 +63,7 @@
         },
         {
             "type": "Film",
+            "location": "Sofa",
             "titleNative": "",
             "titleLiterally": "",
             "titleEnglish": "Avatar",
@@ -60,6 +78,7 @@
         },
         {
             "type": "TV",
+            "location": "Sofa",
             "titleNative": "チェンソーマン, Chensō Man",
             "titleLiterally": "",
             "titleEnglish": "Chainsaw Man",
@@ -74,6 +93,7 @@
         },
 		{
 			"type": "Film",
+            "location": "Sofa",
             "titleNative": "竜とそばかすの姫, Ryū to Sobakasu no Hime",
             "titleLiterally": "The Dragon and the Freckled Princess",
             "titleEnglish": "Belle",
