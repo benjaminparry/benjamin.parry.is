@@ -13,7 +13,7 @@
 
 <ul class="reset-list list list--divided">
 {% for read in readlist.read %}
-<li class="list-group-item">
+<li id="{{ read.titleEnglish | slug }}" class="list-group-item">
     {% if read.titleNative %}
     <h1>{{ read.originFlag }} {{ read.titleNative }}</h1>
     <p>{{ read.titleLiterally }}, aka {{ read.titleEnglish }}</p>

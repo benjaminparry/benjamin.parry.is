@@ -13,7 +13,7 @@
 
 <ul class="reset-list list list--divided">
 {% for watch in watchlist.watched %}
-<li class="list-group-item">
+<li id="{{ watch.titleEnglish | slug }}" class="list-group-item">
 {% if watch.titleNative %}
 <h1>{{ watch.originFlag }} {{ watch.titleNative }}</h1>
 <p>{% if watch.titleLiterally %}{{ watch.titleLiterally }}, {% endif %}aka {{ watch.titleEnglish }}</p>

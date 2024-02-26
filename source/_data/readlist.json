@@ -1,19 +1,6 @@
 {
     "reading": [
         {
-            "type": "Novel",
-            "titleNative": "",
-            "titleLiterally": "",
-            "titleEnglish": "If Cats Disappeared from the World",
-            "originCountry": "Japan️",
-            "originFlag": "🇯🇵️",
-			"summary": "Genki Kawamura.",
-            "warning": "",
-            "artwork": "if-cats-disappeared-from-the-world.jpg",
-            "artworkDescription": "",
-            "rating": "-",
-            "date": ""
-        },{
             "type": "Manga",
             "titleNative": "怪獣8号",
             "titleLiterally": "Kaijū 8-gou",
@@ -85,7 +72,21 @@
         }
     ],
 	"read": [
-		{
+        {
+            "type": "Novel",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "If Cats Disappeared from the World",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": "Genki Kawamura’s short but very, very sweet story of finding meaning in life and death, sacrifice and resolving conflict. No, **you’re** crying!",
+            "warning": "",
+            "artwork": "if-cats-disappeared-from-the-world.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "date": "2024-02-25"
+        },
+        {
             "type": "Novel",
             "titleNative": "日本沈没",
             "titleLiterally": "Nippon Chinbotsu",
