@@ -18,6 +18,21 @@
 	"watched": [
         {
             "type": "Film",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "The Fifth Element",
+            "originCountry": "United States",
+            "originFlag": "🇺🇸️",
+			"summary": "Luc Besson’s absolutely nails our not-too-distant future with extraordinary attention to detail. This viewing I couldn’t help but connect Chris Rock’s Ruby Rhod character with the vacuous and shallow personas of today’s Youtubers. I still find the hip-hop-era scene a bit cringy though.",
+            "warning": "",
+            "artwork": "/the-fifth-element.jpg",
+            "artworkDescription": "",
+            "rating": "5",
+            "date": "2024-03-01"
+        },
+        {
+            "type": "Film",
             "location": "Cinema",
             "titleNative": "",
             "titleLiterally": "",
