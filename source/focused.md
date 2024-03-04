@@ -12,7 +12,7 @@ A place for my regular visited websites and some meaningful distractions.
 - Google
     - [Mail](https://mail.google.com)
     - [Calendar](https://calendar.google.com)
-    - [Drive](https://drive.google.com/starred/)
+    - [Drive](https://drive.google.com/drive/u/0/starred)
 - [Miro](https://miro.com)
 - [Dovetail](https://dovetail.com)
 - [LinkedIn](https://www.linkedin.com/)
