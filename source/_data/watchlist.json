@@ -19,6 +19,51 @@
         {
             "type": "Film",
             "location": "Sofa",
+            "titleNative": "海がきこえる, Umi ga Kikoeru",
+            "titleLiterally": "I Can Hear the Sea",
+            "titleEnglish": "Ocean Waves",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵",
+			"summary": "A lesser known Studio Ghibli coming-of-age romantic drama, recalling the long-forgotten frustrations of youth. Worth a watch for the evocative animation of Japan’s everyday beauty and wonder.",
+            "warning": "",
+            "artwork": "/ocean-waves.jpg",
+            "artworkDescription": "",
+            "rating": "3",
+            "date": "2024-03-08"
+        },
+        {
+            "type": "Film",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Europa Report",
+            "originCountry": "United States",
+            "originFlag": "🇺🇸",
+			"summary": "Well executed slow-burn sci-fi disaster movie in the found-footage style. A firm favourite I keep coming back to.",
+            "warning": "",
+            "artwork": "/europa-report.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "date": "2024-03-07"
+        },
+        {
+            "type": "Film",
+            "location": "Sofa",
+            "titleNative": "カタクリ家の幸福, Katakuri-ke no Kōfuku",
+            "titleLiterally": "",
+            "titleEnglish": "The Happiness of the Katakuris",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵",
+			"summary": "Shallow Grave meets Sound of Music. As ludicrous as it sounds, a wonderful absurdist tale of family, death and deceit. From the twisted mind of Takashi Miike, expect over-the-top song and dance numbers, claymation and surreal cut scenes.",
+            "warning": "",
+            "artwork": "/the-happiness-of-the-katakuris.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "date": "2024-03-06"
+        },
+        {
+            "type": "Film",
+            "location": "Sofa",
             "titleNative": "",
             "titleLiterally": "",
             "titleEnglish": "The Fifth Element",
@@ -58,7 +103,7 @@
             "warning": "",
             "artwork": "/the-hunger-games.jpg",
             "artworkDescription": "",
-            "rating": "3",
+            "rating": "2",
             "date": "2024-02-16"
         },
         {
@@ -88,7 +133,7 @@
             "warning": "",
             "artwork": "/avatar.jpg",
             "artworkDescription": "",
-            "rating": "4",
+            "rating": "3",
             "date": "2024-02-09"
         },
         {
