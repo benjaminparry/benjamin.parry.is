@@ -1,5 +1,10 @@
+{% set basho = basho202401 %}
+
+{% if bashoDate %} 
+  {% set basho = bashoDate %}
+{% endif %}
 <ul class="grid grid--5 bingo-card reset-list">
-{% for rikishi in basho2024Jan.rikishi %}
+{% for rikishi in basho.rikishi %}
 <li class="rikishi rikishi--kachi-koshi rikishi--make-koshi">
 <h2 class="reset-heading rikishi__name">{{ rikishi.name }}</h2>
 <!-- <img src="/assets/images/rikishi/{{ rikishi.name | slug }}.jpg" alt="Rikishi image"> -->

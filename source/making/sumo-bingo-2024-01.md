@@ -5,5 +5,5 @@ tags:
 posse: 'My sumo bingo card for January 2024 basho. '
 date: '2024-01-13'
 ---
-
+{% set bashoDate = basho202401 %}
 {% include "partials/sumo-bingo-card.html" %}
