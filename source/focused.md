@@ -7,6 +7,10 @@ permalink: '/focused/'
 
 A place for my regular visited websites and some meaningful distractions.
 
+## Native apps
+
+- [Obsidian](obsidian://)
+
 ## Work
 
 - Google
