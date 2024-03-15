@@ -18,6 +18,21 @@
 	"watched": [
         {
             "type": "Film",
+            "location": "Cinema",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Dune: Part Two",
+            "originCountry": "United States",
+            "originFlag": "🇺🇸",
+			"summary": "Harkonnen would live in a house like this? My Fitbit says I slept through the entire 3 hours, I was most definitely awake. Desperately seeking closure on the trilogy… please tell me its only a trilogy!",
+            "warning": "",
+            "artwork": "/dune-part-two.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "date": "2024-03-10"
+        },
+        {
+            "type": "Film",
             "location": "Sofa",
             "titleNative": "海がきこえる, Umi ga Kikoeru",
             "titleLiterally": "I Can Hear the Sea",
