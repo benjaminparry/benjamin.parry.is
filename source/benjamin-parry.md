@@ -1,9 +1,6 @@
 ---
 title: 'Benjamin Parry'
 layout: 'layouts/temp.html'
-poop:
-  emotion: '👿️'
-  noun: '🦕️'
 ---
 
 My name is Benjamin Parry. I live is Lewes, East Sussex, UK.
@@ -21,6 +18,6 @@ Fancy a chat? <a href="mailto:benjamin@parry.is" rel="me" class="u-email">Drop m
 
 ## Elsewhere
 
-I’m also available at these digital:
+I’m also available at these digital islands:
 
 {% include "partials/elsewhere.html" %}

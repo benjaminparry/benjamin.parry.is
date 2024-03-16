@@ -1,9 +1,6 @@
 ---
 metaDesc: 'Personal website of Benjamin Parry'
 layout: 'layouts/home.html'
-intro:
-    callout: 'I’m a callout yo'
-    image: '/assets/images/test.jpg'
 ---
 
 <article class="vcard h-card">

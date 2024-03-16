@@ -1,4 +1,66 @@
 {
+	"primary": [
+		{
+			"text": "Writing",
+			"url": "/writing"
+		},
+		{
+			"text": "Working",
+			"url": "/working"
+		},
+		{
+			"text": "Making",
+			"url": "/making"
+		},
+		{
+			"text": "Benjamin Parry",
+			"url": "/benjamin-parry"
+		}
+	],
+	"secondary": [
+		{
+			"text": "Collecting",
+			"url": "/collecting"
+		},
+		{
+			"text": "Links",
+			"url": "/collecting/links"
+		},
+		{
+			"text": "Thoughts",
+			"url": "/collecting/thoughts"
+		},
+		{
+			"text": "Tagging",
+			"url": "/tagging"
+		}
+	],
+	"tertiary": [
+		{
+			"text": "Watching",
+            "emoji": "📺️",
+			"url": "/watching/",
+			"divider": false
+		},
+		{
+			"text": "Listening",
+            "emoji": "🎵️",
+			"url": "/listening/",
+			"divider": false
+		},
+		{
+			"text": "Reading",
+            "emoji": "📚️",
+			"url": "/reading/",
+			"divider": false
+		},
+		{
+			"text": "Focused",
+            "emoji": "🔖️",
+			"url": "/focused/",
+			"divider": true
+		}
+	],
 	"items": [
 		{
 			"text": "Benjamin Parry",
@@ -31,6 +93,56 @@
 		{
 			"text": "Tagging",
 			"url": "/tagging"
+		}
+	],
+	"elsewhere": [
+		{
+			"text": "Mastodon",
+			"url": "https://mastodon.social/@benjaminparry"
+		},
+		{
+			"text": "LinkedIn",
+			"url": "https://www.linkedin.com/in/benjaminparry-/"
+		},
+		{
+			"text": "My Anime List",
+			"url": "https://myanimelist.net/profile/benjaminparry"
+		},
+		{
+			"text": "Readwise",
+			"url": "https://readwise.io/@benjaminparry"
+		},
+		{
+			"text": "Duolingo",
+			"url": "https://www.duolingo.com/profile/benjaminparry"
+		},
+		{
+			"text": "Medium",
+			"url": "https://medium.com/@benjaminparry"
+		},
+		{
+			"text": "Strava",
+			"url": "https://www.strava.com/athletes/benjaminparry"
+		},
+		{
+			"text": "Github",
+			"url": "https://github.com/benjaminparry"
+		},
+		{
+			"text": "Huffduffer",
+			"url": "https://huffduffer.com/BenjaminParry"
+		},
+		{
+			"text": "Pinboard",
+			"url": "https://pinboard.in/u:benjaminparry"
+		},
+		{
+			"text": "Twitter",
+			"url": "https://twitter.com/benjaminparry"
+		},
+		{
+			"text": "Email",
+			"url": "mailto:benjamin@parry.is"
 		}
 	]
 }

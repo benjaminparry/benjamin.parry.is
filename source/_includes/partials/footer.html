@@ -1,6 +1,11 @@
 <footer class="site-footer" role="contentinfo">
 	<ul class="reset-list list list--inline">
-		{% for item in footerNav.items %}
+		{% for item in navigation.secondary %}
+		<li>{{ item.emoji}} <a href="{{ item.url}}">{{ item.text}}</a></li>
+		{% endfor %}
+	</ul>
+	<ul class="reset-list list list--inline">
+		{% for item in navigation.tertiary %}
 		<li>{{ item.emoji}} <a href="{{ item.url}}">{{ item.text}}</a></li>
 		{% endfor %}
 	</ul>
