@@ -16,13 +16,13 @@
 <li id="{{ watch.titleEnglish | slug }}" class="list-group-item">
 {% if watch.titleNative %}
 <h1>{{ watch.originFlag }} {{ watch.titleNative }}</h1>
-<p>{% if watch.titleLiterally %}{{ watch.titleLiterally }}, {% endif %}aka {{ watch.titleEnglish }}</p>
+<p>{% if watch.titleLiterally %}{{ watch.titleLiterally }}, {% endif %}aka <strong>{{ watch.titleEnglish }}</strong></p>
 {% else %}
 <h1>{{ watch.titleEnglish }}</h1>
 {% endif %}
 <div class="artwork-frame" style="position: relative;">
 <img src="/assets/images/watching/{{ watch.artwork }}" alt="artworkDescription" style="max-width: 330px;">
-<p class="artwork-frame__label" style="position: absolute;top: 0;left: 0;padding: 0.25rem; background-color: white;">{% if watch.location == "Cinema" %}🎦{% endif %}{% if watch.location == "Sofa" %}📺{% endif %}{% if watch.location == "Theatre" %}🎭{% endif %} {{ watch.location }}</p>
+<p class="artwork-frame__label" style="position: absolute;bottom: 0;left: 0;padding: 0.25rem; background-color: white;">{% if watch.location == "Cinema" %}🎦{% endif %}{% if watch.location == "Sofa" %}📺{% endif %}{% if watch.location == "Theatre" %}🎭{% endif %} {{ watch.location }}</p>
 </div>
 <p style="font-size: 1.5rem;">{{ watch.summary }}</p>
 {% if watch.warning %}
