@@ -635,6 +635,9 @@ a {
 .grid {
   display: grid;
 }
+.grid--2 {
+  grid-template-columns: 1fr 330px;
+}
 .grid--3 {
   grid-template-columns: 1fr 1fr 1fr;
 }

@@ -13,18 +13,19 @@
 
 <ul class="reset-list list list--divided">
 {% for watch in watchlist.watched %}
-<li id="{{ watch.titleEnglish | slug }}" class="list-group-item">
+<li id="{{ watch.titleEnglish | slug }}" class="list-group-item" style="padding: 2rem 0;{% if watch.favourite %} padding: 1rem;background-color: #fff;border: 4px solid #df950a;position: relative;margin-left: -1rem;margin-right: -1rem;{% endif %}">
+{% if watch.favourite %}
+<div style="padding: 1rem;background-color: #fafafa;border-bottom: 4px solid #df950a;border-left: 4px solid #df950a;position: absolute;top: -4px;right: -4px;font-weight: bold;color: #505050;z-index: 1;">🏆 Top Pick</div>
+{% endif %}
+<div class="grid grid--2">
+<div style="padding-right: 1rem;">
 {% if watch.titleNative %}
-<h1>{{ watch.originFlag }} {{ watch.titleNative }}</h1>
+<h1 class="heading heading--alpha" style="margin-top: 0;">{{ watch.originFlag }} {{ watch.titleNative }}</h1>
 <p>{% if watch.titleLiterally %}{{ watch.titleLiterally }}, {% endif %}aka <strong>{{ watch.titleEnglish }}</strong></p>
 {% else %}
-<h1>{{ watch.titleEnglish }}</h1>
+<h1 class="heading heading--alpha" style="margin-top: 0;">{{ watch.titleEnglish }}</h1>
 {% endif %}
-<div class="artwork-frame" style="position: relative;">
-<img src="/assets/images/watching/{{ watch.artwork }}" alt="artworkDescription" style="max-width: 330px;">
-<p class="artwork-frame__label" style="position: absolute;bottom: 0;left: 0;padding: 0.25rem; background-color: white;">{% if watch.location == "Cinema" %}🎦{% endif %}{% if watch.location == "Sofa" %}📺{% endif %}{% if watch.location == "Theatre" %}🎭{% endif %} {{ watch.location }}</p>
-</div>
-<p style="font-size: 1.5rem;">{{ watch.summary }}</p>
+<p style="font-size: 1.3rem;">{{ watch.summary }}</p>
 {% if watch.warning %}
 <p class="alert alert--warning"><strong class="alert__type">Trigger warning</strong><br/>Themes may be triggering for some people; {{ watch.warning }}.</p>
 {% endif %}
@@ -34,6 +35,12 @@
 <li>Rating: {% if watch.rating == '0' %}&star;&star;&star;&star;&star;{% elseif watch.rating == '1' %}&starf;&star;&star;&star;&star;{% elseif watch.rating == '2' %}&starf;&starf;&star;&star;&star;{% elseif watch.rating == '3' %}&starf;&starf;&starf;&star;&star;{% elseif watch.rating == '4' %}&starf;&starf;&starf;&starf;&star;{% elseif watch.rating == '5' %}&starf;&starf;&starf;&starf;&starf;{% endif %}</li>
 <li>Origin: {{ watch.originFlag }} {{ watch.originCountry }}</li>
 </ul>
+</div>
+<div class="artwork-frame" style="position: relative;">
+<img src="/assets/images/watching/{{ watch.artwork }}" alt="artworkDescription">
+<p class="artwork-frame__label" style="position: absolute;top: 0;left: 0;padding: 0.25rem; background-color: white;">{% if watch.location == "Cinema" %}🎦{% endif %}{% if watch.location == "Sofa" %}📺{% endif %}{% if watch.location == "Theatre" %}🎭{% endif %} {{ watch.location }}</p>
+</div>
+</div>
 </li>
 {% endfor %}
 </ul>

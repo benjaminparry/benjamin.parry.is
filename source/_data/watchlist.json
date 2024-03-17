@@ -19,6 +19,21 @@
 	"watched": [
         {
             "type": "Film",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Inception",
+            "originCountry": "United States",
+            "originFlag": "🇺🇸",
+			"summary": "Mind-bending epic from Christopher Nolan. A practical effect goes a long way. I might have to re-watch the South Park parody now.",
+            "warning": "suicide",
+            "artwork": "/inception.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "favourite": false,
+            "date": "2024-03-16"
+        },        {
+            "type": "Film",
             "location": "Cinema",
             "titleNative": "怪物, Kaibutsu",
             "titleLiterally": "",
@@ -31,7 +46,7 @@
             "artworkDescription": "",
             "rating": "5",
             "favourite": true,
-            "date": "2024-03-16"
+            "date": "2024-03-15"
         },
         {
             "type": "Film",
