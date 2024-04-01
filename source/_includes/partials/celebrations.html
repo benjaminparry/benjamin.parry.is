@@ -1,0 +1,11 @@
+<ul class="reset-list list list--divided">
+{% for celebration in celebrations.celebrations %}
+<li id="{{ celebration.event | slug }}" class="list-group-item">
+<h2>{{ celebration.event}}</h2>
+<p><time datetime="{{ celebration.date}}">{{ celebration.date}}</time></p>
+<p>{{ celebration.eventDescription}}</p>
+{% if celebration.more %}<p><a href="{{ celebration.more}}">{{ celebration.moreText}}</a></p>{% endif %}
+<img src="/assets/images/celebrating/{{ celebration.date }}/{{ celebration.image }}.jpg" alt="{{ celebration.imageDescription }}">
+</li>
+{% endfor %}
+</ul>

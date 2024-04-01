@@ -11,6 +11,11 @@ A place for my regular visited websites and some meaningful distractions.
 
 - [Obsidian](obsidian://)
 
+## Privacy-first
+
+- [Invidious](https://invidious.lunar.icu/feed/popular)
+- [Invidious](https://invidious.private.coffee/)
+
 ## Work
 
 - Google

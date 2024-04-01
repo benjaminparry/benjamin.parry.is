@@ -1,6 +1,20 @@
 {
     "reading": [
         {
+            "type": "Novel",
+            "titleNative": "コーヒーが冷めないうちに",
+            "titleLiterally": "Kohi ga Samenai Uchi ni",
+            "titleEnglish": "Before the Coffee Gets Cold",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "before-the-coffee-gets-cold.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
             "type": "Manga",
             "titleNative": "怪獣8号",
             "titleLiterally": "Kaijū 8-gou",
