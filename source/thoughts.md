@@ -10,3 +10,4 @@ paginationNextText: 'Older'
 paginationAnchor: '#post-list'
 ---
 
+Subscribe to my thoughts [RSS feed](/collecting/thoughts/feed.xml).
