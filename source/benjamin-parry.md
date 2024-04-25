@@ -13,3 +13,5 @@ My name is Benjamin Parry. I live is Lewes, East Sussex, UK.
 - Japanophile,
 - mountain bike rider,
 - bread baker.
+
+[Get in contact](/contactable/)

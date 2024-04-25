@@ -4,8 +4,7 @@ layout: 'layouts/temp.html'
 permalink: '/contactable/'
 ---
 
-- [Add me as a contact](/contactable/benjamin-parry.vcf)
-- Fancy a chat? <a href="mailto:benjamin@parry.is" rel="me" class="u-email">Drop me a line</a>.
+[Add me as a contact](/assets/other/benjamin-parry.vcf) (vCard)
 
 ## Elsewhere
 
