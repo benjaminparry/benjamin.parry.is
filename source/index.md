@@ -29,9 +29,6 @@ layout: 'layouts/home.html'
 
   I use this website for [writing](/writing/) longform posts, [collecting](/collecting) [links](/collecting/links/) and [thoughts](/collecting/thoughts).
 
-   I’m also available at these digital islands:
-
-   {% include "partials/elsewhere.html" %}
 
   <!-- {% include "partials/data-cascade.html" %} -->
 
