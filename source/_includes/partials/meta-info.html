@@ -46,9 +46,4 @@ them into the mix. #}
   <meta name="twitter:description" content="{{ metaDesc }}" />
   <meta property="og:description" content="{{ metaDesc }}" />
   {% endif %}
-
-  <!-- IndieWeb -->
-  {% for item in navigation.elsewhere %}
-  <link href="{{ item.url }}" rel="me"/>
-  {% endfor %}
 </head>
