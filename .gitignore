@@ -15,3 +15,6 @@ build
 source/_includes/css
 
 *.sublime-project
+
+# Local Netlify folder
+.netlify
