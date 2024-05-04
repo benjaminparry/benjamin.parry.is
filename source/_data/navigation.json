@@ -67,6 +67,12 @@
             "emoji": "🎯",
 			"url": "/focused/",
 			"divider": true
+		},
+		{
+			"text": "Now",
+            "emoji": "🗣️",
+			"url": "/now/",
+			"divider": true
 		}
 	],
 	"items": [

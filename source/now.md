@@ -20,10 +20,10 @@ permalink: '/now/'
 ### Culture
 
 - TV and Films: [watching](/watching/#watching) {{ watchlist.watching[0].titleEnglish }}, [watched](/watching/#watched) {{ watchlist.watched[0].titleEnglish}}.
-- Music: {{ playlist.playlist[0].titleEnglish }} by {{ playlist.playlist[0].artistEnglish }}.
+- Music: [listening](/listening/) to {{ playlist.playlist[0].titleEnglish }} by {{ playlist.playlist[0].artistEnglish }}.
 - Books: [reading](/reading/#reading) {{ readlist.reading[0].titleEnglish }}, [read](/reading/#read) {{ readlist.read[0].titleEnglish }} by {{ readlist.read[0].author }}.
 
-{% if now.was %}
+{% if now.was.length %}
 ## Was
 
 An archive of my previous updates.

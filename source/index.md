@@ -25,8 +25,6 @@ layout: 'layouts/home.html'
 
   Since then I have gained **{{ about.experience }}** of **{{ about.activitites }}**.
 
-  I’m currently [working](/working/) at [{{ about.company }}]({{ about.companyURL }}), {{ about.companyDescription }}.
-
   I use this website for [writing](/writing/) longform posts, [collecting](/collecting) [links](/collecting/links/) and [thoughts](/collecting/thoughts).
 
   I’m also available at these digital islands:
