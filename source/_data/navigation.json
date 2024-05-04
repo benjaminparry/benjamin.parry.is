@@ -20,19 +20,27 @@
 	"secondary": [
 		{
 			"text": "Collecting",
-			"url": "/collecting"
+            "emoji": "🗄️",
+			"url": "/collecting",
+			"divider": false
 		},
 		{
 			"text": "Links",
-			"url": "/collecting/links"
+            "emoji": "🔗",
+			"url": "/collecting/links",
+			"divider": false
 		},
 		{
 			"text": "Thoughts",
-			"url": "/collecting/thoughts"
+            "emoji": "🤔",
+			"url": "/collecting/thoughts",
+			"divider": false
 		},
 		{
 			"text": "Tagging",
-			"url": "/tagging"
+            "emoji": "🏷️",
+			"url": "/tagging",
+			"divider": false
 		}
 	],
 	"tertiary": [
@@ -56,7 +64,7 @@
 		},
 		{
 			"text": "Focused",
-            "emoji": "🔖️",
+            "emoji": "🎯",
 			"url": "/focused/",
 			"divider": true
 		}

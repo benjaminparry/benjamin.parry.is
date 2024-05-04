@@ -1,6 +1,20 @@
 {
 	"playlist": [
             {
+                "titleNative": "",
+                "titleLiterally": "",
+                "titleEnglish": "New Games",
+                "artistEnglish": "Goat (jp)",
+                "originCountry": "Japan️",
+                "originFlag": "🇯🇵️",
+                "artwork": "/new-games.jpg",
+                "artworkDescription": "",
+                "genre": "jazz, math rock",
+                "year": "2013",
+                "rating": "5",
+                "status": "🔁 On repeat"
+            },
+            {
                   "titleNative": "",
                   "titleLiterally": "",
                   "titleEnglish": "Live @ EartH, London",

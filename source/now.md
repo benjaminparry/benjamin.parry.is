@@ -5,10 +5,39 @@ layout: 'layouts/temp.html'
 permalink: '/now/'
 ---
 
-{{ posse }}
+<div class="posse">{{ posse }}</div>
 
-Updated: 2024/05/03
+## Latest update – {{ now.now[0].date }}
 
-- Thinking about how to implement this page properly using some of the data on my website.
-- Trying to get Webmentions working on my website.
-- Listening to Goat (jp) back catalogue on repeat.
+### Work
+
+{{ now.now[0].work }}
+
+### Pleasure
+
+{{ now.now[0].pleasure }}
+
+### Culture
+
+- TV and Films: [watching](/watching/#watching) {{ watchlist.watching[0].titleEnglish }}, [watched](/watching/#watched) {{ watchlist.watched[0].titleEnglish}}.
+- Music: {{ playlist.playlist[0].titleEnglish }} by {{ playlist.playlist[0].artistEnglish }}.
+- Books: [reading](/reading/#reading) {{ readlist.reading[0].titleEnglish }}, [read](/reading/#read) {{ readlist.read[0].titleEnglish }} by {{ readlist.read[0].author }}.
+
+{% if now.was %}
+## Was
+
+An archive of my previous updates.
+
+<ul class="list reset-list list--divided">
+{% for was in now.was %}
+<li style="padding: 0.75rem;">
+{{ was.date }}
+
+**Work:** {{ was.work }}
+
+
+**Pleasure:** {{ was.pleasure}}
+</li>
+{% endfor %}
+</ul>
+{% endif %}
