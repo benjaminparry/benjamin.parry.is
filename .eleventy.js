@@ -1,6 +1,6 @@
 
 module.exports = config => {
-  
+
   // RSS feed
   const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
@@ -9,7 +9,7 @@ module.exports = config => {
   const w3DateFilter = require('./source/filters/w3-date-filter.js');
 
   const sortByDisplayOrder = require('./source/utilities/sort-by-display-order.js');
-  
+
   // Add filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
@@ -73,6 +73,11 @@ module.exports = config => {
   config.addCollection('thoughts', collection => {
     return [...collection.getFilteredByGlob('./source/collecting/thoughts/*.md')].reverse();
   });
+
+    // Returns a collection of thoughts in reverse date order
+    config.addCollection('speaking', collection => {
+    return [...collection.getFilteredByGlob('./source/speaking/*.md')].reverse();
+    });
 
   // Returns work items, sorted by display order then filtered by featured
   config.addCollection('featuredWork', collection => {
