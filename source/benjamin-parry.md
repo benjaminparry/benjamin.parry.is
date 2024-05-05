@@ -14,4 +14,7 @@ My name is Benjamin Parry. I live is Lewes, East Sussex, UK.
 - mountain bike rider,
 - bread baker.
 
-[Get in contact](/contactable/)
+## Find out more about me
+
+- [What I’m doing now](/now/)
+- [Get in contact](/contactable/)

@@ -14,7 +14,7 @@
   {% endif %}
 
   {% if posse %}
-  <p class="p-description posse p-summary">{{ posse }}</p>
+  <p class="p-description posse p-summary">{{ posse | safe }}</p>
   {% endif %}
 
   <div class="e-content">

@@ -2,6 +2,21 @@
     "watching": [
         {
             "type": "TV",
+            "titleNative": "高嶺のハナさん",
+            "titleLiterally": "",
+            "titleEnglish": "Takane no Hana-san",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "/takane-no-hana-san.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "favourite": false,
+            "date": ""
+        },
+        {
+            "type": "TV",
             "titleNative": "プルートウ, Pluto",
             "titleLiterally": "",
             "titleEnglish": "Pluto",
@@ -17,6 +32,38 @@
         }
     ],
 	"watched": [
+        {
+            "type": "Film",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Shang-Chi and the Legend of the Ten Rings",
+            "originCountry": "United States",
+            "originFlag": "🇺🇸",
+			"summary": "Another fucking Marvel film? Why do I do this to myself‽ …for my family that’s why! I mean it was okay, better than the rest of the Marvage (see what I did there?) being churned out but to be honest Awkwafina was the only thing that kept me watching.",
+            "warning": "",
+            "artwork": "/shang-chi-and-the-legend-of-the-ten-rings.jpg",
+            "artworkDescription": "",
+            "rating": "3",
+            "favourite": false,
+            "date": "2024-04-28"
+        },
+        {
+            "type": "Film",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "The Fabelmans",
+            "originCountry": "United States",
+            "originFlag": "🇺🇸",
+			"summary": "My second time watching this after seeing it in at the cinema. Very well acted and some great moments of humour. A refreshing film that doesn’t take itself too seriously.",
+            "warning": "",
+            "artwork": "/the-fabelmans.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "favourite": false,
+            "date": "2024-04-28"
+        },
         {
             "type": "Film",
             "location": "Sofa",

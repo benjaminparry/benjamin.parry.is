@@ -16,6 +16,12 @@
         {% endif %}
       </h1>
       <p class="p-name e-content posse">{{ item.data.posse }}</p>
+      {% if item.data.category == "Thoughts" %}
+      {% if item.data.images.length %}
+      {% set images = item.data.images %}
+      {% include "partials/thought.html" %} <!-- I need to abstract this as partials/images -->
+      {% endif %}
+      {% endif %}
       <footer class="utility-font-size-80">
         <ul class="meta">
           <li>
