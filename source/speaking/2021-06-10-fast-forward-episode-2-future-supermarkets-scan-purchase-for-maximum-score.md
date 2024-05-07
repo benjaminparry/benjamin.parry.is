@@ -5,6 +5,7 @@ tags:
   - 'Omnichannel'
   - 'Service Design'
   - 'Research'
+  - 'Podcast'
 posse: 'I appeared on the Fast Forward podcast to speak about the design of retail grocery shopping experiences.'
 date: '2021-06-10'
 bookmark: 'https://fastforward.podbean.com/e/fast-forward-episode-2-future-supermarkets-scan-purchase-for-maximum-score/'
