@@ -10,6 +10,8 @@
 <article class="h-entry">
   {% include "partials/page-header.html" %}
 
+  <p>📆 <date>{{ page.date | dateFilter }}</date></p>
+
   {% if bookmark %}
   <a href="{{ bookmark }}">{{ title }}</a>
   {% endif %}
