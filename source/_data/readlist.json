@@ -2,6 +2,22 @@
     "reading": [
         {
             "type": "Manga",
+            "status": "published",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Dark Matter and Trojan Horses: A Strategic Design Vocabulary",
+            "author": "Dan Hill",
+            "originCountry": "",
+            "originFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "dark-matter-and-trojan-horses.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
+            "type": "Manga",
             "status": "publishing",
             "titleNative": "怪獣8号",
             "titleLiterally": "Kaijū 8-gou",
@@ -60,24 +76,25 @@
             "artworkDescription": "",
             "rating": "-",
             "date": ""
-        },
+        }
+    ],
+	"read": [
         {
             "type": "Manga",
             "status": "published",
             "titleNative": "うずまき",
             "titleLiterally": "Uzumaki",
             "titleEnglish": "Uzumaki: Spiral into Horror",
+            "author": "Junji Ito",
             "originCountry": "Japan️",
             "originFlag": "🇯🇵️",
-			"summary": ".",
-            "warning": "",
+			"summary": "Eww! Proper gross-out horror. Not for the faint-hearted.",
+            "warning": "horror",
             "artwork": "uzumaki.jpg",
             "artworkDescription": "",
-            "rating": "-",
-            "date": ""
-        }
-    ],
-	"read": [
+            "rating": "3",
+            "date": "2024-05-08"
+        },
         {
             "type": "Novel",
             "status": "published",
