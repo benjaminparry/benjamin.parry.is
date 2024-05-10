@@ -8,6 +8,12 @@ module.exports = config => {
   const dateFilter = require('./source/filters/date-filter.js');
   const w3DateFilter = require('./source/filters/w3-date-filter.js');
 
+
+  const pluginWebmentions = require("@chrisburnell/eleventy-cache-webmentions");
+  const configWebmentions = require("./source/_data/configWebmentions.js");
+
+  config.addPlugin(pluginWebmentions, configWebmentions);
+
   const sortByDisplayOrder = require('./source/utilities/sort-by-display-order.js');
 
   // Add filters

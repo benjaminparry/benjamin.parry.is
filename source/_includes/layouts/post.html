@@ -12,6 +12,10 @@
 
   <p>📆 <time>{{ page.date | dateFilter }}</time></p>
 
+  {% if webmentions.length %}
+  <p><a href="#webmentions">Webmentions</a>: {{ webmentions.length }}</p>
+  {% endif %}
+
   {% if bookmark %}
   <a href="{{ bookmark }}">{{ title }}</a>
   {% endif %}
@@ -51,13 +55,27 @@
         Author: <a href="/benjamin-parry/" rel="author" class="p-author h-card">Benjamin Parry</a>
       </li>
     </ul>
+
+    {% if webmentions.length %}
+    <p id="webmentions"><strong>Webmentions</strong>: {{ webmentions.length }}</p>
+    <ul>
+        {% for webmention in webmentions %}
+        {% if webmention.wm-property == "like-of" %}
+        like-of
+        {% endif %}
+        <ol class="list reset-list">
+            <img src="{{ webmention.author.photo }}" alt="Social avatar of {{ webmention.author.name }}" height="50px" width="50px"> <a href="{{ webmention.url }}"><strong>{{ webmention.author.name }}</strong></a>
+        </ol>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
     {% if recommendedPosts %}
       {% set postListItems = recommendedPosts %}
       {% set postListHeadline = 'More content' %}
       {% include "partials/simple-list.html" %}
     {% endif %}
   </footer>
-
 </article>
 
 
