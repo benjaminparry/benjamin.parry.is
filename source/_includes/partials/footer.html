@@ -9,6 +9,11 @@
 		<li>{{ item.emoji}} <a href="{{ item.url}}">{{ item.text}}</a></li>
 		{% endfor %}
 	</ul>
+	<ul class="reset-list list list--inline">
+		{% for item in navigation.quaternary %}
+		<li>{{ item.emoji}} <a href="{{ item.url}}">{{ item.text}}</a></li>
+		{% endfor %}
+	</ul>
 	<p>
 		<small>
 			© 2013 - {{ helpers.currentYear() }} Benjamin Parry – This website was built using <a href="https://www.11ty.dev/">Eleventy</a>, and is hosted on <a href="https://github.com/benjaminparry/benjamin.parry.is">Github</a> and <a href="https://www.netlify.com">Netlify</a>.

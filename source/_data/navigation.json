@@ -67,18 +67,34 @@
 			"divider": false
 		},
 		{
-			"text": "Focused",
-            "emoji": "🎯",
-			"url": "/focused/",
-			"divider": true
-		},
-		{
-			"text": "Now",
-            "emoji": "🗣️",
-			"url": "/now/",
+            "text": "Attending",
+            "emoji": "🎟️",
+			"url": "/attending/",
 			"divider": true
 		}
 	],
+    "quaternary": [
+        {
+            "text": "Now",
+            "emoji": "🗣️",
+            "url": "/now/",
+            "divider": true
+        },
+        {
+            "text": "Contactable",
+            "emoji": "👋",
+            "url": "/contactable/",
+            "divider": true
+        },
+        {
+            "text": "Focused",
+            "emoji": "🎯",
+            "url": "/focused/",
+            "divider": true
+        }
+    ],
+    "quinary": [
+    ],
 	"elsewhere": [
 		{
 			"text": "Mastodon",

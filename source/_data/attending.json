@@ -1,0 +1,31 @@
+{
+	"events": [
+            {
+                "attendingAs": "delegate",
+                "date": "2024-06-06",
+                "time": "19:00",
+                "organiser": "UXup",
+                "eventDescription": "UXup Summer and 5th Birthday Bash!",
+                "venue": "The Pump House, 46 Market Street, Brighton and Hove, BN1 1HH",
+                "url": "https://www.eventbrite.co.uk/e/uxup-summer-and-5th-birthday-bash-tickets-899158887437?aff=oddtdtcreator"
+            },
+            {
+                "attendingAs": "volunteer",
+                "date": "2024-04-27",
+                "time": "10:00",
+                "organiser": "UX Camp Brighton",
+                "eventDescription": "UX Camp Brighton’s annual un-conference.",
+                "venue": "PLATF9RM, Hove Town Hall, Church Road, Hove BN3 2AF",
+                "url": "https://www.uxcampbrighton.org/"
+            },
+            {
+                "attendingAs": "delegate",
+                "date": "2024-03-21",
+                "time": "19:00",
+                "organiser": "UXup",
+                "eventDescription": "Exploring UX Research",
+                "venue": "The Pump House, 46 Market Street, Brighton and Hove, BN1 1HH",
+                "url": "https://www.eventbrite.co.uk/e/exploring-ux-research-tickets-852111206557?aff=oddtdtcreator"
+            }
+	]
+}
