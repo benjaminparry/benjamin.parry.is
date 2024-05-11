@@ -39,8 +39,8 @@ them into the mix. #}
 
     {% if socialImage %}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:image" content="{{ site.url }}{{ socialImage }}" />
-    <meta name="twitter:image" content="{{ site.url }}{{ socialImage }}" />
+    <meta property="og:image" content="{{ site.url }}{{ socialImage[0] }}" />
+    <meta name="twitter:image" content="{{ site.url }}{{ socialImage[0] }}" />
     <meta property="og:image:alt" content="Page image for {{ site.name }}" />
     <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
     {% endif %}
