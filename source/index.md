@@ -1,6 +1,7 @@
 ---
 metaDesc: 'Personal website of Benjamin Parry'
 layout: 'layouts/home.html'
+title: 'Website homepage'
 ---
 
 <article class="vcard h-card">
