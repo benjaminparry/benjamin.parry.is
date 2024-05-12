@@ -15,7 +15,7 @@ body {
   color: #3b393c;
   background-color: #fafafa;
   padding: 2rem 10%;
-  font-size: 16px;
+  font-size: 18px;
   font-family: sans-serif;
   line-height: 1.6;
 }
@@ -565,25 +565,25 @@ a {
   border: 1px #ccc solid;
   width: 100%;
   padding: 1rem 1rem 2.25rem;
-  
+
   margin-top: .5rem;
   margin-bottom: .5rem;
   background-color: #fff;
   position: relative;
 }
 .tiles__item .heading {
-  
+
   margin-top: 0;
   line-height: 1.89rem;
 }
 
 .tiles__item img {
-  
+
   margin-bottom: 1rem;
 }
 .tiles__item.featured {
   border-width: 5px;
-  
+
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
