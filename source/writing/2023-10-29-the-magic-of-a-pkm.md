@@ -5,7 +5,7 @@ tags:
   - "Obsidian"
   - "Productivity"
   - "Behavioural Insights"
-  - "IKEA  Effect"
+  - "IKEA Effect"
   - "Note-taking"
   - "Yak-shaving"
   - "Bikeshedding"
