@@ -1,6 +1,5 @@
 ---
 title: "Design X Stories: Customise"
-date: "2024-05-13"
 tags:
     - 'IKEA Effect'
     - 'Customisation'
@@ -18,8 +17,7 @@ bookmark: 'https://www3.nhk.or.jp/nhkworld/en/shows/2101022/'
 notes: true
 ---
 
-Links to some of the items featured in the episode.
+Links to context and related content:
 
 - https://vuild.co.jp/en/projects/
 - https://www.whatdesigncando.com/stories/misaki-tanaka-on-making-sustainable-fashion-more-inclusive/
--
