@@ -8,12 +8,12 @@
 <li class="list__item"><img
 src="/assets/images/clients/{{ item.data.client |slug }}-logo.png" alt="{{ item.data.client }}" loading="lazy"></li>
 {% if item.data.caseStudyURL.length %}
-<li><a href="{{ item.data.caseStudyURL }}" target="_blank">{{ item.data.cta }}</a> on the {{ item.data.employer }} website.</li>
+<li><a href="{{ item.data.caseStudyURL }}">{{ item.data.cta }}</a> on the {{ item.data.employer }} website.</li>
 {% else %}
 <li><em>Case study coming 2024.</em></li>
 {% endif %}
 <!-- <li><small>{{ item.data.date }} – {{ item.data.duration }}</small></li> -->
-<li class="utility-font-size-80 band">Sector:
+<li class="utility-font-size-80 band">
 <ul class="reset-list list list--inline list--csv">
 {% for sector in item.data.sector %}
 <li>{{ sector }}</li>

@@ -10,7 +10,7 @@ title: 'Website homepage'
 
   <figure class="reset-figure card card--profile">
       <div class="reset-line-height">
-        <img src="/assets/images/profile/benjamin-parry.jpg" alt="Image of Benjamin Parry" class="u-photo card__image">
+        <img src="/assets/images/profile/benjamin-parry.jpg" alt="A white male with dark cropped hair wearing a blue shirt smiling and looking off to the left." class="u-photo card__image">
       </div>
       <figcaption class="reset-figcaption card__text">
         <p class="reset-heading card__text__heading p-name">Benjamin Parry</p>

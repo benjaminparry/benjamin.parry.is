@@ -4,7 +4,7 @@ layout: 'layouts/temp.html'
 permalink: '/contactable/'
 ---
 
-[Add me as a contact](/assets/other/benjamin-parry.vcf) (vCard)
+Add me as a contact by downloading my [vCard, 0.000459MB](/assets/other/benjamin-parry.vcf)
 
 ## Elsewhere
 

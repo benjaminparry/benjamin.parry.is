@@ -10,4 +10,4 @@ bookmark: 'https://podcast.clearleft.com/season02/episode04/'
 mirror: '/assets/audio/speaking/2021/03/clearleft-podcast-s02-e04-prototyping.mp3'
 ---
 
-If you’re having trouble finding the audio, I’m providing [a mirror of the original file]({{ mirror }}).
+If you’re having trouble finding the audio, I’m providing a mirror of the original [podcast audio (MP3, 51.1MB) ]({{ mirror }}).

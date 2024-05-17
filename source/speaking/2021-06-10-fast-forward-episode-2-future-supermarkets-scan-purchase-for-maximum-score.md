@@ -12,4 +12,4 @@ bookmark: 'https://fastforward.podbean.com/e/fast-forward-episode-2-future-super
 mirror: '/assets/audio/speaking/2021/06/fast-forward-episode-2-future-supermarkets-scan-purchase-for-maximum-score.mp3'
 ---
 
-If you’re having trouble finding the audio, I’m providing [a mirror of the original file]({{ mirror }})
+If you’re having trouble finding the audio, I’m providing a mirror of the original [podcast audio (MP3, 51.1MB) ]({{ mirror }}).

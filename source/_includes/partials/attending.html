@@ -1,9 +1,9 @@
 <ul class="reset-list list list--divided">
 {% for event in attending.events %}
 <li id="{{ event.event | slug }}" class="list-group-item">
-<h2>{{ event.organiser}} - <time datetime="{{ event.date}}">{{ event.date}}</time></h2>
-<p><a href="{{ event.url}}">{{ event.eventDescription}}</a></p>
-<p>I’ll be attending as a <strong>{{ event.attendingAs }}</strong>.</p>
+<h2>{{ event.organiser}}</h2>
+<p><a href="{{ event.url}}">{{ event.eventDescription}} - <time datetime="{{ event.date}}">{{ event.date}}</time></a></p>
+<p>I’ll be attending as a <strong>{{ event.attendingAs }}</strong>, {{ event.location}}.</p>
 </li>
 {% endfor %}
 </ul>
