@@ -41,9 +41,9 @@
 			"divider": false
 		},
 		{
-			"text": "Tagging",
-            "emoji": "🏷️",
-			"url": "/tagging",
+			"text": "Ideas",
+            "emoji": "💡",
+			"url": "/collecting/ideas",
 			"divider": false
 		}
 	],
@@ -80,6 +80,12 @@
             "url": "/now/",
             "divider": true
         },
+		{
+			"text": "Tagging",
+            "emoji": "🏷️",
+			"url": "/tagging",
+			"divider": false
+		},
         {
             "text": "Contactable",
             "emoji": "👋",
@@ -103,6 +109,10 @@
 		{
 			"text": "LinkedIn",
 			"url": "https://www.linkedin.com/in/benjaminparry-/"
+		},
+		{
+			"text": "IndieWeb",
+			"url": "https://indieweb.org/User:Benjamin.parry.is"
 		},
 		{
 			"text": "My Anime List",

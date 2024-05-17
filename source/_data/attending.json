@@ -1,31 +1,67 @@
 {
 	"events": [
-            {
-                "attendingAs": "delegate",
-                "date": "2024-06-06",
-                "time": "19:00",
-                "organiser": "UXup",
-                "eventDescription": "UXup Summer and 5th Birthday Bash!",
-                "venue": "The Pump House, 46 Market Street, Brighton and Hove, BN1 1HH",
-                "url": "https://www.eventbrite.co.uk/e/uxup-summer-and-5th-birthday-bash-tickets-899158887437?aff=oddtdtcreator"
-            },
-            {
-                "attendingAs": "volunteer",
-                "date": "2024-04-27",
-                "time": "10:00",
-                "organiser": "UX Camp Brighton",
-                "eventDescription": "UX Camp Brighton’s annual un-conference.",
-                "venue": "PLATF9RM, Hove Town Hall, Church Road, Hove BN3 2AF",
-                "url": "https://www.uxcampbrighton.org/"
-            },
-            {
-                "attendingAs": "delegate",
-                "date": "2024-03-21",
-                "time": "19:00",
-                "organiser": "UXup",
-                "eventDescription": "Exploring UX Research",
-                "venue": "The Pump House, 46 Market Street, Brighton and Hove, BN1 1HH",
-                "url": "https://www.eventbrite.co.uk/e/exploring-ux-research-tickets-852111206557?aff=oddtdtcreator"
-            }
+        {
+            "attendingAs": "attendee",
+            "date": "2024-06-06",
+            "time": "19:00",
+            "organiser": "UXup",
+            "eventDescription": "UXup Summer and 5th Birthday Bash!",
+            "location": "in-person",
+            "url": "https://www.eventbrite.co.uk/e/uxup-summer-and-5th-birthday-bash-tickets-899158887437?aff=oddtdtcreator"
+        },
+        {
+            "attendingAs": "attendee",
+            "date": "2024-05-22",
+            "time": "19:00",
+            "organiser": "Homebrew Website Club Europe/London",
+            "eventDescription": "Regular online IndieWeb meetup.",
+            "location": "online",
+            "url": "https://events.indieweb.org/2024/05/homebrew-website-club-europe-london-1UvVxccFFGsb"
+        },
+        {
+            "attendingAs": "attendee",
+            "date": "2024-05-17",
+            "time": "12:00",
+            "organiser": "Research Thing",
+            "eventDescription": "Global Accessibility Awareness Day.",
+            "location": "online",
+            "url": "https://www.meetup.com/researchthing/events/300992765"
+        },
+        {
+            "attendingAs": "attendee",
+            "date": "2024-05-16",
+            "time": "19:00",
+            "organiser": "Homebrew Website Club Europe/London",
+            "eventDescription": "Regular online IndieWeb meetup.",
+            "location": "online",
+            "url": "https://events.indieweb.org/2024/05/homebrew-website-club-europe-london-HJs8USwnq2Ie"
+        },
+        {
+            "attendingAs": "attendee",
+            "date": "2024-05-09",
+            "time": "16:00",
+            "organiser": "11tyConf",
+            "eventDescription": "International Symposium on Making Web Sites Real Good.",
+            "location": "online",
+            "url": "https://conf.11ty.dev/"
+        },
+        {
+            "attendingAs": "volunteer",
+            "date": "2024-04-27",
+            "time": "10:00",
+            "organiser": "UX Camp Brighton",
+            "eventDescription": "UX Camp Brighton’s annual un-conference.",
+            "location": "in-person",
+            "url": "https://www.uxcampbrighton.org/"
+        },
+        {
+            "attendingAs": "attendee",
+            "date": "2024-03-21",
+            "time": "19:00",
+            "organiser": "UXup",
+            "eventDescription": "Exploring UX Research",
+            "location": "in-person",
+            "url": "https://www.eventbrite.co.uk/e/exploring-ux-research-tickets-852111206557?aff=oddtdtcreator"
+        }
 	]
 }

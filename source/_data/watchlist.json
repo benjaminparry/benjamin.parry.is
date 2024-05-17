@@ -2,6 +2,22 @@
     "watching": [
         {
             "type": "TV",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Grand Sumo – 2024 May Basho",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵",
+			"summary": "",
+            "warning": "",
+            "artwork": "/grand-sumo.jpg",
+            "artworkDescription": "",
+            "rating": "",
+            "favourite": false,
+            "date": ""
+        },
+        {
+            "type": "TV",
             "titleNative": "怪獣8号",
             "titleLiterally": "Kaijū 8-gou",
             "titleEnglish": "Kaiju No. 8",

@@ -7,11 +7,12 @@ My name is Benjamin Parry. I live is Lewes, East Sussex, UK.
 
 ## I’m a…
 
-- senior design researcher at [Clearleft](http://clearleft.com),
+- design researcher,
 - sushi maker novice,
 - sushi eater expert,
-- Japanophile,
+- [Japanophile](/tagging/japan),
 - mountain bike rider,
+- cold water swimmer,
 - bread baker.
 
 ## Find out more about me

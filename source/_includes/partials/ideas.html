@@ -1,0 +1,24 @@
+<ul class="reset-list list list--divided">
+    {% for idea in ideas.ideas %}
+    <li class="">
+        <h2>{{ idea.title }}</h2>
+        <p><time>{{ idea.dateAdded }}</time></p>
+        <p>{{ idea.status}}</p>
+        <p>Problem: {{ idea.problem }}</p>
+        <p>Proposal: {{ idea.proposal }}</p>
+        {% if idea.jobStory.situation + idea.jobStory.situation + idea.jobStory.outcome %}
+        <p>Job Story:</p>
+        <ul>
+            <li>When {{ idea.jobStory.situation }},</li>
+            <li>I want to {{ idea.jobStory.motivation }},</li>
+            <li>So I can {{ idea.jobStory.outcome }}.</li>
+        </ul>
+        {% endif %}
+        <p>MVP: {{ idea.mvp}}</p>
+        {% if idea.dateUpdated %}
+        <p>Updated:{{ idea.dateUpdated }}</p>
+        <p>{{ idea.updateDescription }}</p>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

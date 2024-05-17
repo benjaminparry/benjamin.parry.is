@@ -1,7 +1,25 @@
 {
     "reading": [
         {
+            "category": "Non-fiction",
             "type": "Manga",
+            "status": "published",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Eloquent JavaScript: A Modern Introduction to Programming",
+            "author": "Marijn Haverbeke",
+            "originCountry": "",
+            "originFlag": "",
+            "summary": ".",
+            "warning": "",
+            "artwork": "eloquent-javascript.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
+            "category": "Non-fiction",
+            "type": "",
             "status": "published",
             "titleNative": "",
             "titleLiterally": "",
@@ -17,6 +35,7 @@
             "date": ""
         },
         {
+            "category": "Fiction",
             "type": "Manga",
             "status": "publishing",
             "titleNative": "怪獣8号",
@@ -33,6 +52,7 @@
             "date": ""
         },
         {
+            "category": "Fiction",
             "type": "Novel",
             "status": "published",
             "titleNative": "",
@@ -48,6 +68,7 @@
             "date": ""
         },
         {
+            "category": "Fiction",
             "type": "Manga",
             "status": "publishing",
             "titleNative": "光が死んだ夏",
@@ -63,6 +84,7 @@
             "date": ""
         },
         {
+            "category": "Fiction",
             "type": "Manga",
             "titleNative": "極主夫道",
             "status": "publishing",
@@ -80,6 +102,7 @@
     ],
 	"read": [
         {
+            "category": "Fiction",
             "type": "Manga",
             "status": "published",
             "titleNative": "うずまき",
@@ -96,6 +119,7 @@
             "date": "2024-05-08"
         },
         {
+            "category": "Fiction",
             "type": "Novel",
             "status": "published",
             "titleNative": "コーヒーが冷めないうちに",
@@ -112,6 +136,7 @@
             "date": "2024-05-04"
         },
         {
+            "category": "Fiction",
             "type": "Novel",
             "status": "published",
             "titleNative": "",
@@ -127,6 +152,7 @@
             "date": "2024-02-25"
         },
         {
+            "category": "Fiction",
             "type": "Novel",
             "status": "published",
             "titleNative": "日本沈没",
@@ -142,7 +168,8 @@
             "date": "2024-02-15"
         },
         {
-			"type": "Manga",
+			"category": "Fiction",
+            "type": "Manga",
             "status": "published",
             "titleNative": "",
             "titleLiterally": "",
