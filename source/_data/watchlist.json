@@ -81,6 +81,22 @@
         {
             "type": "Film",
             "location": "Sofa",
+            "titleNative": "Trois couleurs: Bleu / Trzy kolory: Niebieski",
+            "titleLiterally": "",
+            "titleEnglish": "Three Colours: Blue",
+            "originCountry": "France, Poland, Switzerland",
+            "originFlag": "🇫🇷🇵🇱🇨🇭",
+			"summary": "An astonishing visceral piece of cinema. The play of light and sound was sublime!",
+            "warning": "death",
+            "artwork": "/three-colours-blue.jpg",
+            "artworkDescription": "",
+            "rating": "5",
+            "favourite": false,
+            "date": "2024-05-17"
+        },
+        {
+            "type": "Film",
+            "location": "Sofa",
             "titleNative": "",
             "titleLiterally": "",
             "titleEnglish": "Shang-Chi and the Legend of the Ten Rings",
