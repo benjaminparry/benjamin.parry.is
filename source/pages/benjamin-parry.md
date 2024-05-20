@@ -1,5 +1,6 @@
 ---
 title: 'Benjamin Parry'
+permalink: '/benjamin-parry/'
 layout: 'layouts/temp.html'
 ---
 

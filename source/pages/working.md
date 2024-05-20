@@ -1,6 +1,7 @@
 ---
 title: 'Working'
 layout: 'layouts/temp.html'
+permalink: '/working/'
 featuredWork:
     title: 'Featured Work'
 ---
