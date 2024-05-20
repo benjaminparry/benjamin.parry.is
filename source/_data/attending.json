@@ -11,6 +11,24 @@
         },
         {
             "attendingAs": "attendee",
+            "date": "2024-05-30",
+            "time": "17:00",
+            "organiser": "Rally UXR",
+            "eventDescription": "AMA with Steve: What makes a mature research practice?",
+            "location": "online",
+            "url": "https://app.getcontrast.io/register/rally-uxr-ama-with-steve-what-makes-a-mature-research-practice"
+        },
+        {
+            "attendingAs": "attendee",
+            "date": "2024-05-30",
+            "time": "16:00",
+            "organiser": "d.MBA",
+            "eventDescription": "Ups and Downs of Design Entrepreneurship: The Dunning-Kruger Effect in Design",
+            "location": "online",
+            "url": "https://d.mba/webinars/ups-and-downs-of-design-entrepreneurship-the-dunning-kruger-effect-in-design"
+        },
+        {
+            "attendingAs": "attendee",
             "date": "2024-05-22",
             "time": "19:00",
             "organiser": "Homebrew Website Club Europe/London",

@@ -1,14 +1,5 @@
 <footer class="site-footer" role="contentinfo">
 
-    <div class="callout callout--info">
-        <p><strong>A note from the website content author:</strong></p>
-        <p>Unless stated, the contents of this website has been written without the use of generative artificial intelligence (GAI) or any large language models (LLM).</p>
-        <p>Let it be known that <strong>I do not give consent</strong> for any content on this website to be used to train LLMs. This message will remain on this website until there is a reliable way to exclude content like this from LLM training data sets.</p>
-        <p>
-            {{ site.authorName }} – <time datetime="2024-05-20T08:36:41Z">20th May 2024</time>
-        </p>
-    </div>
-
 	<ul class="reset-list list list--inline">
 		{% for item in navigation.secondary %}
 		<li>{{ item.emoji}} <a href="{{ item.url}}">{{ item.text}}</a></li>
@@ -24,16 +15,27 @@
 		<li>{{ item.emoji}} <a href="{{ item.url}}">{{ item.text}}</a></li>
 		{% endfor %}
 	</ul>
+
+    <div class="callout callout--info">
+        <p><strong>A note from the website content author:</strong></p>
+        <p>Unless stated, the contents of this website has been written without the use of generative artificial intelligence (GAI) or any large language models (LLM).</p>
+        <p>Let it be known that <strong>I do not give consent</strong> for any content on this website to be used to train LLMs. This message will remain on this website until there is a reliable way to exclude content like this from LLM training data sets.</p>
+        <p>
+            {{ site.authorName }} – <time datetime="2024-05-20T08:36:41Z">20th May 2024</time>
+        </p>
+    </div>
+
 	<p>
 		<small>
-			© 2013 - {{ helpers.currentYear() }} Benjamin Parry – This website was <a href="https://www.11ty.dev/">built using Eleventy</a>, and is <a href="https://github.com/benjaminparry/benjamin.parry.is" rel="me">hosted on Github</a> and <a href="https://www.netlify.com">Netlify</a>.
+			© 2013 - {{ helpers.currentYear() }} Benjamin Parry – This website was <a href="https://www.11ty.dev/">built using Eleventy</a>, and is <a href="https://github.com/benjaminparry/benjamin.parry.is" rel="me">hosted on Github</a> and <a href="https://www.netlify.com">Netlify</a>. Last build <time datetime="{{ global.builtAt }}">{{ global.builtAt }}</time>.
 		</small>
 	</p>
-    <p>
-        <small>
-            <a href="https://xn--sr8hvo.ws/previous">« previous</a>
-            <a href="https://xn--sr8hvo.ws">IndieWeb Webring 🕸💍</a>
-            <a href="https://xn--sr8hvo.ws/next">next »</a>
-        </small>
-    </p>
+    <div class="text-centred">
+        <p style="margin-bottom: 0;"><small>Proudly part of the <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍</small></p>
+        <p style="margin-top: 0;">
+            <small>
+                <a href="https://xn--sr8hvo.ws/previous">« previous website</a> <a href="https://xn--sr8hvo.ws/next">next website »</a>
+            </small>
+        </p>
+    </div>
 </footer>

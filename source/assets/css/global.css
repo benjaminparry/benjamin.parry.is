@@ -688,3 +688,7 @@ a {
     font-size: smaller;
     padding: 1rem;
 }
+
+.text-centred {
+    text-align: center;
+}
