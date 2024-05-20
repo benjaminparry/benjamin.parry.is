@@ -689,7 +689,10 @@ a {
     padding: 1rem;
 }
 
-/* MARK: Refactor */
+/* MARK: HORRID HACKS */
 .text-centred {
     text-align: center;
+}
+.list--inline .off-screen {
+    display: inline-block;
 }
