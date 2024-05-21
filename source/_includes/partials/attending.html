@@ -1,6 +1,6 @@
 <ul class="reset-list list list--divided">
 {% for event in attending.events %}
-<li id="{{ event.event | slug }}" class="h-entry list-group-item">
+<li id="{{ event.name | slug }}-{{ event.date }}" class="h-entry list-group-item">
 <h2>{{ event.organiser}}</h2>
 <div class="p-summary">
     <p>

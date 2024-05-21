@@ -4,11 +4,11 @@ layout: 'layouts/home.html'
 title: 'Website homepage'
 ---
 
-<article>
+<article class="h-card>
 
   <h1 class="heading heading--alpha"><span class="heading__utility utility-font-size-200">I’m <strong>curious</strong>.</span></h1>
 
-  <figure class="reset-figure card card--profile h-card">
+  <figure class="reset-figure card card--profile">
       <div class="reset-line-height">
         <img src="/assets/images/profile/benjamin-parry.jpg" alt="A white male with dark cropped hair wearing a blue shirt smiling and looking off to the left." class="u-photo card__image">
       </div>
@@ -27,7 +27,7 @@ title: 'Website homepage'
 
   Since then I have gained **{{ about.experience }}** of **{{ about.activitites }}**.
 
-  I’m interested in **the environment**, **people** and **technology**. When these things work together, in that order of preference, I believe we can positive change.
+  I’m interested in **the environment**, **people** and **technology**. When these things work together, in that order of preference, I believe we can create positive change in the world.
 
   I use this website for [writing](/writing/) longform posts, [collecting](/collecting) [links](/collecting/links/) and [thoughts](/collecting/thoughts). Most recently I;
 
