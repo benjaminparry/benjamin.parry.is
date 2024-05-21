@@ -4,21 +4,22 @@ layout: 'layouts/home.html'
 title: 'Website homepage'
 ---
 
-<article class="vcard h-card">
+<article>
 
   <h1 class="heading heading--alpha"><span class="heading__utility utility-font-size-200">I’m <strong>curious</strong>.</span></h1>
 
-  <figure class="reset-figure card card--profile">
+  <figure class="reset-figure card card--profile h-card">
       <div class="reset-line-height">
         <img src="/assets/images/profile/benjamin-parry.jpg" alt="A white male with dark cropped hair wearing a blue shirt smiling and looking off to the left." class="u-photo card__image">
       </div>
       <figcaption class="reset-figcaption card__text">
-        <p class="reset-heading card__text__heading p-name">Benjamin Parry</p>
-        <p class="card__text__description">Design Researcher</p>
+        <p class="card__text__heading"><a href="/" class="u-url p-name">Benjamin Parry</a></p>
+        <p class="card__text__description p-job-title">Design Researcher</p>
+        <p class="card__text__organisation p-org">parry.is</p>
       </figcaption>
   </figure>
 
-  <p class="p-note utility-font-size-120">Hi, I’m <strong><a href="/benjamin-parry" class="url u-url" rel="me">Benjamin Parry</a></strong>.</p>
+  <p class="p-note utility-font-size-120">Hi, I’m <strong><a href="/benjamin-parry">Benjamin Parry</a></strong>.</p>
 
   I’m a **{{ about.role }}** {{ about.location }}.
 
@@ -28,9 +29,7 @@ title: 'Website homepage'
 
   I’m interested in **the environment**, **people** and **technology**. When these things work together, in that order of preference, I believe we can positive change.
 
-  I use this website for [writing](/writing/) longform posts, [collecting](/collecting) [links](/collecting/links/) and [thoughts](/collecting/thoughts).
-
-  Most recently I;
+  I use this website for [writing](/writing/) longform posts, [collecting](/collecting) [links](/collecting/links/) and [thoughts](/collecting/thoughts). Most recently I;
 
   - wrote [{{ collections.writing[0].data.title }}]({{ collections.writing[0].url }}),
   - made [{{ collections.making[0].data.title }}]({{ collections.making[0].url }}),
