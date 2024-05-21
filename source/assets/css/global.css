@@ -642,30 +642,48 @@ a {
 }
 
 .bingo-card {
+    border: 2px solid #c2c2c2;
 }
 .rikishi {
   padding: .75rem;
-  border: 1px solid #6d6d6d;
+  border: 2px solid #c2c2c2;
+  background-color: #fff;
 }
 .rikishi__name {
   font-weight: bold;
   text-align: center;
+  margin-bottom: 0.75rem;
 }
 .results {
-  grid-template-rows: minmax(2rem, 1rem) minmax(2rem, 1rem) minmax(2rem, 1rem);
+  grid-template-rows: minmax(1.5rem, 1rem) minmax(1.5rem, 1rem) minmax(1.5rem, 1rem);
 }
 .result {
-  border: 1px solid #6d6d6d;
+  border: 1px solid #ddd;
   background-color: #ececec;
 }
 .result--win {
-  background-color: #65ba50;
+  background-color: #459132;
 }
 .result--lose {
-  background-color: #ba5050;
+  background-color: #913232;
 }
 .result--forfeit {
   background-color: #1e1e1e;
+}
+.rikishi--make-koshi {
+  background-color: #e0c4c4;
+  border-color: #913232;
+}
+.rikishi--kachi-koshi {
+    background-color: #cbe0c4;
+    border-color: #459132;
+}
+.rikishi--forfeit {
+    background-color: #c6c6c6;
+    border-color: #393939;
+}
+.rikishi img {
+  border: 2px solid #ddd;
 }
 
 /* Alerts */
@@ -693,8 +711,12 @@ a {
 }
 
 /* MARK: HORRID HACKS */
-.text-centred {
+.text-centered {
     text-align: center;
+}
+.image-centred {
+    margin-right: auto;
+    margin-left: auto;
 }
 .list--inline .off-screen {
     display: inline-block;

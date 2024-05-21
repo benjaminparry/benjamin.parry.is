@@ -1,20 +1,33 @@
-{% set basho = basho202401 %}
-
-{% if bashoDate %} 
+{% if bashoDate %}
   {% set basho = bashoDate %}
 {% endif %}
+<ol>
+{% for basho in basho.basho %}
+<li><a href="#{{ basho.month | slug }}">{{ basho.month }}</a></li>
+{% endfor %}
+</ol>
+{% for basho in basho.basho %}
+<h2 id="{{ basho.month | slug }}">{{ basho.month }} Tournament</h2>
+<ul>
+    <li>📍 {{ basho.city }}</li>
+    <li>🏟️ {{ basho.venue }}</li>
+    <li>📆 {{ basho.startDate | dateFilter }} » {{ basho.endDate | dateFilter }}</li>
+</ul>
 <ul class="grid grid--5 bingo-card reset-list">
 {% for rikishi in basho.rikishi %}
-<li class="rikishi rikishi--kachi-koshi rikishi--make-koshi">
+<li class="rikishi rikishi--{{ rikishi.bingo }}">
 <h2 class="reset-heading rikishi__name">{{ rikishi.name }}</h2>
-<!-- <img src="/assets/images/rikishi/{{ rikishi.name | slug }}.jpg" alt="Rikishi image"> -->
+<div class="text-centered">
+    <img src="/assets/images/making/sumo-bingo-cards/rikishi/{{ rikishi.name | slug }}.jpg" alt="">
+</div>
 <ol class="grid grid--5 reset-list results">
 {% for result in rikishi.results %}
-<li class="result{% if result.result.length %} result--{{ result.result | slug }}{% endif %}">
-<span class="off-screen">{{ result.day }}: {{ result.result }}</span>
+<li class="result result--{% if result == 'l' %}lose{% endif %}{% if result == 'w' %}win{% endif %}{% if result == 'f' %}forfeit{% endif %}">
+<div class="off-screen">{% if result == "l" %}Lose{% endif %}{% if result == "w" %}Win{% endif %}{% if result == "f" %}Forfeit{% endif %}</div>
 </li>
 {% endfor %}
 </ol>
 </li>
 {% endfor %}
 </ul>
+{% endfor %}

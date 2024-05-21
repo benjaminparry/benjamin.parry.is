@@ -10,78 +10,103 @@
             "rikishi": [
                 {
                     "name": "Oho",
+                    "bingo": "",
                     "results": ["l","l","l","l","w","w","w","l","w","w","11","12","13","14","15"]
                 },{
                     "name": "Atamifuji",
+                    "bingo": "",
                     "results": ["w","l","w","l","l","l","l","l","w","w","11","12","13","14","15"]
                 },{
                     "name": "Churanoumi",
+                    "bingo": "",
                     "results": ["l","w","w","w","l","w","w","l","w","w","11","12","13","14","15"]
                 },{
                     "name": "Hiradoumi",
+                    "bingo": "",
                     "results": ["w","l","l","l","l","w","l","w","w","l","11","12","13","14","15"]
                 },{
                     "name": "Ura",
+                    "bingo": "",
                     "results": ["w","w","w","w","w","w","l","l","l","l","11","12","13","14","15"]
                 },{
                     "name": "Tomokaze",
+                    "bingo": "make-koshi",
                     "results": ["l","l","l","l","l","l","w","l","l","l","11","12","13","14","15"]
                 },{
                     "name": "Tamawashi",
+                    "bingo": "",
                     "results": ["w","l","w","l","l","l","l","l","l","w","11","12","13","14","15"]
                 },{
                     "name": "Kotozakura",
+                    "bingo": "",
                     "results": ["l","w","w","w","w","l","w","w","w","l","11","12","13","14","15"]
                 },{
                     "name": "Ryuden",
+                    "bingo": "",
                     "results": ["w","w","w","l","w","w","l","l","w","l","11","12","13","14","15"]
                 },{
                     "name": "Hoshoryu",
+                    "bingo": "",
                     "results": ["l","l","w","w","w","w","l","w","l","w","11","12","13","14","15"]
                 },{
                     "name": "Oshoma",
+                    "bingo": "",
                     "results": ["w","w","w","l","w","w","l","l","w","w","11","12","13","14","15"]
                 },{
                     "name": "Kotoshoho",
+                    "bingo": "",
                     "results": ["l","l","l","w","w","w","w","w","w","w","11","12","13","14","15"]
                 },{
                     "name": "Daieisho",
+                    "bingo": "",
                     "results": ["w","w","l","w","w","w","w","l","l","w","11","12","13","14","15"]
                 },{
                     "name": "Hokutofuji",
+                    "bingo": "",
                     "results": ["w","l","l","l","w","w","w","w","l","l","11","12","13","14","15"]
                 },{
                     "name": "Onosato",
+                    "bingo": "kachi-koshi",
                     "results": ["w","l","w","w","w","w","w","w","l","w","11","12","13","14","15"]
                 },{
                     "name": "Tsurugisho",
+                    "bingo": "",
                     "results": ["l","w","w","l","l","l","l","w","l","l","11","12","13","14","15"]
                 },{
                     "name": "Tobizaru",
+                    "bingo": "",
                     "results": ["w","l","l","w","l","l","l","w","l","l","11","12","13","14","15"]
                 },{
-                    "name": "Takerufujil",
+                    "name": "Takerufuji",
+                    "bingo": "forfeit",
                     "results": ["f","f","f","f","f","f","f","f","f","f","11","12","13","14","15"]
                 },{
                     "name": "Takarafuji",
+                    "bingo": "kachi-koshi",
                     "results": ["w","w","w","w","w","l","w","w","l","w","11","12","13","14","15"]
                 },{
                     "name": "Gonoyama",
+                    "bingo": "",
                     "results": ["w","w","l","l","l","w","l","l","w","l","11","12","13","14","15"]
                 },{
                     "name": "Shodai",
+                    "bingo": "",
                     "results": ["l","w","l","w","l","l","w","l","l","w","11","12","13","14","15"]
                 },{
                     "name": "Abi",
+                    "bingo": "",
                     "results": ["l","w","w","w","l","l","w","w","l","w","11","12","13","14","15"]
                 },{
                     "name": "Onosho",
+                    "bingo": "",
                     "results": ["l","w","l","w","w","w","w","l","l","l","11","12","13","14","15"]
                 },{
                     "name": "Wakamotoharu",
+                    "bingo": "",
                     "results": ["l","w","w","l","w","l","l","f","f","f","11","12","13","14","15"]
                 },{
                     "name": "Roga",
+                    "bingo": "",
                     "results": ["w","l","l","w","w","l","l","l","l","w","11","12","13","14","15"]
                 }
             ]

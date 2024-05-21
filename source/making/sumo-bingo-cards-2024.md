@@ -7,4 +7,4 @@ date: '2024-01-13'
 ---
 
 {% set bashoDate = basho2024 %}
-{% include "partials/sumo-bingo-card2.html" %}
+{% include "partials/sumo-bingo-card.html" %}
