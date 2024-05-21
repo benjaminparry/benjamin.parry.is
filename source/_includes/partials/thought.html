@@ -1,4 +1,7 @@
 {{ posse }}
+{% if targetURL %}
+Mentioning: <a href="{{ targetURL }}">{{ targetURL }}</a>
+{% endif %}
 {% if images %}
 {% for image in images %}
 <img src="{{image}}" alt="">
