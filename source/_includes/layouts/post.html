@@ -10,7 +10,7 @@
 <article class="h-entry">
   {% include "partials/page-header.html" %}
 
-  <p>📆 <time>{{ page.date | dateFilter }}</time><a class="off-screen" href="/" class="u-author"></a></p>
+  <p>📆 <time>{{ page.date | dateFilter }}</time></p>
 
   {% if webmentions.length %}
   <p><a href="#webmentions">Webmentions</a>: {{ webmentions.length }}</p>
@@ -50,6 +50,9 @@
 
       <li>
         {{ verb }}: <a class="u-url" href="{{ page.url }}"><time class="dt-published" datetime="">{{ page.date | dateFilter }}</time></a>
+      </li>
+      <li>
+        Author: <a href="/" rel="author" class="p-author h-card">Benjamin Parry</a>
       </li>
     </ul>
 
