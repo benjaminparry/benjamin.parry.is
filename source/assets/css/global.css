@@ -15,7 +15,7 @@ body {
   color: #3b393c;
   background-color: #fafafa;
   padding: 2rem 10%;
-  font-size: 16px;
+  font-size: 18px;
   font-family: sans-serif;
   line-height: 1.6;
 }
@@ -337,13 +337,6 @@ a {
 /*  word-break: break-all;*/
   display: inline;
 }
-[href*="//"]:not([href*="benjamin.parry.is"]) {
-  position: relative;
-}
-[href*="//"]:not([href*="benjamin.parry.is"]):after {
-  content: "\2009»";
-  display: inline-block;
-}
 .heading__anchor {
   position: relative;
   border-top: 1px solid #e0e0e0;
@@ -592,7 +585,7 @@ a {
   position: absolute;
   bottom: 8px;
   right: -8px;
-  background-color: #878787;
+  background-color: #3b393c;
   padding: 2px 7px;
   color: white;
 }
@@ -604,7 +597,7 @@ a {
 .tiles__item h1 {
   font-weight: bold;
 }
-
+.off-screen,
 .skip-link {
   display: block;
   height: 1px;
@@ -627,10 +620,10 @@ a {
    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
 }
 
-.off-screen {
+/* .off-screen {
   position: absolute;
   left: -10000px;
-}
+} */
 
 .grid {
   display: grid;
@@ -690,4 +683,19 @@ a {
 }
 .alert--passive .alert__type {
   color: #3d3d3d;
+}
+
+.callout {
+    border: 4px solid white;
+    background-color: #f9f3f3;
+    font-size: smaller;
+    padding: 1rem;
+}
+
+/* MARK: HORRID HACKS */
+.text-centred {
+    text-align: center;
+}
+.list--inline .off-screen {
+    display: inline-block;
 }

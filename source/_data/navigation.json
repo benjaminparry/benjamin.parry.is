@@ -5,6 +5,10 @@
 			"url": "/writing"
 		},
 		{
+			"text": "Speaking",
+			"url": "/speaking"
+		},
+		{
 			"text": "Working",
 			"url": "/working"
 		},
@@ -37,9 +41,9 @@
 			"divider": false
 		},
 		{
-			"text": "Tagging",
-            "emoji": "🏷️",
-			"url": "/tagging",
+			"text": "Ideas",
+            "emoji": "💡",
+			"url": "/collecting/ideas",
 			"divider": false
 		}
 	],
@@ -63,52 +67,40 @@
 			"divider": false
 		},
 		{
-			"text": "Focused",
-            "emoji": "🎯",
-			"url": "/focused/",
-			"divider": true
-		},
-		{
-			"text": "Now",
-            "emoji": "🗣️",
-			"url": "/now/",
+            "text": "Attending",
+            "emoji": "🎟️",
+			"url": "/attending/",
 			"divider": true
 		}
 	],
-	"items": [
-		{
-			"text": "Benjamin Parry",
-			"url": "/benjamin-parry"
-		},
-		{
-			"text": "Writing",
-			"url": "/writing"
-		},
-		{
-			"text": "Working",
-			"url": "/working"
-		},
-		{
-			"text": "Making",
-			"url": "/making"
-		},
-		{
-			"text": "Collecting",
-			"url": "/collecting"
-		},
-		{
-			"text": "Links",
-			"url": "/collecting/links"
-		},
-		{
-			"text": "Thoughts",
-			"url": "/collecting/thoughts"
-		},
+    "quaternary": [
+        {
+            "text": "Now",
+            "emoji": "🗣️",
+            "url": "/now/",
+            "divider": true
+        },
 		{
 			"text": "Tagging",
-			"url": "/tagging"
-		}
-	],
+            "emoji": "🏷️",
+			"url": "/tagging",
+			"divider": false
+		},
+        {
+            "text": "Contactable",
+            "emoji": "👋",
+            "url": "/contactable/",
+            "divider": true
+        },
+        {
+            "text": "Focused",
+            "emoji": "🎯",
+            "url": "/focused/",
+            "divider": true
+        }
+    ],
+    "quinary": [
+    ],
 	"elsewhere": [
 		{
 			"text": "Mastodon",
@@ -117,6 +109,10 @@
 		{
 			"text": "LinkedIn",
 			"url": "https://www.linkedin.com/in/benjaminparry-/"
+		},
+		{
+			"text": "IndieWeb",
+			"url": "https://indieweb.org/User:Benjamin.parry.is"
 		},
 		{
 			"text": "My Anime List",

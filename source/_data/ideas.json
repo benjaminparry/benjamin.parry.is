@@ -1,0 +1,72 @@
+{
+	"ideas": [
+        {
+            "title": "An Open Standard for Subtitle Styling",
+            "problem": "I watch a lot of Japanese content in its native language and rely on subtitles. The styling of subtitles across different devices is inconsistent, often the same subtitles look completely different, many times with enough colour contrast against the content. This is potentially a huge accessibility problem for people who rely solely on subtitles to consume content. Beyond that there is a design opportunity to create a unique subtitle styles to match the visual style of the content e.g. Promare anime subtitles inheriting the colour palette of the animation artwork https://www.youtube.com/watch?v=UO91f-C_hlA.",
+            "proposal": "TBD",
+            "mvp": "TBD",
+            "jobStory": [
+                {
+                    "situation": "",
+                    "motivation": "",
+                    "outcome": ""
+                }
+            ],
+            "status": "incomplete",
+            "dateAdded": "2024-05-17",
+            "dateUpdated": "",
+            "updateDescription": ""
+        },
+        {
+            "title": "Hide For Later",
+            "problem": "Every website seems to have a bookmaking feature that makes it far too convenient while in the context of the app, resulting in silos of bookmarks I do nothing with.",
+            "proposal": "A browser extension that hides all instances of do-later buttons, icons and CTAs.",
+            "mvp": "Browser bookmarklet to test functionality.",
+            "jobStory": [
+                {
+                    "situation": "",
+                    "motivation": "",
+                    "outcome": ""
+                }
+            ],
+            "status": "incomplete",
+            "dateAdded": "2024-05-17",
+            "dateUpdated": "",
+            "updateDescription": ""
+        },
+        {
+            "title": "(n) Scrolls and You’re Out!",
+            "problem": "The standard for websites, particularly social, is to use infinite scroll to deliver a never ending feed of content. More scrolls = more ads/engagement/dopamine = more profit for shareholders, more time wasted for users.",
+            "proposal": "A browser extension that adds friction to the scroll interaction by showing preogressively aggressive reminders and eventually locks the scroll interaction.",
+            "mvp": "Browser bookmarklet to test functionality. Viewport height ​× custom scroll value e.g. 4 = overflow: none;",
+            "jobStory": [
+                {
+                    "situation": "",
+                    "motivation": "",
+                    "outcome": ""
+                }
+            ],
+            "status": "incomplete",
+            "dateAdded": "2024-05-17",
+            "dateUpdated": "",
+            "updateDescription": ""
+        },
+        {
+            "title": "Fortnite Server Kill Switch",
+            "problem": "Are you fed up with your child/partner/parent always on Fortnite? Are your requests of “5 more mins” never getting through?",
+            "proposal": "A remote kill switch for blocking the Fortnite server on your home nextwork.",
+            "mvp": "Telegram bot message to toggle a PiHole block/allow rule.",
+            "jobStory": [
+                {
+                    "situation": "",
+                    "motivation": "",
+                    "outcome": ""
+                }
+            ],
+            "status": "incomplete",
+            "dateAdded": "2024-05-16",
+            "dateUpdated": "",
+            "updateDescription": ""
+        }
+	]
+}

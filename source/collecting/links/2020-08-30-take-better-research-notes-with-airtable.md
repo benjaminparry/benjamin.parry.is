@@ -3,7 +3,7 @@ type: post
 title: "Sensemaking & structure: how Airtable changed my practice"
 date: 2020-08-30
 categories: urls
-tags: [nNte Taking, Airtable]
+tags: [Note-taking, Airtable]
 posse: "@wonkyearrings tips on note-taking during research sessions using Airtable."
 published: true
 author: Rachel Miles

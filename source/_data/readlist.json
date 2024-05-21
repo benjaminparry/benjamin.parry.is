@@ -1,6 +1,41 @@
 {
     "reading": [
         {
+            "category": "Non-fiction",
+            "type": "Manga",
+            "status": "published",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Eloquent JavaScript: A Modern Introduction to Programming",
+            "author": "Marijn Haverbeke",
+            "originCountry": "",
+            "originFlag": "",
+            "summary": ".",
+            "warning": "",
+            "artwork": "eloquent-javascript.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
+            "category": "Non-fiction",
+            "type": "",
+            "status": "published",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Dark Matter and Trojan Horses: A Strategic Design Vocabulary",
+            "author": "Dan Hill",
+            "originCountry": "",
+            "originFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿️",
+			"summary": ".",
+            "warning": "",
+            "artwork": "dark-matter-and-trojan-horses.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
+            "category": "Fiction",
             "type": "Manga",
             "status": "publishing",
             "titleNative": "怪獣8号",
@@ -17,6 +52,7 @@
             "date": ""
         },
         {
+            "category": "Fiction",
             "type": "Novel",
             "status": "published",
             "titleNative": "",
@@ -32,6 +68,7 @@
             "date": ""
         },
         {
+            "category": "Fiction",
             "type": "Manga",
             "status": "publishing",
             "titleNative": "光が死んだ夏",
@@ -47,6 +84,7 @@
             "date": ""
         },
         {
+            "category": "Fiction",
             "type": "Manga",
             "titleNative": "極主夫道",
             "status": "publishing",
@@ -60,25 +98,28 @@
             "artworkDescription": "",
             "rating": "-",
             "date": ""
-        },
+        }
+    ],
+	"read": [
         {
+            "category": "Fiction",
             "type": "Manga",
             "status": "published",
             "titleNative": "うずまき",
             "titleLiterally": "Uzumaki",
             "titleEnglish": "Uzumaki: Spiral into Horror",
+            "author": "Junji Ito",
             "originCountry": "Japan️",
             "originFlag": "🇯🇵️",
-			"summary": ".",
-            "warning": "",
+			"summary": "Eww! Proper gross-out horror. Not for the faint-hearted.",
+            "warning": "horror",
             "artwork": "uzumaki.jpg",
             "artworkDescription": "",
-            "rating": "-",
-            "date": ""
-        }
-    ],
-	"read": [
+            "rating": "3",
+            "date": "2024-05-08"
+        },
         {
+            "category": "Fiction",
             "type": "Novel",
             "status": "published",
             "titleNative": "コーヒーが冷めないうちに",
@@ -95,6 +136,7 @@
             "date": "2024-05-04"
         },
         {
+            "category": "Fiction",
             "type": "Novel",
             "status": "published",
             "titleNative": "",
@@ -110,6 +152,7 @@
             "date": "2024-02-25"
         },
         {
+            "category": "Fiction",
             "type": "Novel",
             "status": "published",
             "titleNative": "日本沈没",
@@ -125,7 +168,8 @@
             "date": "2024-02-15"
         },
         {
-			"type": "Manga",
+			"category": "Fiction",
+            "type": "Manga",
             "status": "published",
             "titleNative": "",
             "titleLiterally": "",

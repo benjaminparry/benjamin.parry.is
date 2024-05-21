@@ -10,7 +10,7 @@
     <article class="h-entry">
       <h1 class="p-description">
         {% if item.data.bookmark %}
-        <a class="u-url u-syndication" href="{{ item.data.bookmark }}" rel="syndication" target="_blank">{{ item.data.title }}</a>
+        <a class="u-url u-syndication" href="{{ item.data.bookmark }}" rel="syndication">{{ item.data.title }}</a>
         {% else %}
         <a class="u-url u-syndication" href="{{ item.url }}" rel="syndication">{{ item.data.title }}</a>
         {% endif %}

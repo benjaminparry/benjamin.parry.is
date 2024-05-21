@@ -1,9 +1,7 @@
-<!-- I need to abstract this as partials/images -->
 {{ posse }}
 {% if images %}
-<ul class="list reset-list">
 {% for image in images %}
-<li><img src="{{image}}" alt=""></li>
+<img src="{{image}}" alt="">
 {% endfor %}
-</ul>
 {% endif %}
+
