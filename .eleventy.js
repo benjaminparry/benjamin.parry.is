@@ -16,6 +16,11 @@ module.exports = config => {
 
   const sortByDisplayOrder = require('./source/utilities/sort-by-display-order.js');
 
+//   https://www.aleksandrhovhannisyan.com/blog/useful-11ty-filters/
+  const toISOString = (dateString) => new Date(dateString).toISOString();
+  config.addFilter('toISOString', toISOString);
+
+
   // Add filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
