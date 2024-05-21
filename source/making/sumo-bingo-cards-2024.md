@@ -3,7 +3,7 @@ title: 'Sumo bingo cards 2024'
 tags:
   - 'Japan'
 posse: 'My sumo bingo cards for 2024. '
-date: '2024-01-13'
+date: '2024-05-12'
 ---
 
 {% set bashoDate = basho2024 %}

@@ -1,9 +1,28 @@
 <ul class="reset-list list list--divided">
 {% for event in attending.events %}
-<li id="{{ event.event | slug }}" class="list-group-item">
+<li id="{{ event.event | slug }}" class="h-entry list-group-item">
 <h2>{{ event.organiser}}</h2>
-<p><a href="{{ event.url}}">{{ event.eventDescription}} - <time datetime="{{ event.date}}">{{ event.date}}</time></a></p>
-<p>I’ll be attending as a <strong>{{ event.attendingAs }}</strong>, {{ event.location}}.</p>
+<div class="p-summary">
+    <p>
+        <data class="p-rsvp" value="{{ event.rsvp }}">
+        {% if event.rsvp == "yes" -%}
+        🎉 I’ll be attending
+        {% elseif event.rsvp == "interested" -%}
+        🤔 I’m interested in attending
+        {% elseif event.rsvp == "maybe" -%}
+        🤷 I might attend
+        {% elseif event.rsvp == "no" -%}
+        😩 I really want to but unfortunately can’t attend
+        {% endif -%}
+        </data> {{ event.organiser }}’s <a href="{{ event.url }}" class="u-in-reply-to">{{ event.name }}</a>.
+    </p>
+    <ul style="margin-bottom: 1rem;margin-top: 1rem;">
+        <li>Location: {{ event.location }}</li>
+        <li>Attending as: {{ event.attendingAs }}</li>
+        <li>Date: <time datetime="{{ event.date}}">{{ event.date}}</time></li>
+        <li>Author: <span class="p-name">{{ site.authorName }}</span></li>
+    </ul>
+</div>
 </li>
 {% endfor %}
 </ul>
