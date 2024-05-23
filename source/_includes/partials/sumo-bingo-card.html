@@ -20,6 +20,9 @@
 <div class="text-centered">
     <img src="/assets/images/making/sumo-bingo-cards/rikishi/{{ rikishi.name | slug }}.jpg" alt="">
 </div>
+<!-- Score -->
+<p class="text-centered reset-vertical-space" style="font-size: 1rem;font-weight: bold;">{% for total in rikishi.total %}{% if total.win %}{{total.win}}{% endif %}{% if total.lose %} / {{total.lose}}{% endif %}{% if total.forfeit %} / {{total.forfeit}}{% endif %}{% endfor %}
+</p>
 <!-- Results daily -->
 <ol class="grid grid--15 reset-list results results--daily">
 {% for result in rikishi.results %}

@@ -149,6 +149,10 @@ p {
 .post h3 {
   font-size: 1.25rem;
 }
+.reset-vertical-space {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .reset-list {
   list-style: none;
   list-style-image: none;
