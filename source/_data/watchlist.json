@@ -3,6 +3,22 @@
         {
             "type": "TV",
             "location": "Sofa",
+            "titleNative": "呪術廻戦",
+            "titleLiterally": "Sorcery Battle",
+            "titleEnglish": "Jujutsu Kaisen",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵",
+			"summary": "",
+            "warning": "",
+            "artwork": "/jujutsu-kaisen.jpg",
+            "artworkDescription": "",
+            "rating": "",
+            "favourite": false,
+            "date": ""
+        },
+        {
+            "type": "TV",
+            "location": "Sofa",
             "titleNative": "",
             "titleLiterally": "",
             "titleEnglish": "Grand Sumo – 2024 May Basho",
