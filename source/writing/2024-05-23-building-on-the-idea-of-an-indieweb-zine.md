@@ -26,7 +26,7 @@ Print material is fixed (proportions, material) while the web is fluid. **How mi
 
 If the focus of the zine is on the IndieWeb, it only seems natural for contributors to host contributions on their own websites. This allows them to author their content exactly how they want in whatever style they see fit. It allows for the flexibility to update their content if they need to, avoiding any versioning nightmares at the moment of printing (more on that shortly). The content’s url is the source of truth.
 
-It would also be nice to create a simple bridge between the a print and digital version. [QR Codes](https://deshittify.us/qr-coder/index.html) might be useful here.
+It would also be nice to create a simple bridge between the print and digital version. [QR Codes](https://deshittify.us/qr-coder/index.html) might be useful here.
 
 ### Webring bound
 
