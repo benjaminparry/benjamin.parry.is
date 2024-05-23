@@ -5,6 +5,7 @@
             "month": "May",
             "city": "Tokyo",
             "venue": "Ryōgoku Kokugikan",
+            "venueURL": "https://www.google.com/maps/@35.6967069,139.7934202,2a,70.6y,14.16h,69.45t/data=!3m6!1e1!3m4!1sjhBtOwkV9L_kxYQ9gSp7QA!2e0!7i13312!8i6656?entry=ttu",
             "startDate": "2024-05-12",
             "endDate": "2024-05-26",
             "rikishi": [

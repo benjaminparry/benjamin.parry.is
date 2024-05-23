@@ -10,7 +10,7 @@
 <h2 id="{{ basho.month | slug }}">{{ basho.month }} Tournament</h2>
 <ul>
     <li>📍 {{ basho.city }}</li>
-    <li>🏟️ {{ basho.venue }}</li>
+    <li>🏟️ <a href="https://www.google.com/maps/@35.6970848,139.7937749,2a,75y,239.39h,73.01t/data=!3m7!1e1!3m5!1s9IzZ-Cm13q7ovNCEL-auSQ!2e0!3e2!7i13312!8i6656?entry=ttu">{{ basho.venue }}</a></li>
     <li>📆 {{ basho.startDate | dateFilter }} » {{ basho.endDate | dateFilter }}</li>
 </ul>
 <ul class="grid grid--5 bingo-card reset-list">
