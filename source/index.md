@@ -19,7 +19,9 @@ title: 'Website homepage'
       </figcaption>
   </figure>
 
-  <p class="p-note utility-font-size-120">Hi, I’m <strong><a href="/benjamin-parry">Benjamin Parry</a></strong>.</p>
+## About me
+
+  <p class="p-note">Hi, I’m <strong><a href="/benjamin-parry">Benjamin Parry</a></strong>.</p>
 
   I’m a **{{ about.role }}** {{ about.location }}.
 
@@ -29,12 +31,16 @@ title: 'Website homepage'
 
   I’m interested in **the environment**, **people** and **technology**. When these things work together, in that order of preference, I believe we can create positive change in the world.
 
-  I use this website for [writing](/writing/) longform posts, [collecting](/collecting) [links](/collecting/links/) and [thoughts](/collecting/thoughts). Most recently I;
+## About this website
 
-  - wrote [{{ collections.writing[0].data.title }}]({{ collections.writing[0].url }}),
-  - made [{{ collections.making[0].data.title }}]({{ collections.making[0].url }}),
-  - collected my thoughts about [{{ collections.thoughts[0].data.title }}]({{ collections.thoughts[0].url }}),
-  - and collected an interesting link about [{{ collections.links[0].data.title }}]({{ collections.links[0].url }}).
+  I use this website for [writing](/writing/) longform posts, [collecting](/collecting) [links](/collecting/links/) and [thoughts](/collecting/thoughts).
+
+  ### Most recent content
+
+  - I wrote [{{ collections.writing[0].data.title }}]({{ collections.writing[0].url }}),
+  - I made [{{ collections.making[0].data.title }}]({{ collections.making[0].url }}),
+  - I collected my thoughts about [{{ collections.thoughts[0].data.title }}]({{ collections.thoughts[0].url }}),
+  - I collected an interesting link about [{{ collections.links[0].data.title }}]({{ collections.links[0].url }}).
 
   <!-- {% include "partials/data-cascade.html" %} -->
 
