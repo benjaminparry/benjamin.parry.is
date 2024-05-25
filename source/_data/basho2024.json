@@ -154,13 +154,13 @@
                     ]
                 },{
                     "name": "Hokutofuji",
-                    "bingo": "",
+                    "bingo": "make-koshi",
                     "results": ["w","l","l","l","w","w","w","w","l","l","l","w","l","14","15"],
                     "total": [
                         {
                             "win": "6",
                             "forfeit": "",
-                            "lose": "7"
+                            "lose": "8"
                         }
                     ]
                 },{
@@ -275,13 +275,13 @@
                     ]
                 },{
                     "name": "Roga",
-                    "bingo": "",
-                    "results": ["w","l","l","w","w","l","l","l","l","w","l","w","w","14","15"],
+                    "bingo": "make-koshi",
+                    "results": ["w","l","l","w","w","l","l","l","l","w","l","w","w","l","15"],
                     "total": [
                         {
                             "win": "6",
                             "forfeit": "",
-                            "lose": "7"
+                            "lose": "8"
                         }
                     ]
                 }
