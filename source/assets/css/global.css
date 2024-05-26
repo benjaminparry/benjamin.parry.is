@@ -652,6 +652,7 @@ a {
 .grid--15 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
+
 .bingo-card {
     border: 2px solid #c2c2c2;
 }
@@ -661,9 +662,16 @@ a {
   background-color: #fff;
 }
 .rikishi__name {
-  font-weight: bold;
   text-align: center;
   margin-bottom: 0.75rem;
+  line-height: 1;
+}
+.rikishi__score {
+    font-size: 1rem;
+    line-height: 1;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    text-align: center;
 }
 .results--daily {
     grid-template-rows: minmax(.5rem, .5rem);
@@ -702,7 +710,57 @@ a {
 .rikishi img {
   border: 2px solid #ddd;
 }
+.rikishi__photo {
+    line-height: 0;
+    text-align: center;
+}
+.rikishi--saiko {
+ border-color: #df950a;
+ background-color: #dfc085;
+ font-weight: bold;
+}
+.rikishi--saiko .rikishi__name,
+.rikishi--saiko .rikishi__score {
+    font-weight: bold;
+}
+.rikishi--saiko .rikishi__name:after {
+    content: "🏆";
+}
+@media (max-width: 784px) {
+    .rikishi__photo,
+    .results--sorted,
+    .results--daily {
+        display: none;
+    }
+    .rikishi__name,
+    .rikishi__score {
+        writing-mode: sideways-rl;
+        margin: 0;
+    }
+}
 
+@media (max-height: 760px) {
+    .rikishi__photo,
+    .results--sorted {
+        display: none;
+    }
+    .rikishi {
+        padding: 0.25rem;
+    }
+    .results--daily,
+    .rikishi__name {
+        margin-bottom: 0.25rem;
+    }
+}
+@media (max-height: 1200px) {
+    .results--sorted {
+        display: none;
+    }
+    .results--daily,
+    .rikishi__name {
+        margin-bottom: 0.25rem;
+    }
+}
 /* Alerts */
 .alert {
   padding: .5rem;
