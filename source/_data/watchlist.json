@@ -3,6 +3,23 @@
         {
             "type": "TV",
             "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "The Days",
+            "season": "",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵",
+			"summary": "",
+            "warning": "",
+            "artwork": "/the-days.jpg",
+            "artworkDescription": "",
+            "rating": "",
+            "favourite": false,
+            "date": ""
+        },
+        {
+            "type": "TV",
+            "location": "Sofa",
             "titleNative": "呪術廻戦",
             "titleLiterally": "Sorcery Battle",
             "titleEnglish": "Jujutsu Kaisen",
