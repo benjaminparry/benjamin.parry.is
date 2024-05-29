@@ -3,6 +3,16 @@
         {
             "rsvp": "yes",
             "attendingAs": "attendee",
+            "date": "2024-06-11",
+            "time": "13:00",
+            "organiser": "Clearleft",
+            "name": "Service design online panel",
+            "location": "remote",
+            "url": "https://clearleft.com/does-a-great-customer-experience-require-a-great-employee-experience"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
             "date": "2024-06-06",
             "time": "19:00",
             "organiser": "UXup",
