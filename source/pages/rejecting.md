@@ -6,6 +6,10 @@ layout: 'layouts/temp.html'
 
 Things I disprove of.
 
+## Behaviours
+
+- Waste.
+
 ## Companies
 
 - Amazon – I’ve been boycotting the e-commerce behemoth since around 2012. I don’t think I need to explain why. Support your local businesses people, before they disappear.
