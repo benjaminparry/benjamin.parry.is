@@ -1,6 +1,23 @@
 {
 	"ideas": [
         {
+            "title": "Lucky penny lottery number generator",
+            "problem": "I very occasionally play the lottery but when I do I want to be completely removed from the act of picking the numbers. I also pick up pennies and go along with the fun that they are somehow lucky.",
+            "proposal": "A physical penny slot machine that generates lottery numbers when the penny triggers a switch.",
+            "mvp": "TBD",
+            "jobStory": [
+                {
+                    "situation": "",
+                    "motivation": "",
+                    "outcome": ""
+                }
+            ],
+            "status": "incomplete",
+            "dateAdded": "2024-06-01",
+            "dateUpdated": "",
+            "updateDescription": ""
+        },
+        {
             "title": "An Open Standard for Subtitle Styling",
             "problem": "I watch a lot of Japanese content in its native language and rely on subtitles. The styling of subtitles across different devices is inconsistent, often the same subtitles look completely different, many times with enough colour contrast against the content. This is potentially a huge accessibility problem for people who rely solely on subtitles to consume content. Beyond that there is a design opportunity to create a unique subtitle styles to match the visual style of the content e.g. Promare anime subtitles inheriting the colour palette of the animation artwork https://www.youtube.com/watch?v=UO91f-C_hlA.",
             "proposal": "TBD",
