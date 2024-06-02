@@ -5,6 +5,7 @@ eleventyComputed:
   posse: |
      Tap tap… is this thing on?
 tags:
+  - "Indieweb"
 targetURL: "https://reillyspitzfaden.com/blog/05-21-2024"
 ---
 

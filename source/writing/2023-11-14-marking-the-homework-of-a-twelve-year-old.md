@@ -2,7 +2,7 @@
 title: "Marking the homework of a twelve year old"
 posse: "AI, the design thinking process and the enthusiasm of a pre-teen."
 tags:
-  - "AI"
+  - "GAI"
   - "Design Thinking"
   - "Design Sprints"
 published: true
