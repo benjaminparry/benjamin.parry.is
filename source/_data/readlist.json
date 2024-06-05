@@ -1,6 +1,23 @@
 {
     "reading": [
         {
+            "category": "Fiction",
+            "type": "Novel",
+            "status": "published",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "The Memory Police",
+            "author": "Yōko Ogawa",
+            "originCountry": "Japan️",
+            "originFlag": "🇯🇵️",
+            "summary": ".",
+            "warning": "",
+            "artwork": "the-memory-police.jpg",
+            "artworkDescription": "",
+            "rating": "-",
+            "date": ""
+        },
+        {
             "category": "Non-fiction",
             "type": "Manga",
             "status": "published",
