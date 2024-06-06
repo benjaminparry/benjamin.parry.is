@@ -6,6 +6,7 @@ tags:
     - 'Decarbonization'
     - 'Technology'
     - 'Manufacturing'
+    - 'Podcast'
 posse: "A fascinating conversation with the Elephantech startup that is changing the manufacturing of printed circuit boards (PCB) from a subtractive to additive by using ink-jet printing process; reducing waste and manufacturing costs and helping to make a much-needed decarbonisation shift in the tech industry."
 author:
     - 'Tim Romero'
