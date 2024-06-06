@@ -1,0 +1,56 @@
+{
+    "websites": [
+        {
+            "name": "Obsidian",
+            "url": "obsidian://"
+        },
+        {
+            "name": "Localhost",
+            "url": "http://localhost:8080/"
+        },
+        {
+            "name": "Phanpy",
+            "url": "https://phanpy.social/"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/"
+        },
+        {
+            "name": "Mail",
+            "url": "https://mail.google.com"
+        },
+        {
+            "name": "Calendar",
+            "url": "https://calendar.google.com"
+        },
+        {
+            "name": "Drive",
+            "url": "https://drive.google.com/drive/u/0/starred"
+        },
+        {
+            "name": "Miro",
+            "url": "https://miro.com"
+        },
+        {
+            "name": "Dovetail",
+            "url": "https://dovetail.com"
+        },
+        {
+            "name": "Readwise Reader",
+            "url": "https://read.readwise.io/"
+        },
+        {
+            "name": "Spoon & Tamago",
+            "url": "https://www.spoon-tamago.com/"
+        },
+        {
+            "name": "Tokyo Weekender",
+            "url": "https://www.tokyoweekender.com/"
+        },
+        {
+            "name": "Spectrum Tokyo",
+            "url": "https://spctrm.design/"
+        }
+    ]
+}

@@ -796,3 +796,23 @@ a {
 .list--inline .off-screen {
     display: inline-block;
 }
+
+/* MARK: FOCUSED */
+.targets {
+
+}
+.target a {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    margin: .25rem;
+    padding: .25rem;
+    text-align: center;
+    min-height: 4rem;
+    display: block;
+    text-decoration: none;
+}
+.target a:hover,
+.target a:focus {
+    text-decoration: underline;
+}
