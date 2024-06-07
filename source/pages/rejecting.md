@@ -6,6 +6,10 @@ layout: 'layouts/temp.html'
 
 Things I disprove of.
 
+## The status quo
+
+- [How I (mostly) experience the web today](https://how-i-experience-web-today.com/)
+
 ## Behaviours
 
 - Waste.
