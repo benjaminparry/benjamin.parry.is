@@ -4,7 +4,7 @@ layout: 'layouts/temp.html'
 permalink: '/everything-everywhere-all-at-once/'
 ---
 
-Benjamin parry is…
+## Benjamin parry is…
 
 - [Benjamin Parry](/benjamin-parry/) – More about me.
 - [Contactable](/contactable/) - My contact details and how I prefer to converse.
@@ -22,8 +22,18 @@ Benjamin parry is…
 - [Listening](/listening/) – Music I’ve been listening to.
 - [Reading](/reading/) – Books and manga I’ve read or currently reading.
 - [Attending](/attending/) – Events I’m planning on attending or have attended.
-- Using – The day-to-day objects I use. *(yet to be implemented)*
+- [Using](/using/) – The day-to-day objects I use.
 - [Rejecting](/rejecting/) – Things I disapprove of.
 - Supporting – Things I approve of. *(yet to be implemented)*
 - [Focused](/focused/) – Positive distraction websites to visit.
 - [Offline](/offline/) – A list of pages stored locally when you are offline. *(may be broken… 😬)*
+
+{% set postArchiveItems = collections.writing %}
+## All of my writing ({{ postArchiveItems.length }})
+
+{% include "partials/post-archive.html" %}
+
+{% set postArchiveItems = collections.thoughts %}
+## All of my thoughts ({{ postArchiveItems.length }})
+
+{% include "partials/post-archive.html" %}
