@@ -26,8 +26,8 @@ permalink: '/now/'
 
 ### Culture
 
-- I’m reading [{{ readlist.reading[0].titleEnglish }}](/reading/#reading) by {{ readlist.reading[0].author }}
-- I’m watching [{{ watchlist.watching[0].titleEnglish }}](/watching/#watching)
+- I’m reading [{{ readlist.reading[0].titleEnglish }}](/reading/#reading) by {{ readlist.reading[0].author }} *and {{ readlist.reading.length - 1 }} other books*.
+- I’m watching [{{ watchlist.watching[0].titleEnglish }}](/watching/#watching) *and {{ watchlist.watching.length - 1 }} other shows*.
 - I’m listening to [{{ playlist.playlist[0].titleEnglish }}](/listening/) by {{ playlist.playlist[0].artistEnglish }} *{{ playlist.playlist[0].status }} ({{ playlist.playlist[0].rating }}/5)*
 - I read [{{ readlist.read[0].titleEnglish }}](/reading/#read) by {{ readlist.read[0].author }} *({{ readlist.read[0].rating }}/5)*.
 - I watched [{{ watchlist.watched[0].titleEnglish}}](/watching/#watched) *({{ watchlist.watched[0].rating}}/5)*
