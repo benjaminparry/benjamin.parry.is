@@ -26,7 +26,10 @@ them into the mix. #}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <!-- MARK: RSS -->
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/writing/feed.xml" />
+
+    <!-- MARK: Styles -->
     <link rel="stylesheet" type="text/css" href="/assets/css/global.css">
 
     <title>{{ pageTitle }}</title>
@@ -37,6 +40,7 @@ them into the mix. #}
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ currentUrl }}" />
 
+    <!-- MARK: Social images -->
     {% if socialImage %}
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:image" content="{{ site.url }}{{ socialImage[0] }}" />
@@ -51,13 +55,21 @@ them into the mix. #}
     <meta property="og:description" content="{{ metaDesc }}" />
     {% endif %}
 
-    <!-- IndieWeb -->
+    <!-- MARK: IndieWeb -->
     <!-- Webmention -->
     <link rel="pingback" href="https://webmention.io/benjamin.parry.is/xmlrpc" />
     <link rel="webmention" href="https://webmention.io/benjamin.parry.is/webmention" />
-
-
     <!-- IndieAuth -->
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+
+    <!-- Favicon / generated @ https://realfavicongenerator.net/ -->
+    <!-- MARK: Update this at redesign -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
