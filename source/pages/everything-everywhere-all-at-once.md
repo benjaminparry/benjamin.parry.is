@@ -18,15 +18,16 @@ permalink: '/everything-everywhere-all-at-once/'
   - [Links](/collecting/links/) – Links or bookmarks that I find interesting.
   - [Thoughts](/collecting/thoughts/) – Thoughts or observations that end up shared on social media platforms.
   - [Ideas](/collecting/ideas/) – Ideas for things to me be made.
+  - Replies – Replies to content on other people’s websites… *yep websites can do that!*
 - [Watching](/watching/) – Films, television, theatre I’ve watched or currently watching.
 - [Listening](/listening/) – Music I’ve been listening to.
 - [Reading](/reading/) – Books and manga I’ve read or currently reading.
 - [Attending](/attending/) – Events I’m planning on attending or have attended.
 - [Using](/using/) – The day-to-day objects I use.
 - [Rejecting](/rejecting/) – Things I disapprove of.
-- Supporting – Things I approve of. *(yet to be implemented)*
+- [Supporting](/supporting/) – Things I approve of.
 - [Focused](/focused/) – Positive distraction websites to visit.
-- Mirroring – A mirror if important content to me and others. *(yet to be implemented)*
+- Mirroring – A mirror of web important content to me and others. *(yet to be implemented)*
 - [Offline](/offline/) – A list of pages stored locally when you are offline. *(may be broken… 😬)*
 
 {% set postArchiveItems = collections.writing %}

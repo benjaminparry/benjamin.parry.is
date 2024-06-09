@@ -4,7 +4,7 @@ permalink: '/rejecting/'
 layout: 'layouts/temp.html'
 ---
 
-Things I disprove of.
+Things I disapprove of.
 
 ## The status quo
 
