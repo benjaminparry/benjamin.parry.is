@@ -26,6 +26,7 @@ permalink: '/everything-everywhere-all-at-once/'
 - [Rejecting](/rejecting/) – Things I disapprove of.
 - Supporting – Things I approve of. *(yet to be implemented)*
 - [Focused](/focused/) – Positive distraction websites to visit.
+- Mirroring – A mirror if important content to me and others. *(yet to be implemented)*
 - [Offline](/offline/) – A list of pages stored locally when you are offline. *(may be broken… 😬)*
 
 {% set postArchiveItems = collections.writing %}
