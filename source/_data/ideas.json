@@ -4,7 +4,7 @@
             "title": "Podcast audio bookmarklet",
             "problem": "I use [Huffduffer](https://huffduffer.com) for creating a feed of podcasts from around the internet. Huffduffer requires a hyperlink to an audio file. Unfortunately, most podcasts websites don’t provide this. It’s possible to find it by viewing the page source or developer tools network panel but is repetitive and time consuming.",
             "proposal": "A bookmarklet or browser extension that searches for linked audio files and adds a hyper link to them on the web page.",
-            "mvp": "TBD",
+            "mvp": "Browser bookmarklet to test functionality.",
             "jobStory": [
                 {
                     "situation": "",
@@ -21,7 +21,7 @@
             "title": "Lucky penny lottery number generator",
             "problem": "I very occasionally play the lottery but when I do I want to be completely removed from the act of picking the numbers. I also pick up pennies and go along with the fun that they are somehow lucky.",
             "proposal": "A physical penny slot machine that generates lottery numbers when the penny triggers a switch.",
-            "mvp": "TBD",
+            "mvp": "Raspberry Pi Pico python script to generate numbers.",
             "jobStory": [
                 {
                     "situation": "",
