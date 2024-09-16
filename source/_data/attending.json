@@ -3,6 +3,16 @@
         {
             "rsvp": "yes",
             "attendingAs": "attendee",
+            "date": "2024-09-19",
+            "time": "19:00",
+            "organiser": "UXup",
+            "name": "UXup Autumn: content design and strategy",
+            "location": "in-person",
+            "url": "https://www.eventbrite.co.uk/e/uxup-autumn-content-design-and-strategy-tickets-1003719531137?aff=oddtdtcreator"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
             "date": "2024-06-11",
             "time": "13:00",
             "organiser": "Clearleft",
