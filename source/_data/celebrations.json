@@ -1,13 +1,22 @@
 {
 	"celebrations": [
-            {
-                "date": "2024-03-28",
-                "event": "7 years at Clearleft",
-                "eventDescription": "Celebrating my time at Clearleft working with the smartest people on the most interesting projects. Thanks for having me!",
-                "image": "celebrating-clearleft",
-                "imageDescription": "A white card with the word ‘thank you’ hand-written in Japanese hiragana characters stood on a wooden table.",
-                "more": "",
-                "moreText": "Read about my experience at Clearleft"
-            }
+        {
+            "date": "2024-08-01",
+            "event": "I’m curating a research conference",
+            "eventDescription": "I feel immensely privileged to be given the opportunity to curate a one-day design research conference for Clearleft. Stay tuned for announcements about a special event in February 2025 in Brighton.",
+            "image": "",
+            "imageDescription": "",
+            "more": "",
+            "moreText": ""
+        },
+        {
+            "date": "2024-03-28",
+            "event": "7 years at Clearleft",
+            "eventDescription": "Celebrating my time at Clearleft working with the smartest people on the most interesting projects. Thanks for having me!",
+            "image": "celebrating-clearleft",
+            "imageDescription": "A white card with the word ‘thank you’ hand-written in Japanese hiragana characters stood on a wooden table.",
+            "more": "",
+            "moreText": "Read about my experience at Clearleft"
+        }
 	]
 }
