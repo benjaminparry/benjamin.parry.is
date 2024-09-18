@@ -3,7 +3,6 @@ title: "Weeknotes? More like weak notes!"
 posse: "I’ve given up writing weeknotes. Introducing cycles."
 tags:
     - 'Weeknotes'
-    - "Cycles"
 ---
 
 I love the idea or weeknotes. As a reader of other’s notes, I enjoy finding out what other people are working on whether that be personal or client projects. I love the serendipity of discovering a new tool or approach for problem solving, discovering new authors or content creators. As a writer of my own notes, I find them a useful way to reflect on my own challenges and successes, document and celebrate them for a future date. Most of all, I find writing distills my current thought process on a topic, emerging idea or concept.
@@ -16,7 +15,7 @@ I’ve also struggled with maintaining a consistent content framework. While thi
 
 ## Weeknotes are dead, long live cycles
 
-My current thinking is to write under the category of cycles. But why cycles?
+My current thinking is to collect content under [cycles](/collecting/cycles/). But why cycles?
 
 - Cycles to refocus my attention on seasonal writing. Inspired somewhat from the 72 micro-seasons of Japan, a collection of poetic seasons observing the micro changes of Japan’s natural environment. I appreciate how this calendar is led by natural changes around us. I hope that my own writing will become more attuned to my own sense of place and be reflected in its cadence.
 - Cycles to focus on gardening; organic and digital.

@@ -2,5 +2,9 @@
 	"name": "Benjamin Parry",
 	"url": "https://benjamin.parry.is",
 	"authorName": "Benjamin Parry",
-	"authorEmail": "benjamin@parry.is"
+	"authorEmail": "benjamin@parry.is",
+    "socialImageDefault": "/assets/images/profile/benjamin-parry-og-default.jpg",
+    "socialImageEnvironment": "/assets/images/profile/benjamin-parry-og-environment.jpg",
+    "socialImageTechnology": "/assets/images/profile/benjamin-parry-og-technology.jpg",
+    "socialImagePeople": "/assets/images/profile/benjamin-parry-og-people.jpg"
 }

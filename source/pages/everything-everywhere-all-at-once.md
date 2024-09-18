@@ -15,6 +15,7 @@ permalink: '/everything-everywhere-all-at-once/'
 - [Making](/making/) – Things I’ve been making.
 - [Tagging](/tagging/) – A taxonomy to help you find content you might be interested in.
 - [Collecting](/collecting/) – The feed of things I collet that interest me, a mix of my own content and other people’s.
+  - [Cycles](/collecting/cycles/) – Documenting what is going on in my world, formally known as weeknotes.
   - [Links](/collecting/links/) – Links or bookmarks that I find interesting.
   - [Thoughts](/collecting/thoughts/) – Thoughts or observations that end up shared on social media platforms.
   - [Ideas](/collecting/ideas/) – Ideas for things to me be made.

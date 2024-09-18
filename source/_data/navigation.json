@@ -29,6 +29,12 @@
 			"divider": false
 		},
 		{
+			"text": "Cycles",
+            "emoji": "🔃",
+			"url": "/collecting/cycles",
+			"divider": false
+		},
+		{
 			"text": "Links",
             "emoji": "🔗",
 			"url": "/collecting/links",

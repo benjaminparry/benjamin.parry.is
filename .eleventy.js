@@ -80,15 +80,20 @@ module.exports = config => {
     return [...collection.getFilteredByGlob('./source/collecting/links/*.md')].reverse();
   });
 
-    // Returns a collection of thoughts in reverse date order
-  config.addCollection('thoughts', collection => {
-    return [...collection.getFilteredByGlob('./source/collecting/thoughts/*.md')].reverse();
-  });
+// Returns a collection of thoughts in reverse date order
+config.addCollection('thoughts', collection => {
+return [...collection.getFilteredByGlob('./source/collecting/thoughts/*.md')].reverse();
+});
 
-    // Returns a collection of thoughts in reverse date order
-    config.addCollection('speaking', collection => {
-    return [...collection.getFilteredByGlob('./source/speaking/*.md')].reverse();
-    });
+// Returns a collection of cycles in reverse date order
+config.addCollection('cycles', collection => {
+return [...collection.getFilteredByGlob('./source/collecting/cycles/*.md')].reverse();
+});
+
+// Returns a collection of speaking in reverse date order
+config.addCollection('speaking', collection => {
+return [...collection.getFilteredByGlob('./source/speaking/*.md')].reverse();
+});
 
   // Returns work items, sorted by display order then filtered by featured
   config.addCollection('featuredWork', collection => {
