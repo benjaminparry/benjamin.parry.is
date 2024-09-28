@@ -1,6 +1,23 @@
 {
 	"ideas": [
         {
+            "title": "The most dangerous social media browser extension",
+            "problem": "",
+            "proposal": "A browser extension that removes elements of the website the more you interact with it, similar to The most dangerous writing app but responds to action than inaction.",
+            "mvp": "",
+            "jobStory": [
+                {
+                    "situation": "",
+                    "motivation": "",
+                    "outcome": ""
+                }
+            ],
+            "status": "",
+            "dateAdded": "",
+            "dateUpdated": "",
+            "updateDescription": ""
+        },
+        {
             "title": "Podcast audio bookmarklet",
             "problem": "I use [Huffduffer](https://huffduffer.com) for creating a feed of podcasts from around the internet. Huffduffer requires a hyperlink to an audio file. Unfortunately, most podcasts websites don’t provide this. It’s possible to find it by viewing the page source or developer tools network panel but is repetitive and time consuming.",
             "proposal": "A bookmarklet or browser extension that searches for linked audio files and adds a hyper link to them on the web page.",
