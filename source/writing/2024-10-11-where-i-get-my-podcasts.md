@@ -5,6 +5,7 @@ tags:
     - 'Open Source'
     - 'Self Hosting'
     - 'Podcasts'
+    - 'Technology'
 ---
 
 I’ve recently got back into the habit of listening to podcasts.
@@ -38,7 +39,7 @@ Enter [PodGrab](https://github.com/akhilrex/podgrab): an open-source self-hosted
 
 I’m a big fan of self-hosting. There’s a stack of Raspberry Pis plugged into my home network making life slightly better for my family and I; ad blocking (PiHole), home media centre (Jellyfin), network storage (Open Media Centre), file sharing (qbittorrent) and now telemetry-free podcast management (PodGrab).
 
-I’m currently subscribed to about 20 podcasts via the in-built search. You can also directly subscribe to a RSS URL. I’ve done that for my Huffduffer RSS feed. This enables me to still collect individual podcast episodes without adding the full feed to PodGrab. This is useful when I’m not interested in the full podcast back catalogue but am for guest speaker or specific show topic.
+I’m currently subscribed to about 20 podcasts via the in-built search. You can also directly subscribe to a RSS URL. I’ve done that for my Huffduffer RSS feed. This enables me to still collect individual podcast episodes without adding the full feed to PodGrab. This is useful when I’m not interested in the full podcast back catalogue but am interested a guest speaker or specific show topic.
 
 This workflow works really well for me. Audio files are downloaded to a folder on my NAS which is also synced to Jellyfin. This means I can listen to episodes on Jellyfin at home or download them to a mobile device for on-the-go listening.
 
@@ -46,11 +47,11 @@ Syncing between these instances isn’t automatic but I quite like the manual st
 
 Earlier this year I also added [MeTube](https://github.com/alexta69/metube/) to the self-hosting stack. I was looking for a more intentional way of interacting with the content on YouTube. MeTube and its browser extension enables you to download YouTube content locally, away from the manipulative endless auto-play algorithm. Content is similarly downloaded and synced to Jellyfin, providing a customised feed of interesting and distraction-free content.
 
-I recently discovered MeTube has an option for exporting video content as an audio file. Even better! There’s an option to specify a custom file path for these downloads which now in a directory alongside my podcasts.
+I recently discovered MeTube has an option for exporting video content as an audio file. Even better! There’s an option to specify a custom file path for these downloads which now sits in a directory alongside my podcasts.
 
 I’m really happy with the results so far but I’d love to push this workflow further:
 
-- Self-host an RSS or json feed of podcasts and import activity directly to my website.
-- Sync between PodGrab and Jellyfin.
+- Self-host an RSS or json feed of podcast activity that is dynamically added to my website.
+- Sync activity between PodGrab and Jellyfin.
 - Add unplayed/played metadata to audio files to make syncing to mobile devices easier.
 - Auto generate transcripts using whisper.io for note-taking.
