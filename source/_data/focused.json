@@ -5,6 +5,10 @@
             "url": "obsidian://"
         },
         {
+            "name": "Indiekit",
+            "url": "https://indiekit.benjamin.parry.is/"
+        },
+        {
             "name": "Localhost",
             "url": "http://localhost:8080/"
         },
