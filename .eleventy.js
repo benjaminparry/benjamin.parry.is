@@ -81,6 +81,11 @@ module.exports = config => {
   });
 
 // Returns a collection of thoughts in reverse date order
+config.addCollection('lists', collection => {
+return [...collection.getFilteredByGlob('./source/collecting/lists/*.md')].reverse();
+});
+
+  // Returns a collection of thoughts in reverse date order
 config.addCollection('thoughts', collection => {
 return [...collection.getFilteredByGlob('./source/collecting/thoughts/*.md')].reverse();
 });

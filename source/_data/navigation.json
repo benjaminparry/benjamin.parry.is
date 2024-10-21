@@ -51,6 +51,12 @@
             "emoji": "💡",
 			"url": "/collecting/ideas",
 			"divider": false
+		},
+		{
+			"text": "Lists",
+            "emoji": "📄",
+			"url": "/collecting/lists",
+			"divider": false
 		}
 	],
 	"tertiary": [
