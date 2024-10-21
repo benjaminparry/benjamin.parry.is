@@ -1,6 +1,6 @@
 {
   "layout": "layouts/post.html",
-  "permalink": "/collecting/lists/{{ page | post_permalink }}/index.html",
+  "permalink": "/collecting/lists/{{ title | slug | safe }}/index.html",
   "category": "Lists",
   "categoryURL": "/collecting/lists/",
   "verb": "Collected"
