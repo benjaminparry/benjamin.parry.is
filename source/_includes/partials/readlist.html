@@ -37,3 +37,15 @@
 </li>
 {% endfor %}
 </ul>
+
+
+<h2 id="shelved">Shelved</h2>
+
+<ul class="reset-list grid grid--6">
+{% for read in readlist.shelved %}
+<li>
+<img src="/assets/images/reading/{{ read.artwork }}" alt="artworkDescription">
+<p style="margin-top: 0;">{{ read.titleEnglish }}</p>
+</li>
+{% endfor %}
+</ul>
