@@ -20,8 +20,14 @@ them into the mix. #}
 
 {% if images %}
 {% set hasImage = images[0] %}
+{% elseif topic === 'environment' %}
+{% set hasImage = site.socialImageEnvironment %}
+{% elseif topic === 'people' %}
+{% set hasImage = site.socialImagePeople %}
 {% elseif topic === 'technology' %}
 {% set hasImage = site.socialImageTechnology %}
+{% else %}
+{% set hasImage = site.socialImageDefault %}
 {% endif %}
 <head>
     <meta charset="UTF-8" />
@@ -50,9 +56,6 @@ them into the mix. #}
     <meta property="og:image:alt" content="Page image for {{ site.name }}" />
     <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
     {% endif %}
-
-
-
 
     {% if metaDesc %}
     <meta name="description" content="{{ metaDesc }}" />
