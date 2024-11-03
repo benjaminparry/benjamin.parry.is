@@ -15,13 +15,12 @@ them into the mix. #}
 {% endif %}
 
 {% if not metaDesc %}
-{% set metaDesc = summary %}
+{% set metaDesc = posse %}
 {% endif %}
 
 {% if images %}
 {% set hasImage = images[0] %}
-{% endif %}
-{% if category === 'technology' %}
+{% elseif topic === 'technology' %}
 {% set hasImage = site.socialImageTechnology %}
 {% endif %}
 <head>

@@ -1,6 +1,7 @@
 ---
 title: "Don’t mistake platforms for people"
 date: '2024-09-25'
+topic: 'people'
 eleventyComputed:
   posse: |
     I responded to a post on LinkedIn asking for advice for making the experience more endurable. While I was writing it a few of pennies dropped about social networks.

@@ -1,6 +1,7 @@
 ---
 title: "Watching the Europa Clipper launch"
 date: '2024-10-14'
+topic: 'technology'
 eleventyComputed:
   posse: |
     Sharing space history with Boy watching the Europa Clipper launch. I’m very tempted to carry on the fun and re-watch Europa Report after dinner https://benjamin.parry.is/watching/#europa-report

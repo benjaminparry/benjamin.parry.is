@@ -4,6 +4,7 @@ posse: "Riffing on @capjamesg@indieweb.social’s idea of a printed #IndieWeb zi
 tags:
     - 'Indieweb'
     - 'Publishing'
+topic: 'technology'
 ---
 
 At last night’s [Homebrew Website Club Europe/London](https://events.indieweb.org/2024/05/homebrew-website-club-europe-london-1UvVxccFFGsb) introductions James mentioned his [blog post of ideas](https://jamesg.blog/2024/05/20/ideas-ii/). One idea in particular resonated with a few people in the group, including me: an IndieWeb zine.

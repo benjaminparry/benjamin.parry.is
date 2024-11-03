@@ -6,6 +6,7 @@ tags:
     - 'Self Hosting'
     - 'Podcasts'
     - 'Technology'
+topic: 'technology'
 ---
 
 I’ve recently got back into the habit of listening to podcasts.

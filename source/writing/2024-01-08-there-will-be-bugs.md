@@ -5,6 +5,7 @@ tags:
     - 'Indieweb'
     - 'Eleventy'
     - 'Static Site Generator'
+topic: 'technology'
 ---
 
 If you’re reading this, you’re on my rebuilt website. Huzzah!

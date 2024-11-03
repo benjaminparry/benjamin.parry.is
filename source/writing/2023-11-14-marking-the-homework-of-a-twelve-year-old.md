@@ -6,6 +6,7 @@ tags:
   - "Design Thinking"
   - "Design Sprints"
 published: true
+topic: 'technology'
 ---
 
 “I want to make an AI…“ says my son at the dinner table. He’s 12. This isn’t an uncommon discussion in our household. He continues “what piece of code can I write to help you?”
