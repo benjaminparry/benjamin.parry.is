@@ -5,11 +5,12 @@ tags:
     - 'Time'
     - 'Future'
     - 'Place'
-posse: "Fascinating conversation about the fermentation process, its role in history and our current lifestyle, and as a metaphor for our investment in the future of the planet."
 author: 'Sandor Katz'
-bookmark: 'https://emergencemagazine.org/interview/fermentation-as-metaphor/'
+bookmarkOf: 'https://emergencemagazine.org/interview/fermentation-as-metaphor/'
 notes: true
 ---
+
+Fascinating conversation about the fermentation process, its role in history and our current lifestyle, and as a metaphor for our investment in the future of the planet.
 
 > Fermentation is ultimately a very hopeful practice because it does not yield immediate gratification. There’s always delayed gratification in fermentation, and so in a quite literal way it’s an investment in the future. If you are despondent and despairing and don’t know if there’s a future, why would you invest your energy into fermenting? It is quite literally an investment in something that you’re going to be able to enjoy in the future, so there is an intrinsic hopefulness to any practice of fermentation.
 

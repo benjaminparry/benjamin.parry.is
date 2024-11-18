@@ -6,8 +6,9 @@ tags:
     - 'Public Speaking'
     - 'Presenting'
     - 'Podcast'
-posse: "Matthew shares some terrific advice for storytelling, structure and listening styles."
 author: 'Matthew Dicks'
-bookmark: 'https://fs.blog/knowledge-project-podcast/matthew-dicks/'
+bookmarkOf: 'https://fs.blog/knowledge-project-podcast/matthew-dicks/'
 notes: false
 ---
+
+Matthew shares some terrific advice for storytelling, structure and listening styles.

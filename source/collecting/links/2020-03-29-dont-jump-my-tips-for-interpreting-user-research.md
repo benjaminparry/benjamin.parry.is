@@ -4,12 +4,13 @@ title: "Don't jump: My tips for interpreting user research"
 date: 2020-03-29
 categories: urls
 tags: [Research, Note-taking, Observing]
-posse: "@keithemmerson’s gives some great advice about observing research sessions."
 published: true
 author: Keith Emmerson
-bookmark: https://userresearch.blog.gov.uk/2015/10/29/dont-jump-my-tips-for-interpreting-user-research/
+bookmarkOf: https://userresearch.blog.gov.uk/2015/10/29/dont-jump-my-tips-for-interpreting-user-research/
 notes: true
 ---
+
+@keithemmerson’s gives some great advice about observing research sessions.
 
 Keith makes an interesting point about the attitudes and motivations of research session observers.
 

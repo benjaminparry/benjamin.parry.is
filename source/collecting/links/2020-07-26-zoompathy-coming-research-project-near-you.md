@@ -4,12 +4,13 @@ title: "Zoompathy. Coming to a research project near you?"
 date: 2020-07-26
 categories: urls
 tags: [Research, Remote Research, Ethnography]
-posse: "@bowmast on the importance of context in qualitative, the tradeoffs we incur with remote research and how to challenge them."
 published: true
 author: Nick Bowmast
-bookmark: https://www.urledin.com/pulse/zoompathy-coming-research-project-near-you-nick-bowmast/
+bookmarkOf: https://www.urledin.com/pulse/zoompathy-coming-research-project-near-you-nick-bowmast/
 notes: true
 ---
+
+@bowmast on the importance of context in qualitative, the tradeoffs we incur with remote research and how to challenge them.
 
 Tradeoffs and risk.
 

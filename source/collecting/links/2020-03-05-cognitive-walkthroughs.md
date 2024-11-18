@@ -4,12 +4,13 @@ title: Cognitive Walkthroughs
 date: 2020-03-05
 categories: urls
 tags: [Cognitive Walkthrough, Research Method, Research, Usability]
-posse: "Brad Dalrymple gives an overview of the cognitive walkthrough method and shares a useful test spreadsheet template."
 published: true
 author: Brad Dalrymple
-bookmark: https://medium.com/user-research/cognitive-walkthroughs-b84c4f0a14d4
+bookmarkOf: https://medium.com/user-research/cognitive-walkthroughs-b84c4f0a14d4
 notes: true
 ---
+
+Brad Dalrymple gives an overview of the cognitive walkthrough method and shares a useful test spreadsheet template.
 
 Steps
 

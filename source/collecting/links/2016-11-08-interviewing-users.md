@@ -2,12 +2,13 @@
 category: urls
 title: Interviewing Users
 date: 2016-11-08
-bookmark: https://www.nngroup.com/articles/interviewing-users/
+bookmarkOf: https://www.nngroup.com/articles/interviewing-users/
 author: Jakob Nielsen
-posse: Jakob Nielsen’s advice on interviews.
 tags: [Interview, Research]
 notes: true
 ---
+
+Jakob Nielsen’s advice on interviews.
 
 * What users say and what they do are different
 * User interviews are appropriate when used in cases where they generate valid data

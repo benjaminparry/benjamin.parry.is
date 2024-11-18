@@ -7,8 +7,9 @@ tags:
     - 'Privacy'
     - 'Data'
     - 'Podcast'
-posse: "The argument for and against banning TikTok, the staggering magnitude of data stolen by the Meta Pixel."
 author: 'The Media Show'
-bookmark: 'https://www.bbc.co.uk/sounds/play/m001xdg6'
+bookmarkOf: 'https://www.bbc.co.uk/sounds/play/m001xdg6'
 notes: false
 ---
+
+The argument for and against banning TikTok, the staggering magnitude of data stolen by the Meta Pixel.

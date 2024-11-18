@@ -4,12 +4,13 @@ title: "Setting up a Raspberry Pi as a bridged wireless access point"
 date: 2020-12-27
 categories: urls
 tags: [Raspberry Pi]
-posse: "@Raspberry_Pi’s straightforward guide for getting wifi into those hard to reach places using a Pi as an access point."
 published: true
 author: Raspberry Pi Foundation
-bookmark: https://www.raspberrypi.org/documentation/configuration/wireless/access-point-bridged.md
+bookmarkOf: https://www.raspberrypi.org/documentation/configuration/wireless/access-point-bridged.md
 notes: true
 ---
+
+@Raspberry_Pi’s straightforward guide for getting wifi into those hard to reach places using a Pi as an access point.
 
 Since the lockdown I’ve had to be inventive in my home working setup to overcome wifi dead zones.
 

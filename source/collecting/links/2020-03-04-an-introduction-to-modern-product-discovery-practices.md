@@ -4,12 +4,13 @@ title: An Introduction to Modern Product Discovery Practices
 date: 2020-03-04
 categories: urls
 tags: [Discovery, Product, Agile, JTBD, Measurement, OKR, Collaboration]
-posse: "@ttorres’s product discovery keynote from Productized Conference 2016."
 published: true
 author: Teresa Torres
-bookmark: https://www.youtube.com/watch?v=l7-5x0ra2tc&feature=youtu.be
+bookmarkOf: https://www.youtube.com/watch?v=l7-5x0ra2tc&feature=youtu.be
 notes: true
 ---
+
+@ttorres’s product discovery keynote from Productized Conference 2016.
 
 > Goal: learn fast
 >

@@ -4,12 +4,13 @@ title: How to Conduct a Cognitive Walkthrough
 date: 2020-03-05
 categories: urls
 tags: [Cognitive Walkthrough, Research Method, Research, Usability]
-posse: "IXD Foundation overview of the cognitive walkthrough method."
 published: true
 author: Interaction Design Foundation
-bookmark: https://www.interaction-design.org/literature/article/how-to-conduct-a-cognitive-walkthrough
+bookmarkOf: https://www.interaction-design.org/literature/article/how-to-conduct-a-cognitive-walkthrough
 notes: true
 ---
+
+IXD Foundation overview of the cognitive walkthrough method.
 
 > If given a choice – most users prefer to do things to learn a product rather than to read a manual or follow a set of instructions.
 

@@ -6,7 +6,7 @@ tags:
   - 'Podcast'
 posse: 'I joined Jeremy Kieth on the Clearleft podcast to speak about the value of prototyping in the design process.'
 date: '2021-03-03'
-bookmark: 'https://podcast.clearleft.com/season02/episode04/'
+bookmarkOf: 'https://podcast.clearleft.com/season02/episode04/'
 mirror: '/assets/audio/mirroring/clearleft-podcast-s02-e04-prototyping.mp3'
 ---
 

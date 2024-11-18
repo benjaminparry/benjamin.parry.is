@@ -11,11 +11,12 @@ tags:
     - 'Collaboration'
     - 'Japan'
     - 'Innovation'
-posse: "Some really unique approaches to customisation in product design to increase creativity, collaboration and create more accessible and inclusive products for a diverse range of customers."
 author: 'NHK'
-bookmark: 'https://www3.nhk.or.jp/nhkworld/en/shows/2101022/'
+bookmarkOf: 'https://www3.nhk.or.jp/nhkworld/en/shows/2101022/'
 notes: true
 ---
+
+Some really unique approaches to customisation in product design to increase creativity, collaboration and create more accessible and inclusive products for a diverse range of customers.
 
 Links to context and related content:
 

@@ -4,12 +4,13 @@ title: Elevate your research objectives - Write better research objectives to ge
 date: 2019-11-20 13:05:00
 categories: urls
 tags: [Research, Research Objectives]
-posse: "@productherapist explains how to refine your research objectives to gain better results from your research."
 published: true
 author: Nikki Anderson
-bookmark: https://uxdesign.cc/elevate-your-research-objectives-745cf9415d5b
+bookmarkOf: https://uxdesign.cc/elevate-your-research-objectives-745cf9415d5b
 notes: false
 ---
+
+@productherapist explains how to refine your research objectives to gain better results from your research.
 
 What are research objectives?
 

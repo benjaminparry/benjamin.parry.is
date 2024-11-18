@@ -4,12 +4,13 @@ title: Five dysfunctions of ‘democratised’ research. Part 2 – Researching 
 date: 2019-11-15 15:39:32
 categories: urls
 tags: [Research, Collaboration, False Positives, Query Effect]
-posse: "@leisa’s second post about the common dysfunctions about ‘democratised’ research, this focusing on researching in silos, the query effect and false positives."
 published: true
 author: Leisa Reichelt
-bookmark: http://www.disambiguity.com/five-dysfunctions-of-democratised-research-part-2-researching-in-our-silos-leads-to-false-positives/
+bookmarkOf: http://www.disambiguity.com/five-dysfunctions-of-democratised-research-part-2-researching-in-our-silos-leads-to-false-positives/
 notes: false
 ---
+
+@leisa’s second post about the common dysfunctions about ‘democratised’ research, this focusing on researching in silos, the query effect and false positives.
 
 How do we fall victim to the query effect?
 

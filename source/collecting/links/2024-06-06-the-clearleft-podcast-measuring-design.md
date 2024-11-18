@@ -8,8 +8,9 @@ tags:
     - 'Culture'
     - 'Data'
     - 'Podcast'
-posse: "The smart folks at Clearleft and co. discuss what can, can’t, should and shouldn’t be measured of design and user experiences."
 author: 'Various'
-bookmark: 'https://podcast.clearleft.com/season03/episode05/'
+bookmarkOf: 'https://podcast.clearleft.com/season03/episode05/'
 notes: false
 ---
+
+The smart folks at Clearleft and co. discuss what can, can’t, should and shouldn’t be measured of design and user experiences.

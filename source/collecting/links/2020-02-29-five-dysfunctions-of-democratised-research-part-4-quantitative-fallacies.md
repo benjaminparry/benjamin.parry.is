@@ -4,9 +4,10 @@ title: "Five dysfunctions of ‘democratised’ research. Part 4 – Quantitativ
 date: 2020-02-29
 categories: urls
 tags: [Research, Quantitative, Rigour]
-posse: "@leisa’s fourth post about scaling research, this addressing the risks of quantitative research."
 published: true
 author: Leisa Reichelt
-bookmark: http://www.disambiguity.com/five-dysfunctions-of-democratised-research-part-4-quantitative-fallacies/
+bookmarkOf: http://www.disambiguity.com/five-dysfunctions-of-democratised-research-part-4-quantitative-fallacies/
 notes: false
 ---
+
+@leisa’s fourth post about scaling research, this addressing the risks of quantitative research.

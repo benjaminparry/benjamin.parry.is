@@ -8,8 +8,9 @@ tags:
     - 'Research'
     - 'Design'
     - 'Ethics'
-posse: "Thirty minutes of honest conversation about the inputs and outputs of machine learning, what drives our motivation to use it and the ethics of our choices. There were some really interesting questions from a research standpoint that makes me want to track down the other talks."
 author: ''
-bookmark: 'https://www.youtube.com/watch?v=NWkI_CjfRcw'
+bookmarkOf: 'https://www.youtube.com/watch?v=NWkI_CjfRcw'
 notes: false
 ---
+
+Thirty minutes of honest conversation about the inputs and outputs of machine learning, what drives our motivation to use it and the ethics of our choices. There were some really interesting questions from a research standpoint that makes me want to track down the other talks.

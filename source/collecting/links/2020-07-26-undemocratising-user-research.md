@@ -4,12 +4,13 @@ title: "Undemocratising User Research"
 date: 2020-07-26
 categories: urls
 tags: [Research, Collaboration, Democratization]
-posse: "@SaswatiSM’s argument against democratised research."
 published: true
 author: Saswati Saha Mitra
-bookmark: https://uxdesign.cc/undemocratising-user-research-6897e6f4cf72
+bookmarkOf: https://uxdesign.cc/undemocratising-user-research-6897e6f4cf72
 notes: true
 ---
+
+@SaswatiSM’s argument against democratised research.
 
 Love this definition of a researcher ❤️
 

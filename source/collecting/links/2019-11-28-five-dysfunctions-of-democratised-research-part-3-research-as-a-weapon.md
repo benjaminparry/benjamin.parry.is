@@ -4,12 +4,13 @@ title: Five dysfunctions of ‘democratised’ research. Part 3 – Research as 
 date: 2019-11-28
 categories: urls
 tags: [Research, Collaboration]
-posse: "The third part in @leisa’s blog post series about scaling research. This post covering when team relationships go sour and research is ‘weaponised’."
 published: true
 author: Leisa Reichelt
-bookmark: http://www.disambiguity.com/five-dysfunctions-of-democratised-research-part-3-research-as-a-weapon/
+bookmarkOf: http://www.disambiguity.com/five-dysfunctions-of-democratised-research-part-3-research-as-a-weapon/
 notes: false
 ---
+
+The third part in @leisa’s blog post series about scaling research. This post covering when team relationships go sour and research is ‘weaponised’.
 
 Why articulating the design is important.
 

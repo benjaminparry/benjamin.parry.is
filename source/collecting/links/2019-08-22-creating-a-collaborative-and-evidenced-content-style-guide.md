@@ -4,9 +4,10 @@ title: Creating a collaborative and evidenced content style guide by Lizzie Bruc
 date: 2019-08-22 10:00:24
 categories: urls
 tags: [Content Design]
-posse: "@CakeContent announces a very exciting collaborative evidence-based content style guide. Amazing work! 👏️"
 published: true
 author: Lizzie Bruce
-bookmark: https://contentdesign.london/content-process/creating-a-collaborative-and-evidenced-content-style-guide-by-lizzie-bruce/
+bookmarkOf: https://contentdesign.london/content-process/creating-a-collaborative-and-evidenced-content-style-guide-by-lizzie-bruce/
 notes: false
 ---
+
+@CakeContent announces a very exciting collaborative evidence-based content style guide. Amazing work! 👏️

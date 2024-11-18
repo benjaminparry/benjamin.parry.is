@@ -4,12 +4,13 @@ title: "Democratization is our Job"
 date: 2020-07-26
 categories: urls
 tags: [Research, Democratization, Collaboration]
-posse: "@beh_zod describes the importance of democratising research."
 published: true
 author: Behzod Sirjani
-bookmark: https://yetanother.studio/blog/democratization-is-our-job
+bookmarkOf: https://yetanother.studio/blog/democratization-is-our-job
 notes: true
 ---
+
+@beh_zod describes the importance of democratising research.
 
 What is democratization?
 

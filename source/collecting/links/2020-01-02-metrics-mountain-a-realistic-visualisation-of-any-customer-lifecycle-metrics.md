@@ -4,9 +4,10 @@ title: Metrics Mountain - a realistic visualisation of any customer lifecycle me
 date: 2020-01-02 15:34:42
 categories: urls
 tags: [Measurement, Metric, Metaphor]
-posse: "@jboogie makes a suggested replacement for the funnel metaphor. Introducing the Metrics Mountain."
 published: true
 author: Jeff Gothelf
-bookmark: https://jeffgothelf.com/blog/metrics-mountain-a-realistic-visualisation-of-any-customer-lifecycle-metrics/
+bookmarkOf: https://jeffgothelf.com/blog/metrics-mountain-a-realistic-visualisation-of-any-customer-lifecycle-metrics/
 notes: false
 ---
+
+@jboogie makes a suggested replacement for the funnel metaphor. Introducing the Metrics Mountain.

@@ -4,12 +4,13 @@ title: "UX and CX: Same Language; Different Dialects"
 date: 2020-01-09
 categories: urls
 tags: [User Experience, Customer Experience, Qualitative, Quantitative, Mixed Methods]
-posse: "@jmspool’s take on the origin stories of UX and CX, and how shifting from a role to skill mindset alongside a mixed methods approach can offer more impact."
 published: true
 author: Jared M. Spool
-bookmark: https://articles.uie.com/ux-and-cx-same-language-different-dialects/
+bookmarkOf: https://articles.uie.com/ux-and-cx-same-language-different-dialects/
 notes: true
 ---
+
+@jmspool’s take on the origin stories of UX and CX, and how shifting from a role to skill mindset alongside a mixed methods approach can offer more impact.
 
 Mixed methods for the win!
 

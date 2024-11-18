@@ -4,12 +4,13 @@ title: "A Comprehensive Guide to Accessible User Research: Part 1 – Project Pl
 date: 2020-12-26
 categories: urls
 tags: [Accessibility, Research]
-posse: "@BrianGrellmann’s first blog post of a series about taking an inclusive approach to accessibility in design research."
 published: true
 author: Brian Grellmann
-bookmark: https://dscout.com/people-nerds/accessible-user-research-1
+bookmarkOf: https://dscout.com/people-nerds/accessible-user-research-1
 notes: true
 ---
+
+@BrianGrellmann’s first blog post of a series about taking an inclusive approach to accessibility in design research.
 
 Things to consider:
 

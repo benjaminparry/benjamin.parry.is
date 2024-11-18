@@ -2,12 +2,13 @@
 category: urls
 title: 5 Steps to Create Good User Interview Questions By @Metacole — A Comprehensive Guide
 date: 2016-11-10
-bookmark: https://medium.com/interactive-mind/5-steps-to-create-good-user-interview-questions-by-metacole-a-comprehensive-guide-8a591b0e2162#.z4w6v6akt
+bookmarkOf: https://medium.com/interactive-mind/5-steps-to-create-good-user-interview-questions-by-metacole-a-comprehensive-guide-8a591b0e2162#.z4w6v6akt
 author: Teo Yu Sheng
-posse: 5 Steps to Create Good User Interview Questions By @Metacole — A Comprehensive Guide
 tags: [Interview, Research]
 notes: true
 ---
+
+5 Steps to Create Good User Interview Questions By @Metacole — A Comprehensive Guide
 
 * User interviews enable you to:
   * speak directly to your users

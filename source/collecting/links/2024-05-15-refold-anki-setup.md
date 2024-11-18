@@ -5,11 +5,12 @@ tags:
     - 'Japanese'
     - 'Language Learning'
     - 'Tools'
-posse: "Useful settings to make Anki SRS app more forgiving and increase learning efficiency."
 author: 'Refold'
-bookmark: 'https://refold.la/roadmap/stage-1/a/anki-setup'
+bookmarkOf: 'https://refold.la/roadmap/stage-1/a/anki-setup'
 notes: true
 ---
+
+Useful settings to make Anki SRS app more forgiving and increase learning efficiency.
 
 Links to context and related content:
 

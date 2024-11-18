@@ -4,12 +4,13 @@ title: Five dysfunctions of ‘democratised’ research. Part 1 – Speed trumps
 date: 2019-11-12
 categories: urls
 tags: [Research, Agile, Recruitment, Confidence]
-posse: "@leisa’s calls out the tradeoffs of compromising speed with validity, the first of five research dysfunctions."
 published: true
 author: Leisa Reichelt
-bookmark: http://www.disambiguity.com/five-dysfunctions-of-democratised-research-part-1-speed-trumps-validity/
+bookmarkOf: http://www.disambiguity.com/five-dysfunctions-of-democratised-research-part-1-speed-trumps-validity/
 notes: false
 ---
+
+@leisa’s calls out the tradeoffs of compromising speed with validity, the first of five research dysfunctions.
 
 > It’s not a coincidence that people usually start with ‘build’ and rushing to MVP when talking about the ‘learn, build, measure’ cycle.
 

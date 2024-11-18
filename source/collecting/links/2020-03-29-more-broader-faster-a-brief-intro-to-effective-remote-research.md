@@ -4,12 +4,13 @@ title: "More, Broader, Faster: A Brief Intro to Effective Remote Research"
 date: 2020-03-29
 categories: urls
 tags: [Research, Remote]
-posse: "@productherapist’s tips for better remote research."
 published: true
 author: Nikki Anderson
-bookmark: https://dscout.com/people-nerds/more-broader-faster-a-brief-intro-to-effective-remote-research
+bookmarkOf: https://dscout.com/people-nerds/more-broader-faster-a-brief-intro-to-effective-remote-research
 notes: true
 ---
+
+@productherapist’s tips for better remote research.
 
 Advantages of remote Research:
 

@@ -5,8 +5,9 @@ tags:
     - 'Art'
     - 'Research'
     - 'Information Architecture'
-posse: "Capucine Korenberg’s astonishing scientific research study into the chronology and composition of over 100 Hokusai’s ‘The Great Wave’ impressions."
 author: 'Kate Mothes'
-bookmark: 'https://www.thisiscolossal.com/2024/05/the-great-wave-chronology/'
+bookmarkOf: 'https://www.thisiscolossal.com/2024/05/the-great-wave-chronology/'
 notes: false
 ---
+
+Capucine Korenberg’s astonishing scientific research study into the chronology and composition of over 100 Hokusai’s ‘The Great Wave’ impressions.

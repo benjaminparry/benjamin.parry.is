@@ -9,13 +9,19 @@
   <li>
     <article class="h-entry">
       <h1 class="p-description">
-        {% if item.data.bookmark %}
-        <a class="u-url u-syndication" href="{{ item.data.bookmark }}" rel="syndication">{{ item.data.title }}</a>
+        {% if item.data.bookmarkOf %}
+        <a class="u-url u-syndication" href="{{ item.data.bookmarkOf }}" rel="syndication">{{ item.data.title }}</a>
         {% else %}
         <a class="u-url u-syndication" href="{{ item.url }}" rel="syndication">{{ item.data.title }}</a>
         {% endif %}
       </h1>
+
+      {% if item.data.bookmarkOf %}
+      {{ item.data.content | safe }}
+      {% else %}
       <p class="p-name e-content posse">{{ item.data.posse }}</p>
+      {% endif %}
+
       {% if item.data.category == "Thoughts" %}
       {% if item.data.images.length %}
       {% set images = item.data.images %}

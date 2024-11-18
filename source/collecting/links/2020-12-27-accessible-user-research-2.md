@@ -4,12 +4,13 @@ title: "A Comprehensive Guide to Accessible User Research: Part 2 – Recruitmen
 date: 2020-12-27
 categories: urls
 tags: [Accessibility, Recruitment]
-posse: "@BrianGrellmann’s second blog post of a series about taking an inclusive approach to accessibility in design research."
 published: true
 author: Brian Grellmann
-bookmark: https://dscout.com/people-nerds/accessible-user-research-2
+bookmarkOf: https://dscout.com/people-nerds/accessible-user-research-2
 notes: true
 ---
+
+@BrianGrellmann’s second blog post of a series about taking an inclusive approach to accessibility in design research.
 
 Things to consider:
 

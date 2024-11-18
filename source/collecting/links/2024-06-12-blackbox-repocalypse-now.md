@@ -4,8 +4,10 @@ tags:
     - 'GAI'
     - 'LLM'
     - 'Machine Learning'
-posse: "Loneliness, love, lust and LLMs… what could possibly go wrong?"
+    - 'Podcast'
 author: ''
-bookmark: 'https://www.theguardian.com/technology/audio/2024/mar/11/black-box-episode-three-repocalypse-now-podcast'
 notes: false
+bookmarkOf: 'https://www.theguardian.com/technology/audio/2024/mar/11/black-box-episode-three-repocalypse-now-podcast'
 ---
+
+Loneliness, love, lust and LLMs… what could possibly go wrong?

@@ -4,12 +4,13 @@ title: "Updating to the latest Plex build on a Raspberry Pi"
 date: 2020-12-30
 categories: urls
 tags: [Raspberry Pi, Plex]
-posse: "I finally found a way to upgrade to the latest Plex build on a Raspberry Pi."
 published: true
 author: mbourgon
-bookmark: https://pimylifeup.com/raspberry-pi-plex-server/#comment-27573
+bookmarkOf: https://pimylifeup.com/raspberry-pi-plex-server/#comment-27573
 notes: true
 ---
+
+I finally found a way to upgrade to the latest Plex build on a Raspberry Pi.
 
 I run my own media server using Plex on a Raspberry Pi 4. It performs really well and has the added benefit of low energy usage thanks to the Pi.
 

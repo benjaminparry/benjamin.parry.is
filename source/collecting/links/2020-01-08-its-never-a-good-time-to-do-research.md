@@ -4,12 +4,13 @@ title: It’s Never a Good Time to Do Research
 date: 2020-01-08
 categories: urls
 tags: [Research]
-posse: "@mulegirl’s take on the excuses we make not to run a research study and accepting the discomfort of asking questions."
 published: true
 author: Erika Hall
-bookmark: https://medium.com/mule-design/its-never-a-good-time-to-do-research-1ef719158980
+bookmarkOf: https://medium.com/mule-design/its-never-a-good-time-to-do-research-1ef719158980
 notes: false
 ---
+
+@mulegirl’s take on the excuses we make not to run a research study and accepting the discomfort of asking questions.
 
 Why design research is postponed.
 

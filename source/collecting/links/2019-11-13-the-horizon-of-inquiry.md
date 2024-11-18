@@ -4,12 +4,13 @@ title: The Horizon of Inquiry – To find time for research, don’t fight the f
 date: 2019-11-13
 categories: urls
 tags: [Research, Agile]
-posse: "@mulegirl shares a model of fitting research into the flow of continuous work."
 published: true
 author: Erika Hall
-bookmark: https://medium.com/mule-design/the-horizon-of-inquiry-417acdbbda39
+bookmarkOf: https://medium.com/mule-design/the-horizon-of-inquiry-417acdbbda39
 notes: false
 ---
+
+@mulegirl shares a model of fitting research into the flow of continuous work.
 
 > The key is not to optimize for your comfort, but to rethink how research integrates with the rest of your product work or other business decisions.
 
