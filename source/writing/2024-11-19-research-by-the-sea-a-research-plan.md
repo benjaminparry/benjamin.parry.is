@@ -1,6 +1,6 @@
 ---
-title: "Research by the Sea: A research plan"
-posse: "I’ve approached the conference as I would a research project, with a research plan. Read more about what you’ll expect to learn at the two days in Feb 2025 at Research by the Sea."
+title: "Research by the Sea: A Research Plan"
+posse: "I’ve approached curating the Research by the Sea conference as I would a research project, with a research plan. Read more about what you’ll expect to learn during the two days in Feb 2025 at Research by the Sea."
 tags:
     - 'Research by the Sea'
     - 'Clearleft'
@@ -30,7 +30,7 @@ Now breathe.
 
 ## Learning objectives 
 
-The goal of Research by the Sea is to explore some of the most pressing challenges and opportunities in our careers as researchers and broader societal, and global contexts.
+Research by the Sea aims to explore some of the most pressing challenges and opportunities in our careers as researchers and broader societal, and global contexts.
 
 ### What is the future of research?
 
@@ -56,8 +56,8 @@ As [Judd Antin](https://medium.com/onebigthought/the-ux-research-reckoning-is-he
 
 #### Culture
 
-- How might we make more impact by better understanding our organisations culture?
-- How might we new use methods to identify future insight and opportunities?
+- How might we make more impact by better understanding our organisation’s culture?
+- How might we use new methods to identify future insights and opportunities?
 - How might we confidently navigate ethical design decisions?
 - How might we responsibly use the currency of data to solve user needs?
 
