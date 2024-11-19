@@ -95,6 +95,12 @@ config.addCollection('cycles', collection => {
 return [...collection.getFilteredByGlob('./source/collecting/cycles/*.md')].reverse();
 });
 
+// Returns a collection of attending in order of event start date item.data.start
+// https://github.com/11ty/eleventy/issues/898#issuecomment-581738415
+config.addCollection('attending', collection => {
+return [...collection.getFilteredByGlob('./source/attending/*.md')].sort((a, b) => b.data.start - a.data.start);
+});
+
 // Returns a collection of speaking in reverse date order
 config.addCollection('speaking', collection => {
 return [...collection.getFilteredByGlob('./source/speaking/*.md')].reverse();
