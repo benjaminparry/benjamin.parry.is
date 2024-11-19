@@ -28,3 +28,36 @@
 </li>
 {% endfor %}
 </ul>
+
+<p>Events I’ve attended.</p>
+
+<ul class="reset-list list list--divided">
+{% for item in collections.attended %}
+<li id="{{ event.title | slug }}-{{ event.start }}" class="h-entry list-group-item">
+<h2>{{ item.data.title }}</h2>
+
+<div class="p-summary">
+    <!-- <p>
+        <data class="p-rsvp" value="{{ event.rsvp }}">
+        {% if event.rsvp == "yes" -%}
+        🎉 I’ll be attending
+        {% elseif event.rsvp == "interested" -%}
+        🤔 I’m interested in attending
+        {% elseif event.rsvp == "maybe" -%}
+        🤷 I might attend
+        {% elseif event.rsvp == "no" -%}
+        😩 I really want to but unfortunately can’t attend
+        {% endif -%}
+        </data> {{ event.organiser }}’s <a href="{{ event.url }}" class="u-in-reply-to">{{ event.name }}</a>.
+    </p> -->
+    <p>{{ item.content | safe }}</p>
+    <ul style="margin-bottom: 1rem;margin-top: 1rem;">
+        <li>Location: {{ item.data.location.name }}</li>
+        <li>Address: {{ item.data.location.streetAddress }}, {{ item.data.location.locality }}, {{ item.data.location.countryName }}, {{ item.data.location.postalCode }}</li>
+        <li>Date: <time datetime="{{ item.data.start}}">{{ item.data.start | dateFilter }}</time></li><!-- add end date + logic -->
+        <a class="u-author off-screen" href="/"></a>
+    </ul>
+</div>
+</li>
+{% endfor %}
+</ul>

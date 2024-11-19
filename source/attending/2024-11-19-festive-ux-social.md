@@ -1,8 +1,8 @@
 ---
 date: 2024-11-19T17:40:49.642Z
 title: Festive UX Social
-start: 2024-12-05T18:30
-end: 2024-12-05T23:00
+start: 2024-12-05
+end: 2024-12-05
 location:
   type: card
   name: Mrs Fitzherbert's

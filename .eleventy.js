@@ -20,7 +20,6 @@ module.exports = config => {
   const toISOString = (dateString) => new Date(dateString).toISOString();
   config.addFilter('toISOString', toISOString);
 
-
   // Add filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
@@ -95,10 +94,38 @@ config.addCollection('cycles', collection => {
 return [...collection.getFilteredByGlob('./source/collecting/cycles/*.md')].reverse();
 });
 
-// Returns a collection of attending in order of event start date item.data.start
-// https://github.com/11ty/eleventy/issues/898#issuecomment-581738415
+// Returns a collection of attending
 config.addCollection('attending', collection => {
-return [...collection.getFilteredByGlob('./source/attending/*.md')].sort((a, b) => b.data.start - a.data.start);
+    return [...collection.getFilteredByGlob('./source/attending/*.md')]
+    // https://samimaatta.fi/en/a-custom-collection-to-sort-events-with-eleventy/
+    // Filters only upcoming dates
+      .filter(function (item) {
+            var dateToday = new Date();
+            if (item.data.start > dateToday) {
+                  return item;
+                }
+              })
+  // TODO order events by start date item.data.start
+  // Kind of working below but breaks with time included in date
+  .sort((a, b) => {
+    return a.data.start - b.data.start;
+  }).reverse();
+});
+config.addCollection('attended', collection => {
+    return [...collection.getFilteredByGlob('./source/attending/*.md')]
+    // https://samimaatta.fi/en/a-custom-collection-to-sort-events-with-eleventy/
+    // Filters only upcoming dates
+      .filter(function (item) {
+            var dateToday = new Date();
+            if (item.data.start < dateToday) {
+                  return item;
+                }
+              })
+  // TODO order events by start date item.data.start
+  // Kind of working below but breaks with time included in date
+  .sort((a, b) => {
+    return a.data.start - b.data.start;
+  }).reverse();
 });
 
 // Returns a collection of speaking in reverse date order

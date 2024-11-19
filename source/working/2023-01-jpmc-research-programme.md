@@ -1,5 +1,5 @@
 ---
-title: 'Delivering a programme of reseach'
+title: 'Delivering a programme of research'
 client: 'JP Morgan'
 sector:
   - 'Finance'
