@@ -10,7 +10,7 @@ tags:
 
 ## Background and context
 
-Hold your breath.
+*Hold your breath.*
 
 The last few years have been traumatic. As individuals and researchers, we’ve weathered a perfect storm of wicked problems that have left us exhausted with the status quo and pessimistic about what is to come.
 
@@ -22,11 +22,12 @@ The last few years have been traumatic. As individuals and researchers, we’ve 
 
 Faced with so much uncertainty,
 
-- who can be our beacons for change?
+- where might we find sources of hope?
+- Who can be our beacons for change?
 - What new mindsets and methods should we adopt?
 - How might we begin to imagine positive futures for **people**, our **cultures** and our **planet**?
 
-Now breathe.
+*Now breathe.*
 
 ## Learning objectives 
 
