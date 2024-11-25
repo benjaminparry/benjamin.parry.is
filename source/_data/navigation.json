@@ -114,14 +114,22 @@
     "quinary": [
     ],
 	"elsewhere": [
-		{
-			"text": "Mastodon",
+        {
+            "text": "Mastodon",
 			"url": "https://mastodon.social/@benjaminparry"
 		},
 		{
-			"text": "LinkedIn",
+            "text": "LinkedIn",
 			"url": "https://www.linkedin.com/in/benjaminparry-/"
 		},
+        {
+            "text": "Medium",
+            "url": "https://medium.com/@benjaminparry"
+        },
+        {
+            "text": "Bluesky",
+            "url": "https://bsky.app/profile/benjaminparry.bsky.social"
+        },
 		{
 			"text": "IndieWeb",
 			"url": "https://indieweb.org/User:Benjamin.parry.is"
@@ -137,10 +145,6 @@
 		{
 			"text": "Duolingo",
 			"url": "https://www.duolingo.com/profile/benjaminparry"
-		},
-		{
-			"text": "Medium",
-			"url": "https://medium.com/@benjaminparry"
 		},
 		{
 			"text": "Strava",
