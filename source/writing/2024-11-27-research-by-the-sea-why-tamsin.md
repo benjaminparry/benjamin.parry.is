@@ -32,12 +32,10 @@ I’m delighted that Tamsin is joining us at [Research by the Sea](https://resea
 
 ## Next steps
 
-- [Grab your ticket](https://ti.to/clearleft/researchbythesea2025) for Tamsin’s talk and the other 6 speakers.
-- [Read more about her talk](https://researchbythesea.com/tamsin-bishton) on the Research by the Sea website
-- [Connect with her](https://www.linkedin.com/in/tamsinbishton/) on LinkedIn
-- Check out her own conference [Content Rising](https://contentrising.co.uk/) happening in June 2025
-
-*Tickets currently Early-bird discounted, prices change on 30th Nov.*
+- [Grab your ticket](https://ti.to/clearleft/researchbythesea2025) for Tamsin’s talk and the other 6 speakers. *Tickets currently Early-bird discounted, prices change on 30th Nov.*
+- [Read more about her talk](https://researchbythesea.com/tamsin-bishton) on the Research by the Sea website.
+- [Connect with her](https://www.linkedin.com/in/tamsinbishton/) on LinkedIn.
+- Check out her own conference [Content Rising](https://contentrising.co.uk/) happening in June 2025.
 
 ![](/assets/images/writing/2024/11/research-by-the-sea-tamsin-bishton.jpg)
 
