@@ -50,6 +50,10 @@
       </li>
       {% endif %}
 
+      {% if syndication %}
+      <li>Syndicated to: <a href="{{ syndication }}">Mastodon</a></li>
+      {% endif %}
+
       <li>
         {{ verb }}: <a class="u-url" href="{{ page.url }}"><time class="dt-published" datetime="{{ page.date | toISOString }}">{{ page.date | dateFilter }}</time></a>
       </li>
