@@ -26,9 +26,9 @@ During a session, we do our best to put our participants at ease, build rapport 
 
 What if there was another way? What if we turned this largely static, unnatural and unfamiliar process on its head? What kind of stories would be shared with us? How might these stories help us shape the future?
 
-I’m delighted that Tamsin is joining us at [Research by the Sea](https://researchbythesea.com/) to explore some of these themes and questions. She’ll outline a research method that will help us push back against destructive norms and help us on our first steps toward an inclusive and restorative future practice.
+I’m delighted that Tamsin is joining us at [Research by the Sea](https://researchbythesea.com/tamsin-bishton) to explore some of these themes and questions. She’ll outline a research method that will help us push back against destructive norms and help us on our first steps toward an inclusive and restorative future practice.
 
-[Grab your ticket](https://ti.to/clearleft/researchbythesea2025) for Tamsin’s talk and the other 6 speakers.
+- [Grab your ticket](https://ti.to/clearleft/researchbythesea2025) for Tamsin’s talk and the other 6 speakers.
 
 *Tickets currently Early-bird discounted, prices change on 30th Nov.*
 
