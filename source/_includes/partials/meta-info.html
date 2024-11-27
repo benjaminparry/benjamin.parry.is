@@ -20,11 +20,11 @@ them into the mix. #}
 
 {% if images %}
 {% set hasImage = images[0] %}
-{% elseif topic === 'environment' %}
+{% elseif category === 'Environment' %}
 {% set hasImage = site.socialImageEnvironment %}
-{% elseif topic === 'people' %}
+{% elseif category === 'People' %}
 {% set hasImage = site.socialImagePeople %}
-{% elseif topic === 'technology' %}
+{% elseif category === 'Technology' %}
 {% set hasImage = site.socialImageTechnology %}
 {% else %}
 {% set hasImage = site.socialImageDefault %}

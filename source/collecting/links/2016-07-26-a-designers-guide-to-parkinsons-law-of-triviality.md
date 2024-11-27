@@ -1,5 +1,4 @@
 ---
-category: urls
 title: A designer’s guide to Parkinson’s Law of Triviality
 date: 2016-07-26
 bookmarkOf: https://library.gv.com/a-designers-guide-to-parkinson-s-law-of-triviality-86484cb79526

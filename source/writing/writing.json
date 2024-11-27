@@ -1,7 +1,7 @@
 {
   "layout": "layouts/post.html",
   "permalink": "/writing/{{ page | post_permalink }}/index.html",
-  "category": "Writing",
-  "categoryURL": "/writing/",
+  "section": "Writing",
+  "sectionURL": "/writing/",
   "verb": "Written"
 }

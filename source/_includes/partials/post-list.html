@@ -22,7 +22,7 @@
       <p class="p-name e-content posse">{{ item.data.posse }}</p>
       {% endif %}
 
-      {% if item.data.category == "Thoughts" %}
+      {% if item.data.section == "Thoughts" %}
       {% if item.data.images.length %}
       {% set images = item.data.images %}
       {% include "partials/thought.html" %} <!-- I need to abstract this as partials/images -->
@@ -31,7 +31,7 @@
       <footer class="utility-font-size-80">
         <ul class="meta">
           <li>
-            Filed under: <a href="{{ item.data.categoryURL }}">{{ item.data.category }}</a>
+            Filed under: <a href="{{ item.data.sectionURL }}">{{ item.data.section }}</a>
           </li>
           {% if item.data.tags.length %}
           <li>Tagged with:

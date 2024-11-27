@@ -1,7 +1,7 @@
 ---
 title: "I deleted my Twitter account"
 date: '2024-11-11'
-topic: 'technology'
+category: Technology
 eleventyComputed:
   posse: |
     Continuing the slow process of Big Tech Exorcism™. 30 days and it’s all gone.

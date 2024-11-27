@@ -1,5 +1,4 @@
 ---
-category: urls
 title: Running in Circles
 date: 2017-12-06 17:36:49
 bookmarkOf: https://m.signalvnoise.com/running-in-circles-aae73d79ce19

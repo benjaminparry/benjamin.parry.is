@@ -1,5 +1,4 @@
 ---
-category: urls
 title: How to Stop UX Research being a Blocker
 date: 2017-12-05 14:28:20
 bookmarkOf: https://medium.muz.li/how-to-stop-ux-research-being-a-blocker-225d91105de8

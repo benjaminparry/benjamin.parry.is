@@ -1,5 +1,4 @@
 ---
-category: urls
 title: Interviewing Users
 date: 2016-11-08
 bookmarkOf: https://www.nngroup.com/articles/interviewing-users/

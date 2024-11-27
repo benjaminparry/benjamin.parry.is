@@ -1,5 +1,4 @@
 ---
-category: urls
 title: Empathy in Design
 date: 2017-11-28 12:14:30
 bookmarkOf: http://specialprojects.studio/article/empathy-in-design/

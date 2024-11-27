@@ -1,5 +1,4 @@
 ---
-category: urls
 title: User personas - don’t let them die…
 date: 2016-07-27
 bookmarkOf: http://www.mindtheproduct.com/2016/07/user-personas-dont-let-them-die/

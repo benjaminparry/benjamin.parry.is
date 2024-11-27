@@ -1,5 +1,4 @@
 ---
-category: urls
 title: Usability Heuristics for Bots
 date: 2017-12-01 12:34:31
 bookmarkOf: https://chatbotsmagazine.com/usability-heuristics-for-bots-7075132d2c92

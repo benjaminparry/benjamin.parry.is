@@ -1,5 +1,4 @@
 ---
-category: urls
 title: Designing features using Job Stories
 date: 2017-11-25 23:05:18
 bookmarkOf: https://www.pebbleroad.com/articles/the-job-to-be-done-theory-for-designers

@@ -1,7 +1,7 @@
 {
   "layout": "layouts/post.html",
   "permalink": "/speaking/{{ title | slug }}/index.html",
-  "category": "Speaking",
-  "categoryURL": "/speaking/",
+  "section": "Speaking",
+  "sectionURL": "/speaking/",
   "verb": "Spoke"
 }

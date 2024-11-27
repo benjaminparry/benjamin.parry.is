@@ -1,7 +1,7 @@
 ---
 title: "I deleted my Instagram account"
 date: '2024-06-10'
-topic: 'technology'
+category: Technology
 eleventyComputed:
   posse: |
     Starting the slow process of removing myself and my data from these giant tech platforms.

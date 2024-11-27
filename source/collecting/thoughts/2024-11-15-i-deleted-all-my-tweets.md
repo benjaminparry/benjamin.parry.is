@@ -1,7 +1,7 @@
 ---
 title: "I deleted all my Tweets"
 date: '2024-11-15'
-topic: 'technology'
+category: Technology
 eleventyComputed:
   posse: |
     I temporarily reinstated my Xitter account and used this script to delete all my Tweets https://github.com/lucahammer/tweetXer. This house is clean!

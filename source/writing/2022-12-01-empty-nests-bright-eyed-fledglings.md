@@ -3,7 +3,7 @@ title: "Empty nests and bright eyed fledglings"
 posse: "Empty nests and bright eyed fledglings – My obligatory moving from Twitter to Mastodon post."
 tags: []
 published: true
-topic: 'technology'
+category: Technology
 ---
 
 Reading what has been happening at Twitter HQ over the past few weeks is astonishing. Musk’s parasitic behaviour to his new employees and users reminds me of a bloated cuckoo crushing it’s newly occupied nest. His public arrogance makes it all the more sickening.

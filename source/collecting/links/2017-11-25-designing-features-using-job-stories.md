@@ -1,5 +1,4 @@
 ---
-category: urls
 title: Designing features using Job Stories
 date: 2017-11-25 22:11:15
 bookmarkOf: https://blog.intercom.com/using-job-stories-design-features-ui-ux/

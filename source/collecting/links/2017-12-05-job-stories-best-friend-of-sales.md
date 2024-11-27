@@ -1,5 +1,4 @@
 ---
-category: urls
 title: Job Stories — Best Friend of Sales
 date: 2017-12-05 17:33:45
 bookmarkOf: https://jtbd.info/job-stories-best-friend-of-sales-21a7af2d7bc2
