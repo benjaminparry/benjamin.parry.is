@@ -16,8 +16,8 @@
   <p><a href="#webmentions">Webmentions</a>: {{ webmentions.length }}</p>
   {% endif %}
 
-  {% if bookmark %}
-  <a href="{{ bookmark }}" class="u-bookmark-of  h-cite">{{ title }}</a>
+  {% if bookmarkOf %}
+  <a href="{{ bookmarkOf }}" class="u-bookmark-of  h-cite">{{ bookmarkOf }}</a>
   {% endif %}
 
   {% if posse %}
