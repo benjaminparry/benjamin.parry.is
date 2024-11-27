@@ -5,6 +5,6 @@ pagination:
   data: collections
   size: 1
   alias: tag
-  filter: ['all', 'nav', 'writing', 'work', 'featuredWork', 'rss']
+  filter: ['attending', 'attended', 'working', 'writing', 'featuredWork', 'rss', 'tagsList', 'speaking', 'thoughts', 'making', 'cycles', 'lists', 'collecting', 'all', 'links']
 permalink: '/tagging/{{ tag | slug }}/'
 ---
