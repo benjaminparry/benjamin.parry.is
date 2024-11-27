@@ -1,6 +1,9 @@
 ---
 date: 2024-11-27T17:53:18.947Z
 title: "Research by the Sea: Why Tamsin?"
+syndication:
+  - https://mastodon.social/@benjaminparry/113556196273558610
+updated: 2024-11-27T17:54:06.270Z
 ---
 
 There’s a moment during the design of a research study that always gives me pause for thought. The tension between three variables: the research goals, the duration of the session and the experience of the participant.
