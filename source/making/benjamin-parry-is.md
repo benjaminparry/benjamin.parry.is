@@ -1,6 +1,4 @@
 ---
-permalink: false
-eleventyExcludeFromCollections: true
 title: 'benjamin.parry.is – Colophon'
 tags:
   - 'Indieweb'
@@ -17,13 +15,24 @@ link2:
     - 'heading'
 ---
 
-This website is built using [Eleventy](https://www.11ty.dev/), hosted on [Github](https://github.com/) and deployed by [Netlify](https://www.netlify.com/).
+## What I use
 
-I used [Andy Bell](https://andy-bell.co.uk/)’s excellent resource [Learn Eleventy From Scratch](https://learneleventyfromscratch.com/) to help me learn.
+- Generating with [Eleventy](https://www.11ty.dev/)
+- Controlling versions with [Github](https://github.com/)
+- Publishing and syndicating with:
+    - [Indiekit](https://getindiekit.com/)
+    - [Railway.app](https://railway.app/)
+- Webmentioning with:
+    - [Bridgy](https://brid.gy/)
+    - [Webmention.app](https://webmention.app/)
+    - [Webmention.io](https://webmention.io/)
+- Deploying with [Netlify](https://www.netlify.com/)
+- Setting type with [Utopia](https://utopia.fyi/)
+- Designing in the browser with [Firefox](https://www.mozilla.org/en-GB/firefox/)
 
-I designed in the browser.
+## Credit where credit is due
 
-Below is my styleguide reference.
+I used [Andy Bell](https://andy-bell.co.uk/)’s excellent resource [Learn Eleventy From Scratch](https://learneleventyfromscratch.com/) to help me get started.
 
 ---
 
@@ -71,8 +80,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scripta sane et multa e
 
 ### Emphasis
 
-- Not important
-- *Important*
+- Not important, but still important
+- *Actually important*
 - **Really important**
 - ***Really, really important***
 

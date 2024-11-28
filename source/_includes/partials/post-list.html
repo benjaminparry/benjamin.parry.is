@@ -7,7 +7,7 @@
 <ol class="reset-list list--divided">
   {% for item in postListItems %}
   <li>
-    <article class="h-entry">
+    <article class="h-entry card">
       <h1 class="p-description">
         {% if item.data.bookmarkOf %}
         <a class="u-url u-syndication" href="{{ item.data.bookmarkOf }}" rel="syndication">{{ item.data.title }}</a>
