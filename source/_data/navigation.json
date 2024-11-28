@@ -95,7 +95,7 @@
 		{
 			"text": "Tagging",
             "emoji": "🏷️",
-			"url": "/tagging",
+			"url": "/tagging/",
 			"divider": false
 		},
         {
