@@ -141,6 +141,7 @@ return [...collection.getFilteredByGlob('./source/speaking/*.md')].reverse();
   });
 
   config.addPassthroughCopy('./source/assets/');
+  config.addPassthroughCopy("./source/serviceworker.js");
 
   return {
     markdownTemplateEngine: 'njk',
