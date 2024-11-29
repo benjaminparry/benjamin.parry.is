@@ -44,7 +44,7 @@ Problem: **We didn’t have the right people in the room**
 * understanding organisations
 * different value places into the involvement in the process
 * involve the right people - the product team;  developers, designers etc
-* [planning poker exercise](https://www.crisp.se/bocker-och-produkter/planning-poker){:target="_blank"} for user stories
+* [planning poker exercise](https://www.crisp.se/bocker-och-produkter/planning-poker) for user stories
 * timing is key
 
 Solution: **A good scoping phase**
@@ -98,7 +98,7 @@ Solution: **Try being agile (lowercase a)**
 * start slow and small
 * develop stakeholder understanding
 * building culture
-* refer to the [agile manifesto](http://agilemanifesto.org/){:target="_blank"}
+* refer to the [agile manifesto](http://agilemanifesto.org/)
 
 ---
 
@@ -182,4 +182,4 @@ Solution: **Try working with them first**
 * **hard for one person to change the whole culture**
 * **find allies**
 
-Thanks for a very insightful talk [Andy](https://twitter.com/andybudd){:target="_blank"}. Thanks to [UserTesting](https://www.usertesting.com/){:target="_blank"} for hosting the free webinar.
+Thanks for a very insightful talk [Andy](https://twitter.com/andybudd). Thanks to [UserTesting](https://www.usertesting.com/) for hosting the free webinar.

@@ -10,7 +10,7 @@ published: true
 
 <h2><a href="#the-first-30-seconds-user-onboarding" class="heading__anchor" id="the-first-30-seconds-user-onboarding">The First 30 Seconds: Let’s Talk User Onboarding</a></h2>
 
-By **Andrea Saez** [@dreasaez](https://twitter.com/dreasaez){:target="_blank"}
+By **Andrea Saez** [@dreasaez](https://twitter.com/dreasaez)
 
 ### Onboarding
 
@@ -25,8 +25,8 @@ By **Andrea Saez** [@dreasaez](https://twitter.com/dreasaez){:target="_blank"}
 
 ### Give them something to focus on
 
-* [Shopify](https://www.shopify.co.uk/){:target="_blank"} e.g. - numbered steps to engage the user
-* [Prodpad](https://www.prodpad.com/){:target="_blank"} case study
+* [Shopify](https://www.shopify.co.uk/) e.g. - numbered steps to engage the user
+* [Prodpad](https://www.prodpad.com/) case study
   * cohort analysis (time form trial to conversion)
   * conversion times 6-10 weeks » 4-6 weeks with onboarding changes
   * drip flow emails to increase product engagement
@@ -38,9 +38,9 @@ By **Andrea Saez** [@dreasaez](https://twitter.com/dreasaez){:target="_blank"}
 
 * Anchor.fm - short audio messaging
 * Users are impatient
-* [Tictail](https://tictail.com/){:target="_blank"} onboarding: tasks - suggested text + t+c to move the user through the onboarding process quicker
+* [Tictail](https://tictail.com/) onboarding: tasks - suggested text + t+c to move the user through the onboarding process quicker
 * Adding friction: increase commitment and value by adding friction where it makes sense
-* Feature bloat: [Appcues](http://www.appcues.com/){:target="_blank"} case study.
+* Feature bloat: [Appcues](http://www.appcues.com/) case study.
   * aggressive onboarding
   * understanding tasks
   * through this you gain a better understanding what features your users actually need
@@ -55,13 +55,13 @@ By **Andrea Saez** [@dreasaez](https://twitter.com/dreasaez){:target="_blank"}
   * users don’t read
 * Pace of onboarding: it depends on the user e.g. service provider/consumer contexts might require slower/quicker more/less speed or friction
 
-[View Andrea’s slides](http://www.slideshare.net/AndreaSaez4/the-first-30-seconds-lets-talk-user-onboarding){:target="_blank"}
+[View Andrea’s slides](http://www.slideshare.net/AndreaSaez4/the-first-30-seconds-lets-talk-user-onboarding)
 
 
 
 <h2><a href="#initiating-ux-through-resistance" class="heading__anchor" id="initiating-ux-through-resistance">Initiating UX Through Resistance</a></h2>
 
-By **Gultekin Irengun** [@mgirengun](https://twitter.com/mgirengun){:target="_blank"}
+By **Gultekin Irengun** [@mgirengun](https://twitter.com/mgirengun)
 
 ### How to integrate UX into an established product?
 
@@ -106,7 +106,7 @@ By **Gultekin Irengun** [@mgirengun](https://twitter.com/mgirengun){:target="_bl
 
 <h2><a href="#flowcharts-personas-and-a-love-story" class="heading__anchor" id="flowcharts-personas-and-a-love-story">Flowcharts, Personas and a Love Story</a></h2>
 
-By **Natalia Rey** [@mikitcha](https://twitter.com/mikitcha){:target="_blank"}
+By **Natalia Rey** [@mikitcha](https://twitter.com/mikitcha)
 
 * Use consistent patterns
 * Reviewing the overall interaction design: highlights user goals - justify the changes
@@ -125,13 +125,13 @@ By **Natalia Rey** [@mikitcha](https://twitter.com/mikitcha){:target="_blank"}
 * *Appropriate user persona e.g. motivations etc?*  Aligned with the business and collaborative process
 * *Testing the motivation?* Done during the user research stage
 
-[View Natalia’s slides](http://www.slideshare.net/mikitcha/flocharts-personas-pdf){:target="_blank"}
+[View Natalia’s slides](http://www.slideshare.net/mikitcha/flocharts-personas-pdf)
 
 
 
 <h2><a href="#iterative-personas" class="heading__anchor" id="iterative-personas">Iterative Personas</a></h2>
 
-By **Adrian Howard** [@adrianh](https://twitter.com/adrianh){:target="_blank"}
+By **Adrian Howard** [@adrianh](https://twitter.com/adrianh)
 
 ### How do we understand out customers?
 
@@ -174,19 +174,19 @@ By **Adrian Howard** [@adrianh](https://twitter.com/adrianh){:target="_blank"}
 * Hypothisis about users, customere and product features
 * Go for the truth straight away
 
-[View Adrian’s slides](http://www.slideshare.net/adrianh/lean-persona){:target="_blank"}
+[View Adrian’s slides](http://www.slideshare.net/adrianh/lean-persona)
 
 
 
 <h2><a href="#practical-analytics-tips" class="heading__anchor" id="practical-analytics-tips">Practical Analytics Tips</a></h2>
 
-By **Luke Hay** [@hayluke](https://twitter.com/hayluke){:target="_blank"}
+By **Luke Hay** [@hayluke](https://twitter.com/hayluke)
 
 0. Reasons to use google Analytics
   *  easy to setup
   *  documented
   *  free
-0. [gachecker.com](http://www.gachecker.com/){:target="_blank"} - checks whole website for tracking
+0. [gachecker.com](http://www.gachecker.com/) - checks whole website for tracking
 0. Filter out spam/bots traffic
   * google doing well to filter this out
   * filter out unwanted spam
@@ -224,7 +224,7 @@ By **Luke Hay** [@hayluke](https://twitter.com/hayluke){:target="_blank"}
 0. Customise your reports - easy access
 0. Use it often - better insight
 
-[View Luke’s slides](http://www.slideshare.net/LukeHay/analytics-for-ux-public){:target="_blank"}
+[View Luke’s slides](http://www.slideshare.net/LukeHay/analytics-for-ux-public)
 
 
 
@@ -255,7 +255,7 @@ By **Luke Hay** [@hayluke](https://twitter.com/hayluke){:target="_blank"}
 
 <h2><a href="#the-project-pre-mortem" class="heading__anchor" id="the-project-pre-mortem">The Project Pre-Mortem</a></h2>
 
-By **Tom Prior** [@tomprior](https://twitter.com/tomprior){:target="_blank"}
+By **Tom Prior** [@tomprior](https://twitter.com/tomprior)
 
 * Hindsight is a great things
 * How to avoid making the same mistakes?
@@ -299,13 +299,13 @@ Making course corrections - use retrospectives to route check and change tack
 
 * *Client billing?* Yes. More to maintain afterward.
 
-[View Tom’s slides](https://speakerdeck.com/tomprior/the-project-pre-mortem-harnessing-prospective-hindsight-for-healthier-projects){:target="_blank"}
+[View Tom’s slides](https://speakerdeck.com/tomprior/the-project-pre-mortem-harnessing-prospective-hindsight-for-healthier-projects)
 
 
 
 <h2><a href="#how-to-ask-better-questions-from-asking-better-questions" class="heading__anchor" id="how-to-ask-better-questions-from-asking-better-questions">How To Ask Better Questions From Asking Better Questions</a></h2>
 
-By **Chris How** [@chrishow](https://twitter.com/chrishow){:target="_blank"}
+By **Chris How** [@chrishow](https://twitter.com/chrishow)
 
 ### What makes a good question?
 
@@ -336,11 +336,11 @@ Questions are scary - senior
 0. **Can be answered**
   * “*what do* you do…” rather than “*what would* you do…”
 
-[View Chris’ slides](http://www.slideshare.net/ChrisHow/how-to-get-better-answers-from-asking-better-questions-59633964){:target="_blank"}
+[View Chris’ slides](http://www.slideshare.net/ChrisHow/how-to-get-better-answers-from-asking-better-questions-59633964)
 
 
 
-[View all the UX Camp Brighton 2016 sessions](http://www.uxcampbrighton.org/sessions/){:target="_blank"}
+[View all the UX Camp Brighton 2016 sessions](http://www.uxcampbrighton.org/sessions/)
 
 <!-- Todo
 

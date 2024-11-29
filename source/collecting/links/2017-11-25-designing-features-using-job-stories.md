@@ -12,6 +12,6 @@ Alan Klement explaining how JTBD job stories can help during the feature design 
 
 Bonus urls to comments highlights:
 
-* [Problem space vs solution space](https://blog.intercom.com/using-job-stories-design-features-ui-ux/#comment-2032438850){:target="_blank"}
-* [Cognative bias and personas](https://blog.intercom.com/using-job-stories-design-features-ui-ux/#comment-2022626819){:target="_blank"}
-* [Original intended design of user stories](https://blog.intercom.com/using-job-stories-design-features-ui-ux/#comment-1736634294){:target="_blank"}
+* [Problem space vs solution space](https://blog.intercom.com/using-job-stories-design-features-ui-ux/#comment-2032438850)
+* [Cognative bias and personas](https://blog.intercom.com/using-job-stories-design-features-ui-ux/#comment-2022626819)
+* [Original intended design of user stories](https://blog.intercom.com/using-job-stories-design-features-ui-ux/#comment-1736634294)

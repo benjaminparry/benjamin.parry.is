@@ -11,9 +11,9 @@ published: true
 
 I started volunteering in the summer of 2013 while in-between jobs and waiting to hear the outcomes of two second-round interviews. I had time on my hands and wanted to find a way to fill it constructively.
 
-I stumbled upon a tweet in my timeline asking for volunteers for an upcoming conference called UX London. The company running the conference was Brighton-based UX design agency [Clearleft](http://clearleft.com/){:target="_blank"}. Being based in Brighton at the time, well Hove actually, it was a rather serendipitous moment I couldn’t afford to miss.
+I stumbled upon a tweet in my timeline asking for volunteers for an upcoming conference called UX London. The company running the conference was Brighton-based UX design agency [Clearleft](http://clearleft.com/). Being based in Brighton at the time, well Hove actually, it was a rather serendipitous moment I couldn’t afford to miss.
 
-Since then, I’ve volunteered for the majority of Clearleft’s conferences, [UX Brighton](http://uxbrighton.org.uk/){:target="_blank"}’s annual conference and helped out where I can for smaller meetups and BarCamps. Looking back, it’s been one of the most beneficial things I’ve done and could be for you too.
+Since then, I’ve volunteered for the majority of Clearleft’s conferences, [UX Brighton](http://uxbrighton.org.uk/)’s annual conference and helped out where I can for smaller meetups and BarCamps. Looking back, it’s been one of the most beneficial things I’ve done and could be for you too.
 
 ## Why volunteer?
 

@@ -13,7 +13,7 @@ Since then I have grown curious about the benefits of mixed methods and broader 
 
 But in an agency environment, budget and time constraints can sometimes limit the reach of our research. Traditional lab-based usability studies and street-level intercepted guerrilla tests have been our UX research bread and butter for quite some time. Although remote interviews and contextual inquiries might enable us to speak to people in the comfort of their home or work spaces, we seldom get the opportunity to go deep and gain first-hand experience in true ethnographic detail.
 
-To satisfy this hunger for a richer world view of ethnographic research, I attended Jan Chipchase’s Field Research Masterclass, a single day workshop that forms part of the [Clearleft Presents](https://clearleft.com/presents/design-sprint-workshop){:target="_blank"} series. Here are some of my key takeaways.
+To satisfy this hunger for a richer world view of ethnographic research, I attended Jan Chipchase’s Field Research Masterclass, a single day workshop that forms part of the [Clearleft Presents](https://clearleft.com/presents/design-sprint-workshop) series. Here are some of my key takeaways.
 
 ## Workshop takeaways as a design researcher
 
@@ -39,8 +39,8 @@ Toward the end of the workshop, three brave volunteers partook in an exercise in
 
 While the workshop was aimed at international ethnographic researchers, I left with a deeper appreciation of team leadership, a fresh outlook on process, and a great responsibility of the evidence I collect.
 
-For more info on Jan’s work, side projects, and The Field Study Handbook [check out his website](http://janchipchase.com/){:target="_blank"}.
+For more info on Jan’s work, side projects, and The Field Study Handbook [check out his website](http://janchipchase.com/).
 
 <!-- ---
 
-Clearleft Presents is a programme of workshops, led by some of the biggest names in the tech industry. It’s a hand selected combination of designers, speakers, authors and evangelists, from across the sector; inspired by the most popular and impactful sessions at UX London, Leading Design and working with people we admire. Jake Knapp is up next in our series and he’ll be guiding folk in how to nail Design Sprints. He’s a New York Times bestselling author on the subject, so you’ll be in safe hands! [Take a look](https://clearleft.com/presents/design-sprint-workshop){:target="_blank"} to book your tickets. -->
+Clearleft Presents is a programme of workshops, led by some of the biggest names in the tech industry. It’s a hand selected combination of designers, speakers, authors and evangelists, from across the sector; inspired by the most popular and impactful sessions at UX London, Leading Design and working with people we admire. Jake Knapp is up next in our series and he’ll be guiding folk in how to nail Design Sprints. He’s a New York Times bestselling author on the subject, so you’ll be in safe hands! [Take a look](https://clearleft.com/presents/design-sprint-workshop) to book your tickets. -->

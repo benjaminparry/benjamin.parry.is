@@ -47,10 +47,10 @@ notes: true
 * Ask multiple questions to inquire about one thing
   * offers an opportunity to verify that you’ve understood the interviewee and check for contradictions
   * avoid asking these questions concurrently, instead pick a the next natural moment in the flow of conversation
-  * [data triangulation](http://www.write.com/writing-guides/research-writing/research-process/data-triangulation-how-the-triangulation-of-data-strengthens-your-research/){:target="_blank"} can also help
+  * [data triangulation](http://www.write.com/writing-guides/research-writing/research-process/data-triangulation-how-the-triangulation-of-data-strengthens-your-research/) can also help
   * Avoid asking if an interviewee would purchase or use the product
     * this is an uncomfortable position for your interviewee to be put in and they will probably say “yes” even if they don’t mean it
-    * instead, ask about their [intent to purchase](http://boxesandarrows.com/intent-to-solve/){:target="_blank"}
+    * instead, ask about their [intent to purchase](http://boxesandarrows.com/intent-to-solve/)
 
 ### 4. Be prepared to paraphrase your questions
 

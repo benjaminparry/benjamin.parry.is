@@ -20,4 +20,4 @@ It was abundantly clear that the success of what came next hinged upon this last
 
 Retrospectives have taught me how to recognise the opportunities to experiment and learn. Whether it’s through design or coincidence, each project shape offers new a new landscape in which to explore. Perhaps it’s solving a really wicked problem or working with client from a new sector or industry. Maybe it’s a new team structure or choosing to use a self built product to solve a problem. Whatever the difference, after your work has shipped you and your team will be brimming with ideas and opinions on what worked and what didn’t. Retrospectives are a powerful way to unlock the latent productivity within your team and propel you in a better direction.
 
-*This post was originally posted on [The Human In The Machine project](https://thehumaninthemachine.com/benjamin-parry/2017-december-27){:target="_blank"}.*
+*This post was originally posted on [The Human In The Machine project](https://thehumaninthemachine.com/benjamin-parry/2017-december-27).*

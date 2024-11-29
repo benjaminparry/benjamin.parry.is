@@ -26,4 +26,4 @@ Matching the telephone number you are calling on to the phone number against the
 
 You’d expect that kind of experience from an app or, God forbib, a chatbot but this is a refreshing example of a great omnichannel experience, especially for a telephone channel.
 
-The taxi service in question is [Brighton Taxis](https://www.brightontaxis.com/){:target="_blank"}
+The taxi service in question is [Brighton Taxis](https://www.brightontaxis.com/)

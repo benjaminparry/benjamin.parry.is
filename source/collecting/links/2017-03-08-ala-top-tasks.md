@@ -91,7 +91,7 @@ The survey design is such for two reasons:
 
 Results of the survey will expose the top, medium, small and tiny tasks.
 
-[See article for example results](https://alistapart.com/article/what-really-matters-focusing-on-top-tasks#section4){:target="_blank"}
+[See article for example results](https://alistapart.com/article/what-really-matters-focusing-on-top-tasks#section4)
 
 ### Benefits
 

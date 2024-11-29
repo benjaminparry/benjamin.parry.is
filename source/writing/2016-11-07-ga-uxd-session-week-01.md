@@ -63,11 +63,11 @@ published: true
 
 > Experience design is the design of anything independent of medium, or across media, with human experience as an explicit outcome and human engagement as an explicit goal.
 >
-> **[Jesse James Garret](https://twitter.com/jjg){:target="_blank"}**
+> **[Jesse James Garret](https://twitter.com/jjg)**
 
 > User experience encompasses all aspects of the end-user’s interaction with the company, its services, and its products.
 >
-> **[Donald Norman](https://twitter.com/jnd1er){:target="_blank"}**
+> **[Donald Norman](https://twitter.com/jnd1er)**
 
 ### Examples of good and bad user experience
 
@@ -117,7 +117,7 @@ published: true
   * silence = thinking - don’t interrupt it
 * Ask about a typical day
 * Be aware that moods fluctuate during the day
-* [Discussion guide](https://www.gov.uk/service-manual/user-centred-design/user-research/discussion-guides.html){:target="_blank"}
+* [Discussion guide](https://www.gov.uk/service-manual/user-centred-design/user-research/discussion-guides.html)
 * Notetaking is a good idea, additionally the audio can be recorded for convenient playback
 * Quotes are good - affinity mapping
 * outline key takeaways
@@ -132,7 +132,7 @@ The class then regrouped to compared our learnings in an open discussion.
 
 ## Homework
 
-Familiarize the process of running a [Design Sprint](http://www.gv.com/sprint/){:target="_blank"}
+Familiarize the process of running a [Design Sprint](http://www.gv.com/sprint/)
 
 ---
 
@@ -240,12 +240,12 @@ Create at least two topics for the final project.
 
 ## Week 01 links
 
-* [Nielsen Norman Group](https://www.nngroup.com/){:target="_blank"}
-* [Design Of Everyday Things](http://amzn.to/2cFB0eP){:target="_blank"}
-* [Google Venture’s Design Sprint](http://www.gv.com/sprint/){:target="_blank"}
-* [Clinical User Experience Association meetup](https://www.eventbrite.co.uk/e/can-better-ux-improve-the-nhs-tickets-28746447398){:target="_blank"}
-* [How User Experience Inspires Remarkable Customer Experiences](http://www.business2community.com/customer-experience/user-experience-inspires-remarkable-customer-experiences-01678514#64T6DRL7eD7RrLwq.97){:target="_blank"}
-* [Introducing The New Uber App For Riders](https://ride.uber.com/en_US/){:target="_blank"}
-* [Reactions: Not everything in life is Likable – Facebook Design](https://medium.com/facebook-design/reactions-not-everything-in-life-is-likable-5c403de72a3f#.d36j9ngxp){:target="_blank"}
-* [How I Built This podcast](http://www.npr.org/podcasts/510313/how-i-built-this){:target="_blank"}
-* [Interviewing Users](https://www.nngroup.com/articles/interviewing-users/){:target="_blank"}
+* [Nielsen Norman Group](https://www.nngroup.com/)
+* [Design Of Everyday Things](http://amzn.to/2cFB0eP)
+* [Google Venture’s Design Sprint](http://www.gv.com/sprint/)
+* [Clinical User Experience Association meetup](https://www.eventbrite.co.uk/e/can-better-ux-improve-the-nhs-tickets-28746447398)
+* [How User Experience Inspires Remarkable Customer Experiences](http://www.business2community.com/customer-experience/user-experience-inspires-remarkable-customer-experiences-01678514#64T6DRL7eD7RrLwq.97)
+* [Introducing The New Uber App For Riders](https://ride.uber.com/en_US/)
+* [Reactions: Not everything in life is Likable – Facebook Design](https://medium.com/facebook-design/reactions-not-everything-in-life-is-likable-5c403de72a3f#.d36j9ngxp)
+* [How I Built This podcast](http://www.npr.org/podcasts/510313/how-i-built-this)
+* [Interviewing Users](https://www.nngroup.com/articles/interviewing-users/)

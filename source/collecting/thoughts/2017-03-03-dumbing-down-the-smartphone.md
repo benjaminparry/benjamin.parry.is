@@ -5,7 +5,7 @@ posse: "Is going “full dumbphone” really necessary? Here’s my thoughts on 
 tags: ['Technology']
 ---
 
-Ben W recently wrote a post about the [relaunched Nokia 3310](https://clearleft.com/posts/433){:target="_blank"}. He’s not alone in the Clearleft HQ to approve of the reboot and there’s a general consensus that this is the start of the “backlash” against device addiction.
+Ben W recently wrote a post about the [relaunched Nokia 3310](https://clearleft.com/posts/433). He’s not alone in the Clearleft HQ to approve of the reboot and there’s a general consensus that this is the start of the “backlash” against device addiction.
 
 Kicking about in the bottom of our household’s tech graveyard – we all have one right? – is a Nokia 3100 and I’ve been temped on a few occations to fire it up for a dummy run. But as much as I’d love to permenantly ditch the smartphone there’s a few things that would make the daily grind a little rougher without one.
 
@@ -15,9 +15,9 @@ Kicking about in the bottom of our household’s tech graveyard – we all have 
 
 But what about that “backlash”? Do we need to take such drastic measures as diching all the smartness? Where’s the middle gound?
 
-A few people have mentioned [Glued app](http://www.glued.to/){:target="_blank"} but I can’t help but feel cynical about installing an app that tells me when enough is enough. To coin a phrase: Less is more.
+A few people have mentioned [Glued app](http://www.glued.to/) but I can’t help but feel cynical about installing an app that tells me when enough is enough. To coin a phrase: Less is more.
 
-Around the summer of 2016 I read Jake Knapp’s article [The distraction-free iPhone (or ‘Why I’m happier since I disabled Safari’)](https://medium.com/time-dorks/the-distraction-free-iphone-or-why-im-happier-since-i-disabled-safari-80f8d525b0d8#.lz8vhofip){:target="_blank"} and tried out his suggestions.
+Around the summer of 2016 I read Jake Knapp’s article [The distraction-free iPhone (or ‘Why I’m happier since I disabled Safari’)](https://medium.com/time-dorks/the-distraction-free-iphone-or-why-im-happier-since-i-disabled-safari-80f8d525b0d8#.lz8vhofip) and tried out his suggestions.
 
 His article explains the week long experiment of removing/disabling the following apps from his phone;
 

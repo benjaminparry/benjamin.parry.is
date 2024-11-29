@@ -7,7 +7,7 @@ tags: ['Prototyping', 'Offline']
 
 It won’t come as a surprise when I say building an HTML prototype from the comfort of the office is a lot different than building on public transport. Limited seating, the constant flow of passengers, the flaky and expensive onboard internet connection are just a few of the contributing factors that make it a less than ideal environment for productivity.
 
-However, in the interest of progress, clients must be seen and work must be presented. So it’s on the 07.12 London-bound train from Brighton that [Rich](http://clagnut.com/){:target="_blank"}, [Jon](http://carbongraffiti.com/){:target="_blank"} and I find ourselves reviewing a prototype while deprived of the one office luxury we’ve grown so accustomed to: a stable and generous internet connection.
+However, in the interest of progress, clients must be seen and work must be presented. So it’s on the 07.12 London-bound train from Brighton that [Rich](http://clagnut.com/), [Jon](http://carbongraffiti.com/) and I find ourselves reviewing a prototype while deprived of the one office luxury we’ve grown so accustomed to: a stable and generous internet connection.
 
 The sudden change in conditions exposed our over-reliance of such a luxury.
 
