@@ -22,6 +22,7 @@ link2:
 - Publishing and syndicating with:
     - [Indiekit](https://getindiekit.com/)
     - [Railway.app](https://railway.app/)
+    - [EchoFeed](https://echofeed.app)
 - Webmentioning with:
     - [Bridgy](https://brid.gy/)
     - [Webmention.app](https://webmention.app/)
