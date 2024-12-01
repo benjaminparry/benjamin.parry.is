@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<article class="h-entry">
+<article class="h-entry{{ ' ' + section | slug }}">
   {% include "partials/page-header.html" %}
 
   <p>📆 <time class="dt-published" datetime="{{ page.date | toISOString }}">{{ page.date | dateFilter }}</time></p>

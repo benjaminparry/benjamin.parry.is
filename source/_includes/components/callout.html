@@ -1,0 +1,15 @@
+<!--
+Callouts:
+- tip
+-->
+
+{% set calloutType = default %}
+{% set calloutTypeClass = default %}
+{% set calloutTitle = "Callout" %}
+{% set calloutMessage = "Some long string of text and then a md formated link [ink.com](https://www.link.com)" %}
+
+<p class="callout callout--{{ calloutTypeClass }}">
+    <strong class="alert__type">{{ calloutTitle }}:</strong>
+    <br/>
+    {{ calloutMessage | safe }}.
+</p>
