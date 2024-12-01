@@ -33,7 +33,7 @@ link2:
 
 ## Credit where credit is due
 
-I used [Andy Bell](https://andy-bell.co.uk/)’s excellent resource [Learn Eleventy From Scratch](https://learneleventyfromscratch.com/) to help me get started.
+- [Andy Bell](https://andy-bell.co.uk/)’s excellent resource [Learn Eleventy From Scratch](https://learneleventyfromscratch.com/) to help me get started.
 
 ---
 
@@ -77,7 +77,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scripta sane et multa e
 ### Quotes
 
 > Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen: It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee.
+>
 > – Agent Cooper, Twin Peaks
+
+<p class="pullquote">Hey! I’ve pulled this sentence out because it’s important. You should probably pay attention to it.</p>
 
 ### Emphasis
 
