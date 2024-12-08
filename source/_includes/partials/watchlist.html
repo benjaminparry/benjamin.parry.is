@@ -4,7 +4,7 @@
 {% for watch in watchlist.watching %}
 <li>
     <img src="/assets/images/watching/{{ watch.artwork }}" alt="artworkDescription">
-    <p style="margin-top: 0;">{{ watch.titleEnglish }}</p>
+    <p style="margin-top: 0;">{{ watch.titleEnglish }}{% if watch.season %} – S{{ watch.season }}{% endif %}</p>
 </li>
 {% endfor %}
 </ul>
@@ -23,7 +23,7 @@
 <h1 class="heading heading--alpha" style="margin-top: 0;">{{ watch.originFlag }} {{ watch.titleNative }}</h1>
 <p>{% if watch.titleLiterally %}{{ watch.titleLiterally }}, {% endif %}aka <strong>{{ watch.titleEnglish }}</strong></p>
 {% else %}
-<h1 class="heading heading--alpha" style="margin-top: 0;">{{ watch.titleEnglish }}</h1>
+<h1 class="heading heading--alpha" style="margin-top: 0;">{{ watch.titleEnglish }}{% if watch.season %} – Season {{ watch.season }}{% endif %}</h1>
 {% endif %}
 <p style="font-size: 1.3rem;">{{ watch.summary }}</p>
 {% if watch.warning %}

@@ -16,7 +16,7 @@
 <ul class="grid grid--5 bingo-card reset-list">
 {% for rikishi in basho.rikishi %}
 <li class="rikishi rikishi--{{ rikishi.bingo }}{% if rikishi.saiko %} rikishi--saiko{% endif %}">
-<h2 class="reset-heading rikishi__name">{{ rikishi.name }}</h2>
+<p class="reset-heading rikishi__name">{{ rikishi.name }}</p>
 <div class="rikishi__photo">
     <img src="/assets/images/making/sumo-bingo-cards/rikishi/{{ rikishi.name | slug }}.jpg" alt="">
 </div>

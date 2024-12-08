@@ -106,23 +106,6 @@
             "location": "Sofa",
             "titleNative": "",
             "titleLiterally": "",
-            "titleEnglish": "Mr. Robot",
-            "season": "02",
-            "originCountry": "United Kingdom, United States",
-            "originFlag": "🇬🇧🇺🇲",
-			"summary": "",
-            "warning": "",
-            "artwork": "/mr-robot-02.jpg",
-            "artworkDescription": "",
-            "rating": "",
-            "favourite": false,
-            "date": ""
-        },
-        {
-            "type": "TV",
-            "location": "Sofa",
-            "titleNative": "",
-            "titleLiterally": "",
             "titleEnglish": "Star Trek: Discovery",
             "season": "02",
             "originCountry": "United States",
@@ -154,6 +137,23 @@
         }
     ],
 	"watched": [
+        {
+            "type": "TV",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Mr. Robot",
+            "season": "02",
+            "originCountry": "United Kingdom, United States",
+            "originFlag": "🇬🇧🇺🇲",
+			"summary": "Mind-bending follow-up to season one. I especially enjoyed the penultimate episode. Technically on point.",
+            "warning": "mental health",
+            "artwork": "/mr-robot-02.jpg",
+            "artworkDescription": "",
+            "rating": "5",
+            "favourite": false,
+            "date": "2024-12-08"
+        },
         {
             "type": "TV",
             "location": "Sofa",
