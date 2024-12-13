@@ -1,7 +1,7 @@
 <ul class="reset-list list list--divided">
 {% for item in collections.attending %}
 <li id="{{ event.title | slug }}-{{ event.start }}" class="h-entry list-group-item">
-<h2>{{ item.data.title }}</h2>
+<h3>{{ item.data.title }}</h3>
 
 <div class="p-summary">
     <!-- <p>
@@ -29,12 +29,12 @@
 {% endfor %}
 </ul>
 
-<p>Events I’ve attended.</p>
+<h2>Events I’ve attended.</h2>
 
 <ul class="reset-list list list--divided">
 {% for item in collections.attended %}
 <li id="{{ event.title | slug }}-{{ event.start }}" class="h-entry list-group-item">
-<h2>{{ item.data.title }}</h2>
+<h3>{{ item.data.title }}</h3>
 
 <div class="p-summary">
     <!-- <p>
