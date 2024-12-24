@@ -89,6 +89,23 @@
             "location": "Sofa",
             "titleNative": "",
             "titleLiterally": "",
+            "titleEnglish": "Mr. Robot",
+            "season": "03",
+            "originCountry": "United Kingdom, United States",
+            "originFlag": "🇬🇧🇺🇲",
+			"summary": ".",
+            "warning": "",
+            "artwork": "/mr-robot-03.jpg",
+            "artworkDescription": "",
+            "rating": "",
+            "favourite": false,
+            "date": ""
+        },
+        {
+            "type": "TV",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
             "titleEnglish": "The Armando Iannucci Shows",
             "season": "",
             "originCountry": "United Kingdom",
@@ -137,6 +154,23 @@
         }
     ],
 	"watched": [
+        {
+            "type": "Film",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Stewart Lee, Basic Lee: Live at The Lowry",
+            "season": "",
+            "originCountry": "United Kingdom",
+            "originFlag": "🇬🇧",
+			"summary": "Stewart Lee, Stewart Lee, Stewart Lee, Stewart Lee, Stewart Lee, Stew… no… Lee, Stewart Lee, Stewart Lee, Stewart Lee, Stewart Lee, yeah… Lee, Stewart Lee, Stewart Lee, Stewart Lee.",
+            "warning": "",
+            "artwork": "/stewart-lee-basic-lee-live-at-the-lowry.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "favourite": false,
+            "date": "2024-12-24"
+        },
         {
             "type": "Film",
             "location": "Cinema",
