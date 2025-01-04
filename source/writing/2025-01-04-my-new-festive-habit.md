@@ -1,6 +1,6 @@
 ---
 title: "My new festive habit"
-posse: "From on, around the festive period or shortly afterwards, I’m going to give back to the open source developers that have made life more productive and less intrusive. The first of which is @paulrobertlloyd@mastodon.social’s Indiekit, the utterly superb IndieWeb server. #OpenSource #IndieWeb #Reciprocity"
+posse: "From now on, around the festive period or shortly afterwards, I’m going to give back to the open source developers that have made life more productive and less intrusive. The first of which is @paulrobertlloyd@mastodon.social’s Indiekit, the utterly superb IndieWeb server. #OpenSource #IndieWeb #Reciprocity"
 tags:
     - 'Open Source'
     - 'Indieweb'
@@ -16,7 +16,7 @@ Since then, I’ve felt a pang of guilt every time I’m presented with the dona
 
 **It’s about time I put my money where my mouth is.**
 
-So from on, around the festive period or shortly afterwards, I’m going to gift back to the open source developers that have made life more productive and less intrusive.
+So from now on, around the festive period or shortly afterwards, I’m going to gift back to the open source developers that have made life more productive and less intrusive.
 
 The first of which is Paul Robert Lloyd’s [Indiekit](https://getindiekit.com/) – the utterly superb IndieWeb server. Paul has designed and built an beautiful and accessible product, written excellent documentation and is incredibly responsive. I highly recommend it to anyone interested in IndieWeb and the Activity Pub protocol.
 
