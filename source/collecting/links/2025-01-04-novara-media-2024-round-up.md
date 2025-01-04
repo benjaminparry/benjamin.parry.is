@@ -8,9 +8,10 @@ tags:
   - Technology
   - Consumerism
   - Regenerative
+updated: 2025-01-04T14:44:36.662Z
 ---
 
-I’ve grown very fond of the journalists of Novara Media. I particularly liked Ash Sarkar’s closing hopes for 2025.
+I’ve grown very fond of the Novara Media journalists. I particularly liked Ash Sarkar’s closing hopes for 2025.
 
 > Thinking about human relationships and our experience of each other and our experience of the world and how corroded it's been by various logics of disposability and so this is thinking about consumerism and thinking about what does it do to us to buy so many items which are designed to be thrown away what does that make us feel about our own labor what's our relationship to our own labor.
 > 
