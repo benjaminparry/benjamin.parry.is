@@ -29,11 +29,11 @@ title: 'Website homepage'
 
   Since then I have gained **{{ about.experience }}** of **{{ about.activitites }}**.
 
-  I’m interested in **the environment**, **people** and **technology**. When these things work together, in that order of preference, I believe we can create positive change in the world.
+  I’m passionate about **the environment**, **people** and **technology**. When these things work together, in that order of preference, I believe we can create positive change in the world.
 
 ## About this website
 
-  I use this website for [writing](/writing/) longform posts, [collecting](/collecting) [links](/collecting/links/) and [thoughts](/collecting/thoughts).
+  I use this website for [writing](/writing/) longform posts, [collecting](/collecting) [links](/collecting/links/), [lists](/collecting/lists/) and [thoughts](/collecting/thoughts).
 
   ### Most recent content
 
