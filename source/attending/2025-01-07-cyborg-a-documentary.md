@@ -11,6 +11,7 @@ location:
   countryName: United Kingdom
   postalCode: BN7 2JS
 category: Technology
+updated: 2025-01-07T09:36:31.586Z
 ---
 
-Screening of Cyborg: A Documentary with Q&A with the director and academics from University of Sussex.
+Screening of [Cyborg: A Documentary](https://lewesdepot.org/film/cyborg-a-documentary/) with Q&A with the director and academics from University of Sussex.
