@@ -40,6 +40,12 @@
         Filed under: <a class="p-category" href="{{ sectionURL }}">{{ section }}</a>
       </li>
 
+      {% if section == "Replies" %}
+      <li>
+          Replying to: <a href="{{ inReplyTo }}">{{ inReplyTo }}</a>
+      </li>
+      {% endif %}
+
       {% if tags %}
       <li>Tagged with:
         <ul class="reset-list list list--inline list--csv" aria-describedby="tags-desc">

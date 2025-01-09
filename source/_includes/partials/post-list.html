@@ -30,14 +30,14 @@
       {% endif %}
       <footer class="utility-font-size-80">
         <ul class="meta">
+            <li>
+                Filed under: <a href="{{ item.data.sectionURL }}">{{ item.data.section }}</a>
+            </li>
             {% if item.data.section == "Replies" %}
             <li>
-                In reply to: <a href="#">poop</a>
+                Replying to: <a href="{{ item.data.inReplyTo }}">{{ item.data.inReplyTo }}</a>
             </li>
             {% endif %}
-          <li>
-            Filed under: <a href="{{ item.data.sectionURL }}">{{ item.data.section }}</a>
-          </li>
           {% if item.data.tags.length %}
           <li>Tagged with:
             <ul class="reset-list list list--inline list--csv">
