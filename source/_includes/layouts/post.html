@@ -24,9 +24,14 @@
   <p class="p-description posse p-summary">{{ posse | safe }}</p>
   {% endif %}
 
-  <div class="e-content">
-  {{ content | safe }}
+  <div class="e-content p-name">
+      {{ content | safe }}
   </div>
+
+
+{% if section == "Replies" %}
+<p>In reply to: <a href="{{ inReplyTo }}" rel="in-reply-to" class="u-in-reply-to">{{ inReplyTo }}</a></p>
+{% endif %}
 
   <p><em>Like this post?</em> <strong><a href="https://shareopenly.org/share/?url={{ site.url }}{{ page.url }}&text={{ title }} by {{ site.authorName }}">Share it</a></strong></p>
   <!--
@@ -39,12 +44,6 @@
       <li>
         Filed under: <a class="p-category" href="{{ sectionURL }}">{{ section }}</a>
       </li>
-
-      {% if section == "Replies" %}
-      <li>
-          Replying to: <a href="{{ inReplyTo }}">{{ inReplyTo }}</a>
-      </li>
-      {% endif %}
 
       {% if tags %}
       <li>Tagged with:
