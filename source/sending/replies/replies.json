@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/sending/replies/{{ page | post_permalink }}/index.html",
+  "section": "Replies",
+  "sectionURL": "/sending/replies/",
+  "verb": "Replied"
+}

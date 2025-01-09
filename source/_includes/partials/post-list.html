@@ -16,7 +16,7 @@
         {% endif %}
       </h1>
 
-      {% if item.data.bookmarkOf %}
+      {% if (item.data.bookmarkOf) or (item.data.section == "Replies") %}
       {{ item.data.content | safe }}
       {% else %}
       <p class="p-name e-content posse">{{ item.data.posse }}</p>
@@ -30,6 +30,11 @@
       {% endif %}
       <footer class="utility-font-size-80">
         <ul class="meta">
+            {% if item.data.section == "Replies" %}
+            <li>
+                In reply to: <a href="#">poop</a>
+            </li>
+            {% endif %}
           <li>
             Filed under: <a href="{{ item.data.sectionURL }}">{{ item.data.section }}</a>
           </li>
