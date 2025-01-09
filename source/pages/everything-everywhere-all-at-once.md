@@ -19,6 +19,8 @@ permalink: '/everything-everywhere-all-at-once/'
   - [Links](/collecting/links/) – Links or bookmarks that I find interesting.
   - [Thoughts](/collecting/thoughts/) – Thoughts or observations that end up shared on social media platforms.
   - [Ideas](/collecting/ideas/) – Ideas for things to me be made.
+- Sending
+  - Likes – Sending appreciation for those that deserve it, *in my eyes at least*.
   - Replies – Replies to content on other people’s websites… *yep websites can do that!*
 - [Celebrating](/celebrating/) – Marking special events in my career history.
 - [Watching](/watching/) – Films, television, theatre I’ve watched or currently watching.

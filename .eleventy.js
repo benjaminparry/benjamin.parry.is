@@ -74,6 +74,21 @@ module.exports = config => {
     return [...collection.getFilteredByGlob('./source/collecting/*/*.md')].reverse();
   });
 
+  // Returns a collection of all collected items in reverse date order
+  config.addCollection('sending', collection => {
+    return [...collection.getFilteredByGlob('./source/sending/*/*.md')].reverse();
+  });
+
+  // Returns a collection of all collected items in reverse date order
+  config.addCollection('replies', collection => {
+    return [...collection.getFilteredByGlob('./source/sending/replies/*.md')].reverse();
+  });
+
+  // Returns a collection of all collected items in reverse date order
+  config.addCollection('likes', collection => {
+    return [...collection.getFilteredByGlob('./source/sending/likes/*.md')].reverse();
+  });
+
   // Returns a collection of links in reverse date order
   config.addCollection('links', collection => {
     return [...collection.getFilteredByGlob('./source/collecting/links/*.md')].reverse();
