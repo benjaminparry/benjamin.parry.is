@@ -2,7 +2,7 @@
 title: 'Chronologically'
 layout: 'layouts/feed.html'
 pagination:
-  data: collections.everythingpoop
+  data: collections.everything
   size: 10
 permalink: 'everything-everywhere-all-at-once/chronologically{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html'
 paginationPrevText: 'Newer'
