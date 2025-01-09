@@ -33,6 +33,8 @@ permalink: '/everything-everywhere-all-at-once/'
 - [Focused](/focused/) – Positive distraction websites to visit.
 - Mirroring – A mirror of web important content to me and others. *(yet to be implemented)*
 - [Offline](/offline/) – A list of pages stored locally when you are offline. *(may be broken… 😬)*
+- [Everthing Everywhere All At Once](/everything-everywhere-all-at-once/) – this page, a sitemap.
+  - [Chronologically](/everything-everywhere-all-at-once/chronologically/) – the firehose of everything.
 
 {% set postArchiveItems = collections.writing %}
 ## All of my writing ({{ postArchiveItems.length }})
