@@ -16,7 +16,7 @@
         {% endif %}
       </h1>
 
-      {% if (item.data.bookmarkOf) or (item.data.section == "Replies") %}
+      {% if (item.data.bookmarkOf) or (item.data.section == "Replies") or (item.data.section == "Likes") %}
       {{ item.data.content | safe }}
       {% else %}
       <p class="p-name e-content posse">{{ item.data.posse }}</p>

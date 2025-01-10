@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/sending/likes/{{ page | post_permalink }}/index.html",
+  "section": "Likes",
+  "sectionURL": "/sending/likes/",
+  "verb": "Liked"
+}

@@ -71,6 +71,12 @@
             "emoji": "📨",
 			"url": "/sending/replies",
 			"divider": false
+		},
+		{
+			"text": "Likes",
+            "emoji": "❤️",
+			"url": "/sending/likes",
+			"divider": false
 		}
     ],
     "quaternary": [
