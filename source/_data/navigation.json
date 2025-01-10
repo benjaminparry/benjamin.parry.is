@@ -61,43 +61,57 @@
 	],
 	"tertiary": [
 		{
-			"text": "Watching",
+			"text": "Sending",
+            "emoji": "🚀",
+			"url": "/sending",
+			"divider": false
+		},
+		{
+			"text": "Replies",
+            "emoji": "📨",
+			"url": "/sending/replies",
+			"divider": false
+		}
+    ],
+    "quaternary": [
+        {
+            "text": "Watching",
             "emoji": "📺️",
-			"url": "/watching/",
-			"divider": false
-		},
-		{
-			"text": "Listening",
+            "url": "/watching/",
+            "divider": false
+        },
+        {
+            "text": "Listening",
             "emoji": "🎵️",
-			"url": "/listening/",
-			"divider": false
-		},
-		{
-			"text": "Reading",
+            "url": "/listening/",
+            "divider": false
+        },
+        {
+            "text": "Reading",
             "emoji": "📚️",
-			"url": "/reading/",
-			"divider": false
-		},
-		{
+            "url": "/reading/",
+            "divider": false
+        },
+        {
             "text": "Attending",
             "emoji": "🎟️",
-			"url": "/attending/",
-			"divider": true
-		}
-	],
-    "quaternary": [
+            "url": "/attending/",
+            "divider": true
+        }
+    ],
+    "quinary": [
         {
             "text": "Now",
             "emoji": "🗣️",
             "url": "/now/",
             "divider": true
         },
-		{
-			"text": "Tagging",
+        {
+            "text": "Tagging",
             "emoji": "🏷️",
-			"url": "/tagging/",
-			"divider": false
-		},
+            "url": "/tagging/",
+            "divider": false
+        },
         {
             "text": "Contactable",
             "emoji": "👋",
@@ -110,8 +124,6 @@
             "url": "/focused/",
             "divider": true
         }
-    ],
-    "quinary": [
     ],
 	"elsewhere": [
         {
