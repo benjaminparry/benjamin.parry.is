@@ -38,6 +38,11 @@
                 Replying to: <a href="{{ item.data.inReplyTo }}" rel="in-reply-to" class="u-in-reply-to">{{ item.data.inReplyTo }}</a>
             </li>
             {% endif %}
+            {% if item.data.section == "Likes" %}
+            <li>
+                Liked: <a class="u-like-of u-url" href="{{ item.data.likeOf }}">{{ item.data.likeOf }}</a>
+            </li>
+            {% endif %}
           {% if item.data.tags.length %}
           <li>Tagged with:
             <ul class="reset-list list list--inline list--csv">
