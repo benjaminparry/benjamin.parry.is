@@ -19,4 +19,4 @@ Also Musk:
 
 > The cumulative sum of sustenance has been exhausted in binge eating. That happened basically today.
 >
-> The only way to then supplement that is with human feces where … it will sort of resemble chocolate ice cream or be the next McDonald’s and then will digest itself and … go through this process of self-nourishment.
+> The only way to then supplement that is with human faeces where … it will sort of resemble chocolate ice cream or be the next McDonald’s and then will digest itself and … go through this process of self-nourishment.
