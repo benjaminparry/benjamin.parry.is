@@ -6,7 +6,7 @@ category: Technology
 tags:
   - LLM
   - GAI
-  - MAchine Learning
+  - Machine Learning
 ---
 
 Musk:
