@@ -1,0 +1,340 @@
+{
+    "year": "2025",
+    "basho": [
+        {
+            "month": "January",
+            "city": "Tokyo",
+            "venue": "Ryōgoku Kokugikan",
+            "venueURL": "https://www.google.com/maps/@35.6967069,139.7934202,2a,70.6y,14.16h,69.45t/data=!3m6!1e1!3m4!1sjhBtOwkV9L_kxYQ9gSp7QA!2e0!7i13312!8i6656?entry=ttu",
+            "startDate": "2025-01-12",
+            "endDate": "2025-01-26",
+            "rikishi": [
+                {
+                    "name": "Tokihayate",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Kotoshoho",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Kirishima",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Kitanowaka",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Onokatsu",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Chiyoshoma",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Mitakeumi",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Oshoma",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Hokutofuji",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Ichiyamamoto",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Daieisho",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Terunofuji",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Takerufuji",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Midorifuji",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Wakatakakage",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Meisei",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Atamifuji",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Nishikifuji",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Hiradoumi",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Onosato",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Shodai",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Takanosho",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Tamawashi",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Kinbozan",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Hoshoryu",
+                    "bingo": "",
+                    "results": ["","","","","","","","","","","","","","",""],
+                    "total": [
+                        {
+                            "win": "",
+                            "forfeit": "",
+                            "lose": ""
+                        }
+                    ],
+                    "saiko": false
+                }
+            ]
+        }
+    ]
+}
