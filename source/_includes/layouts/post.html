@@ -28,6 +28,9 @@
       {{ content | safe }}
   </div>
 
+  {% if section == "Photos" %}
+  <img src="{{ photo[0].url }}" alt="{{ photo[0].alt }}">
+  {% endif %}
 
 {% if section == "Replies" %}
 <p>In reply to: <a href="{{ inReplyTo }}" rel="in-reply-to" class="u-in-reply-to u-url">{{ inReplyTo }}</a></p>

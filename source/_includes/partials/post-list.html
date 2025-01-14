@@ -16,10 +16,14 @@
         {% endif %}
       </h1>
 
-      {% if (item.data.bookmarkOf) or (item.data.section == "Replies") or (item.data.section == "Likes") %}
+      {% if (item.data.bookmarkOf) or (item.data.section == "Replies") or (item.data.section == "Likes") or (item.data.section == "Photos") %}
       {{ item.data.content | safe }}
       {% else %}
       <p class="p-name e-content posse">{{ item.data.posse }}</p>
+      {% endif %}
+
+      {% if item.data.section == "Photos" %}
+      <img src="{{ item.data.photo[0].url }}" alt="{{ item.data.photo[0].alt }}">
       {% endif %}
 
       {% if item.data.section == "Thoughts" %}
