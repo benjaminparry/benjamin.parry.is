@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/collecting/photos/{{ page | post_permalink }}/index.html",
+  "section": "Photos",
+  "sectionURL": "/collecting/photos/",
+  "verb": "Collected"
+}

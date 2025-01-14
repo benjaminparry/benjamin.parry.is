@@ -114,6 +114,11 @@ config.addCollection('cycles', collection => {
 return [...collection.getFilteredByGlob('./source/collecting/cycles/*.md')].reverse();
 });
 
+// Returns a collection of photos in reverse date order
+config.addCollection('photos', collection => {
+return [...collection.getFilteredByGlob('./source/collecting/photos/*.md')].reverse();
+});
+
 // Returns a collection of everything in reverse date order
 config.addCollection('everything', function(collectionApi) {
     return collectionApi.getFilteredByGlob([
