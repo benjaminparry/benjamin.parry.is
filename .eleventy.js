@@ -125,7 +125,8 @@ config.addCollection('everything', function(collectionApi) {
         './source/writing/*.md',
         './source/collecting/*/*.md',
         './source/sending/*/*.md',
-        './source/making/*.md'
+        './source/making/*.md',
+        './attending/*.md'
     ]).reverse();
 });
 
