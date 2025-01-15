@@ -126,7 +126,7 @@ config.addCollection('everything', function(collectionApi) {
         './source/collecting/*/*.md',
         './source/sending/*/*.md',
         './source/making/*.md',
-        './attending/*.md'
+        './source/attending/*.md'
     ]).reverse();
 });
 
@@ -145,7 +145,7 @@ config.addCollection('attending', collection => {
   // Kind of working below but breaks with time included in date
   .sort((a, b) => {
     return a.data.start - b.data.start;
-  }).reverse();
+  });
 });
 config.addCollection('attended', collection => {
     return [...collection.getFilteredByGlob('./source/attending/*.md')]

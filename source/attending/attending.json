@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/attending/{{ title | slugify }}/index.html",
+  "section": "Attending",
+  "sectionURL": "/attending/",
+  "verb": "Booked"
+}
