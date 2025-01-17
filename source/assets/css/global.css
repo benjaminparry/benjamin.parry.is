@@ -766,8 +766,9 @@ a {
 .result--lose {
   background-color: #913232;
 }
-.result--forfeit {
-  background-color: #1e1e1e;
+.result--forfeit,
+.result--retire {
+  background-color: #393939;
 }
 .rikishi--make-koshi {
   background-color: #e0c4c4;
@@ -777,7 +778,8 @@ a {
     background-color: #cbe0c4;
     border-color: #459132;
 }
-.rikishi--forfeit {
+.rikishi--forfeit,
+.rikishi--retire {
     background-color: #c6c6c6;
     border-color: #393939;
 }

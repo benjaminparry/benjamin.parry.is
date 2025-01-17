@@ -26,7 +26,7 @@
 <!-- Results daily -->
 <ol class="grid grid--15 reset-list results results--daily">
 {% for result in rikishi.results %}
-<li class="result result--{% if result == 'l' %}lose{% endif %}{% if result == 'w' %}win{% endif %}{% if result == 'f' %}forfeit{% endif %}">
+<li class="result result--{% if result == 'l' %}lose{% endif %}{% if result == 'w' %}win{% endif %}{% if result == 'f' %}forfeit{% endif %}{% if result == 'r' %}retire{% endif %}">
 <div class="off-screen">{% if result == "l" %}Lose{% endif %}{% if result == "w" %}Win{% endif %}{% if result == "f" %}Forfeit{% endif %}</div>
 </li>
 {% endfor %}
@@ -34,7 +34,7 @@
 <!-- Results sorted -->
 <ol class="grid grid--5 reset-list results results--sorted">
 {% for result in rikishi.results %}
-<li class="result result--{% if result == 'l' %}lose{% endif %}{% if result == 'w' %}win{% endif %}{% if result == 'f' %}forfeit{% endif %}">
+<li class="result result--{% if result == 'l' %}lose{% endif %}{% if result == 'w' %}win{% endif %}{% if result == 'f' %}forfeit{% endif %}{% if result == 'r' %}retire{% endif %}">
 <div class="off-screen">{% if result == "l" %}Lose{% endif %}{% if result == "w" %}Win{% endif %}{% if result == "f" %}Forfeit{% endif %}</div>
 </li>
 {% endfor %}
