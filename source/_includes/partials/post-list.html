@@ -11,8 +11,10 @@
       <h1 class="p-description">
         {% if item.data.bookmarkOf %}
         <a class="u-url u-syndication" href="{{ item.data.bookmarkOf }}" rel="syndication">{{ item.data.title }}</a>
+        {% elseif item.data.section == "Replies" %}
+        <a class="u-url" href="{{ item.url }}" rel="in-reply-to" class="u-in-reply-to u-url">{{ item.data.inReplyTo }}</a>
         {% else %}
-        <a class="u-url u-syndication" href="{{ item.url }}" rel="syndication">{{ item.data.title }}</a>
+        <a class="u-url" href="{{ item.url }}">{{ item.data.title }}</a>
         {% endif %}
       </h1>
 
