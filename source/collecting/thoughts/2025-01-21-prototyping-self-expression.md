@@ -2,6 +2,7 @@
 title: "Prototyping self-expression"
 date: '2025-01-21'
 category: People
+posse: "Sketching out some ideas for making the Research by the Sea lanyard something that attendees might want to keep for later rather than throw away."
 tags:
     - Prototyping
     - Self Expression
