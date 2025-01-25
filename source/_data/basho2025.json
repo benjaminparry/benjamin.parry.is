@@ -11,13 +11,13 @@
             "rikishi": [
                 {
                     "name": "Tokihayate",
-                    "bingo": "",
-                    "results": ["w","l","w","w","l","l","l","w","l","w","l","","","",""],
+                    "bingo": "make-koshi",
+                    "results": ["w","l","w","w","l","l","l","w","l","w","l","l","l","w",""],
                     "total": [
                         {
-                            "win": "5",
+                            "win": "6",
                             "forfeit": "",
-                            "lose": "6"
+                            "lose": "8"
                         }
                     ],
                     "saiko": false
@@ -25,12 +25,12 @@
                 {
                     "name": "Kotoshoho",
                     "bingo": "make-koshi",
-                    "results": ["l","w","l","l","l","l","l","l","w","l","l","","","",""],
+                    "results": ["l","w","l","l","l","l","l","l","w","l","l","w","l","w",""],
                     "total": [
                         {
-                            "win": "2",
+                            "win": "4",
                             "forfeit": "",
-                            "lose": "9"
+                            "lose": "10"
                         }
                     ],
                     "saiko": false
@@ -38,12 +38,12 @@
                 {
                     "name": "Kirishima",
                     "bingo": "kachi-koshi",
-                    "results": ["l","l","l","w","w","w","w","w","w","w","w","","","",""],
+                    "results": ["l","l","l","w","w","w","w","w","w","w","w","w","w","l",""],
                     "total": [
                         {
-                            "win": "8",
+                            "win": "10",
                             "forfeit": "",
-                            "lose": "3"
+                            "lose": "4"
                         }
                     ],
                     "saiko": false
@@ -51,11 +51,11 @@
                 {
                     "name": "Kitanowaka",
                     "bingo": "",
-                    "results": ["l","w","l","w","w","w","l","l","f","f","f","","","",""],
+                    "results": ["l","w","l","w","w","w","l","l","f","f","f","f","","",""],
                     "total": [
                         {
                             "win": "4",
-                            "forfeit": "2",
+                            "forfeit": "3",
                             "lose": "5"
                         }
                     ],
@@ -64,12 +64,12 @@
                 {
                     "name": "Onokatsu",
                     "bingo": "",
-                    "results": ["w","l","l","w","l","w","w","w","w","l","l","","","",""],
+                    "results": ["w","l","l","w","l","w","w","w","w","l","l","w","l","l",""],
                     "total": [
                         {
-                            "win": "6",
+                            "win": "7",
                             "forfeit": "",
-                            "lose": "5"
+                            "lose": "7"
                         }
                     ],
                     "saiko": false
@@ -77,12 +77,12 @@
                 {
                     "name": "Chiyoshoma",
                     "bingo": "kachi-koshi",
-                    "results": ["w","w","w","w","w","w","w","l","w","l","l","","","",""],
+                    "results": ["w","w","w","w","w","w","w","l","w","l","l","l","l","l",""],
                     "total": [
                         {
                             "win": "8",
                             "forfeit": "",
-                            "lose": "3"
+                            "lose": "6"
                         }
                     ],
                     "saiko": false
@@ -90,23 +90,23 @@
                 {
                     "name": "Mitakeumi",
                     "bingo": "make-koshi",
-                    "results": ["w","l","w","l","l","l","l","l","l","l","l","","","",""],
+                    "results": ["w","l","w","l","l","l","l","l","l","l","l","l","l","l",""],
                     "total": [
                         {
                             "win": "2",
                             "forfeit": "",
-                            "lose": "9"
+                            "lose": "12"
                         }
                     ],
                     "saiko": false
                 },
                 {
                     "name": "Oshoma",
-                    "bingo": "",
-                    "results": ["l","w","l","w","w","w","l","l","l","w","l","","","",""],
+                    "bingo": "kachi-koshi",
+                    "results": ["l","w","l","w","w","w","l","l","l","w","l","w","w","w",""],
                     "total": [
                         {
-                            "win": "5",
+                            "win": "8",
                             "forfeit": "",
                             "lose": "6"
                         }
@@ -129,23 +129,23 @@
                 {
                     "name": "Ichiyamamoto",
                     "bingo": "",
-                    "results": ["w","w","l","w","w","l","l","w","w","l","l","","","",""],
+                    "results": ["w","w","l","w","w","l","l","w","w","l","l","l","w","l",""],
                     "total": [
                         {
-                            "win": "6",
+                            "win": "7",
                             "forfeit": "",
-                            "lose": "5"
+                            "lose": "7"
                         }
                     ],
                     "saiko": false
                 },
                 {
                     "name": "Daieisho",
-                    "bingo": "",
-                    "results": ["w","w","w","l","w","l","w","w","l","l","w","","","",""],
+                    "bingo": "kachi-koshi",
+                    "results": ["w","w","w","l","w","l","w","w","l","l","w","w","w","w",""],
                     "total": [
                         {
-                            "win": "7",
+                            "win": "10",
                             "forfeit": "",
                             "lose": "4"
                         }
@@ -168,10 +168,10 @@
                 {
                     "name": "Takerufuji",
                     "bingo": "kachi-koshi",
-                    "results": ["w","w","w","l","w","w","w","w","l","w","l","","","",""],
+                    "results": ["w","w","w","l","w","w","w","w","l","w","l","w","w","",""],
                     "total": [
                         {
-                            "win": "8",
+                            "win": "10",
                             "forfeit": "",
                             "lose": "3"
                         }
@@ -181,10 +181,10 @@
                 {
                     "name": "Midorifuji",
                     "bingo": "",
-                    "results": ["w","l","l","l","l","l","l","l","w","w","w","","","",""],
+                    "results": ["w","l","l","l","l","l","l","l","w","w","w","w","w","w",""],
                     "total": [
                         {
-                            "win": "4",
+                            "win": "7",
                             "forfeit": "",
                             "lose": "7"
                         }
@@ -194,25 +194,25 @@
                 {
                     "name": "Wakatakakage",
                     "bingo": "",
-                    "results": ["w","l","l","w","l","w","l","l","w","w","l","","","",""],
+                    "results": ["w","l","l","w","l","w","l","l","w","w","l","w","w","l",""],
                     "total": [
                         {
-                            "win": "5",
+                            "win": "7",
                             "forfeit": "",
-                            "lose": "6"
+                            "lose": "7"
                         }
                     ],
                     "saiko": false
                 },
                 {
                     "name": "Meisei",
-                    "bingo": "",
-                    "results": ["l","l","w","l","l","w","l","l","l","w","w","","","",""],
+                    "bingo": "make-koshi",
+                    "results": ["l","l","w","l","l","w","l","l","l","w","w","l","w","w",""],
                     "total": [
                         {
-                            "win": "4",
+                            "win": "6",
                             "forfeit": "",
-                            "lose": "7"
+                            "lose": "8"
                         }
                     ],
                     "saiko": false
@@ -220,62 +220,23 @@
                 {
                     "name": "Atamifuji",
                     "bingo": "make-koshi",
-                    "results": ["l","l","l","l","w","w","l","l","l","l","l","","","",""],
+                    "results": ["l","l","l","l","w","w","l","l","l","l","l","w","l","w",""],
                     "total": [
                         {
-                            "win": "2",
+                            "win": "4",
                             "forfeit": "",
-                            "lose": "9"
+                            "lose": "10"
                         }
                     ],
                     "saiko": false
                 },
                 {
                     "name": "Nishikifuji",
-                    "bingo": "",
-                    "results": ["l","w","w","l","l","w","w","l","l","w","w","","","",""],
+                    "bingo": "kachi-koshi",
+                    "results": ["l","w","w","l","l","w","w","l","l","w","w","w","w","l",""],
                     "total": [
                         {
-                            "win": "6",
-                            "forfeit": "",
-                            "lose": "5"
-                        }
-                    ],
-                    "saiko": false
-                },
-                {
-                    "name": "Hiradoumi",
-                    "bingo": "",
-                    "results": ["l","w","l","l","l","w","w","w","w","l","w","","","",""],
-                    "total": [
-                        {
-                            "win": "6",
-                            "forfeit": "",
-                            "lose": "5"
-                        }
-                    ],
-                    "saiko": false
-                },
-                {
-                    "name": "Onosato",
-                    "bingo": "",
-                    "results": ["l","w","w","l","l","w","w","w","w","w","l","","","",""],
-                    "total": [
-                        {
-                            "win": "7",
-                            "forfeit": "",
-                            "lose": "4"
-                        }
-                    ],
-                    "saiko": false
-                },
-                {
-                    "name": "Shodai",
-                    "bingo": "",
-                    "results": ["l","l","l","w","w","l","l","w","w","w","l","","","",""],
-                    "total": [
-                        {
-                            "win": "5",
+                            "win": "8",
                             "forfeit": "",
                             "lose": "6"
                         }
@@ -283,25 +244,64 @@
                     "saiko": false
                 },
                 {
-                    "name": "Takanosho",
-                    "bingo": "",
-                    "results": ["l","l","l","l","l","w","w","l","l","w","w","","","",""],
+                    "name": "Hiradoumi",
+                    "bingo": "make-koshi",
+                    "results": ["l","w","l","l","l","w","w","w","w","l","w","l","l","l",""],
                     "total": [
                         {
-                            "win": "4",
+                            "win": "6",
                             "forfeit": "",
-                            "lose": "7"
+                            "lose": "8"
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Onosato",
+                    "bingo": "kachi-koshi",
+                    "results": ["l","w","w","l","l","w","w","w","w","w","l","w","l","w",""],
+                    "total": [
+                        {
+                            "win": "9",
+                            "forfeit": "",
+                            "lose": "5"
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Shodai",
+                    "bingo": "make-koshi",
+                    "results": ["l","l","l","w","w","l","l","w","w","w","l","w","l","l",""],
+                    "total": [
+                        {
+                            "win": "6",
+                            "forfeit": "",
+                            "lose": "8"
+                        }
+                    ],
+                    "saiko": false
+                },
+                {
+                    "name": "Takanosho",
+                    "bingo": "make-koshi",
+                    "results": ["l","l","l","l","l","w","w","l","l","w","w","w","w","l",""],
+                    "total": [
+                        {
+                            "win": "6",
+                            "forfeit": "",
+                            "lose": "8"
                         }
                     ],
                     "saiko": false
                 },
                 {
                     "name": "Tamawashi",
-                    "bingo": "",
-                    "results": ["w","w","w","w","w","l","w","l","l","l","l","","","",""],
+                    "bingo": "kachi-koshi",
+                    "results": ["w","w","w","w","w","l","w","l","l","l","l","w","w","w",""],
                     "total": [
                         {
-                            "win": "6",
+                            "win": "9",
                             "forfeit": "",
                             "lose": "5"
                         }
@@ -311,12 +311,12 @@
                 {
                     "name": "Kinbozan",
                     "bingo": "kachi-koshi",
-                    "results": ["w","w","w","w","w","w","w","w","w","l","w","","","",""],
+                    "results": ["w","w","w","w","w","w","w","w","w","l","w","l","w","w",""],
                     "total": [
                         {
-                            "win": "10",
+                            "win": "12",
                             "forfeit": "",
-                            "lose": "1"
+                            "lose": "2"
                         }
                     ],
                     "saiko": false
@@ -324,10 +324,10 @@
                 {
                     "name": "Hoshoryu",
                     "bingo": "kachi-koshi",
-                    "results": ["w","w","w","w","l","w","w","l","l","w","w","","","",""],
+                    "results": ["w","w","w","w","l","w","w","l","l","w","w","w","w","",""],
                     "total": [
                         {
-                            "win": "8",
+                            "win": "10",
                             "forfeit": "",
                             "lose": "3"
                         }
