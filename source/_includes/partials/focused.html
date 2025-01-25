@@ -1,3 +1,8 @@
+<form action="https://kagi.com/search?q=" method="get">
+    <input type="text" name="q" autofocus />
+    <input type="submit" value="search" />
+</form>
+
 <ul class="reset-list grid grid--5 targets">
     {%- for website in focused.websites -%}
     <li class="target"><a href="{{ website.url }}">{{ website.name }}</a></li>
