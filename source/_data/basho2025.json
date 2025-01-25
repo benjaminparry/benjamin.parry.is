@@ -168,12 +168,12 @@
                 {
                     "name": "Takerufuji",
                     "bingo": "kachi-koshi",
-                    "results": ["w","w","w","l","w","w","w","w","l","w","l","w","w","",""],
+                    "results": ["w","w","w","l","w","w","w","w","l","w","l","w","w","l",""],
                     "total": [
                         {
                             "win": "10",
                             "forfeit": "",
-                            "lose": "3"
+                            "lose": "4"
                         }
                     ],
                     "saiko": false
@@ -324,10 +324,10 @@
                 {
                     "name": "Hoshoryu",
                     "bingo": "kachi-koshi",
-                    "results": ["w","w","w","w","l","w","w","l","l","w","w","w","w","",""],
+                    "results": ["w","w","w","w","l","w","w","l","l","w","w","w","w","w",""],
                     "total": [
                         {
-                            "win": "10",
+                            "win": "11",
                             "forfeit": "",
                             "lose": "3"
                         }
