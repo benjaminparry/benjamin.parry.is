@@ -726,7 +726,7 @@ a {
 .grid--15 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-
+/* MARK: SUMO */
 .bingo-card {
     border: 2px solid #c2c2c2;
 }
@@ -756,9 +756,10 @@ a {
 }
 .results--sorted .result {
     border: 1px solid #ddd;
+    background-color: #ececec;
 }
-.result {
-  background-color: #ececec;
+.rikishi--absent .result--pending {
+    background-color: #393939;
 }
 .result--win {
   background-color: #459132;
@@ -778,8 +779,9 @@ a {
     background-color: #cbe0c4;
     border-color: #459132;
 }
-.rikishi--forfeit,
-.rikishi--retire {
+/* Add some logic to style remaining matches after retirement or absence */
+.rikishi--absent,
+.rikishi--retired {
     background-color: #c6c6c6;
     border-color: #393939;
 }

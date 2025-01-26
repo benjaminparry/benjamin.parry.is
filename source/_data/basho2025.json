@@ -11,328 +11,378 @@
             "rikishi": [
                 {
                     "name": "Tokihayate",
-                    "bingo": "make-koshi",
-                    "results": ["w","l","w","w","l","l","l","w","l","w","l","l","l","w",""],
+                    "results": ["w","l","w","w","l","l","l","w","l","w","l","l","l","w","w"],
                     "total": [
                         {
-                            "win": "6",
+                            "win": "7",
                             "forfeit": "",
-                            "lose": "8"
+                            "lose": "8",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Kotoshoho",
-                    "bingo": "make-koshi",
-                    "results": ["l","w","l","l","l","l","l","l","w","l","l","w","l","w",""],
+                    "results": ["l","w","l","l","l","l","l","l","w","l","l","w","l","w","w"],
                     "total": [
                         {
-                            "win": "4",
+                            "win": "5",
                             "forfeit": "",
-                            "lose": "10"
+                            "lose": "10",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Kirishima",
-                    "bingo": "kachi-koshi",
-                    "results": ["l","l","l","w","w","w","w","w","w","w","w","w","w","l",""],
+                    "results": ["l","l","l","w","w","w","w","w","w","w","w","w","w","l","w"],
                     "total": [
                         {
-                            "win": "10",
+                            "win": "11",
                             "forfeit": "",
-                            "lose": "4"
+                            "lose": "4",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Kitanowaka",
-                    "bingo": "",
                     "results": ["l","w","l","w","w","w","l","l","f","f","f","f","","",""],
                     "total": [
                         {
                             "win": "4",
                             "forfeit": "3",
-                            "lose": "5"
+                            "lose": "5",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": true,
                     "saiko": false
                 },
                 {
                     "name": "Onokatsu",
-                    "bingo": "",
-                    "results": ["w","l","l","w","l","w","w","w","w","l","l","w","l","l",""],
+                    "results": ["w","l","l","w","l","w","w","w","w","l","l","w","l","l","l"],
                     "total": [
                         {
                             "win": "7",
                             "forfeit": "",
-                            "lose": "7"
+                            "lose": "8",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Chiyoshoma",
-                    "bingo": "kachi-koshi",
-                    "results": ["w","w","w","w","w","w","w","l","w","l","l","l","l","l",""],
+                    "results": ["w","w","w","w","w","w","w","l","w","l","l","l","l","l","w"],
                     "total": [
                         {
-                            "win": "8",
+                            "win": "9",
                             "forfeit": "",
-                            "lose": "6"
+                            "lose": "6",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Mitakeumi",
-                    "bingo": "make-koshi",
-                    "results": ["w","l","w","l","l","l","l","l","l","l","l","l","l","l",""],
+                    "results": ["w","l","w","l","l","l","l","l","l","l","l","l","l","l","l"],
                     "total": [
                         {
                             "win": "2",
                             "forfeit": "",
-                            "lose": "12"
+                            "lose": "13",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Oshoma",
-                    "bingo": "kachi-koshi",
-                    "results": ["l","w","l","w","w","w","l","l","l","w","l","w","w","w",""],
+                    "results": ["l","w","l","w","w","w","l","l","l","w","l","w","w","w","l"],
                     "total": [
                         {
                             "win": "8",
                             "forfeit": "",
-                            "lose": "6"
+                            "lose": "7",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Hokutofuji",
-                    "bingo": "forfeit",
                     "results": ["f","f","f","f","f","f","f","f","f","f","f","f","f","f","f"],
                     "total": [
                         {
                             "win": "0",
                             "forfeit": "14",
-                            "lose": "0"
+                            "lose": "0",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": true,
                     "saiko": false
                 },
                 {
                     "name": "Ichiyamamoto",
-                    "bingo": "",
-                    "results": ["w","w","l","w","w","l","l","w","w","l","l","l","w","l",""],
+                    "results": ["w","w","l","w","w","l","l","w","w","l","l","l","w","l","w"],
                     "total": [
                         {
-                            "win": "7",
+                            "win": "8",
                             "forfeit": "",
-                            "lose": "7"
+                            "lose": "7",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Daieisho",
-                    "bingo": "kachi-koshi",
-                    "results": ["w","w","w","l","w","l","w","w","l","l","w","w","w","w",""],
+                    "results": ["w","w","w","l","w","l","w","w","l","l","w","w","w","w","w"],
                     "total": [
                         {
-                            "win": "10",
+                            "win": "11",
                             "forfeit": "",
-                            "lose": "4"
+                            "lose": "4",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Terunofuji",
-                    "bingo": "retire",
                     "results": ["l","w","w","l","l","r","r","r","r","r","r","r","r","r","r"],
                     "total": [
                         {
                             "win": "2",
                             "forfeit": "",
-                            "lose": "3"
+                            "lose": "3",
+                            "playoff": ""
                         }
                     ],
+                    "retired": true,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Takerufuji",
-                    "bingo": "kachi-koshi",
-                    "results": ["w","w","w","l","w","w","w","w","l","w","l","w","w","l",""],
+                    "results": ["w","w","w","l","w","w","w","w","l","w","l","w","w","l","l"],
                     "total": [
                         {
                             "win": "10",
                             "forfeit": "",
-                            "lose": "4"
+                            "lose": "5",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Midorifuji",
-                    "bingo": "",
-                    "results": ["w","l","l","l","l","l","l","l","w","w","w","w","w","w",""],
+                    "results": ["w","l","l","l","l","l","l","l","w","w","w","w","w","w","l"],
                     "total": [
                         {
                             "win": "7",
                             "forfeit": "",
-                            "lose": "7"
+                            "lose": "8",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Wakatakakage",
-                    "bingo": "",
-                    "results": ["w","l","l","w","l","w","l","l","w","w","l","w","w","l",""],
+                    "results": ["w","l","l","w","l","w","l","l","w","w","l","w","w","l","l"],
                     "total": [
                         {
                             "win": "7",
                             "forfeit": "",
-                            "lose": "7"
+                            "lose": "8",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Meisei",
-                    "bingo": "make-koshi",
-                    "results": ["l","l","w","l","l","w","l","l","l","w","w","l","w","w",""],
+                    "results": ["l","l","w","l","l","w","l","l","l","w","w","l","w","w","l"],
                     "total": [
                         {
                             "win": "6",
                             "forfeit": "",
-                            "lose": "8"
+                            "lose": "9",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Atamifuji",
-                    "bingo": "make-koshi",
-                    "results": ["l","l","l","l","w","w","l","l","l","l","l","w","l","w",""],
+                    "results": ["l","l","l","l","w","w","l","l","l","l","l","w","l","w","w"],
                     "total": [
                         {
-                            "win": "4",
+                            "win": "5",
                             "forfeit": "",
-                            "lose": "10"
+                            "lose": "10",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Nishikifuji",
-                    "bingo": "kachi-koshi",
-                    "results": ["l","w","w","l","l","w","w","l","l","w","w","w","w","l",""],
+                    "results": ["l","w","w","l","l","w","w","l","l","w","w","w","w","l","w"],
                     "total": [
                         {
-                            "win": "8",
+                            "win": "9",
                             "forfeit": "",
-                            "lose": "6"
+                            "lose": "6",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Hiradoumi",
-                    "bingo": "make-koshi",
-                    "results": ["l","w","l","l","l","w","w","w","w","l","w","l","l","l",""],
+                    "results": ["l","w","l","l","l","w","w","w","w","l","w","l","l","l","w"],
                     "total": [
                         {
-                            "win": "6",
+                            "win": "7",
                             "forfeit": "",
-                            "lose": "8"
+                            "lose": "8",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Onosato",
-                    "bingo": "kachi-koshi",
-                    "results": ["l","w","w","l","l","w","w","w","w","w","l","w","l","w",""],
+                    "results": ["l","w","w","l","l","w","w","w","w","w","l","w","l","w","w"],
                     "total": [
                         {
-                            "win": "9",
+                            "win": "10",
                             "forfeit": "",
-                            "lose": "5"
+                            "lose": "5",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Shodai",
-                    "bingo": "make-koshi",
-                    "results": ["l","l","l","w","w","l","l","w","w","w","l","w","l","l",""],
+                    "results": ["l","l","l","w","w","l","l","w","w","w","l","w","l","l","l"],
                     "total": [
                         {
                             "win": "6",
                             "forfeit": "",
-                            "lose": "8"
+                            "lose": "9",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Takanosho",
-                    "bingo": "make-koshi",
-                    "results": ["l","l","l","l","l","w","w","l","l","w","w","w","w","l",""],
+                    "results": ["l","l","l","l","l","w","w","l","l","w","w","w","w","l","l"],
                     "total": [
                         {
                             "win": "6",
                             "forfeit": "",
-                            "lose": "8"
+                            "lose": "9",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Tamawashi",
-                    "bingo": "kachi-koshi",
-                    "results": ["w","w","w","w","w","l","w","l","l","l","l","w","w","w",""],
+                    "results": ["w","w","w","w","w","l","w","l","l","l","l","w","w","w","l"],
                     "total": [
                         {
                             "win": "9",
                             "forfeit": "",
-                            "lose": "5"
+                            "lose": "6",
+                            "playoff": ""
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Kinbozan",
-                    "bingo": "kachi-koshi",
-                    "results": ["w","w","w","w","w","w","w","w","w","l","w","l","w","w",""],
+                    "results": ["w","w","w","w","w","w","w","w","w","l","w","l","w","w","l"],
                     "total": [
                         {
                             "win": "12",
                             "forfeit": "",
-                            "lose": "2"
+                            "lose": "3",
+                            "playoff": "0"
                         }
                     ],
+                    "retired": false,
+                    "absent": false,
                     "saiko": false
                 },
                 {
                     "name": "Hoshoryu",
-                    "bingo": "kachi-koshi",
-                    "results": ["w","w","w","w","l","w","w","l","l","w","w","w","w","w",""],
+                    "results": ["w","w","w","w","l","w","w","l","l","w","w","w","w","w","w"],
                     "total": [
                         {
-                            "win": "11",
+                            "win": "12",
                             "forfeit": "",
-                            "lose": "3"
+                            "lose": "3",
+                            "playoff": "2"
                         }
                     ],
-                    "saiko": false
+                    "retired": false,
+                    "absent": false,
+                    "saiko": true
                 }
             ]
         }
