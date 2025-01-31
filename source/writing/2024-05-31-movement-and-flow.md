@@ -3,6 +3,7 @@ title: "Movement and flow"
 posse: "My last minute submission for May’s #IndieWeb carnival hosted by @hamatti@mastodon.world on the theme of creative environments."
 tags:
     - 'Creativity'
+    - 'Indieweb'
 ---
 
 If I sit for too long I get restless. My muscles start to stiffen and ideas stagnate. Time to get up and move.
