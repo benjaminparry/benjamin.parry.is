@@ -679,6 +679,7 @@ a {
 .tiles__item h1 {
   font-weight: bold;
 }
+.visually-hidden,
 .off-screen,
 .skip-link {
   display: block;
@@ -915,3 +916,22 @@ a {
     font-size: var(--step-1);
     line-height: var(--step--1);
 }
+
+/* MARK: ANCHOR LINKS */
+.heading-wrapper {
+    position: relative;
+}
+.header-anchor {
+    /* position: absolute;
+    top: 0;
+    left: -2rem; */
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+}
+/* h2 + .header-anchor {
+    font-size: var(--step-4);
+    line-height: 1.6;
+} */

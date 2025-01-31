@@ -24,6 +24,7 @@
     "moment": "^2.29.4"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it-anchor": "^9.2.0"
   }
 }
