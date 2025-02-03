@@ -8,7 +8,7 @@ eleventyComputed:
   posse: |
     A bimble about Brighton seafront with Al Power, Paul Robert Lloyd and a camera.
 images:
-  - "/assets/images/collecting/photos/2025/02/20250201-photo-bimble-01.jpg"
+  - "/assets/images/collecting/photos/2025/02/20250201-photo-bimble-07.jpg"
 ---
 
 ![A man facing left looking through a camera, the sea in the background.](/assets/images/collecting/photos/2025/02/20250201-photo-bimble-01.jpg)
