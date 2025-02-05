@@ -9,10 +9,11 @@ tags:
   - "Note-taking"
   - "Yak-shaving"
   - "Bikeshedding"
+  - Personal Knowledge Management
 published: true
 ---
 
-Let’s face it, part of the attraction to personal knowledge management (PMK) software is indulging in the act of Bikeshedding. While the endless tweaking of settings, templates and plugins seems rewarding at the time, it usually a distraction from the original goal: building a networked system of knowledge.
+Let’s face it, part of the attraction to personal knowledge management (PKM) software is indulging in the act of Bikeshedding. While the endless tweaking of settings, templates and plugins seems rewarding at the time, it usually a distraction from the original goal: building a networked system of knowledge.
 
 As an aside, this obsessive tinkering could be good news for the software developers in the longterm. There’s some behavioural insights that come into play here. [IKEA Effect](https://www.coglode.com/research/ikea-effect) explains that we put overwhelmingly more value on products we play some part in making. Lego is a great example of such a product.
 
