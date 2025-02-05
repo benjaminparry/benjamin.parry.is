@@ -8,7 +8,7 @@ tags:
     - Ethics
 posse: "Learn more about why Cennydd is perfect for speaking at Research by the Sea."
 images:
-  - "/assets/images/writing/2025/01/research-by-the-sea-michael-cennydd.jpg"
+  - "/assets/images/writing/2025/02/research-by-the-sea-cennydd.jpg"
 ---
 
 I feel sorry for anyone tasked with writing a talk about ethics in digital technology in early 2025. The smorgasbord of negative examples are enough to make anyone feel nauseous and light-headed. If the menu doesn’t trigger your gag reflexes, then I’m afraid to say, you might have taken the wrong pill.
@@ -27,3 +27,5 @@ I'm delighted that Cennydd is joining us at Research by the Sea with his new tal
 - [Read more about Cennydd’s talk](https://researchbythesea.com/cennydd-bowles) on the Research by the Sea website.
 - [Connect with Cennydd](https://www.linkedin.com/in/cennydd/) on LinkedIn.
 - Check out Cennydd’s book [Future Ethics](https://cennydd.com/future-ethics).
+
+![A man looking forwards with the words "Cennydd Bowles Managing director, NowNext, Research by the Sea 27 Feb 2025"](/assets/images/writing/2025/02/research-by-the-sea-cennydd.jpg)
