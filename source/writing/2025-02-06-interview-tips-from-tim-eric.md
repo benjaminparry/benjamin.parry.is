@@ -1,6 +1,6 @@
 ---
 title: "Interview tips from Tim & Eric"
-posse: "Comedians Tim & Eric are well known for their irreverent approach to press interviews. The duo use them as another stage for their absurdist style of humour. Amongst the anarchic trolling of this interview clip their lies some timeless advice for research practitioners."
+posse: "Irreverent comedian duo Tim & Eric provide some timeless research interviewing advice amongst the anarchic trolling of this press interview clip."
 tags:
     - Interview
     - Stakeholder Interviews
@@ -12,7 +12,7 @@ images:
 ---
 
 <div class="embed-wrapper">
-    <video controls width="250" poster="/assets/images/writing/2025/02/interview-tips-from-tim-eric.jpg" class="embed-wrapper__item">
+    <video controls poster="/assets/images/writing/2025/02/interview-tips-from-tim-eric.jpg" class="embed-wrapper__item">
         <source src="/assets/video/writing/2025/02/interview-tips-from-tim-eric.mp4" type="video/mp4" />
         <source src="/assets/video/writing/2025/02/interview-tips-from-tim-eric.webm" type="video/webm" />
         <source src="/assets/video/writing/2025/02/interview-tips-from-tim-eric.ogg" type="video/ogg" />
