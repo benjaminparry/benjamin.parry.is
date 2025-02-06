@@ -32,7 +32,7 @@ As an Amazon customer, you no longer have to think. From one-click payments, sel
 
 By some defiance of logic, Amazon are able to sell quality like-for-like products cheaper than any other retailer and have them delivered to your door the same day.
 
-<p class="pullquote"> I suppose the established belief behind the phrase “Quality, Speed, Cost: pick two” was yet another one of Jeff’s ’opportunities‘.</p>
+<p class="pullquote">I suppose the established belief behind the phrase “Quality, Speed, Cost: pick two” was yet another one of Jeff’s ’opportunities‘.</p>
 
 Too good to be true, huh?
 
