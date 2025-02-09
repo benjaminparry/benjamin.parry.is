@@ -155,6 +155,23 @@
     ],
 	"watched": [
         {
+            "type": "Film",
+            "location": "Sofa",
+            "titleNative": "",
+            "titleLiterally": "",
+            "titleEnglish": "Groundhog Day",
+            "season": "",
+            "originCountry": "United States",
+            "originFlag": "🇺🇸",
+			"summary": "The classic Sci-Fi time loop plot device with prime Bill Murrey.",
+            "warning": "",
+            "artwork": "/groundhog-day.jpg",
+            "artworkDescription": "",
+            "rating": "4",
+            "favourite": false,
+            "date": "2025-02-08"
+        },
+        {
             "type": "TV",
             "location": "Sofa",
             "titleNative": "",
