@@ -2,6 +2,8 @@
 title: 'Offline'
 layout: 'layouts/temp.html'
 permalink: '/offline/'
+section:
+    - utopia
 ---
 
 

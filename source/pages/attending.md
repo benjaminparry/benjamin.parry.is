@@ -2,7 +2,8 @@
 title: 'Attending'
 permalink: '/attending/'
 layout: 'layouts/temp.html'
-section: attending
+section:
+    - utopia
 ---
 
 ## Events I’ll be attending.

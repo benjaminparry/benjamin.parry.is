@@ -2,6 +2,8 @@
 title: 'Making Mistakes'
 permalink: '/making/mistakes/'
 layout: 'layouts/temp.html'
+section:
+    - utopia
 ---
 
 A list of mistakes I’ve made maintaining this site and the reasoning behind making the changes to rectify them.
@@ -22,6 +24,6 @@ There is also the issue of repeated entry titles e.g. `writing/ground-zero/` wri
 * Map out the design with real content
 * Experiment with the language
 * Be consistent
-* If it feels boated or clunky, you’ve probably made a mistake  
+* If it feels boated or clunky, you’ve probably made a mistake
 * Abstract it
 * Think [future friendly](https://futurefriendlyweb.com/)

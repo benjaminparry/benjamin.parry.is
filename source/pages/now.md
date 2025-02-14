@@ -3,6 +3,8 @@ title: 'Now'
 posse: 'A snapshot of what I’m doing now. Part of the NowNowNow group https://nownownow.com/about.'
 layout: 'layouts/temp.html'
 permalink: '/now/'
+section:
+    - utopia
 ---
 
 <div class="posse">{{ posse }}</div>
