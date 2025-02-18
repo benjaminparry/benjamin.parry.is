@@ -1,7 +1,7 @@
 {
-    "layout": "layouts/post.html",
-    "permalink": "/watching/{{ page | post_permalink }}/index.html",
-    "section": "watching",
-    "sectionURL": "/watching/",
-    "verb": "Watched"
-  }
+  "layout": "layouts/post.html",
+  "permalink": "/watching/{{ page | post_permalink }}/index.html",
+  "section": "watching",
+  "sectionURL": "/watching/",
+  "verb": "Watched"
+}

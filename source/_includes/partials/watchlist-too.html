@@ -1,0 +1,32 @@
+{% for item in collections.watchlist %}
+<ul>
+<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+<li><img src="/assets/images/watching/{{ item.data.title | slugify }}{% if item.data.season %}-{% if item.data.season < 10 %}0{% endif %}{{ item.data.season }}{% endif %}.jpg"></li>
+<li>{{ item.data.context }}</li>
+<li>{{ item.data.media }}</li>
+<li>{{ item.data.rating }}</li>
+
+<li>{{ item.data.content | safe }}</li>
+
+{% if item.data.warning %}
+<li>Content warnings:
+<ul>
+{% for warnings in item.data.warning %}
+<li>{{ warnings }}</li>
+{% endfor %}
+</ul>
+</li>
+{% endif %}
+
+<li>Watched:
+<ul>
+{% for watches in item.data.watched %}
+<li>{{ watches | dateFilter  }}</li>
+{% endfor %}
+</ul>
+</li>
+
+</ul>
+
+<hr>
+{% endfor %}
