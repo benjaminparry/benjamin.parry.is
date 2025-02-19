@@ -1,6 +1,6 @@
 {
   "layout": "layouts/post.html",
-  "permalink": "/watching/{{ page | post_permalink }}/index.html",
+  "permalink": "/watching/{{ title | slugify }}/index.html",
   "section": "watching",
   "sectionURL": "/watching/",
   "verb": "Watched"

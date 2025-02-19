@@ -10,4 +10,4 @@ paginationNextText: 'Older'
 paginationAnchor: '#post-list'
 ---
 
-Watching 2
+Watching(s)

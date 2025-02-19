@@ -1,32 +1,109 @@
-{% for item in collections.watchlist %}
-<ul>
-<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
-<li><img src="/assets/images/watching/{{ item.data.title | slugify }}{% if item.data.season %}-{% if item.data.season < 10 %}0{% endif %}{{ item.data.season }}{% endif %}.jpg"></li>
-<li>{{ item.data.context }}</li>
-<li>{{ item.data.media }}</li>
-<li>{{ item.data.rating }}</li>
+<h2>Currently watching</h2>
 
-<li>{{ item.data.content | safe }}</li>
-
-{% if item.data.warning %}
-<li>Content warnings:
-<ul>
-{% for warnings in item.data.warning %}
-<li>{{ warnings }}</li>
-{% endfor %}
-</ul>
-</li>
-{% endif %}
-
-<li>Watched:
-<ul>
-{% for watches in item.data.watched %}
-<li>{{ watches | dateFilter  }}</li>
-{% endfor %}
-</ul>
-</li>
-
+<ul class="reset-list grid grid--5">
+    {% for watch in watchlist.watching %}
+    <li>
+        <img
+            src="/assets/images/watching/{{ watch.artwork }}"
+            alt="artworkDescription"
+        />
+        <p style="margin-top: 0">
+            {{ watch.titleEnglish }}{% if watch.season %} – S{{ watch.season
+            }}{% endif %}
+        </p>
+    </li>
+    {% endfor %}
 </ul>
 
-<hr>
-{% endfor %}
+<h2>Watched</h2>
+
+<ul class="reset-list list list--divided">
+    {% for item in collections.watchlist %}
+    <li
+        id="{{ item.data.title | slugify | safe }}"
+        class="list-group-item"
+        style="padding: 2rem 0;{% if item.data.award %} padding: 1rem;background-color: #fff;border: 4px solid #df950a;position: relative;margin-left: -1rem;margin-right: -1rem;{% endif %}"
+    >
+        {% if item.data.award %}
+        <div
+            style="
+                padding: 1rem;
+                background-color: #fafafa;
+                border-bottom: 4px solid #df950a;
+                border-left: 4px solid #df950a;
+                position: absolute;
+                top: -4px;
+                right: -4px;
+                font-weight: bold;
+                color: #505050;
+                z-index: 1;
+            "
+        >
+            🏆 Top Pick
+        </div>
+        {% endif %}
+        <div class="grid grid--2">
+            <div style="padding-right: 1rem">
+                <!-- {% if watch.titleNative %}
+                <h1 class="heading heading--alpha" style="margin-top: 0">
+                    {{ watch.originFlag }} {{ watch.titleNative }}
+                </h1>
+                <p>
+                    {% if watch.titleLiterally %}{{ watch.titleLiterally }}, {%
+                    endif %}aka <strong>{{ watch.titleEnglish }}</strong>
+                </p>
+                {% else %}
+                {% endif %} -->
+                <h1 class="heading heading--alpha" style="margin-top: 0">
+                    <a href="{{ item.url }}">
+                        {{ item.data.title }}{% if item.data.season %} – Season
+                        {% if item.data.season < "10" %}0{% endif %}{{
+                        item.data.season }}{% endif %}</a
+                    >
+                </h1>
+                <p style="font-size: 1.3rem">{{ item.content | safe }}</p>
+                {% if item.data.warning %}
+                <p class="alert alert--warning">
+                    <strong class="alert__type">Trigger warning</strong
+                    ><br />Themes may be triggering for some people; {{
+                    item.data.warning }} (loop).
+                </p>
+                {% endif %}
+                <ul class="reset-list" style="font-size: 0.9rem">
+                    <li>Type: {{ item.data.media }}</li>
+                    <li>Rating: {{ item.data.rating }}</li>
+                    <li>
+                        Watched:
+                        <ul>
+                            {% for watches in item.data.watched %}
+                            <li>{{ watches | dateFilter }}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="artwork-frame" style="position: relative">
+                <img
+                    src="/assets/images/watching/{{ item.data.title | slugify }}{% if item.data.season %}-{% if item.data.season < 10 %}0{% endif %}{{ item.data.season }}{% endif %}.jpg"
+                    alt="artworkDescription"
+                />
+                <p
+                    class="artwork-frame__label"
+                    style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 0.25rem;
+                        background-color: white;
+                    "
+                >
+                    {% if item.data.context == "cinema" %}🎦{% endif %}{% if
+                    item.data.context == "sofa" %}📺{% endif %}{% if
+                    item.data.context == "theatre" %}🎭{% endif %} {{
+                    item.data.context }}
+                </p>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
