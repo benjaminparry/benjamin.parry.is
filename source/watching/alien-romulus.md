@@ -2,11 +2,11 @@
 title: "Alien: Romulus"
 date: 2024-10-30
 media: film
-season:
 watched:
   - 2024-10-30
 context: sofa
-rating: 🍿☣️👽
+rating_emoji: 🍿☣️
+rating_prose: One bag of popcorn and a biohazard sign warning people to stay away from this one!
 warning:
 award: false
 ---

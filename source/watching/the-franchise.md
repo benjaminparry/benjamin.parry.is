@@ -1,12 +1,12 @@
 ---
-title: The Franchise
-date: 2025-02-01
+title: The Franchise – S01
+date: 2024-11-30
 media: tv
-season: 01
 watched:
-  - 2025-01-20
+  - 2024-11-30
 context: sofa
-rating: 🍿🍿🍿🍿🍿🦸
+rating_emoji: 🍿🍿🍿🍿🍿🪦
+rating_prose: Five bags of popcorn and a tombstone to mark the death of the superhero movie franchise.
 warning:
 award: true
 ---

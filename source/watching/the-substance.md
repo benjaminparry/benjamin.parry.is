@@ -1,13 +1,12 @@
 ---
 title: The Substance
-date: 2024-11-30
+date: 2024-11-01
 media: film
-season:
 watched:
-  - 2024-11-30
-  - 2025-01-23
+  - 2024-11-01
 context: sofa
-rating: 🍿🍿🍿🍿🍳💉
+rating_emoji: 🍿🍿🍿🍿📝
+rating_prose: Four bags of popcorn and a list of instructions to follow so you don’t mess up like the characters in this film.
 warning:
   - violence
   - gore

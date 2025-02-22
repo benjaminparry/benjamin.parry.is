@@ -55,23 +55,22 @@
                 {% else %}
                 {% endif %} -->
                 <h1 class="heading heading--alpha" style="margin-top: 0">
-                    <a href="{{ item.url }}">
-                        {{ item.data.title }}{% if item.data.season %} – Season
-                        {% if item.data.season < "10" %}0{% endif %}{{
-                        item.data.season }}{% endif %}</a
-                    >
+                    <a href="{{ item.url }}"> {{ item.data.title }}</a>
                 </h1>
                 <p style="font-size: 1.3rem">{{ item.content | safe }}</p>
                 {% if item.data.warning %}
                 <p class="alert alert--warning">
-                    <strong class="alert__type">Trigger warning</strong
-                    ><br />Themes may be triggering for some people; {{
-                    item.data.warning }} (loop).
+                    <strong class="alert__type">Trigger warning</strong><br />
+                    Themes may be triggering for some people; {% for warning in
+                    item.data.warning %}, {{ warning }}{% endfor %}.
                 </p>
                 {% endif %}
                 <ul class="reset-list" style="font-size: 0.9rem">
                     <li>Type: {{ item.data.media }}</li>
-                    <li>Rating: {{ item.data.rating }}</li>
+                    <li>
+                        Rating: {{ item.data.rating_emoji }} – “{{
+                        item.data.rating_prose }}”
+                    </li>
                     <li>
                         Watched:
                         <ul>
@@ -84,7 +83,7 @@
             </div>
             <div class="artwork-frame" style="position: relative">
                 <img
-                    src="/assets/images/watching/{{ item.data.title | slugify }}{% if item.data.season %}-{% if item.data.season < 10 %}0{% endif %}{{ item.data.season }}{% endif %}.jpg"
+                    src="/assets/images/watching/{{ item.data.title | slugify }}.jpg"
                     alt="artworkDescription"
                 />
                 <p
