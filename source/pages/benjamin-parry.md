@@ -20,5 +20,6 @@ My name is Benjamin Parry. I live is Lewes, East Sussex, UK.
 
 ## Find out more about me
 
-- [What I’m doing now](/now/)
-- [Get in contact](/contactable/)
+- A [user manual](/benjamin-parry/user-manual/) for working with me.
+- [What I’m doing now](/now/).
+- [Get in contact](/contactable/).

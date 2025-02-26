@@ -14,7 +14,7 @@ Hi, thanks for making time to read about me. If you think I’ve missing somethi
 
 **I live and die by the calendar.** My calander is mostly up to date and assume other people’s are too… though I appreciate that’s not how all people work. I make sure to accept/declide invitations for the current and following week at a minimum. I have lunch booked in everyday at 12:00 but occasionally move it, I sometimes run errands over lunch too so will be away from the computer.
 
-**My phone isn’t a company phone.** I’m trying to get better at setting boundaries so I don’t have any company related accounts on my mobile phone. That means no email or Slack. I don’t use WhatsApp either because≤… well, Zuckerburg! The best way to get in touch with me is by text or a phone call, my number is on my Slack profile.
+**My phone isn’t a company phone.** I’m trying to get better at setting boundaries so I don’t have any company related accounts on my mobile phone. That means no email or Slack. I don’t use WhatsApp either because… well, Zuckerburg! The best way to get in touch with me is by text or a phone call, my number is on my Slack profile.
 
 **I like to move it, move it.** A ride before/after the working day, a walking 1:1, a ‘doing’ social activity, working at a standing desk, all raise my energy and bring out the best in me. If I’m sat in the same position all day give me a poke.
 

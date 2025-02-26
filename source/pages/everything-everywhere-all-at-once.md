@@ -9,6 +9,7 @@ section:
 ## Benjamin parry is…
 
 - [Benjamin Parry](/benjamin-parry/) – More about me.
+  - [User Manual](/benjamin-parry/user-manual) – A guide for working with me.
 - [Contactable](/contactable/) - My contact details and how I prefer to converse.
 - [Now](/now/) – What I’m up to right now: a status update.
 - [Writing](/writing/) – Long form written content like articles and essays.
