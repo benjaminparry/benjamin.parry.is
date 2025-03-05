@@ -72,3 +72,5 @@ Guerrilla testing will help you quickly answer a handful of questions at a low c
 ## Go forth and learn
 
 To learn at the required speed and depth we need a range of methods at our disposal. When time and budget are working against you, reach for a method like guerrilla testing that allows you to make the progress you need.
+
+Now that we’ve selected guerrilla testing as an appropriate method for our research, how do we make sure we [get the best results](/writing/2020/09/guerrilla-testing-tips-for-better-results/)?

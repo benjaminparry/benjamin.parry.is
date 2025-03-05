@@ -7,11 +7,11 @@ tags:
 published: true
 ---
 
-Now that we’ve selected guerrilla testing as an appropriate method for our research, how do we make sure we get the best results?
+Now that we’ve [selected guerrilla testing](/writing/2020/03/guerrilla-testing-what-it-is-and-when-to-use-it/) as an appropriate method for our research, how do we make sure we get the best results?
 
 When dealing with the tradeoffs of time and rigour, it’s important to be as prepared as possible on the day. Here are some of our rules of thumb for before, during, and after test day.
 
-## Before
+## Before
 
 A refined and rehearsed discussion guide adds structure to your tests. We have found value in front-loading our most important questions and leaving the ‘nice-to-know’ toward the end. Doing a dry-run with colleagues will help to trim down the script, weed out ambiguous questions and flush out prototype gremlins.
 
