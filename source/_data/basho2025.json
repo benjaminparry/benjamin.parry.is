@@ -811,11 +811,11 @@
             "w",
             "l",
             "w",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "6",
+              "win": "7",
               "forfeit": "",
               "lose": "8",
               "playoff": ""
@@ -842,11 +842,11 @@
             "l",
             "w",
             "l",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "5",
+              "win": "6",
               "forfeit": "",
               "lose": "9",
               "playoff": ""
@@ -873,11 +873,11 @@
             "w",
             "w",
             "l",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "7",
+              "win": "8",
               "forfeit": "",
               "lose": "7",
               "playoff": ""
@@ -904,11 +904,11 @@
             "l",
             "l",
             "w",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "8",
+              "win": "9",
               "forfeit": "",
               "lose": "6",
               "playoff": ""
@@ -935,13 +935,13 @@
             "l",
             "l",
             "l",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "3",
               "forfeit": "",
-              "lose": "11",
+              "lose": "12",
               "playoff": ""
             }
           ],
@@ -966,11 +966,11 @@
             "l",
             "w",
             "w",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "6",
+              "win": "7",
               "forfeit": "",
               "lose": "8",
               "playoff": ""
@@ -997,13 +997,13 @@
             "w",
             "w",
             "w",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "9",
               "forfeit": "",
-              "lose": "5",
+              "lose": "6",
               "playoff": ""
             }
           ],
@@ -1028,19 +1028,19 @@
             "w",
             "l",
             "w",
-            ""
+            "w"
           ],
           "total": [
             {
               "win": "11",
               "forfeit": "",
               "lose": "3",
-              "playoff": ""
+              "playoff": "1"
             }
           ],
           "retired": false,
           "absent": false,
-          "saiko": false
+          "saiko": true
         },
         {
           "name": "Kirishima",
@@ -1059,11 +1059,11 @@
             "l",
             "w",
             "w",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "7",
+              "win": "8",
               "forfeit": "",
               "lose": "7",
               "playoff": ""
@@ -1090,13 +1090,13 @@
             "w",
             "l",
             "w",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "3",
               "forfeit": "",
-              "lose": "11",
+              "lose": "12",
               "playoff": ""
             }
           ],
@@ -1121,11 +1121,11 @@
             "l",
             "l",
             "w",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "5",
+              "win": "6",
               "forfeit": "",
               "lose": "9",
               "playoff": ""
@@ -1152,13 +1152,13 @@
             "w",
             "w",
             "l",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "8",
               "forfeit": "",
-              "lose": "6",
+              "lose": "7",
               "playoff": ""
             }
           ],
@@ -1183,13 +1183,13 @@
             "l",
             "l",
             "l",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "6",
               "forfeit": "",
-              "lose": "8",
+              "lose": "9",
               "playoff": ""
             }
           ],
@@ -1212,15 +1212,15 @@
             "w",
             "l",
             "w",
-            "",
-            "",
-            ""
+            "l",
+            "w",
+            "l"
           ],
           "total": [
             {
               "win": "9",
               "forfeit": "",
-              "lose": "5",
+              "lose": "6",
               "playoff": ""
             }
           ],
@@ -1245,13 +1245,13 @@
             "w",
             "w",
             "w",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "10",
               "forfeit": "",
-              "lose": "4",
+              "lose": "5",
               "playoff": ""
             }
           ],
@@ -1276,11 +1276,11 @@
             "w",
             "w",
             "l",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "8",
+              "win": "9",
               "forfeit": "",
               "lose": "6",
               "playoff": ""
@@ -1307,13 +1307,13 @@
             "l",
             "w",
             "l",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "9",
               "forfeit": "",
-              "lose": "5",
+              "lose": "6",
               "playoff": ""
             }
           ],
@@ -1338,11 +1338,11 @@
             "l",
             "w",
             "w",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "8",
+              "win": "9",
               "forfeit": "",
               "lose": "6",
               "playoff": ""
@@ -1369,13 +1369,13 @@
             "w",
             "w",
             "l",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "6",
               "forfeit": "",
-              "lose": "8",
+              "lose": "9",
               "playoff": ""
             }
           ],
@@ -1400,13 +1400,13 @@
             "w",
             "l",
             "w",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "6",
               "forfeit": "",
-              "lose": "8",
+              "lose": "9",
               "playoff": ""
             }
           ],
@@ -1431,13 +1431,13 @@
             "l",
             "l",
             "l",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "3",
               "forfeit": "",
-              "lose": "11",
+              "lose": "12",
               "playoff": ""
             }
           ],
@@ -1462,13 +1462,13 @@
             "w",
             "w",
             "l",
-            ""
+            "l"
           ],
           "total": [
             {
               "win": "6",
               "forfeit": "",
-              "lose": "8",
+              "lose": "9",
               "playoff": ""
             }
           ],
@@ -1493,11 +1493,11 @@
             "l",
             "l",
             "w",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "8",
+              "win": "9",
               "forfeit": "",
               "lose": "6",
               "playoff": ""
@@ -1523,14 +1523,14 @@
             "l",
             "l",
             "w",
-            "",
-            ""
+            "w",
+            "l"
           ],
           "total": [
             {
-              "win": "5",
+              "win": "6",
               "forfeit": "",
-              "lose": "8",
+              "lose": "9",
               "playoff": ""
             }
           ],
@@ -1555,11 +1555,11 @@
             "w",
             "l",
             "w",
-            ""
+            "w"
           ],
           "total": [
             {
-              "win": "9",
+              "win": "10",
               "forfeit": "",
               "lose": "5",
               "playoff": ""
