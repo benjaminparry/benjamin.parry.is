@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en-GB" class="h-feed {{ page.type }}">
+    {% include "partials/meta-info.html" %}
+
+    <body>
+        <div class="{{ ' ' + section | slug }}">
+            <section class="page-content clearfix">
+                <main tabindex="-1" id="main-content">
+                    {{ content | safe }}
+                </main>
+            </section>
+        </div>
+    </body>
+</html>
