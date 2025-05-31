@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/celebrating/{{ page | post_permalink }}/index.html",
+  "section": "Celebrating",
+  "sectionURL": "/celebrating/",
+  "verb": "Celebrated"
+}

@@ -191,6 +191,13 @@ module.exports = (config) => {
   });
 
   // Returns a collection of links in reverse date order
+  config.addCollection("celebrations", (collection) => {
+    return [
+      ...collection.getFilteredByGlob("./source/celebrating/*.md"),
+    ].reverse();
+  });
+
+  // Returns a collection of links in reverse date order
   config.addCollection("links", (collection) => {
     return [
       ...collection.getFilteredByGlob("./source/collecting/links/*.md"),
