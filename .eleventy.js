@@ -248,6 +248,8 @@ module.exports = (config) => {
         "./source/sending/*/*.md",
         "./source/making/*.md",
         "./source/attending/*.md",
+        "./source/celebrating/*.md",
+        "./source/speaking/*.md",
         // "./source/watching/*.md",
       ])
       .reverse();
