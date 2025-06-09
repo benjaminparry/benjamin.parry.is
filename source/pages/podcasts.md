@@ -10,4 +10,4 @@ paginationNextText: 'Older'
 paginationAnchor: '#post-list'
 ---
 
-Custom feed of poscasts. Subscribe to the podcasts [RSS feed](/collecting/podcasts/feed.xml).
+Custom feed of poscasts. Subscribe to the podcasts [RSS feed](/collecting/podcasts/feed.rss).
