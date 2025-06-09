@@ -10,4 +10,6 @@ paginationNextText: 'Older'
 paginationAnchor: '#post-list'
 ---
 
-Custom feed of poscasts. Subscribe to the podcasts [RSS feed](/collecting/podcasts/feed.rss).
+A feed of podcasts that haven’t quite made it onto my subscription list. I used to use [Huffduffer](https://huffduffer.com) for this but I wanted to own this content myself.
+
+Subscribe to the podcasts [RSS feed](/collecting/podcasts/feed.rss).
