@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/collecting/podcasts/{{ page | post_permalink }}/index.html",
+  "section": "Podcasts",
+  "sectionURL": "/collecting/podcasts/",
+  "verb": "Collected"
+}

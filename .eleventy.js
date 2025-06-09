@@ -204,6 +204,13 @@ module.exports = (config) => {
     ].reverse();
   });
 
+  // Returns a collection of links in reverse date order
+  config.addCollection("podcasts", (collection) => {
+    return [
+      ...collection.getFilteredByGlob("./source/collecting/podcasts/*.md"),
+    ].reverse();
+  });
+
   // Returns a collection of thoughts in reverse date order
   config.addCollection("lists", (collection) => {
     return [
@@ -252,6 +259,22 @@ module.exports = (config) => {
         "./source/speaking/*.md",
         // "./source/watching/*.md",
       ])
+      .reverse();
+  });
+
+  config.addCollection("updating", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob([
+        // "./source/writing/*.md",
+        // "./source/collecting/*/*.md",
+        // "./source/sending/*/*.md",
+        "./source/making/*.md",
+        "./source/attending/*.md",
+        "./source/celebrating/*.md",
+        "./source/speaking/*.md",
+        "./source/watching/*.md",
+      ])
+      .filter((x) => x.data.updated)
       .reverse();
   });
 

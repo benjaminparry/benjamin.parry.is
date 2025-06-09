@@ -4,7 +4,7 @@ posse: "My workflow to solve the lack of openly accessible podcast audio files a
 tags:
     - 'Open Source'
     - 'Self Hosting'
-    - 'Podcasts'
+    - 'Podcast'
     - 'Technology'
 category: Technology
 ---

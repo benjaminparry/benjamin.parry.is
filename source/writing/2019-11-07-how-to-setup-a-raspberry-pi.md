@@ -25,13 +25,9 @@ Let’s begin.
 7. Open Terminal and enter `ssh pi@{Raspberry Pi IP address}`
 8. Type `yes` to confirm connection
 9. Type the default password `raspberry`
-10. Update the Raspberry Pi with the newest packages by typing `sudo apt update`
-11. Upgrade the packages by typing `sudo apt full-upgrade`
-12. Type `y` to confirm the upgrade
-13. _Go make yourself a cup of tea…_
-14. Clean everything up by typing `sudo apt clean`
-15. Reboot by typing `sudo shutdown -r now`
-16. Connect again via SSH again `ssh pi@{IP address}`
+10. Update and upgrade the Raspberry Pi with the newest packages and reboot the Pi by typing `sudo apt update && sudo apt full-upgrade && sudo apt clean && sudo shutdown -r now`
+12. Type `y` to confirm the upgrade and _make yourself a cup of tea… this will take some time_
+16. After the Pi reboots, connect again via SSH again `ssh pi@{IP address}`
 17. Type the default password `raspberry`
 18. Start the Raspberry Pi configuration by typing `sudo raspi-config`
 19. Select **Change user password** and press enter
