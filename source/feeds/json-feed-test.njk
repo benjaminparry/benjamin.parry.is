@@ -12,10 +12,11 @@ permalink: 'everything-everywhere-all-at-once/chronologically/feed.json'
     "icon": "{{ site.icon.feed }}",
     "items": [
         {% for item in collections.everything %}{
-            "id": "{{ item.url }}",
-            "url": "{{ item.url }}",
+            "id": "{{ site.url }}{{ item.url }}",
+            "title": "{{ item.data.title }}",
+            "url": "{{ site.url }}{{ item.url }}",
             "external_url": "{% if item.data.bookmarkOf %}{{ item.data.bookmarkOf }}{% endif %}",
-            "image": "{{ site.url }}{{ item.data.images[0] }}",
+            "image": "{% if item.data.images %}{{ site.url }}{{ item.data.images[0] }}{% endif %}",
             "tags": [{% if item.data.tags %}{% for tag in item.data.tags %}"{{ tag }}"{% if not loop.last %},{% endif %}{% endfor %}{% endif %}],
             "summary": "{{ item.data.posse | safe }}"
         }{% if not loop.last %},{% endif %}{% endfor %}
