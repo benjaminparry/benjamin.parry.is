@@ -1,9 +1,7 @@
 ---
 title: "A solution seeking a problem"
 date: '2024-06-02'
-eleventyComputed:
-  posse: |
-    Kyoto based pottery studio Asahiyaki uses ~1000 pieces from its 400 year collection to train an neural network to generate new ideas for pottery pieces. Interesting but I can’t help but notice the affect on the design process as described by Matsubayashi Hosai the studio director.
+posse: Kyoto based pottery studio Asahiyaki uses ~1000 pieces from its 400 year collection to train an neural network to generate new ideas for pottery pieces. Interesting but I can’t help but notice the affect on the design process as described by Matsubayashi Hosai the studio director.
 tags:
   - "GAI"
   - "Design Thinking"

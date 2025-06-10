@@ -1,9 +1,7 @@
 ---
 title: "AAA – An accessibly audit"
 date: '2024-05-17'
-eleventyComputed:
-  posse: |
-     I was supposed to take the day off today. Instead I put my #GADD money where my mouth is and spent a couple of hours running an initial accessibility audit on my website using the Sa11y bookmarklet https://sa11y.netlify.app #accessibility #a11y
+posse: I was supposed to take the day off today. Instead I put my #GADD money where my mouth is and spent a couple of hours running an initial accessibility audit on my website using the Sa11y bookmarklet https://sa11y.netlify.app #accessibility #a11y
 tags:
   - 'Accessibility'
 images:

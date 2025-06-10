@@ -4,9 +4,7 @@ date: '2025-02-03'
 category: Environment
 tags:
     - Photography
-eleventyComputed:
-  posse: |
-    A bimble about Brighton seafront with Al Power, Paul Robert Lloyd and a camera.
+posse: A bimble about Brighton seafront with Al Power, Paul Robert Lloyd and a camera.
 images:
   - "/assets/images/collecting/photos/2025/02/20250201-photo-bimble-07.jpg"
 ---
