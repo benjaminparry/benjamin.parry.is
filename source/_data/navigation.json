@@ -1,200 +1,206 @@
 {
-	"primary": [
-		{
-			"text": "Writing",
-			"url": "/writing"
-		},
-		{
-			"text": "Speaking",
-			"url": "/speaking"
-		},
-		{
-			"text": "Working",
-			"url": "/working"
-		},
-		{
-			"text": "Making",
-			"url": "/making"
-		},
-		{
-			"text": "Benjamin Parry",
-			"url": "/benjamin-parry"
-		}
-	],
-	"secondary": [
-		{
-			"text": "Collecting",
-            "emoji": "🗄️",
-			"url": "/collecting",
-			"divider": false
-		},
-		{
-			"text": "Cycles",
-            "emoji": "🔃",
-			"url": "/collecting/cycles",
-			"divider": false
-		},
-		{
-			"text": "Links",
-            "emoji": "🔗",
-			"url": "/collecting/links",
-			"divider": false
-		},
-		{
-			"text": "Thoughts",
-            "emoji": "🤔",
-			"url": "/collecting/thoughts",
-			"divider": false
-		},
-		{
-			"text": "Ideas",
-            "emoji": "💡",
-			"url": "/collecting/ideas",
-			"divider": false
-		},
-		{
-			"text": "Lists",
-            "emoji": "📄",
-			"url": "/collecting/lists",
-			"divider": false
-		}
-	],
-	"tertiary": [
-		{
-			"text": "Sending",
-            "emoji": "🚀",
-			"url": "/sending",
-			"divider": false
-		},
-		{
-			"text": "Replies",
-            "emoji": "📨",
-			"url": "/sending/replies",
-			"divider": false
-		},
-		{
-			"text": "Likes",
-            "emoji": "❤️",
-			"url": "/sending/likes",
-			"divider": false
-		}
-    ],
-    "quaternary": [
-        {
-            "text": "Watching",
-            "emoji": "📺️",
-            "url": "/watching/",
-            "divider": false
-        },
-        {
-            "text": "Listening",
-            "emoji": "🎵️",
-            "url": "/listening/",
-            "divider": false
-        },
-        {
-            "text": "Reading",
-            "emoji": "📚️",
-            "url": "/reading/",
-            "divider": false
-        },
-        {
-            "text": "Attending",
-            "emoji": "🎟️",
-            "url": "/attending/",
-            "divider": true
-        }
-    ],
-    "quinary": [
-        {
-            "text": "Now",
-            "emoji": "🗣️",
-            "url": "/now/",
-            "divider": true
-        },
-        {
-            "text": "Tagging",
-            "emoji": "🏷️",
-            "url": "/tagging/",
-            "divider": false
-        },
-        {
-            "text": "Contactable",
-            "emoji": "👋",
-            "url": "/contactable/",
-            "divider": true
-        },
-        {
-            "text": "Focused",
-            "emoji": "🎯",
-            "url": "/focused/",
-            "divider": true
-        }
-    ],
-	"elsewhere": [
-        {
-            "text": "Mastodon",
-			"url": "https://mastodon.social/@benjaminparry"
-		},
-		{
-            "text": "LinkedIn",
-			"url": "https://www.linkedin.com/in/benjaminparry-/"
-		},
-        {
-            "text": "Medium",
-            "url": "https://medium.com/@benjaminparry"
-        },
-        {
-            "text": "Bluesky",
-            "url": "https://bsky.app/profile/benjamin.parry.is"
-        },
-		{
-			"text": "IndieWeb",
-			"url": "https://indieweb.org/User:Benjamin.parry.is"
-		},
-		{
-			"text": "My Anime List",
-			"url": "https://myanimelist.net/profile/benjaminparry"
-		},
-		{
-			"text": "Readwise",
-			"url": "https://readwise.io/@benjaminparry"
-		},
-		{
-			"text": "Duolingo",
-			"url": "https://www.duolingo.com/profile/benjaminparry"
-		},
-		{
-			"text": "Strava",
-			"url": "https://www.strava.com/athletes/benjaminparry"
-		},
-		{
-			"text": "Github",
-			"url": "https://github.com/benjaminparry"
-		},
-		{
-			"text": "Huffduffer",
-			"url": "https://huffduffer.com/BenjaminParry"
-		},
-		{
-			"text": "Pinboard",
-			"url": "https://pinboard.in/u:benjaminparry"
-		},
-		{
-			"text": "Twitter",
-			"url": "https://twitter.com/benjaminparry"
-		},
-        {
-            "text": "NowNowNow",
-            "url": "https://nownownow.com/p/wba3"
-        },
-        {
-            "text": "Bandcamp",
-            "url": "https://bandcamp.com/benjaminparry"
-        },
-		{
-			"text": "Email",
-			"url": "mailto:benjamin@parry.is"
-		}
-	]
+  "primary": [
+    {
+      "text": "Writing",
+      "url": "/writing"
+    },
+    {
+      "text": "Speaking",
+      "url": "/speaking"
+    },
+    {
+      "text": "Working",
+      "url": "/working"
+    },
+    {
+      "text": "Making",
+      "url": "/making"
+    },
+    {
+      "text": "Benjamin Parry",
+      "url": "/benjamin-parry"
+    }
+  ],
+  "secondary": [
+    {
+      "text": "Collecting",
+      "emoji": "🗄️",
+      "url": "/collecting",
+      "divider": false
+    },
+    {
+      "text": "Cycles",
+      "emoji": "🔃",
+      "url": "/collecting/cycles",
+      "divider": false
+    },
+    {
+      "text": "Links",
+      "emoji": "🔗",
+      "url": "/collecting/links",
+      "divider": false
+    },
+    {
+      "text": "Thoughts",
+      "emoji": "🤔",
+      "url": "/collecting/thoughts",
+      "divider": false
+    },
+    {
+      "text": "Ideas",
+      "emoji": "💡",
+      "url": "/collecting/ideas",
+      "divider": false
+    },
+    {
+      "text": "Lists",
+      "emoji": "📄",
+      "url": "/collecting/lists",
+      "divider": false
+    },
+    {
+      "text": "Podcasts",
+      "emoji": "🎧",
+      "url": "/collecting/podcasts",
+      "divider": false
+    }
+  ],
+  "tertiary": [
+    {
+      "text": "Sending",
+      "emoji": "🚀",
+      "url": "/sending",
+      "divider": false
+    },
+    {
+      "text": "Replies",
+      "emoji": "📨",
+      "url": "/sending/replies",
+      "divider": false
+    },
+    {
+      "text": "Likes",
+      "emoji": "❤️",
+      "url": "/sending/likes",
+      "divider": false
+    }
+  ],
+  "quaternary": [
+    {
+      "text": "Watching",
+      "emoji": "📺️",
+      "url": "/watching/",
+      "divider": false
+    },
+    {
+      "text": "Listening",
+      "emoji": "🎵️",
+      "url": "/listening/",
+      "divider": false
+    },
+    {
+      "text": "Reading",
+      "emoji": "📚️",
+      "url": "/reading/",
+      "divider": false
+    },
+    {
+      "text": "Attending",
+      "emoji": "🎟️",
+      "url": "/attending/",
+      "divider": true
+    }
+  ],
+  "quinary": [
+    {
+      "text": "Now",
+      "emoji": "🗣️",
+      "url": "/now/",
+      "divider": true
+    },
+    {
+      "text": "Tagging",
+      "emoji": "🏷️",
+      "url": "/tagging/",
+      "divider": false
+    },
+    {
+      "text": "Contactable",
+      "emoji": "👋",
+      "url": "/contactable/",
+      "divider": true
+    },
+    {
+      "text": "Focused",
+      "emoji": "🎯",
+      "url": "/focused/",
+      "divider": true
+    }
+  ],
+  "elsewhere": [
+    {
+      "text": "Mastodon",
+      "url": "https://mastodon.social/@benjaminparry"
+    },
+    {
+      "text": "LinkedIn",
+      "url": "https://www.linkedin.com/in/benjaminparry-/"
+    },
+    {
+      "text": "Medium",
+      "url": "https://medium.com/@benjaminparry"
+    },
+    {
+      "text": "Bluesky",
+      "url": "https://bsky.app/profile/benjamin.parry.is"
+    },
+    {
+      "text": "IndieWeb",
+      "url": "https://indieweb.org/User:Benjamin.parry.is"
+    },
+    {
+      "text": "My Anime List",
+      "url": "https://myanimelist.net/profile/benjaminparry"
+    },
+    {
+      "text": "Readwise",
+      "url": "https://readwise.io/@benjaminparry"
+    },
+    {
+      "text": "Duolingo",
+      "url": "https://www.duolingo.com/profile/benjaminparry"
+    },
+    {
+      "text": "Strava",
+      "url": "https://www.strava.com/athletes/benjaminparry"
+    },
+    {
+      "text": "Github",
+      "url": "https://github.com/benjaminparry"
+    },
+    {
+      "text": "Huffduffer",
+      "url": "https://huffduffer.com/BenjaminParry"
+    },
+    {
+      "text": "Pinboard",
+      "url": "https://pinboard.in/u:benjaminparry"
+    },
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/benjaminparry"
+    },
+    {
+      "text": "NowNowNow",
+      "url": "https://nownownow.com/p/wba3"
+    },
+    {
+      "text": "Bandcamp",
+      "url": "https://bandcamp.com/benjaminparry"
+    },
+    {
+      "text": "Email",
+      "url": "mailto:benjamin@parry.is"
+    }
+  ]
 }

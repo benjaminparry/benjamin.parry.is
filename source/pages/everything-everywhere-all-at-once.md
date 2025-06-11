@@ -23,6 +23,7 @@ section:
   - [Cycles](/collecting/cycles/) – Documenting what is going on in my world, formally known as weeknotes.
   - [Lists](/collecting/lists/) – Lists of things, places and people.
   - [Ideas](/collecting/ideas/) – Ideas for things to me be made.
+  - [Podcasts](/collecting/podcasts/) – A feed of individual podcast episodes.
 - [Sending](/sending) – Using webmentions to send content to other people’s websites… *yep websites can do that!*
   - [Likes](/sending/likes/) – Sending appreciation for those that deserve it.
   - [Replies](/sending/replies/) – Replying to content.
