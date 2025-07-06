@@ -18,7 +18,9 @@ permalink: 'everything-everywhere-all-at-once/chronologically/feed.json'
             "external_url": "{% if item.data.bookmarkOf %}{{ item.data.bookmarkOf }}{% endif %}",
             "image": "{% if item.data.images %}{{ site.url }}{{ item.data.images[0] }}{% endif %}",
             "tags": [{% if item.data.tags %}{% for tag in item.data.tags %}"{{ tag }}"{% if not loop.last %},{% endif %}{% endfor %}{% endif %}],
-            "summary": "{{ item.data.posse | safe }}"
+            "summary": "{% if item.data.section == "Watching" %} {{
+                item.data.rating_emoji | safe }} {{ item.data.rating_prose | safe }} {% else
+                %} {{ item.data.posse | safe }} {% endif %}"
         }{% if not loop.last %},{% endif %}{% endfor %}
     ]
 }

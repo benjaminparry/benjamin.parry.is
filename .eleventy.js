@@ -257,11 +257,11 @@ module.exports = (config) => {
         "./source/attending/*.md",
         "./source/celebrating/*.md",
         "./source/speaking/*.md",
-        // "./source/watching/*.md",
+        "./source/watching/*.md",
       ])
       .reverse();
   });
-
+  // Pages I’ve updared
   config.addCollection("updating", function (collectionApi) {
     return collectionApi
       .getFilteredByGlob([

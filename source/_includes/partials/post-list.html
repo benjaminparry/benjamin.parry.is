@@ -33,7 +33,11 @@
             (item.data.section == "Likes") or (item.data.section == "Photos") or
             (item.data.section == "Attending") or (item.data.section ==
             "Celebrating") %} {{ item.data.content | safe }} {% else %}
-            <p class="p-name e-content posse">{{ item.data.posse }}</p>
+            <p class="p-name e-content posse">
+                {% if item.data.section == "Watching" %} {{
+                item.data.rating_emoji }} {{ item.data.rating_prose }} {% else
+                %} {{ item.data.posse }} {% endif %}
+            </p>
             {% endif %} {% if item.data.section == "Photos" %}
             <img
                 src="{{ item.data.photo[0].url }}"
@@ -69,6 +73,7 @@
                             >{{ item.data.likeOf }}</a
                         >
                     </li>
+                    <li>Author: {{ item.data.author }}</li>
                     {% endif %} {% if item.data.tags.length %}
                     <li>
                         Tagged with:
