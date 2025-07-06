@@ -15,7 +15,7 @@ permalink: 'everything-everywhere-all-at-once/chronologically/feed.json'
             "id": "{{ site.url }}{{ item.url }}",
             "title": "{{ item.data.title }}",
             "url": "{{ site.url }}{{ item.url }}",
-            "external_url": "{% if item.data.bookmarkOf %}{{ item.data.bookmarkOf }}{% endif %}",
+            "external_url": "{% if item.data.bookmarkOf %}{{ item.data.bookmarkOf }}{% endif %}{% if item.data.likeOf %}{{ item.data.likeOf }}{% endif %}",
             "image": "{% if item.data.images %}{{ site.url }}{{ item.data.images[0] }}{% endif %}",
             "tags": [{% if item.data.tags %}{% for tag in item.data.tags %}"{{ tag }}"{% if not loop.last %},{% endif %}{% endfor %}{% endif %}],
             "summary": "{% if item.data.section == "Watching" %} {{
