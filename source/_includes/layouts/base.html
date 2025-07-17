@@ -1,16 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB" class="h-feed {{ page.type }}">
+    {% include "partials/meta-info.html" %}
 
-  {% include "partials/meta-info.html" %}
-
-  <body>
-    <div class="wrap{{ ' ' + section | slug }}">
-      <section class="page-content clearfix">
-        {% include "partials/site-head.html" %}
-        <main tabindex="-1" id="main-content">{% block content %}{% endblock %}</main>
-      </section>
-      {% include "partials/footer.html" %}
-      {% include "partials/serviceworker.html" %}
-    </div>
-  </body>
+    <body class="has--body-banner">
+        <div class="body-banner resist">🌍🍉✊</div>
+        <div class="wrap{{ ' ' + section | slug }}">
+            <section class="page-content clearfix">
+                {% include "partials/site-head.html" %}
+                <main tabindex="-1" id="main-content">
+                    {% block content %}{% endblock %}
+                </main>
+            </section>
+            {% include "partials/footer.html" %} {% include
+            "partials/serviceworker.html" %}
+        </div>
+    </body>
 </html>
