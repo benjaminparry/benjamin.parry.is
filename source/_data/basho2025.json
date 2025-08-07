@@ -1570,6 +1570,791 @@
           "saiko": false
         }
       ]
+    },
+    {
+      "month": "July",
+      "city": "",
+      "venue": "",
+      "venueURL": "",
+      "startDate": "2025-07-09",
+      "endDate": "2025-07-23",
+      "rikishi": [
+        {
+          "name": "Wakatakakage",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "6",
+              "forfeit": "",
+              "lose": "4",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Hakuoho",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "6",
+              "forfeit": "",
+              "lose": "4",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Midorifuji",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "6",
+              "forfeit": "",
+              "lose": "4",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Wakamotoharu",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "2",
+              "forfeit": "",
+              "lose": "8",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Ura",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "6",
+              "forfeit": "",
+              "lose": "4",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Tokihayate",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "4",
+              "forfeit": "",
+              "lose": "6",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Takanosho",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "7",
+              "forfeit": "",
+              "lose": "3",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Shishi",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "3",
+              "forfeit": "",
+              "lose": "7",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Oho",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "3",
+              "forfeit": "",
+              "lose": "7",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Kusano",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "8",
+              "forfeit": "",
+              "lose": "2",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Tobizaru",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "3",
+              "forfeit": "",
+              "lose": "7",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Kotoeiho",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "4",
+              "forfeit": "",
+              "lose": "6",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Atamifuji",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "7",
+              "forfeit": "",
+              "lose": "3",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Daieisho",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "",
+              "forfeit": "",
+              "lose": "",
+              "playoff": ""
+            }
+          ],
+          "retired": true,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Oshoma",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "2",
+              "forfeit": "",
+              "lose": "8",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Kayo",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "2",
+              "forfeit": "",
+              "lose": "8",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Tamawashi",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "8",
+              "forfeit": "",
+              "lose": "2",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Takerufuji",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "5",
+              "forfeit": "",
+              "lose": "5",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Roga",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "6",
+              "forfeit": "",
+              "lose": "4",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Takayasu",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "7",
+              "forfeit": "",
+              "lose": "3",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Ichiyamamoto",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "9",
+              "forfeit": "",
+              "lose": "1",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Hoshoryu",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "",
+              "forfeit": "",
+              "lose": "",
+              "playoff": ""
+            }
+          ],
+          "retired": true,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Onokatsu",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "4",
+              "forfeit": "",
+              "lose": "6",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Asakoryu",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "2",
+              "forfeit": "",
+              "lose": "8",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        },
+        {
+          "name": "Onosato",
+          "results": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "total": [
+            {
+              "win": "7",
+              "forfeit": "",
+              "lose": "3",
+              "playoff": ""
+            }
+          ],
+          "retired": false,
+          "absent": false,
+          "saiko": false
+        }
+      ]
     }
   ]
 }
