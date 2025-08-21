@@ -11,4 +11,4 @@ warning:
 award: true
 ---
 
-Slingshotting around to catch up on Armando Iannucci’s spectarular sci-fi comedy. A really strong first series supported by stellar cast. With only a couple of semi-flat episodes toward the end this was excellent. I’ve very much looking forward to the second series.
+Slingshotting around to catch up on Armando Iannucci’s spectarular sci-fi comedy. A really strong first series supported by stellar cast. With only a couple of semi-flat episodes toward the end this was excellent. I’m very much looking forward to the second series.
