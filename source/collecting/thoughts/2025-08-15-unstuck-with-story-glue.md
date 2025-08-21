@@ -1,7 +1,8 @@
 ---
 title: "Unstuck with story glue"
 date: '2025-08-15'
-tags: People
+category: People
+tags:
     - Storytelling
 posse: This week I volunteered to give an update at Waitrose Online’s Design Deli, our weekly sharing of work in progress. Instead of a chain of ‘and then’ I decided to dig out my notes from Ben Sauer’s Practical Strategic Storytelling workshop and add some story glue for a more compelling story. If you’re looking to raise your storytelling game or your team’s, I highly recommend getting in touch with Ben! https://bensauer.net/workshop/
 ---
