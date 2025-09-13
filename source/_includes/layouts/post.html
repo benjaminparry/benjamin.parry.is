@@ -1,148 +1,199 @@
-{% extends "layouts/base.html" %}
-
-{% set pageHeaderTitle = title %}
-
-{# Grab other posts that aren’t this one for the 'more from the blog' feed #}
-{% set recommendedPosts = helpers.getSiblingContent(collections.writing, page) %}
-
-{% block content %}
+{% extends "layouts/base.html" %} {% set pageHeaderTitle = title %} {# Grab
+other posts that aren’t this one for the 'more from the blog' feed #} {% set
+recommendedPosts = helpers.getSiblingContent(collections.writing, page) %} {%
+block content %}
 
 <article class="h-entry">
-  {% include "partials/page-header.html" %}
+    {% include "partials/page-header.html" %}
 
-  <p>📆 <time class="dt-published" datetime="{{ page.date | toISOString }}">{{ page.date | dateFilter }}</time></p>
-
-  {% if webmentions.length %}
-  <p><a href="#webmentions">Webmentions</a>: {{ webmentions.length }}</p>
-  {% endif %}
-
-  {% if bookmarkOf %}
-  <a href="{{ bookmarkOf }}" class="u-bookmark-of  h-cite">{{ bookmarkOf }}</a>
-  {% endif %}
-
-  {% if posse %}
-  <p class="p-description posse p-summary">{{ posse | safe }}</p>
-  {% endif %}
-
-  <div class="e-content p-content p-name">
-      {{ content | safe }}
-  </div>
-
-  {% if section == "Photos" %}
-  <img src="{{ photo[0].url }}" alt="{{ photo[0].alt }}">
-  {% endif %}
-
-{% if section == "Replies" %}
-<p>In reply to: <a href="{{ inReplyTo }}" rel="in-reply-to" class="u-in-reply-to u-url">{{ inReplyTo }}</a></p>
-{% endif %}
-
-{% if section == "Likes" %}
-<p>Liked: <a href="{{ likeOf }}" class="u-like-of u-url">{{ likeOf }}</a></p>
-{% endif %}
-
-  <p><em>Like this post?</em> <strong><a href="https://shareopenly.org/share/?url={{ site.url }}{{ page.url }}&text={{ title }} by {{ site.authorName }}">Share it</a></strong></p>
-  <!--
-  Repetition here, would prefer to use below a partial
-  -->
-  <footer class="page-footer">
-
-
-    <ul class="meta">
-      <li>
-        Filed under: <a class="p-category" href="{{ sectionURL }}">{{ section }}</a>
-      </li>
-
-      {% if tags %}
-      <li>Tagged with:
-        <ul class="reset-list list list--inline list--csv" aria-describedby="tags-desc">
-          {% for tag in tags %}
-          <li><a href="/tagging/{{ tag | slug }}/" class="tag">{{ tag | title }}</a></li>
-          {% endfor %}
-        </ul>
-      </li>
-      {% endif %}
-
-      {% if syndication %}
-      <li>Syndicated to: <a class="u-syndication" rel="syndication" href="{{ syndication }}">Mastodon</a></li>
-      {% endif %}
-
-      <li>
-        {{ verb }}: <a class="u-url" href="{{ page.url }}"><time class="dt-published" datetime="{{ page.date | toISOString }}">{{ page.date | dateFilter }}</time></a>
-      </li>
-      <li>
-        Author: <a href="/" rel="author" class="p-author h-card">Benjamin Parry</a>
-      </li>
-    </ul>
+    <p>
+        📆 Published:
+        <time class="dt-published" datetime="{{ page.date | toISOString }}"
+            >{{ page.date | dateFilter }}</time
+        >
+        {% if updated %} // 🆕 Updated:
+        <time class="" datetime="{{ updated | toISOString }}"
+            >{{ updated | dateFilter }}</time
+        >
+        {% endif %}
+    </p>
 
     {% if webmentions.length %}
-    <div id="webmentions">
-    <!-- Webmention: likes -->
-    {% set likes = webmentions | getWebmentionsByTypes(['like-of']) %}
-    {% if likes.length %}
-    <p>Liked by:</p>
-    <ol class="list reset-list list--inline">
-    {% for like in likes %}
-    <li>
-        <a href="{{ like.url }}">
-            <img src="{{ like.author.photo }}" alt="" height="50px" width="50px">
-            <span class="off-screen">View {{ like.author.name }}’s webmention</span>
-        </a>
-    </li>
-    {% endfor %}
-    </ol>
-    {% endif %}
-    <!-- Webmention: Reposts -->
-    {% set reposts = webmentions | getWebmentionsByTypes(['repost-of']) %}
-    {% if reposts.length %}
-    <p>Repostd by:</p>
-    <ol class="list reset-list list--inline">
-    {% for repost in reposts %}
-    <li>
-        <a href="{{ repost.url}}">
-            <img src="{{ repost.author.photo }}" alt="Social avatar of {{ repost.author.name }}" height="50px" width="50px">
-        </a>
-    </li>
-    {% endfor %}
-    </ol>
-    {% endif %}
-    <!-- Webmention: bookmarks -->
-    {% set bookmarks = webmentions | getWebmentionsByTypes(['bookmark-of']) %}
-    {% if bookmarks.length %}
-    <p>bookmarkd by:</p>
-    <ol class="list reset-list list--inline">
-    {% for bookmark in bookmarks %}
-    <li>
-        <a href="{{ bookmark.url }}">
-            <img src="{{ bookmark.author.photo }}" alt="Social avatar of {{ bookmark.author.name }}" height="50px" width="50px">
-        </a>
-    </li>
-    {% endfor %}
-    </ol>
-    {% endif %}
-    <!-- Webmention: mentions -->
-    {% set mentions = webmentions | getWebmentionsByTypes(['mention-of', 'in-reply-to']) %}
-    {% if mentions.length %}
-    <p>Mentioned by:</p>
-    <ol class="list reset-list list--inline">
-    {% for mention in mentions %}
-    <li>
-        <a href="{{ mention.url }}">
-            <img src="{{ mention.author.photo }}" alt="Social avatar of {{ mention.author.name }}" height="50px" width="50px">
-        </a>
-    </li>
-    {% endfor %}
-    </ol>
+    <p><a href="#webmentions">Webmentions</a>: {{ webmentions.length }}</p>
+    {% endif %} {% if bookmarkOf %}
+    <a href="{{ bookmarkOf }}" class="u-bookmark-of h-cite">{{ bookmarkOf }}</a>
+    {% endif %} {% if posse %}
+    <p class="p-description posse p-summary">{{ posse | safe }}</p>
     {% endif %}
 
-    </div>
+    <div class="e-content p-content p-name">{{ content | safe }}</div>
+
+    {% if section == "Photos" %}
+    <img src="{{ photo[0].url }}" alt="{{ photo[0].alt }}" />
+    {% endif %} {% if section == "Replies" %}
+    <p>
+        In reply to:
+        <a href="{{ inReplyTo }}" rel="in-reply-to" class="u-in-reply-to u-url"
+            >{{ inReplyTo }}</a
+        >
+    </p>
+    {% endif %} {% if section == "Likes" %}
+    <p>
+        Liked: <a href="{{ likeOf }}" class="u-like-of u-url">{{ likeOf }}</a>
+    </p>
     {% endif %}
 
-    {% if recommendedPosts %}
-      {% set postListItems = recommendedPosts %}
-      {% set postListHeadline = 'More content' %}
-      {% include "partials/simple-list.html" %}
-    {% endif %}
-  </footer>
+    <p>
+        <em>Like this post?</em>
+        <strong
+            ><a
+                href="https://shareopenly.org/share/?url={{ site.url }}{{ page.url }}&text={{ title }} by {{ site.authorName }}"
+                >Share it</a
+            ></strong
+        >
+    </p>
+    <!--
+  Repetition here, would prefer to use below a partial
+  -->
+    <footer class="page-footer">
+        <ul class="meta">
+            <li>
+                Filed under:
+                <a class="p-category" href="{{ sectionURL }}">{{ section }}</a>
+            </li>
+
+            {% if tags %}
+            <li>
+                Tagged with:
+                <ul
+                    class="reset-list list list--inline list--csv"
+                    aria-describedby="tags-desc"
+                >
+                    {% for tag in tags %}
+                    <li>
+                        <a href="/tagging/{{ tag | slug }}/" class="tag"
+                            >{{ tag | title }}</a
+                        >
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %} {% if syndication %}
+            <li>
+                Syndicated to:
+                <a
+                    class="u-syndication"
+                    rel="syndication"
+                    href="{{ syndication }}"
+                    >Mastodon</a
+                >
+            </li>
+            {% endif %}
+
+            <li>
+                {{ verb }}:
+                <a class="u-url" href="{{ page.url }}"
+                    ><time
+                        class="dt-published"
+                        datetime="{{ page.date | toISOString }}"
+                        >{{ page.date | dateFilter }}</time
+                    ></a
+                >
+            </li>
+            <li>
+                Author:
+                <a href="/" rel="author" class="p-author h-card"
+                    >Benjamin Parry</a
+                >
+            </li>
+        </ul>
+
+        {% if webmentions.length %}
+        <div id="webmentions">
+            <!-- Webmention: likes -->
+            {% set likes = webmentions | getWebmentionsByTypes(['like-of']) %}
+            {% if likes.length %}
+            <p>Liked by:</p>
+            <ol class="list reset-list list--inline">
+                {% for like in likes %}
+                <li>
+                    <a href="{{ like.url }}">
+                        <img
+                            src="{{ like.author.photo }}"
+                            alt=""
+                            height="50px"
+                            width="50px"
+                        />
+                        <span class="off-screen"
+                            >View {{ like.author.name }}’s webmention</span
+                        >
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+            <!-- Webmention: Reposts -->
+            {% set reposts = webmentions | getWebmentionsByTypes(['repost-of'])
+            %} {% if reposts.length %}
+            <p>Repostd by:</p>
+            <ol class="list reset-list list--inline">
+                {% for repost in reposts %}
+                <li>
+                    <a href="{{ repost.url}}">
+                        <img
+                            src="{{ repost.author.photo }}"
+                            alt="Social avatar of {{ repost.author.name }}"
+                            height="50px"
+                            width="50px"
+                        />
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+            <!-- Webmention: bookmarks -->
+            {% set bookmarks = webmentions |
+            getWebmentionsByTypes(['bookmark-of']) %} {% if bookmarks.length %}
+            <p>bookmarkd by:</p>
+            <ol class="list reset-list list--inline">
+                {% for bookmark in bookmarks %}
+                <li>
+                    <a href="{{ bookmark.url }}">
+                        <img
+                            src="{{ bookmark.author.photo }}"
+                            alt="Social avatar of {{ bookmark.author.name }}"
+                            height="50px"
+                            width="50px"
+                        />
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+            <!-- Webmention: mentions -->
+            {% set mentions = webmentions | getWebmentionsByTypes(['mention-of',
+            'in-reply-to']) %} {% if mentions.length %}
+            <p>Mentioned by:</p>
+            <ol class="list reset-list list--inline">
+                {% for mention in mentions %}
+                <li>
+                    <a href="{{ mention.url }}">
+                        <img
+                            src="{{ mention.author.photo }}"
+                            alt="Social avatar of {{ mention.author.name }}"
+                            height="50px"
+                            width="50px"
+                        />
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+        </div>
+        {% endif %} {% if recommendedPosts %} {% set postListItems =
+        recommendedPosts %} {% set postListHeadline = 'More content' %} {%
+        include "partials/simple-list.html" %} {% endif %}
+    </footer>
 </article>
 
 {% endblock %}
