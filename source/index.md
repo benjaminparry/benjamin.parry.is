@@ -39,6 +39,7 @@ title: 'Website homepage'
 
   - I wrote [{{ collections.writing[0].data.title }}]({{ collections.writing[0].url }}),
   - I made [{{ collections.making[0].data.title }}]({{ collections.making[0].url }}),
+  - I collected my most recent cycle [{{ collections.cycles[0].data.title }}]({{ collections.cycles[0].url }}),
   - I collected my thoughts about [{{ collections.thoughts[0].data.title }}]({{ collections.thoughts[0].url }}),
   - I collected an interesting link about [{{ collections.links[0].data.title }}]({{ collections.links[0].url }}).
 
