@@ -31,4 +31,4 @@ To quote [Tom Scott](https://www.linkedin.com/in/tomscott/) “What people decid
 
 It’s no wonder businesses lean into quantitative research methods. They provide safe, binary outcomes and numerical metrics that make go/no-go decisions far easier. But let’s face it, the world and people are far more complex than yes/no.
 
-If we want to be truly human-centred we need to immerse ourselves in the world of the people we are trying to support. That means becoming receptive to the complexity of their contexts, their differing mental models and developing an understanding of what they did as much as why they did it.
+If we want to be truly human-centred we need to immerse ourselves in the world of the people we are trying to support. That means becoming receptive to the complexity of their contexts, their differing mental models and developing an equal understanding of what they did and why they did it.
