@@ -5,6 +5,7 @@ tags:
     - Data
     - Qualitative
     - Quantitative
+    - Research
 category:
     - 'People'
 ---
