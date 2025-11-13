@@ -13,4 +13,4 @@ location:
 category: People
 ---
 
-Seriously excited to be taking Boy to see Stewart Lee’s newest show and Brighton Dome.
+Seriously excited to be taking Boy to see Stewart Lee’s newest show at the Brighton Dome.
