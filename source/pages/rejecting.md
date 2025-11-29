@@ -25,7 +25,7 @@ Things I disapprove of.
 - Jeff Bezos – the man is pure unapologetic slime.
   - Exhibit A.1 _ [William Shatner’s earnest reflection of his first space travel experience, interrupted](https://video.twimg.com/ext_tw_video/1695687028762148864/pu/vid/1280x720/efhD-pisu3w5mj_B.mp4?tag=12)
   - Exhibit A.2 _ [Limmy’s commentary on the clip](https://www.youtube.com/watch?v=raYyKM9wQAc)
-  - Exhibit B _ [wealth of Jeff Bezos visualised](https://mkorostoff.github.io/1-pixel-wealth/)
+  - Exhibit B _ [wealth of Jeff Bezos visualised](https://eattherichtextformat.github.io/1-pixel-wealth/)
 
 ## Language
 
