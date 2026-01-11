@@ -1,9 +1,9 @@
 ---
 title: "Looper"
-date: 2026-01-11
+date: 2026-01-10
 media: film
 watched:
-  - 2026-01-11
+  - 2026-01-10
 context: sofa
 rating_emoji: 🍿🍿🍿🍿🕳️
 rating_prose: Four bags of popcorn and a big hole for to drop parts of the plot into.
