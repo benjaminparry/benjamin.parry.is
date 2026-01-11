@@ -1,10 +1,10 @@
 {% if bashoDate %} {% set basho = bashoDate %} {% endif %}
 <ol>
-    {% for basho in basho.basho %}
+    {%- for basho in basho.basho -%}
     <li><a href="#{{ basho.month | slug }}">{{ basho.month }}</a></li>
-    {% endfor %}
+    {%- endfor -%}
 </ol>
-{% for basho in basho.basho %}
+{%- for basho in basho.basho %}
 <h2 id="{{ basho.month | slug }}">{{ basho.month }} Tournament</h2>
 <ul>
     <li>📍 {{ basho.city }}</li>
@@ -19,16 +19,14 @@
         📆 {{ basho.startDate | dateFilter }} » {{ basho.endDate | dateFilter }}
     </li>
     <li>
-        {% for bingo in basho.sumokaboom %} 🪪 Sumo Kaboom bingo ID:
+        {%- for bingo in basho.sumokaboom -%} 🪪 Sumo Kaboom bingo ID:
         <a href="{{ bingo.cardURL }}">{{ bingo.cardID }}</a>
-        {% endfor %}
+        {%- endfor -%}
     </li>
 </ul>
 <ul class="grid grid--5 bingo-card reset-list">
-    {% for rikishi in basho.rikishi -%}
-    <li
-        class="rikishi rikishi--{% for total in rikishi.total %}{% if total.win > 7 %}kachi-koshi{% elseif total.lose > 7 %}make-koshi{% else %}no-result-yet{% endif %}{% endfor %}{% if rikishi.saiko %} rikishi--saiko{% endif %}{% if rikishi.retired %} rikishi--retired{% endif %}{% if rikishi.absent %} rikishi--absent{% endif %}"
-    >
+    {%- for rikishi in basho.rikishi -%}
+    <li class="rikishi rikishi--{%- for total in rikishi.total %}{% if total.win > 7 %}kachi-koshi{% elseif total.lose > 7 %}make-koshi{% else %}no-result-yet{% endif %}{%- endfor -%}{% if rikishi.saiko %} rikishi--saiko{% endif %}{% if rikishi.retired %} rikishi--retired{% endif %}{% if rikishi.absent %} rikishi--absent{% endif %}">
         <p class="reset-heading rikishi__name">{{ rikishi.name }}</p>
         <div class="rikishi__photo">
             <img
@@ -38,14 +36,14 @@
         </div>
         <!-- Score -->
         <p class="rikishi__score">
-            {% for total in rikishi.total -%}{% if total.win %}{{total.win}}{%
+            {%- for total in rikishi.total -%}{% if total.win %}{{total.win}}{%
             endif %}{% if total.lose %} / {{total.lose}}{% endif %}{% if
             total.forfeit %} / {{total.forfeit}}{% endif %}{% if total.playoff
-            %} ({{total.playoff}}){% endif %}{% endfor %}
+            %} ({{total.playoff}}){% endif %}{%- endfor -%}
         </p>
         <!-- Results daily -->
         <ol class="grid grid--15 reset-list results results--daily">
-            {% for result in rikishi.results -%}
+            {%- for result in rikishi.results -%}
             <li
                 class="result result--{% if result == 'l' %}lose{% elseif result == 'w' %}win{% elseif result == 'f' %}forfeit{% elseif result == 'r' %}retire{% else %}pending{% endif %}"
             >
@@ -54,22 +52,21 @@
                     %}Win{% endif %}{% if result == "f" %}Forfeit{% endif %}
                 </div>
             </li>
-            {% endfor %}
+            {%- endfor -%}
         </ol>
         <!-- Results sorted -->
         <ol class="grid grid--5 reset-list results results--sorted">
-            {% for result in rikishi.results -%}
-            <li
-                class="result result--{% if result == 'l' %}lose{% endif %}{% if result == 'w' %}win{% endif %}{% if result == 'f' %}forfeit{% endif %}{% if result == 'r' %}retire{% endif %}"
+            {%- for result in rikishi.results -%}
+            <li class="result result--{% if result == 'l' %}lose{% endif %}{% if result == 'w' %}win{% endif %}{% if result == 'f' %}forfeit{% endif %}{% if result == 'r' %}retire{% endif %}"
             >
                 <div class="off-screen">
                     {% if result == "l" %}Lose{% endif %}{% if result == "w"
                     %}Win{% endif %}{% if result == "f" %}Forfeit{% endif %}
                 </div>
             </li>
-            {% endfor %}
+            {%- endfor -%}
         </ol>
     </li>
-    {% endfor %}
+    {%- endfor -%}
 </ul>
-{% endfor %}
+{%- endfor -%}

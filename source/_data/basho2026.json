@@ -18,7 +18,7 @@
         {
           "name": "Hakunofuji",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -36,9 +36,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
@@ -49,7 +49,7 @@
         {
           "name": "Yoshinofuji",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -67,9 +67,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -80,7 +80,7 @@
         {
           "name": "Tomokaze",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -98,9 +98,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -111,7 +111,7 @@
         {
           "name": "Mitakeumi",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -129,9 +129,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -142,7 +142,7 @@
         {
           "name": "Chiyoshoma",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -160,9 +160,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -173,7 +173,7 @@
         {
           "name": "Asanoyama",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -191,9 +191,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -204,7 +204,7 @@
         {
           "name": "Hatsuyama",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -222,9 +222,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -235,7 +235,7 @@
         {
           "name": "Tamawashi",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -253,9 +253,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -266,7 +266,7 @@
         {
           "name": "Fujinokawa",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -284,9 +284,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -297,7 +297,7 @@
         {
           "name": "Kirishima",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -315,9 +315,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
@@ -328,7 +328,7 @@
         {
           "name": "Wakatakakage",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -346,9 +346,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -359,7 +359,7 @@
         {
           "name": "Shodai",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -377,9 +377,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
@@ -390,7 +390,7 @@
         {
           "name": "Oho",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -408,9 +408,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -421,7 +421,7 @@
         {
           "name": "Tobizaru",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -439,9 +439,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
@@ -452,7 +452,7 @@
         {
           "name": "Kinbozan",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -470,9 +470,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -483,7 +483,7 @@
         {
           "name": "Oshoumi",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -501,9 +501,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
@@ -514,7 +514,7 @@
         {
           "name": "Kotoshoho",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -532,9 +532,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -545,7 +545,7 @@
         {
           "name": "Aonishiki",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -563,9 +563,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
@@ -576,7 +576,7 @@
         {
           "name": "Atamifuji",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -594,9 +594,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -607,7 +607,7 @@
         {
           "name": "Oshoma",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -625,9 +625,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
@@ -638,7 +638,7 @@
         {
           "name": "Ryuden",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -656,9 +656,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
@@ -669,7 +669,7 @@
         {
           "name": "Daieisho",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -687,9 +687,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
@@ -700,7 +700,7 @@
         {
           "name": "Nishikifuji",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -718,9 +718,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -731,7 +731,7 @@
         {
           "name": "Gonoyama",
           "results": [
-            "",
+            "l",
             "",
             "",
             "",
@@ -749,9 +749,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "0",
               "forfeit": "",
-              "lose": "",
+              "lose": "1",
               "playoff": ""
             }
           ],
@@ -762,7 +762,7 @@
         {
           "name": "Onosato",
           "results": [
-            "",
+            "w",
             "",
             "",
             "",
@@ -780,9 +780,9 @@
           ],
           "total": [
             {
-              "win": "",
+              "win": "1",
               "forfeit": "",
-              "lose": "",
+              "lose": "0",
               "playoff": ""
             }
           ],
