@@ -26,8 +26,8 @@ An absolute surprise banger of a strategy and design podcast. So many sparks of 
 - Breakout groups FTW: create empowerment by enabling everyone gets time to speak – [Liberating Structures](https://www.liberatingstructures.com/)
 - A social conditioning that other people are disposable (similar topic in a recent [Trashfuture](https://trashfuture.co.uk/)
 - First pancake theory: accepting that your first try at something is going to be crap
-- Growth comes from worthing through the hard stuff
-- Sortition – https://en.wikipedia.org/wiki/Sortition
+- Growth comes from working through the hard stuff
+- [Sortition](https://en.wikipedia.org/wiki/Sortition)
 - Delegate conferences aren’t designed to foster deeper connection or change - Reminds me of a conversation with [James Lang](https://www.linkedin.com/in/jameslangresearch/) when curating Research by the Sea
 
 Props to [Tom Scott](https://www.linkedin.com/in/tomscott/) for the recommendation.
