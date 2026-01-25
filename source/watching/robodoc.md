@@ -1,9 +1,9 @@
 ---
 title: "RoboDoc: The Creation of RoboCop"
-date: 2026-01-22
+date: 2026-01-21
 media: tv
 watched:
-  - 2026-01-22
+  - 2026-01-21
 context: sofa
 rating_emoji: 🍿🍿🍿🍿🍿🩸🩸🩸🩸🩸
 rating_prose: Five bags of popcorn and “more fucking blood” to satisfy Paul Verhoeven

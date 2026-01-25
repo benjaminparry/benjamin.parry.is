@@ -1,9 +1,9 @@
 ---
 title: "The Terminator"
-date: 2026-01-24
+date: 2026-01-23
 media: film
 watched:
-  - 2026-01-24
+  - 2026-01-23
 context: sofa
 rating_emoji: 🍿🍿🍿🍿🍿🐕
 rating_prose: Five bags of popcorn and a dog for sniffing out those maniacle murdering machines
