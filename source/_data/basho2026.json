@@ -794,9 +794,9 @@
     },
     {
       "month": "March",
-      "city": "",
-      "venue": "",
-      "venueURL": "",
+      "city": "Osaka",
+      "venue": "Ōsaka furitsu taiikukaikan",
+      "venueURL": "https://www.google.com/maps/@34.6619678,135.4993934,2a,75y,329.5h,80.9t/data=!3m7!1e1!3m5!1sLl0vXzsLADDUyIxJn74rIA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D9.102033856310058%26panoid%3DLl0vXzsLADDUyIxJn74rIA%26yaw%3D329.5031394451697!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDMxNy4wIKXMDSoASAFQAw%3D%3D",
       "startDate": "2026-03-08",
       "endDate": "2026-03-22",
       "sumokaboom": [
