@@ -992,3 +992,12 @@ a {
     letter-spacing: 0.5rem;
     line-height: var(--step-5);
 }
+hr {
+    padding: var(--space-l) 0;
+    border: none;
+    text-align: center;
+    font-size: var(--step-3);
+}
+hr:before {
+    content: "🌸";
+}

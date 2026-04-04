@@ -29,15 +29,16 @@ section:
   - [Replies](/sending/replies/) – Replying to content.
 - [Celebrating](/celebrating/) – Marking special events in my career history.
 - [Watching](/watching/) – Films, television, theatre I’ve watched or currently watching.
-- [Listening](/listening/) – Music I’ve been listening to.
-- [Reading](/reading/) – Books and manga I’ve read or currently reading.
-- [Attending](/attending/) – Events I’m planning on attending or have attended.
+- [Listening](/listening/) – Music I’ve been listening to.
+- [Reading](/reading/) – Books and manga I’ve read or currently reading.
+- [Attending](/attending/) – Events I’m planning on attending or have attended.
 - [Using](/using/) – The day-to-day objects I use.
-- [Rejecting](/rejecting/) – Things I disapprove of.
-- [Supporting](/supporting/) – Things I approve of.
-- [Focused](/focused/) – My web browser homepage.
+- [Rejecting](/rejecting/) – Things I disapprove of.
+- [Supporting](/supporting/) – Things I approve of.
+- [Referring](/referring/) – Referral links for services I use.
+- [Focused](/focused/) – My web browser homepage.
 - Mirroring – A mirror of web important content to me and others. *(yet to be implemented)*
-- [Offline](/offline/) – A list of pages stored locally when you are offline.
+- [Offline](/offline/) – A list of pages stored locally when you are offline.
 - [Everthing Everywhere All At Once](/everything-everywhere-all-at-once/) – This page, a sitemap of sorts.
   - [Chronologically](/everything-everywhere-all-at-once/chronologically/) – A chronological firehose of content posted to this website.
 
