@@ -8,11 +8,15 @@ section:
 
 ## Overherd Oatmilk
 
-Your get £5 credit, I get £5 credit.
+You get £5 credit, I get £5 credit.
 
 [Try Overherd Oatmilk](https://overherd.uk/products/oat-milk-powder?ad_id=00cQEaXyEQ)
 
 ## Trooli Broadband
+
+__Coming soon…__
+
+## Fairphone
 
 __Coming soon…__
 
@@ -24,6 +28,10 @@ You get £50 credit, I get £50 credit.
 
 ---
 
-## Test
+## Naked Paper
 
-sadfsd
+B-corp recycled toilet paper.
+
+You get £5 credit, I get £5 credit.
+
+[Try Naked Paper](https://rc-refer.com/benjamin-wu693a)
