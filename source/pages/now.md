@@ -9,15 +9,9 @@ section:
 
 <div class="posse">{{ posse }}</div>
 
-## Latest update – {{ now.now[0].date }}
+## {{ collections.now[0].data.title }}
 
-### Work
-
-{{ now.now[0].work }}
-
-### Pleasure
-
-{{ now.now[0].pleasure }}
+{{ collections.now[0].content | safe }}
 
 ### Most recent content
 
@@ -25,30 +19,25 @@ section:
 - I made [{{ collections.making[0].data.title }}]({{ collections.making[0].url }})
 - Thought collected [{{ collections.thoughts[0].data.title }}]({{ collections.thoughts[0].url }})
 - Link collected [{{ collections.links[0].data.title }}]({{ collections.links[0].url }}) by {{ collections.links[0].data.author }}
+- Podcast collected [{{ collections.podcasts[0].data.title }}]({{ collections.podcasts[0].url }})
 
 ### Culture
 
 - I’m reading [{{ readlist.reading[0].titleEnglish }}](/reading/#reading) by {{ readlist.reading[0].author }} *and {{ readlist.reading.length - 1 }} other books*.
 - I’m listening to [{{ playlist.playlist[0].titleEnglish }}](/listening/) by {{ playlist.playlist[0].artistEnglish }} *{{ playlist.playlist[0].status }} ({{ playlist.playlist[0].rating }}/5)*
 - I read [{{ readlist.read[0].titleEnglish }}](/reading/#read) by {{ readlist.read[0].author }} *({{ readlist.read[0].rating }}/5)*.
-- I watched [{{ collections.watchlist[0].data.title }}]({{ collections.watchlist[0].url}}) *({{ collections.watchlist[0].rating}}/5)*
+- I watched [{{ collections.watchlist[0].data.title }}]({{ collections.watchlist[0].url}}) ({{ collections.watchlist[0].data.rating_emoji}})
 
 
 
-{% if now.was.length %}
 ## Was
 
-An archive of my previous updates.
+An archive of all of my Now updates.
 
 <ul class="list reset-list list--divided">
-{% for was in now.was %}
-<li style="padding: 0.75rem;">
-{{ was.date }}
+{% for was in collections.now %}
 
-**Work:** {{ was.work }}
+* [{{ was.page.fileSlug }}]({{was.url}}): {{ was.data.posse }}
 
-**Pleasure:** {{ was.pleasure}}
-</li>
 {% endfor %}
 </ul>
-{% endif %}

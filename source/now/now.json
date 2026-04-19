@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/now/{{ page.fileSlug }}/index.html",
+  "section": "Now",
+  "sectionURL": "/now/",
+  "verb": "Updated"
+}

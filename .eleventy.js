@@ -246,6 +246,11 @@ module.exports = (config) => {
     ].reverse();
   });
 
+  // Returns a collection of photos in reverse date order
+  config.addCollection("now", (collection) => {
+    return [...collection.getFilteredByGlob("./source/now/*.md")].reverse();
+  });
+
   // Returns a collection of everything in reverse date order
   config.addCollection("everything", function (collectionApi) {
     return collectionApi
@@ -258,6 +263,7 @@ module.exports = (config) => {
         "./source/celebrating/*.md",
         "./source/speaking/*.md",
         "./source/watching/*.md",
+        "./source/now/*.md",
       ])
       .reverse();
   });
