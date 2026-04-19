@@ -10,6 +10,6 @@ paginationNextText: 'Older'
 paginationAnchor: '#post-list'
 ---
 
-A feed of podcasts that haven’t quite made it onto my subscription list. I used to use [Huffduffer](https://huffduffer.com) for this but I wanted to own this content myself.
+A feed of my favourite podcasts to re-visit and take notes on, maybe you’ll find them interesting too.
 
 Subscribe to the podcasts [RSS feed](/collecting/podcasts/feed.rss).

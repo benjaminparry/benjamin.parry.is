@@ -17,4 +17,9 @@ Things I approve of.
 
 ## Podcasts
 
-- [Disrupting Japan](https://www.disruptingjapan.com/)
+- Read my list of [podcasts I’m subscribed to](/collecting/lists/podcasts-i'm-subscribed-to/).
+- Subscribe to my [curated list of podcasts](/collecting/podcasts/).
+
+## *It’s not all roses though!*
+
+Find out what I’m actively [rejecting](/rejecting/).

@@ -28,8 +28,6 @@ section:
 - I read [{{ readlist.read[0].titleEnglish }}](/reading/#read) by {{ readlist.read[0].author }} *({{ readlist.read[0].rating }}/5)*.
 - I watched [{{ collections.watchlist[0].data.title }}]({{ collections.watchlist[0].url}}) ({{ collections.watchlist[0].data.rating_emoji}})
 
-
-
 ## Was
 
 An archive of all of my Now updates.
