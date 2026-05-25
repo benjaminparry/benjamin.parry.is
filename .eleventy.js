@@ -218,6 +218,11 @@ module.exports = (config) => {
     ].reverse();
   });
 
+  // Returns a collection of playing in reverse date order
+  config.addCollection("playing", (collection) => {
+    return [...collection.getFilteredByGlob("./source/playing/*.md")].reverse();
+  });
+
   // Returns a collection of watchlist in reverse date order
   config.addCollection("watchlist", (collection) => {
     return [
@@ -264,6 +269,7 @@ module.exports = (config) => {
         "./source/speaking/*.md",
         "./source/watching/*.md",
         "./source/now/*.md",
+        "./source/playing/*.md",
       ])
       .reverse();
   });

@@ -105,6 +105,12 @@
       "divider": false
     },
     {
+      "text": "Playing",
+      "emoji": "🎲",
+      "url": "/playing/",
+      "divider": false
+    },
+    {
       "text": "Attending",
       "emoji": "🎟️",
       "url": "/attending/",

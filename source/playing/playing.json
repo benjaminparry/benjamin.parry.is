@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post.html",
+  "permalink": "/playing/{{ title | slugify }}/index.html",
+  "section": "Playing",
+  "sectionURL": "/playing/",
+  "verb": "Played"
+}
