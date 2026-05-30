@@ -12,4 +12,4 @@ tags:
   - Creativity
 ---
 
-A heartwarming story of bravery, resilience and acceptance.
+A heartwarming story of bravery, resilience and acceptance. **PULL THE STRING!!!**
