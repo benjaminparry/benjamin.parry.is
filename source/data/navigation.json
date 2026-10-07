@@ -1,0 +1,212 @@
+{
+  "primary": [
+    {
+      "label": "Writing",
+      "url": "/writing"
+    },
+    {
+      "label": "Speaking",
+      "url": "/speaking"
+    },
+    {
+      "label": "Working",
+      "url": "/working"
+    },
+    {
+      "label": "Making",
+      "url": "/making"
+    },
+    {
+      "label": "Benjamin Parry",
+      "url": "/benjamin-parry"
+    }
+  ],
+  "secondary": [
+    {
+      "label": "Collecting",
+      "decoration": "🗄️",
+      "url": "/collecting",
+      "divider": false
+    },
+    {
+      "label": "Cycles",
+      "decoration": "🔃",
+      "url": "/collecting/cycles",
+      "divider": false
+    },
+    {
+      "label": "Links",
+      "decoration": "🔗",
+      "url": "/collecting/links",
+      "divider": false
+    },
+    {
+      "label": "Thoughts",
+      "decoration": "🤔",
+      "url": "/collecting/thoughts",
+      "divider": false
+    },
+    {
+      "label": "Ideas",
+      "decoration": "💡",
+      "url": "/collecting/ideas",
+      "divider": false
+    },
+    {
+      "label": "Lists",
+      "decoration": "📄",
+      "url": "/collecting/lists",
+      "divider": false
+    },
+    {
+      "label": "Podcasts",
+      "decoration": "🎧",
+      "url": "/collecting/podcasts",
+      "divider": false
+    }
+  ],
+  "tertiary": [
+    {
+      "label": "Sending",
+      "decoration": "🚀",
+      "url": "/sending",
+      "divider": false
+    },
+    {
+      "label": "Replies",
+      "decoration": "📨",
+      "url": "/sending/replies",
+      "divider": false
+    },
+    {
+      "label": "Likes",
+      "decoration": "❤️",
+      "url": "/sending/likes",
+      "divider": false
+    }
+  ],
+  "quaternary": [
+    {
+      "label": "Watching",
+      "decoration": "📺️",
+      "url": "/watching/",
+      "divider": false
+    },
+    {
+      "label": "Listening",
+      "decoration": "🎵️",
+      "url": "/listening/",
+      "divider": false
+    },
+    {
+      "label": "Reading",
+      "decoration": "📚️",
+      "url": "/reading/",
+      "divider": false
+    },
+    {
+      "label": "Playing",
+      "decoration": "🎲",
+      "url": "/playing/",
+      "divider": false
+    },
+    {
+      "label": "Attending",
+      "decoration": "🎟️",
+      "url": "/attending/",
+      "divider": true
+    }
+  ],
+  "quinary": [
+    {
+      "label": "Now",
+      "decoration": "🗣️",
+      "url": "/now/",
+      "divider": true
+    },
+    {
+      "label": "Tagging",
+      "decoration": "🏷️",
+      "url": "/tagging/",
+      "divider": false
+    },
+    {
+      "label": "Contactable",
+      "decoration": "👋",
+      "url": "/contactable/",
+      "divider": true
+    },
+    {
+      "label": "Focused",
+      "decoration": "🎯",
+      "url": "/focused/",
+      "divider": true
+    }
+  ],
+  "elsewhere": [
+    {
+      "label": "Mastodon",
+      "url": "https://mastodon.social/@benjaminparry"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/benjaminparry-/"
+    },
+    {
+      "label": "Medium",
+      "url": "https://medium.com/@benjaminparry"
+    },
+    {
+      "label": "Bluesky",
+      "url": "https://bsky.app/profile/benjamin.parry.is"
+    },
+    {
+      "label": "IndieWeb",
+      "url": "https://indieweb.org/User:Benjamin.parry.is"
+    },
+    {
+      "label": "My Anime List",
+      "url": "https://myanimelist.net/profile/benjaminparry"
+    },
+    {
+      "label": "Readwise",
+      "url": "https://readwise.io/@benjaminparry"
+    },
+    {
+      "label": "Duolingo",
+      "url": "https://www.duolingo.com/profile/benjaminparry"
+    },
+    {
+      "label": "Strava",
+      "url": "https://www.strava.com/athletes/benjaminparry"
+    },
+    {
+      "label": "Github",
+      "url": "https://github.com/benjaminparry"
+    },
+    {
+      "label": "Huffduffer",
+      "url": "https://huffduffer.com/BenjaminParry"
+    },
+    {
+      "label": "Pinboard",
+      "url": "https://pinboard.in/u:benjaminparry"
+    },
+    {
+      "label": "Twitter",
+      "url": "https://twitter.com/benjaminparry"
+    },
+    {
+      "label": "NowNowNow",
+      "url": "https://nownownow.com/p/wba3"
+    },
+    {
+      "label": "Bandcamp",
+      "url": "https://bandcamp.com/benjaminparry"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:benjamin@parry.is"
+    }
+  ]
+}

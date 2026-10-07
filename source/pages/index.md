@@ -16,3 +16,5 @@ images:
 {{ title }}
 
 {{ nested.sample }}
+
+{% include "partials/navigation.html" %}
