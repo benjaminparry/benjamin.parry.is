@@ -13,4 +13,4 @@ My contribution was the [storytelling](/tagging/storytelling) practice group cal
 
 Huge thanks to Emma for nominating me in the first place, everyone who voted for me. A particular shout out to Jon, Mark, Zoe, Rob, Nat and Jason who joined Season 01.
 
-Additional shout outs to various people in my career who I begged, borrowed and stole from to come up with the idea and shape the approach; Jeremy, Ben, Chris and Matt.
+Additional shout outs to various people in my career who I begged, borrowed and stole from to come up with the idea and shape the approach; Steph, Jeremy, Ben, Chris and Matt.
