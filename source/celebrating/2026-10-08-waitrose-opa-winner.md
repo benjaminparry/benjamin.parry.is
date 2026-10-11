@@ -1,9 +1,11 @@
 ---
 date: 2026-10-08
 title: I won a One Partnership Award
-image: "/assets/images/celebrating/waitrose-opa-winner.jpg"
+image: "/assets/images/celebrating/2026-10-08-waitrose-opa-winner.jpg"
 summary: "I was nominated for and won September’s John Lewis Partnership One Partnership Award (OPA)."
 ---
+
+![An image of an email announcing the winner of an award.]({{ image }})
 
 I was nominated for and won September’s John Lewis Partnership One Partnership Award (OPA), an award to ‘recognise and celebrate Partners who are demonstrating the Partnership's Behaviours through a truly inspiring contribution.’
 
