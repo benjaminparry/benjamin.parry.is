@@ -1,6 +1,6 @@
 ---
 date: 2026-10-08
-title: Membership earned
+title: I won a One Partnership Award
 image: "/assets/images/celebrating/waitrose-opa-winner.jpg"
 summary: "I was nominated for and won September’s John Lewis Partnership One Partnership Award (OPA)."
 ---
