@@ -1,0 +1,43 @@
+{# Suggests other posts that share a tag or category with the current page. Shows nothing if there are none.
+
+   Usage, in any page or layout:
+     {% from "macros/related.html" import related %}
+     {{ related(collections.relatable, page) }}
+     {{ related(collections.relatable, page, { "limit": 5, "category": false, "heading": "More on this topic" }) }}
+
+   The pool (collections.relatable) and the page are passed in because macros can't see the page's own variables.
+
+   Options (all optional):
+     limit     how many suggestions in total. Default 3.
+     tags      true / false: suggest posts that share a tag. Default true.
+     category  true / false: suggest posts that share a category. Default true.
+     featured  "prefer" (featured posts first, the default), "only" (featured posts only) or "ignore".
+     heading   the heading text. Default "Related content". Use "" for no visible heading.
+     match     for a page that isn't in the pool: { "tags": ["Research"], "category": "Technology" }
+
+   Quote the option names, as above, like the other macros here do. #}
+{% macro related(pool, page, options) %}
+  {# Imported here, inside the macro, so they are always in scope #}
+  {% from "macros/writing-list-item.html" import writingItem %}
+  {% from "macros/collecting.html" import collectingItem %}
+  {% from "macros/feed.html" import feedItem %}
+  {% set options = options or {} %}
+  {% set suggestions = pool | related(page, options) %}
+  {% set heading = options.heading if "heading" in options else "Related content" %}
+  {% if suggestions.length %}
+    <aside aria-label="{{ heading or 'Related content' }}">
+      {% if heading %}<h2>{{ heading }}</h2>{% endif %}
+      <ul>
+        {% for post in suggestions %}
+          {% if post.data.section %}
+            {{ collectingItem(post, true) }}
+          {% elif post.data.collection %}
+            {{ feedItem(post, true) }}
+          {% else %}
+            {{ writingItem(post) }}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </aside>
+  {% endif %}
+{% endmacro %}

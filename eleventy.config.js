@@ -3,6 +3,7 @@ import { slugify, yearOf, monthOf, newestFirst, writingYears, writingMonths, wri
 import { sections, collectionName, globFor, allGlob, collectingYears, collectingMonths, hostname } from "./_config/collecting.js";
 import { roots, rootGlob, yearsName, monthsName, rootYears, rootMonths } from "./_config/roots.js";
 import { activities, activityGlob, activityCollections } from "./_config/activity.js";
+import { related } from "./_config/related.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
 const watchingFiles = "source/watching/*.md";
@@ -12,6 +13,15 @@ const writingFiles = "source/writing/*.md";
 
 // Tolerates a Date or a date written as text ("2026-01-02")
 const asDate = (d) => (d instanceof Date ? d : new Date(d));
+
+// Every post that has tags or a category: writing, collecting, the root collections,
+// and reading/playing/listening. Watching items don't have tags (yet), so they are left out.
+const taggablePosts = (api) => [
+  ...api.getFilteredByGlob(writingFiles),
+  ...api.getFilteredByGlob(allGlob),
+  ...roots.flatMap((root) => api.getFilteredByGlob(rootGlob(root.slug))),
+  ...activities.flatMap((activity) => api.getFilteredByGlob(activityGlob(activity.slug))),
+];
 
 export default function (eleventyConfig) {
 
@@ -102,13 +112,11 @@ export default function (eleventyConfig) {
 
   // Tags across every post: writing, collecting, the root collections, and reading/playing/listening.
   // One /tagging/{tag}/ page each. Watching items don't have tags (yet), so they are left out.
-  eleventyConfig.addCollection("allTags", (api) =>
-    writingTags([
-      ...api.getFilteredByGlob(writingFiles),
-      ...api.getFilteredByGlob(allGlob),
-      ...roots.flatMap((root) => api.getFilteredByGlob(rootGlob(root.slug))),
-      ...activities.flatMap((activity) => api.getFilteredByGlob(activityGlob(activity.slug))),
-    ]));
+  eleventyConfig.addCollection("allTags", (api) => writingTags(taggablePosts(api)));
+
+  // Every post that can be suggested by the related content component (macros/related.html).
+  // The same posts as allTags: collections.relatable
+  eleventyConfig.addCollection("relatable", (api) => newestFirst(taggablePosts(api)));
 
   // One collection per section: collections.collectingCycles, collections.collectingLinks, ...
   for (const section of sections) {
@@ -134,6 +142,10 @@ export default function (eleventyConfig) {
 
   // "https://www.rowboat.net/product/" -> "rowboat.net"
   eleventyConfig.addFilter("hostname", hostname);
+
+  // pool | related(page, { limit: 3, tags: true, category: true, featured: "prefer" })
+  // Used by macros/related.html
+  eleventyConfig.addFilter("related", related);
 }
 
 // Set template engines
