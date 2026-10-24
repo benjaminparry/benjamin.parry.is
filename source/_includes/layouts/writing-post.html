@@ -10,10 +10,6 @@ layout: layouts/base.html
 
   {{ content | safe }}
 
-  {% from "macros/related.html" import related %}
-  {{ related(collections.relatable, page, { "limit": 5, "category": false, "featured": "only", "heading": "More on this topic" }) }}
-  {{ related(collections.relatable, page, { "onThisDay": true }) }}
-
   {% if tags %}
     <h2>Tags</h2>
     <ul>
@@ -22,4 +18,8 @@ layout: layouts/base.html
       {% endfor %}
     </ul>
   {% endif %}
+
+  {% from "macros/related.html" import related %}
+  {{ related(collections.relatable, page, { "limit": 5, "category": false, "featured": "only", "heading": "More on this topic" }) }}
+  {{ related(collections.relatable, page, { "onThisDay": true }) }}
 </article>
