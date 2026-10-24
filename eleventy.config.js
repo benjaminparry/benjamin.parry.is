@@ -3,7 +3,7 @@ import { slugify, yearOf, monthOf, newestFirst, writingYears, writingMonths, wri
 import { sections, collectionName, globFor, allGlob, collectingYears, collectingMonths, hostname } from "./_config/collecting.js";
 import { roots, rootGlob, yearsName, monthsName, rootYears, rootMonths } from "./_config/roots.js";
 import { activities, activityGlob, activityCollections, coverSrc } from "./_config/activity.js";
-import { related } from "./_config/related.js";
+import { related, onThisDay } from "./_config/related.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
 const watchingFiles = "source/watching/*.md";
@@ -149,6 +149,10 @@ export default function (eleventyConfig) {
   // pool | related(page, { limit: 3, tags: true, category: true, featured: "prefer" })
   // Used by macros/related.html
   eleventyConfig.addFilter("related", related);
+
+  // pool | onThisDay(page, { onThisDay: true, onThisDayLimit: 3 })
+  // Used by macros/related.html
+  eleventyConfig.addFilter("onThisDay", onThisDay);
 }
 
 // Set template engines

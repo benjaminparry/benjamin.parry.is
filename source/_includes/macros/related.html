@@ -1,19 +1,29 @@
-{# Suggests other posts that share a tag or category with the current page. Shows nothing if there are none.
+{# Suggests other posts that share a tag or category with the current page, and (if asked) posts made
+   on the same day of the year. Each list is only shown if it has something in it.
 
    Usage, in any page or layout:
      {% from "macros/related.html" import related %}
      {{ related(collections.relatable, page) }}
      {{ related(collections.relatable, page, { "limit": 5, "category": false, "heading": "More on this topic" }) }}
+     {{ related(collections.relatable, page, { "onThisDay": true }) }}
 
    The pool (collections.relatable) and the page are passed in because macros can't see the page's own variables.
 
    Options (all optional):
-     limit     how many suggestions in total. Default 3.
-     tags      true / false: suggest posts that share a tag. Default true.
-     category  true / false: suggest posts that share a category. Default true.
-     featured  "prefer" (featured posts first, the default), "only" (featured posts only) or "ignore".
-     heading   the heading text. Default "Related content". Use "" for no visible heading.
-     match     for a page that isn't in the pool: { "tags": ["Research"], "category": "Technology" }
+     limit            how many related suggestions in total. Default 3. Use 0 to show only "on this day".
+     tags             true / false: suggest posts that share a tag. Default true.
+     category         true / false: suggest posts that share a category. Default true.
+     featured         "prefer" (featured posts first, the default), "only" (featured posts only) or "ignore".
+                      Applies to both lists.
+     heading          the heading text. Default "Related content". Use "" for no visible heading.
+     match            for a page that isn't in the pool: { "tags": ["Research"], "category": "Technology" }
+
+     onThisDay        false (the default): no "on this day" list.
+                      true or "page": posts from the same month and day as this page, in any year.
+                      "today": posts from the same month and day as the day the site is built.
+     onThisDayLimit   how many "on this day" posts to show. Default 3.
+     onThisDayHeading the heading text. Default "On this day". Use "" for no visible heading.
+     date             for "page" on a page without a date: the date to use, e.g. "2026-10-24".
 
    Quote the option names, as above, like the other macros here do. #}
 {% macro related(pool, page, options) %}
@@ -22,22 +32,31 @@
   {% from "macros/collecting.html" import collectingItem %}
   {% from "macros/feed.html" import feedItem %}
   {% set options = options or {} %}
-  {% set suggestions = pool | related(page, options) %}
   {% set heading = options.heading if "heading" in options else "Related content" %}
-  {% if suggestions.length %}
-    <aside aria-label="{{ heading or 'Related content' }}">
-      {% if heading %}<h2>{{ heading }}</h2>{% endif %}
-      <ul>
-        {% for post in suggestions %}
-          {% if post.data.section %}
-            {{ collectingItem(post, true) }}
-          {% elif post.data.collection %}
-            {{ feedItem(post, true) }}
-          {% else %}
-            {{ writingItem(post) }}
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </aside>
-  {% endif %}
+  {% set dayHeading = options.onThisDayHeading if "onThisDayHeading" in options else "On this day" %}
+
+  {# Both lists are drawn by the loop below #}
+  {% set lists = [
+    { "label": "Related content", "heading": heading, "posts": pool | related(page, options) },
+    { "label": "On this day", "heading": dayHeading, "posts": pool | onThisDay(page, options) }
+  ] %}
+
+  {% for list in lists %}
+    {% if list.posts.length %}
+      <aside aria-label="{{ list.heading or list.label }}">
+        {% if list.heading %}<h2>{{ list.heading }}</h2>{% endif %}
+        <ul>
+          {% for post in list.posts %}
+            {% if post.data.section %}
+              {{ collectingItem(post, true) }}
+            {% elif post.data.collection %}
+              {{ feedItem(post, true) }}
+            {% else %}
+              {{ writingItem(post) }}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </aside>
+    {% endif %}
+  {% endfor %}
 {% endmacro %}

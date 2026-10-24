@@ -13,6 +13,8 @@ export const defaults = {
   tags: true,          // suggest posts that share a tag
   category: true,      // suggest posts that share a category
   featured: "prefer",  // "prefer" = featured posts first, "only" = featured posts only, "ignore" = no special treatment
+  onThisDay: false,    // true / "page" = posts from the same month and day as this page, "today" = as the day the site is built
+  onThisDayLimit: 3,   // how many "on this day" posts to show
 };
 
 // A list or a single string, as a set of comparable keys: ["Data", "data "] -> Set { "data" }
@@ -68,4 +70,37 @@ export function related(pool = [], current = {}, options = {}) {
       order.get(a.post) - order.get(b.post))
     .slice(0, limit)
     .map((s) => s.post);
+}
+
+// Posts made on the same month and day as a date, in any year, newest first.
+//   onThisDay(collections.relatable, page, { onThisDay: true })
+//
+// Which day is set by the onThisDay option:
+//   false (the default)  nothing is returned
+//   true or "page"       the page's own date (page.date), or the `date` option for a page without one
+//   "today"              the day the site is built (or the `now` option, which is there for testing)
+// The page itself is left out. Months and days are in UTC, like the rest of the site's dates.
+// featured: "only" and "prefer" work as they do for related(). tags and category don't apply here.
+export function onThisDay(pool = [], current = {}, options = {}) {
+  const mode = options.onThisDay ?? defaults.onThisDay;
+  const limit = Math.max(0, Math.floor(Number(options.onThisDayLimit ?? defaults.onThisDayLimit)));
+  const featured = options.featured ?? defaults.featured;
+  if (!mode || !limit) return [];
+
+  const self = pool.find((post) => post.url === current.url);
+  const raw = mode === "today" ? (options.now ?? new Date()) : (current.date ?? self?.date ?? options.date);
+  const day = raw ? new Date(raw) : null;
+  if (!day || Number.isNaN(day.getTime())) return [];
+
+  const key = (date) => `${date.getUTCMonth()}-${date.getUTCDate()}`;
+  const wanted = key(day);
+
+  const matches = pool.filter((post) =>
+    post.url && post.url !== current.url && post.date && key(new Date(post.date)) === wanted &&
+    (featured !== "only" || isFeatured(post.data)));
+
+  const featuredRank = (post) => (featured === "prefer" && isFeatured(post.data) ? 0 : 1);
+  return newestFirst(matches)                                   // newest first, and the sort below is stable
+    .sort((a, b) => featuredRank(a) - featuredRank(b))
+    .slice(0, limit);
 }
