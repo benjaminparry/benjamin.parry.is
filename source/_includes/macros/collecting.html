@@ -1,6 +1,8 @@
 {# One post in a feed or archive list.
    showSection: true on mixed lists (/collecting/, archives) so each item says which section it is from. #}
 {% macro collectingItem(post, showSection) %}
+  {# Ideas have a proposal rather than a summary #}
+  {% set blurb = post.data.summary or post.data.proposal %}
   <li>
     {% if post.data.images and post.data.images.length %}
       {# Decorative: the title link beside it names the post, so the alt text is empty #}
@@ -12,7 +14,7 @@
       <a href="/collecting/{{ post.data.section }}/">{{ post.data.sectionTitle }}</a>
     {% endif %}
     {% if post.data.bookmarkOf %}<span>({{ post.data.bookmarkOf | hostname }})</span>{% endif %}
-    {% if post.data.summary %}<p>{{ post.data.summary }}</p>{% endif %}
+    {% if blurb %}<p>{{ blurb }}</p>{% endif %}
   </li>
 {% endmacro %}
 

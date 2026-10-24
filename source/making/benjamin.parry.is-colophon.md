@@ -1,5 +1,6 @@
 ---
 layout: 'layouts/extend-base-example.html'
+date: '2026-10-24'
 title: 'How I built this website – Colophon'
 tags:
   - 'Indieweb'

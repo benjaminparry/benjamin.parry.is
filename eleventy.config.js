@@ -1,12 +1,17 @@
 import { currentlyWatching, allWatched, watchedByYear, watchedInYear, watchedBeforeYear } from "./_config/watching.js";
 import { slugify, yearOf, monthOf, newestFirst, writingYears, writingMonths, writingTags } from "./_config/writing.js";
 import { sections, collectionName, globFor, allGlob, collectingYears, collectingMonths, hostname } from "./_config/collecting.js";
+import { roots, rootGlob, yearsName, monthsName, rootYears, rootMonths } from "./_config/roots.js";
+import { activities, activityGlob, activityCollections } from "./_config/activity.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
 const watchingFiles = "source/watching/*.md";
 
 // Every Markdown file directly inside source/writing/ is a writing post
 const writingFiles = "source/writing/*.md";
+
+// Tolerates a Date or a date written as text ("2026-01-02")
+const asDate = (d) => (d instanceof Date ? d : new Date(d));
 
 export default function (eleventyConfig) {
 
@@ -16,6 +21,9 @@ export default function (eleventyConfig) {
 
   // Set directories to pass through to build directory
   eleventyConfig.addPassthroughCopy('source/assets/images');
+  eleventyConfig.addPassthroughCopy('source/assets/audio');   // mirrored talks and podcasts
+  eleventyConfig.addPassthroughCopy('source/assets/video');
+  eleventyConfig.addPassthroughCopy('source/assets/other');   // e.g. the vCard
 
   // Watching collections
   eleventyConfig.addCollection("currentlyWatching", (api) =>
@@ -35,6 +43,25 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("watchedYears", (api) =>
     watchedByYear(api.getFilteredByGlob(watchingFiles)));
 
+  // Reading, playing and listening collections: the same four as watching, one set per activity
+  // e.g. collections.currentlyReading, readThisYear, readPreviousYears, readYears
+  for (const activity of activities) {
+    const files = activityGlob(activity.slug);
+    const build = activityCollections(activity.listKey);
+
+    eleventyConfig.addCollection(activity.names.currently, (api) =>
+      build.currently(api.getFilteredByGlob(files)));
+
+    eleventyConfig.addCollection(activity.names.thisYear, (api) =>
+      build.inYear(api.getFilteredByGlob(files), new Date().getUTCFullYear()));
+
+    eleventyConfig.addCollection(activity.names.previousYears, (api) =>
+      build.beforeYear(api.getFilteredByGlob(files), new Date().getUTCFullYear()));
+
+    eleventyConfig.addCollection(activity.names.years, (api) =>
+      build.byYear(api.getFilteredByGlob(files)));
+  }
+
   // Writing collections
   eleventyConfig.addCollection("writing", (api) =>
     newestFirst(api.getFilteredByGlob(writingFiles)));
@@ -48,6 +75,21 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("writingTags", (api) =>
     writingTags(api.getFilteredByGlob(writingFiles)));
 
+  // Root collections: every post in source/<slug>/ (speaking, celebrating, attending, now, making)
+  // e.g. collections.speaking, collections.speakingYears, collections.speakingMonths
+  for (const root of roots) {
+    const files = rootGlob(root.slug);
+
+    eleventyConfig.addCollection(root.slug, (api) =>
+      newestFirst(api.getFilteredByGlob(files)));
+
+    eleventyConfig.addCollection(yearsName(root.slug), (api) =>
+      rootYears(api.getFilteredByGlob(files)));
+
+    eleventyConfig.addCollection(monthsName(root.slug), (api) =>
+      rootMonths(api.getFilteredByGlob(files)));
+  }
+
   // Collecting collections: every post in source/collecting/<section>/
   eleventyConfig.addCollection("collecting", (api) =>
     newestFirst(api.getFilteredByGlob(allGlob)));
@@ -58,9 +100,15 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("collectingMonths", (api) =>
     collectingMonths(api.getFilteredByGlob(allGlob)));
 
-  // Tags across writing AND collecting posts: one /tagging/{tag}/ page each
+  // Tags across every post: writing, collecting, the root collections, and reading/playing/listening.
+  // One /tagging/{tag}/ page each. Watching items don't have tags (yet), so they are left out.
   eleventyConfig.addCollection("allTags", (api) =>
-    writingTags([...api.getFilteredByGlob(writingFiles), ...api.getFilteredByGlob(allGlob)]));
+    writingTags([
+      ...api.getFilteredByGlob(writingFiles),
+      ...api.getFilteredByGlob(allGlob),
+      ...roots.flatMap((root) => api.getFilteredByGlob(rootGlob(root.slug))),
+      ...activities.flatMap((activity) => api.getFilteredByGlob(activityGlob(activity.slug))),
+    ]));
 
   // One collection per section: collections.collectingCycles, collections.collectingLinks, ...
   for (const section of sections) {
@@ -75,9 +123,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addGlobalData("currentYear", () => new Date().getUTCFullYear());
 
   // Date filters (UTC, so dates don't shift an hour in British Summer Time)
-  eleventyConfig.addFilter("isoDate", (d) => d.toISOString().slice(0, 10));
+  eleventyConfig.addFilter("isoDate", (d) => asDate(d).toISOString().slice(0, 10));
   eleventyConfig.addFilter("longDate", (d) =>
-    new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(d));
+    new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(asDate(d)));
 
   // Used to build /writing/yyyy/mm/post-name/ and /tagging/tag-name/ URLs
   eleventyConfig.addFilter("yearOf", yearOf);

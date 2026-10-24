@@ -1,0 +1,25 @@
+---
+layout: layouts/base.html
+---
+{# A celebration. The image is written into the post itself, so it is not repeated here.
+   Optional front matter: more (a link) and moreText (what the link says). #}
+<article>
+  <h1>{{ title }}</h1>
+
+  <p>
+    <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    in <a href="/celebrating/">Celebrating</a>
+  </p>
+
+  {% if summary %}<p>{{ summary }}</p>{% endif %}
+
+  {{ content | safe }}
+
+  {% if more %}
+    <p><a href="{{ more }}">{{ moreText or "Read more" }}</a></p>
+  {% endif %}
+
+  {% include "partials/tags.html" %}
+
+  <p><a href="/celebrating/">Back to Celebrating</a></p>
+</article>

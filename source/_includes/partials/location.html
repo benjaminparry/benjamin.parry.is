@@ -1,0 +1,10 @@
+{# A place, from a `location` object in the front matter:
+   location:
+     name, streetAddress, locality, postalCode, countryName #}
+{% if location and location.name %}
+  <address>
+    {% for part in [location.name, location.streetAddress, location.locality, location.postalCode, location.countryName] %}
+      {% if part %}<span>{{ part }}</span>{% endif %}
+    {% endfor %}
+  </address>
+{% endif %}

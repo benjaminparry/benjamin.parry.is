@@ -1,0 +1,30 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.speakingYears
+  size: 1
+  alias: group
+permalink: "/speaking/{{ group.year }}/"
+eleventyComputed:
+  title: "Speaking in {{ group.year }}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/feed.html" import feedItem %}
+
+<h1>{{ title }}</h1>
+
+<nav aria-label="Months in {{ group.year }}">
+  <ul>
+    {% for m in group.months %}
+      <li><a href="/speaking/{{ group.year }}/{{ m.month }}/">{{ m.name }}</a> ({{ m.count }})</li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<ul>
+  {% for post in group.posts %}
+    {{ feedItem(post) }}
+  {% endfor %}
+</ul>
+
+<p><a href="/speaking/">All speaking</a></p>

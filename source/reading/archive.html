@@ -1,0 +1,22 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.readYears
+  size: 1
+  alias: group
+permalink: "/reading/{{ group.year }}/"
+eleventyComputed:
+  title: "Read in {{ group.year }}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/read-entry.html" import readEntry %}
+
+<h1>{{ title }}</h1>
+
+<ul>
+  {% for entry in group.entries %}
+    {{ readEntry(entry) }}
+  {% endfor %}
+</ul>
+
+<p><a href="/reading/">Back to Reading</a></p>

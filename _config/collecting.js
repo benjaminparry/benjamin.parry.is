@@ -1,4 +1,4 @@
-// Helpers for the /collecting/ collections (cycles, links, lists, photos, podcasts, thoughts).
+// Helpers for the /collecting/ collections (cycles, ideas, links, lists, photos, podcasts, thoughts).
 // Plain JavaScript with no Eleventy code in it, so it is easy to test on its own.
 //
 // Posts live in source/collecting/<section>/ and are named with their date:
@@ -8,9 +8,10 @@
 import { newestFirst, writingYears, writingMonths } from "./writing.js";
 
 // slug = the folder name and the URL segment. title = the heading shown on the site.
-// Add a line here (plus a folder and an index.html) to add a seventh section.
+// Add a line here (plus a folder and an index.html) to add an eighth section.
 export const sections = [
   { slug: "cycles", title: "Cycles" },
+  { slug: "ideas", title: "Ideas" },
   { slug: "links", title: "Links" },
   { slug: "lists", title: "Lists" },
   { slug: "photos", title: "Photos" },

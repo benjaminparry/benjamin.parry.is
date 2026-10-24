@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/celebrating-post.html",
+  "collection": "celebrating",
+  "collectionTitle": "Celebrating",
+  "permalink": "/celebrating/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"
+}

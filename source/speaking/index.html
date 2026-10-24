@@ -1,0 +1,35 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.speaking
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/speaking/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Speaking{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/feed.html" import feedItem %}
+{% from "macros/collecting.html" import pager %}
+
+<h1>Speaking</h1>
+
+<nav aria-label="Browse speaking by year">
+  <ul>
+    {% for group in collections.speakingYears %}
+      <li><a href="/speaking/{{ group.year }}/">{{ group.year }}</a></li>
+    {% endfor %}
+    <li><a href="/tagging/">All tags</a></li>
+  </ul>
+</nav>
+
+<ul>
+  {% for post in posts %}
+    {{ feedItem(post) }}
+  {% else %}
+    <li>Nothing yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

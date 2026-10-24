@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/making-post.html",
+  "collection": "making",
+  "collectionTitle": "Making",
+  "permalink": "/making/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"
+}

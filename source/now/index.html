@@ -1,0 +1,128 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.now
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/now/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Now{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{# The first page shows my latest update in full, then the most recent thing from everywhere else on
+   the site, then the Was list: every update, ten to a page. Later pages only show the Was list. #}
+{% from "macros/feed.html" import feedItem %}
+{% from "macros/collecting.html" import pager %}
+
+<h1>Now</h1>
+
+<p>A snapshot of what I’m doing now. Part of the <a href="https://nownownow.com/about" rel="external">NowNowNow</a> group.</p>
+
+<nav aria-label="Browse now by year">
+  <ul>
+    {% for group in collections.nowYears %}
+      <li><a href="/now/{{ group.year }}/">{{ group.year }}</a></li>
+    {% endfor %}
+    <li><a href="/tagging/">All tags</a></li>
+  </ul>
+</nav>
+
+{% if pagination.pageNumber == 0 %}
+
+  {% set latest = collections.now[0] %}
+  {% if latest %}
+    <section aria-labelledby="latest-heading">
+      <h2 id="latest-heading"><a href="{{ latest.url }}">{{ latest.data.title }}</a></h2>
+      <p><time datetime="{{ latest.date | isoDate }}">{{ latest.date | longDate }}</time></p>
+      {{ latest.templateContent | safe }}
+    </section>
+  {% endif %}
+
+  <section aria-labelledby="recent-heading">
+    <h2 id="recent-heading">Most recent content</h2>
+    <ul>
+      {% if collections.writing.length %}
+        <li>I wrote <a href="{{ collections.writing[0].url }}">{{ collections.writing[0].data.title }}</a></li>
+      {% endif %}
+      {% if collections.making.length %}
+        <li>I made <a href="{{ collections.making[0].url }}">{{ collections.making[0].data.title }}</a></li>
+      {% endif %}
+      {% if collections.collectingThoughts.length %}
+        <li>Thought collected <a href="{{ collections.collectingThoughts[0].url }}">{{ collections.collectingThoughts[0].data.title }}</a></li>
+      {% endif %}
+      {% if collections.collectingLinks.length %}
+        <li>
+          Link collected <a href="{{ collections.collectingLinks[0].url }}">{{ collections.collectingLinks[0].data.title }}</a>
+          {% if collections.collectingLinks[0].data.author %}by {{ collections.collectingLinks[0].data.author }}{% endif %}
+        </li>
+      {% endif %}
+      {% if collections.collectingPodcasts.length %}
+        <li>Podcast collected <a href="{{ collections.collectingPodcasts[0].url }}">{{ collections.collectingPodcasts[0].data.title }}</a></li>
+      {% endif %}
+    </ul>
+  </section>
+
+  <section aria-labelledby="culture-heading">
+    <h2 id="culture-heading">Culture</h2>
+    <ul>
+      {% set reading = collections.currentlyReading %}
+      {% if reading.length %}
+        <li>
+          I’m reading <a href="{{ reading[0].url }}">{{ reading[0].data.title }}</a>
+          {% if reading[0].data.author %}by {{ reading[0].data.author }}{% endif %}
+          {% if reading.length > 1 %}<em>and {{ reading.length - 1 }} other{% if reading.length > 2 %}s{% endif %}</em>{% endif %}
+        </li>
+      {% endif %}
+
+      {% set listening = collections.currentlyListening %}
+      {% if listening.length %}
+        <li>
+          I’m listening to <a href="{{ listening[0].url }}">{{ listening[0].data.title }}</a>
+          {% if listening[0].data.artist %}by {{ listening[0].data.artist }}{% endif %}
+          {% if listening[0].data.rating %}<em>({{ listening[0].data.rating }}/5)</em>{% endif %}
+        </li>
+      {% endif %}
+
+      {% set playing = collections.currentlyPlaying %}
+      {% if playing.length %}
+        <li>
+          I’m playing <a href="{{ playing[0].url }}">{{ playing[0].data.title }}</a>
+          {% if playing[0].data.rating %}<em>({{ playing[0].data.rating }}/5)</em>{% endif %}
+        </li>
+      {% endif %}
+
+      {% if collections.readYears.length %}
+        {% set lastRead = collections.readYears[0].entries[0] %}
+        <li>
+          I read <a href="{{ lastRead.item.url }}">{{ lastRead.item.data.title }}</a>
+          {% if lastRead.item.data.author %}by {{ lastRead.item.data.author }}{% endif %}
+          {% if lastRead.item.data.rating %}<em>({{ lastRead.item.data.rating }}/5)</em>{% endif %}
+        </li>
+      {% endif %}
+
+      {% if collections.allWatched.length %}
+        {% set lastWatched = collections.allWatched[0] %}
+        <li>
+          I watched <a href="{{ lastWatched.item.url }}">{{ lastWatched.item.data.title }}</a>
+          {% if lastWatched.item.data.rating_emoji %}({{ lastWatched.item.data.rating_emoji }}){% endif %}
+        </li>
+      {% endif %}
+    </ul>
+  </section>
+
+{% endif %}
+
+<section aria-labelledby="was-heading">
+  <h2 id="was-heading">Was</h2>
+  <p>An archive of all of my Now updates.</p>
+  <ul>
+    {% for post in posts %}
+      {{ feedItem(post) }}
+    {% else %}
+      <li>Nothing yet.</li>
+    {% endfor %}
+  </ul>
+</section>
+
+{{ pager(pagination, page.url) }}

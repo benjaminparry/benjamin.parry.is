@@ -1,0 +1,48 @@
+---
+layout: layouts/base.html
+---
+{% set typeLabels = { "video game": "🎮 Video game", "board game": "🎲 Board game", "card game": "🃏 Card game" } %}
+
+<article>
+  <h1>{{ title }}</h1>
+
+  <img src="{{ cover or ('/assets/images/playing/' ~ page.fileSlug ~ '.jpg') }}" alt="Cover of {{ title }}" width="200" height="300" decoding="async">
+
+  {% if award %}<p><strong>Award</strong></p>{% endif %}
+
+  {% if game %}<p>{{ typeLabels[game] or game }}</p>{% endif %}
+
+  {% if complexity or duration %}
+    <p>{% if complexity %}Complexity: {{ complexity }}{% endif %}{% if complexity and duration %} | {% endif %}{% if duration %}Duration: {{ duration }}{% endif %}</p>
+  {% endif %}
+
+  {% if website %}<p><a href="{{ website }}" rel="external">{{ website | hostname }}</a></p>{% endif %}
+
+  {% if rating_emoji %}
+    <p>{{ rating_emoji }}{% if rating_prose %} – {{ rating_prose }}{% endif %}</p>
+  {% elif rating %}
+    <p>{{ rating }}/5</p>
+  {% endif %}
+
+  {{ content | safe }}
+
+  {% if activity.length %}
+    <h2>Played</h2>
+    <ol>
+      {% for w in activity | reverse %}
+        <li>
+          {% if w.started %}
+            {{ w.started | longDate }}{% if w.finished %} – {{ w.finished | longDate }}{% else %} – ongoing{% endif %}
+          {% else %}
+            {{ w.date | longDate }}
+          {% endif %}
+          {% if w.comment %} — {{ w.comment }}{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+
+  {% include "partials/tags.html" %}
+
+  <p><a href="/playing/">Back to Playing</a></p>
+</article>

@@ -1,0 +1,25 @@
+{# One post in a feed or archive for the root collections (speaking, celebrating, attending, now, making).
+   showCollection: true on mixed lists (tag pages) so each item says which collection it is from. #}
+{% macro feedItem(post, showCollection) %}
+  {% set typeLabels = { "event": "🎤 Event", "media": "🎙️ Media" } %}
+  {% set blurb = post.data.summary or post.data.posse %}
+  <li>
+    {% if post.data.image and post.data.image[0] == "/" %}
+      {# Decorative: the title link beside it names the post, so the alt text is empty #}
+      <img src="{{ post.data.image }}" alt="" loading="lazy" decoding="async">
+    {% endif %}
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    {% if post.data.showDate != false %}
+      <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
+    {% endif %}
+    {% if showCollection and post.data.collectionTitle %}
+      <a href="/{{ post.data.collection }}/">{{ post.data.collectionTitle }}</a>
+    {% endif %}
+    {% if post.data.entryType %}<span>{{ typeLabels[post.data.entryType] or post.data.entryType }}</span>{% endif %}
+    {% if post.data.location and post.data.location.name %}
+      <span>{{ post.data.location.name }}{% if post.data.location.locality %}, {{ post.data.location.locality }}{% endif %}</span>
+    {% endif %}
+    {% if post.data.bookmarkOf %}<span>({{ post.data.bookmarkOf | hostname }})</span>{% endif %}
+    {% if blurb %}<p>{{ blurb }}</p>{% endif %}
+  </li>
+{% endmacro %}

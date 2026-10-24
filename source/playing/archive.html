@@ -1,0 +1,22 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.playedYears
+  size: 1
+  alias: group
+permalink: "/playing/{{ group.year }}/"
+eleventyComputed:
+  title: "Played in {{ group.year }}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/played-entry.html" import playedEntry %}
+
+<h1>{{ title }}</h1>
+
+<ul>
+  {% for entry in group.entries %}
+    {{ playedEntry(entry) }}
+  {% endfor %}
+</ul>
+
+<p><a href="/playing/">Back to Playing</a></p>

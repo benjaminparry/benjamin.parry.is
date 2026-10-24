@@ -1,0 +1,59 @@
+---
+title: Reading
+layout: layouts/base.html
+permalink: /reading/
+---
+{% from "macros/read-entry.html" import readEntry %}
+
+<h1>{{ title }}</h1>
+
+<section aria-labelledby="now-heading">
+  <h2 id="now-heading">Currently reading</h2>
+  <ul>
+    {% for item in collections.currentlyReading %}
+      {% set cover = item.data.cover or ("/assets/images/reading/" ~ item.fileSlug ~ ".jpg") %}
+      <li>
+        <img src="{{ cover }}" alt="Cover of {{ item.data.title }}" width="200" height="300" decoding="async">
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+      </li>
+    {% else %}
+      <li>Nothing at the moment.</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section aria-labelledby="done-heading">
+  <h2 id="done-heading">Read this year</h2>
+  <ul>
+    {% for entry in collections.readThisYear %}
+      {{ readEntry(entry) }}
+    {% else %}
+      <li>Nothing read yet this year.</li>
+    {% endfor %}
+  </ul>
+  {% if collections.readThisYear.length %}
+    <p><a href="/reading/{{ currentYear }}/">{{ currentYear }} archive</a></p>
+  {% endif %}
+</section>
+
+{% if collections.readPreviousYears.length %}
+<section aria-labelledby="previous-heading">
+  <h2 id="previous-heading">Previously read</h2>
+  {% for group in collections.readPreviousYears %}
+    <h3><a href="/reading/{{ group.year }}/">{{ group.year }}</a></h3>
+    <ul>
+      {% for entry in group.awarded %}
+        <li>
+          <a href="{{ entry.item.url }}">{{ entry.item.data.title }}</a>
+          <span>🏆 Award</span>
+        </li>
+      {% endfor %}
+      {% if group.others %}
+        <li>{{ group.others }} other item{% if group.others != 1 %}s{% endif %}</li>
+      {% endif %}
+    </ul>
+  {% endfor %}
+</section>
+{% endif %}
+
+<p><a href="/tagging/">All tags</a></p>

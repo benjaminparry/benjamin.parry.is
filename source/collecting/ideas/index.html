@@ -1,0 +1,27 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.collectingIdeas
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/collecting/ideas/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Ideas{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/collecting.html" import collectingItem, pager, sectionNav %}
+
+<h1>Ideas</h1>
+
+{{ sectionNav(collectingSections, "ideas") }}
+
+<ul>
+  {% for post in posts %}
+    {{ collectingItem(post, false) }}
+  {% else %}
+    <li>No ideas yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

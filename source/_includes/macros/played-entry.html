@@ -1,0 +1,16 @@
+{% macro playedEntry(entry) %}
+  {% set typeLabels = { "video game": "🎮 Video game", "board game": "🎲 Board game", "card game": "🃏 Card game" } %}
+  {% set post = entry.item.data %}
+  {% set cover = post.cover or ("/assets/images/playing/" ~ entry.item.fileSlug ~ ".jpg") %}
+  <li>
+    <img src="{{ cover }}" alt="Cover of {{ post.title }}" width="200" height="300" loading="lazy" decoding="async">
+    <a href="{{ entry.item.url }}">{{ post.title }}</a>
+    {% if post.award %}<p>🏆 Award</p>{% endif %}
+    {% if post.rating_emoji %}
+      <p>{{ post.rating_emoji }}{% if post.rating_prose %} – {{ post.rating_prose }}{% endif %}</p>
+    {% elif post.rating %}
+      <p>{{ post.rating }}/5</p>
+    {% endif %}
+    <p>{% if post.game %}{{ typeLabels[post.game] or post.game }} | {% endif %}Last played: <time datetime="{{ entry.latest | isoDate }}">{{ entry.latest | longDate }}</time> | Times played: {{ entry.count }}</p>
+  </li>
+{% endmacro %}

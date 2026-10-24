@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/attending-post.html",
+  "collection": "attending",
+  "collectionTitle": "Attending",
+  "permalink": "/attending/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"
+}

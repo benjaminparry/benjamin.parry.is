@@ -1,0 +1,20 @@
+---
+layout: layouts/base.html
+---
+{# One update, from the Was list on /now/. The posse line is the short summary that is shared elsewhere. #}
+<article>
+  <h1>{{ title }}</h1>
+
+  <p>
+    <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    in <a href="/now/">Now</a>
+  </p>
+
+  {% if posse %}<p>{{ posse }}</p>{% endif %}
+
+  {{ content | safe }}
+
+  {% include "partials/tags.html" %}
+
+  <p><a href="/now/">Back to Now</a></p>
+</article>

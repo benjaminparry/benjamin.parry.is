@@ -1,0 +1,35 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.making
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/making/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Making{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/feed.html" import feedItem %}
+{% from "macros/collecting.html" import pager %}
+
+<h1>Making</h1>
+
+<nav aria-label="Browse making by year">
+  <ul>
+    {% for group in collections.makingYears %}
+      <li><a href="/making/{{ group.year }}/">{{ group.year }}</a></li>
+    {% endfor %}
+    <li><a href="/tagging/">All tags</a></li>
+  </ul>
+</nav>
+
+<ul>
+  {% for post in posts %}
+    {{ feedItem(post) }}
+  {% else %}
+    <li>Nothing made yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

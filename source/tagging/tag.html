@@ -11,6 +11,7 @@ eleventyExcludeFromCollections: true
 ---
 {% from "macros/writing-list-item.html" import writingItem %}
 {% from "macros/collecting.html" import collectingItem %}
+{% from "macros/feed.html" import feedItem %}
 
 <h1>{{ title }}</h1>
 
@@ -18,6 +19,8 @@ eleventyExcludeFromCollections: true
   {% for post in group.posts %}
     {% if post.data.section %}
       {{ collectingItem(post, true) }}
+    {% elif post.data.collection %}
+      {{ feedItem(post, true) }}
     {% else %}
       {{ writingItem(post) }}
     {% endif %}

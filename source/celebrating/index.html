@@ -1,0 +1,35 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.celebrating
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/celebrating/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Celebrating{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/feed.html" import feedItem %}
+{% from "macros/collecting.html" import pager %}
+
+<h1>Celebrating</h1>
+
+<nav aria-label="Browse celebrating by year">
+  <ul>
+    {% for group in collections.celebratingYears %}
+      <li><a href="/celebrating/{{ group.year }}/">{{ group.year }}</a></li>
+    {% endfor %}
+    <li><a href="/tagging/">All tags</a></li>
+  </ul>
+</nav>
+
+<ul>
+  {% for post in posts %}
+    {{ feedItem(post) }}
+  {% else %}
+    <li>Nothing to celebrate yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

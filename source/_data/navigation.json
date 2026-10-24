@@ -111,6 +111,12 @@
       "divider": false
     },
     {
+      "label": "Celebrating",
+      "decoration": "🎉",
+      "url": "/celebrating/",
+      "divider": false
+    },
+    {
       "label": "Attending",
       "decoration": "🎟️",
       "url": "/attending/",

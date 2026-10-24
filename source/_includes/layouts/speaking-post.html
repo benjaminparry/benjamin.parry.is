@@ -1,0 +1,51 @@
+---
+layout: layouts/base.html
+---
+{# A speaking post is an event (in person) or media (a recording).
+   entryType and mirrorKind are worked out in speaking.11tydata.js.
+   Media front matter: bookmarkOf (the original), mirror (the copy hosted on this site). #}
+{% set typeLabels = { "event": "🎤 Event", "media": "🎙️ Media" } %}
+
+<article>
+  <h1>{{ title }}</h1>
+
+  <p>
+    <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    in <a href="/speaking/">Speaking</a>
+    | {{ typeLabels[entryType] or entryType }}
+  </p>
+
+  {% if summary %}<p>{{ summary }}</p>{% endif %}
+
+  {% if entryType == "event" %}
+    {% include "partials/location.html" %}
+  {% endif %}
+
+  {% if entryType == "media" %}
+    <h2>Recording</h2>
+    <ul>
+      {% if bookmarkOf %}
+        <li>Original: <a href="{{ bookmarkOf }}" rel="external">{{ bookmarkOf | hostname }}</a></li>
+      {% endif %}
+      {% if mirror %}
+        <li>Mirror: <a href="{{ mirror }}">hosted on this site</a></li>
+      {% endif %}
+    </ul>
+
+    {% if mirror and mirrorKind == "audio" %}
+      <audio controls preload="none" src="{{ mirror }}">
+        <a href="{{ mirror }}">Download the audio</a>
+      </audio>
+    {% elif mirror and mirrorKind == "video" %}
+      <video controls preload="none" src="{{ mirror }}">
+        <a href="{{ mirror }}">Download the video</a>
+      </video>
+    {% endif %}
+  {% endif %}
+
+  {{ content | safe }}
+
+  {% include "partials/tags.html" %}
+
+  <p><a href="/speaking/">Back to Speaking</a></p>
+</article>

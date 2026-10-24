@@ -1,0 +1,19 @@
+---
+layout: layouts/base.html
+---
+<article>
+  <h1>{{ title }}</h1>
+
+  <p>
+    <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    in <a href="/making/">Making</a>
+  </p>
+
+  {% if summary %}<p>{{ summary }}</p>{% endif %}
+
+  {{ content | safe }}
+
+  {% include "partials/tags.html" %}
+
+  <p><a href="/making/">Back to Making</a></p>
+</article>

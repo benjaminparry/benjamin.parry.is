@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/now-post.html",
+  "collection": "now",
+  "collectionTitle": "Now",
+  "permalink": "/now/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"
+}

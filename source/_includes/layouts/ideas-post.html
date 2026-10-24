@@ -1,0 +1,39 @@
+---
+layout: layouts/collecting-post.html
+---
+{# An idea. Wrapped by collecting-post.html, which adds the title, date, section link and tags.
+   Front matter: problem, proposal, mvp, jobStory (a list of situation / motivation / outcome),
+   status, dateAdded, dateUpdated, updateDescription. Every field is optional. #}
+
+{% if status %}<p>Status: {{ status }}</p>{% endif %}
+
+{% if problem %}
+  <h2>Problem</h2>
+  <p>{{ problem }}</p>
+{% endif %}
+
+{% if proposal %}
+  <h2>Proposal</h2>
+  <p>{{ proposal }}</p>
+{% endif %}
+
+{% if mvp %}
+  <h2>MVP</h2>
+  <p>{{ mvp }}</p>
+{% endif %}
+
+{% for story in jobStory %}
+  {% if story.situation or story.motivation or story.outcome %}
+    {% if loop.first %}<h2>Job story</h2>{% endif %}
+    <p>{{ story.situation }} {{ story.motivation }} {{ story.outcome }}</p>
+  {% endif %}
+{% endfor %}
+
+{% if dateAdded or dateUpdated %}
+  <p>
+    {% if dateAdded %}Added <time datetime="{{ dateAdded | isoDate }}">{{ dateAdded | longDate }}</time>.{% endif %}
+    {% if dateUpdated %}Updated <time datetime="{{ dateUpdated | isoDate }}">{{ dateUpdated | longDate }}</time>{% if updateDescription %}: {{ updateDescription }}{% endif %}.{% endif %}
+  </p>
+{% endif %}
+
+{{ content | safe }}

@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/ideas-post.html",
+  "section": "ideas",
+  "sectionTitle": "Ideas",
+  "permalink": "/collecting/ideas/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"
+}

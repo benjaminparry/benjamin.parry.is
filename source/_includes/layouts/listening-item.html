@@ -1,0 +1,44 @@
+---
+layout: layouts/base.html
+---
+{% set typeLabels = { "album": "💿 Album", "track": "🎵 Track", "podcast": "🎙️ Podcast", "audiobook": "🎧 Audiobook" } %}
+
+<article>
+  <h1>{{ title }}</h1>
+  
+  {% if artist %}<p>{{ artist }}</p>{% endif %}
+
+  <img src="{{ cover or ('/assets/images/listening/' ~ page.fileSlug ~ '.jpg') }}" alt="Cover of {{ title }}" width="200" height="300" decoding="async">
+
+  {% if award %}<p><strong>Award</strong></p>{% endif %}
+
+  {% if media %}<p>{{ typeLabels[media] or media }}</p>{% endif %}
+
+  {% if rating_emoji %}
+    <p>{{ rating_emoji }}{% if rating_prose %} – {{ rating_prose }}{% endif %}</p>
+  {% elif rating %}
+    <p>{{ rating }}/5</p>
+  {% endif %}
+
+  {{ content | safe }}
+
+  {% if activity.length %}
+    <h2>Listened</h2>
+    <ol>
+      {% for w in activity | reverse %}
+        <li>
+          {% if w.started %}
+            {{ w.started | longDate }}{% if w.finished %} – {{ w.finished | longDate }}{% else %} – ongoing{% endif %}
+          {% else %}
+            {{ w.date | longDate }}
+          {% endif %}
+          {% if w.comment %} — {{ w.comment }}{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+
+  {% include "partials/tags.html" %}
+
+  <p><a href="/listening/">Back to Listening</a></p>
+</article>

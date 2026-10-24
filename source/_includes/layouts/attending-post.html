@@ -1,0 +1,32 @@
+---
+layout: layouts/base.html
+---
+{# An event I am attending (or attended).
+   Front matter: start, end, and a location with name, streetAddress, locality, postalCode and countryName. #}
+<article>
+  <h1>{{ title }}</h1>
+
+  <p>
+    <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    in <a href="/attending/">Attending</a>
+  </p>
+
+  {% if summary %}<p>{{ summary }}</p>{% endif %}
+
+  {% if start %}
+    <p>
+      <time datetime="{{ start | isoDate }}">{{ start | longDate }}</time>
+      {% if end and (end | isoDate) != (start | isoDate) %}
+        to <time datetime="{{ end | isoDate }}">{{ end | longDate }}</time>
+      {% endif %}
+    </p>
+  {% endif %}
+
+  {% include "partials/location.html" %}
+
+  {{ content | safe }}
+
+  {% include "partials/tags.html" %}
+
+  <p><a href="/attending/">Back to Attending</a></p>
+</article>

@@ -1,0 +1,35 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.attending
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/attending/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Attending{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/feed.html" import feedItem %}
+{% from "macros/collecting.html" import pager %}
+
+<h1>Attending</h1>
+
+<nav aria-label="Browse attending by year">
+  <ul>
+    {% for group in collections.attendingYears %}
+      <li><a href="/attending/{{ group.year }}/">{{ group.year }}</a></li>
+    {% endfor %}
+    <li><a href="/tagging/">All tags</a></li>
+  </ul>
+</nav>
+
+<ul>
+  {% for post in posts %}
+    {{ feedItem(post) }}
+  {% else %}
+    <li>Nowhere yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

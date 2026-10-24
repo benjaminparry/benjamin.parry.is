@@ -1,0 +1,17 @@
+{% macro listenedEntry(entry) %}
+  {% set typeLabels = { "album": "💿 Album", "track": "🎵 Track", "podcast": "🎙️ Podcast", "audiobook": "🎧 Audiobook" } %}
+  {% set post = entry.item.data %}
+  {% set cover = post.cover or ("/assets/images/listening/" ~ entry.item.fileSlug ~ ".jpg") %}
+  <li>
+    <img src="{{ cover }}" alt="Cover of {{ post.title }}" width="200" height="300" loading="lazy" decoding="async">
+    <a href="{{ entry.item.url }}">{{ post.title }}</a>
+    {% if post.artist %}<span>{{ post.artist }}</span>{% endif %}
+    {% if post.award %}<p>🏆 Award</p>{% endif %}
+    {% if post.rating_emoji %}
+      <p>{{ post.rating_emoji }}{% if post.rating_prose %} – {{ post.rating_prose }}{% endif %}</p>
+    {% elif post.rating %}
+      <p>{{ post.rating }}/5</p>
+    {% endif %}
+    <p>{% if post.media %}{{ typeLabels[post.media] or post.media }} | {% endif %}Last listened: <time datetime="{{ entry.latest | isoDate }}">{{ entry.latest | longDate }}</time> | Times listened: {{ entry.count }}</p>
+  </li>
+{% endmacro %}
