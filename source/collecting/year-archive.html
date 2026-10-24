@@ -1,0 +1,30 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.collectingYears
+  size: 1
+  alias: group
+permalink: "/collecting/{{ group.year }}/"
+eleventyComputed:
+  title: "Collecting in {{ group.year }}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/collecting.html" import collectingItem %}
+
+<h1>{{ title }}</h1>
+
+<nav aria-label="Months in {{ group.year }}">
+  <ul>
+    {% for m in group.months %}
+      <li><a href="/collecting/{{ group.year }}/{{ m.month }}/">{{ m.name }}</a> ({{ m.count }})</li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<ul>
+  {% for post in group.posts %}
+    {{ collectingItem(post, true) }}
+  {% endfor %}
+</ul>
+
+<p><a href="/collecting/">All collecting</a></p>

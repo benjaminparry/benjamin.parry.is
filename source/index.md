@@ -16,10 +16,3 @@ images:
 {{ title }}
 
 {{ nested.sample }}
-
-{% set navigation = navigation.secondary %}
-{% include "partials/navigation.html" %}
-
-{% from 'macros/pullquote.njk' import pullquote %}
-
-{{ pullquote(summary) }}

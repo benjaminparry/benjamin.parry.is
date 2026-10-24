@@ -1,0 +1,28 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.writingYears
+  size: 1
+  alias: group
+permalink: "/writing/{{ group.year }}/"
+eleventyComputed:
+  title: "Writing in {{ group.year }}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/writing-list-item.html" import writingItem %}
+
+<h1>{{ title }}</h1>
+
+<nav aria-label="Months in {{ group.year }}">
+  <ul>
+    {% for m in group.months %}
+      <li><a href="/writing/{{ group.year }}/{{ m.month }}/">{{ m.name }}</a> ({{ m.count }})</li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<ul>
+  {% for post in group.posts %}
+    {{ writingItem(post) }}
+  {% endfor %}
+</ul>

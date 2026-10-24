@@ -1,0 +1,39 @@
+---
+layout: layouts/base.html
+---
+
+{% set typeLabels = { "film": "🎞️ Film", "tv": "📺 TV", "theatre": "🎭 Theatre", "sofa": "📺", "cinema": "🎦" } %}
+
+<article>
+  <h1>{{ title }}</h1>
+
+  <img src="{{ poster or ('/assets/images/watching/' ~ page.fileSlug ~ '.jpg') }}" alt="Poster for {{ title }}" width="200" height="300" decoding="async">
+
+  {% if award %}<p><strong>Award</strong></p>{% endif %}
+
+  <p>{{ typeLabels[media] or media }} | Last watched: <time datetime="">???</time> | Watch count: {{ count }}</p>
+
+  {% if review %}
+  <p>
+      {% if review.popcorn == "5" %}🍿🍿🍿🍿🍿{% elif review.popcorn == "4" %}🍿🍿🍿🍿{% elif review.popcorn == "3" %}🍿🍿🍿{% elif review.popcorn == "2" %}🍿🍿{% elif review.popcorn == "1" %}🍿{% else %}🕳️{% endif %}{{ review.extra }} – {% if review.popcorn == "5" %}Five{% elif review.popcorn == "4" %}Four{% elif review.popcorn == "3" %}Three{% elif review.popcorn == "2" %}Two{% elif review.popcorn == "1" %}One{% else %}No{% endif %} bag{% if review.popcorn != "1" %}s{% endif %} of popcorn and {{ review.comment }}
+  </p>
+  {% endif %}
+
+  {{ content | safe }}
+
+  <h2>Watched</h2>
+  <ol>
+    {% for w in watched | reverse %}
+      <li>
+        {% if w.started %}
+          {{ w.started | longDate }}{% if w.finished %} – {{ w.finished | longDate }}{% else %} – ongoing{% endif %}
+        {% else %}
+          {{ w.date | longDate }}
+        {% endif %}
+        {% if w.comment %} — {{ w.comment }}{% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+
+  <p><a href="/watching/">Back to everything I'm watching</a></p>
+</article>

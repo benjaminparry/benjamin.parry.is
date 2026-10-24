@@ -1,0 +1,49 @@
+{# One post in a feed or archive list.
+   showSection: true on mixed lists (/collecting/, archives) so each item says which section it is from. #}
+{% macro collectingItem(post, showSection) %}
+  <li>
+    {% if post.data.images and post.data.images.length %}
+      {# Decorative: the title link beside it names the post, so the alt text is empty #}
+      <img src="{{ post.data.images[0] }}" alt="" loading="lazy" decoding="async">
+    {% endif %}
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
+    {% if showSection and post.data.sectionTitle %}
+      <a href="/collecting/{{ post.data.section }}/">{{ post.data.sectionTitle }}</a>
+    {% endif %}
+    {% if post.data.bookmarkOf %}<span>({{ post.data.bookmarkOf | hostname }})</span>{% endif %}
+    {% if post.data.summary %}<p>{{ post.data.summary }}</p>{% endif %}
+  </li>
+{% endmacro %}
+
+{# Links between /collecting/ and its sections. current = the section slug, or "" for /collecting/ #}
+{% macro sectionNav(sections, current) %}
+  <nav aria-label="Collecting sections">
+    <ul>
+      <li><a href="/collecting/"{% if current == "" %} aria-current="page"{% endif %}>All</a></li>
+      {% for s in sections %}
+        <li><a href="/collecting/{{ s.slug }}/"{% if s.slug == current %} aria-current="page"{% endif %}>{{ s.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endmacro %}
+
+{# Previous / numbered pages / Next. Only shown when there is more than one page.
+   pagination and the current url are passed in because macros can't see the page's own variables. #}
+{% macro pager(pagination, currentUrl) %}
+  {% if pagination.hrefs.length > 1 %}
+    <nav aria-label="Pagination">
+      <ul>
+        {% if pagination.href.previous %}
+          <li><a href="{{ pagination.href.previous }}" rel="prev">Previous</a></li>
+        {% endif %}
+        {% for href in pagination.hrefs %}
+          <li><a href="{{ href }}" aria-label="Page {{ loop.index }}"{% if href == currentUrl %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+        {% endfor %}
+        {% if pagination.href.next %}
+          <li><a href="{{ pagination.href.next }}" rel="next">Next</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
+{% endmacro %}

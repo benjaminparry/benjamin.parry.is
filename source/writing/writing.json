@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/writing-post.html",
+  "permalink": "/writing/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"
+}

@@ -1,7 +1,23 @@
+
+<a href="/">Benjamin Parry</a>
+
 <ul>
-    {% for item in navigation %}
+    {% for item in navigation.primary %}
     <li>
         <a href="{{ item.url }}">{{ item.label }}</a>
     </li>
     {% endfor %}
 </ul>
+
+<ul>
+    {% for item in navigation.secondary %}
+    <li>
+        <a href="{{ item.url }}">{{ item.label }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+
+{% from 'macros/pullquote.njk' import pullquote %}
+
+{{ pullquote(summary) }}

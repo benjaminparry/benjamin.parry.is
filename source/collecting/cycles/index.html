@@ -1,0 +1,27 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.collectingCycles
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/collecting/cycles/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Cycles{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/collecting.html" import collectingItem, pager, sectionNav %}
+
+<h1>Cycles</h1>
+
+{{ sectionNav(collectingSections, "cycles") }}
+
+<ul>
+  {% for post in posts %}
+    {{ collectingItem(post, false) }}
+  {% else %}
+    <li>No cycles yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

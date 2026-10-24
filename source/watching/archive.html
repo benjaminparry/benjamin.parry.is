@@ -1,0 +1,22 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.watchedYears
+  size: 1
+  alias: group
+permalink: "/watching/{{ group.year }}/"
+eleventyComputed:
+  title: "Watched in {{ group.year }}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/watched-entry.html" import watchedEntry %}
+
+<h1>{{ title }}</h1>
+
+<ul>
+  {% for entry in group.entries %}
+    {{ watchedEntry(entry) }}
+  {% endfor %}
+</ul>
+
+<p><a href="/watching/">Back to Watching</a></p>

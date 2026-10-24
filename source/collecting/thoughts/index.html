@@ -1,0 +1,27 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.collectingThoughts
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/collecting/thoughts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Thoughts{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/collecting.html" import collectingItem, pager, sectionNav %}
+
+<h1>Thoughts</h1>
+
+{{ sectionNav(collectingSections, "thoughts") }}
+
+<ul>
+  {% for post in posts %}
+    {{ collectingItem(post, false) }}
+  {% else %}
+    <li>No thoughts yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

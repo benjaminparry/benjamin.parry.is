@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/watching-item.html",
+  "permalink": "/watching/{{ page.fileSlug }}/"
+}

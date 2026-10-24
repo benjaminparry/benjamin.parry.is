@@ -1,0 +1,34 @@
+---
+layout: layouts/base.html
+---
+<article>
+  <h1>{{ title }}</h1>
+
+  <p>
+    <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    in <a href="/collecting/{{ section }}/">{{ sectionTitle }}</a>
+  </p>
+
+  {% if summary %}<p>{{ summary }}</p>{% endif %}
+
+  {% if bookmarkOf %}
+    <p>Bookmarked: <a href="{{ bookmarkOf }}" rel="external">{{ bookmarkOf | hostname }}</a></p>
+  {% endif %}
+
+  {% if audio %}
+    <audio controls preload="none" src="{{ audio }}">
+      <a href="{{ audio }}">Download the audio</a>
+    </audio>
+  {% endif %}
+
+  {{ content | safe }}
+
+  {% if tags %}
+    <h2>Tags</h2>
+    <ul>
+      {% for tag in tags %}
+        <li><a href="/tagging/{{ tag | tagSlug }}/">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>

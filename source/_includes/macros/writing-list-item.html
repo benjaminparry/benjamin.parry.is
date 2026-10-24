@@ -1,0 +1,7 @@
+{% macro writingItem(post) %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
+    {% if post.data.summary %}<p>{{ post.data.summary }}</p>{% endif %}
+  </li>
+{% endmacro %}

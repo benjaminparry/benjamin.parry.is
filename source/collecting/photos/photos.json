@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/collecting-post.html",
+  "section": "photos",
+  "sectionTitle": "Photos",
+  "permalink": "/collecting/photos/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"
+}

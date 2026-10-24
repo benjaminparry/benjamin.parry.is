@@ -1,0 +1,35 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.collecting
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/collecting/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Collecting{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/collecting.html" import collectingItem, pager, sectionNav %}
+
+<h1>Collecting</h1>
+
+{{ sectionNav(collectingSections, "") }}
+
+<nav aria-label="Browse collecting by year">
+  <ul>
+    {% for group in collections.collectingYears %}
+      <li><a href="/collecting/{{ group.year }}/">{{ group.year }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<ul>
+  {% for post in posts %}
+    {{ collectingItem(post, true) }}
+  {% else %}
+    <li>Nothing collected yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

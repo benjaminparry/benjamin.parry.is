@@ -1,0 +1,17 @@
+---
+title: Tags
+layout: layouts/base.html
+permalink: /tagging/
+eleventyExcludeFromCollections: true
+---
+<h1>{{ title }}</h1>
+
+<ul>
+  {% for tag in collections.allTags %}
+    <li><a href="/tagging/{{ tag.slug }}/">{{ tag.name }}</a> ({{ tag.posts.length }})</li>
+  {% else %}
+    <li>No tags yet.</li>
+  {% endfor %}
+</ul>
+
+<p><a href="/writing/">Writing</a> · <a href="/collecting/">Collecting</a></p>

@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Benjamin Parry
+N;CHARSET=UTF-8:Parry;Benjamin;;;
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:benjamin@parry.is
+TEL;TYPE=CELL:07877241510
+URL;type=WORK;CHARSET=UTF-8:https://benjamin.parry.is
+TITLE;CHARSET=UTF-8:Design Researcher
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/benjaminparry-/
+X-SOCIALPROFILE;TYPE=Mastodon:https://mastodon.social/@benjaminparry
+REV:2024-04-25T15:26:19.485Z
+END:VCARD

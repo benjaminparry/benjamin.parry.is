@@ -1,0 +1,25 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.allTags
+  size: 1
+  alias: group
+permalink: "/tagging/{{ group.slug }}/"
+eleventyComputed:
+  title: "Tagged: {{ group.name }}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/writing-list-item.html" import writingItem %}
+{% from "macros/collecting.html" import collectingItem %}
+
+<h1>{{ title }}</h1>
+
+<ul>
+  {% for post in group.posts %}
+    {% if post.data.section %}
+      {{ collectingItem(post, true) }}
+    {% else %}
+      {{ writingItem(post) }}
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,15 @@
+{% macro watchedEntry(entry) %}
+  {% set typeLabels = { "film": "🎞️ Film", "tv": "📺 TV", "theatre": "🎭 Theatre", "sofa": "📺", "cinema": "🎦" } %}
+      {% set post = entry.item.data %}
+      {% set popcorn = post.review.popcorn %}
+      {% set poster = post.poster or ("/assets/images/watching/" ~ entry.item.fileSlug ~ ".jpg") %}
+      <li>
+        <img src="{{ poster }}" alt="Poster for {{ post.title }}" width="200" height="300" loading="lazy" decoding="async">
+        <a href="{{ entry.item.url }}">{{ post.title }}</a>
+        {% if post.award %}<p>🏆 Award</p>{% endif %}
+        {% if post.review %}
+        <p>{% if popcorn == "5" %}🍿🍿🍿🍿🍿{% elif popcorn == "4" %}🍿🍿🍿🍿{% elif popcorn == "3" %}🍿🍿🍿{% elif popcorn == "2" %}🍿🍿{% elif popcorn == "1" %}🍿{% else %}🕳️{% endif %}{{ post.review.extra }} – {% if popcorn == "5" %}Five{% elif popcorn == "4" %}Four{% elif popcorn == "3" %}Three{% elif popcorn == "2" %}Two{% elif popcorn == "1" %}One{% else %}No{% endif %} bag{% if popcorn != "1" %}s{% endif %} of popcorn and {{ post.review.comment }}</p>
+        {% endif %}
+        <p>{{ typeLabels[post.media] or post.media }} | Last watched: <time datetime="{{ entry.latest | isoDate }}">{{ entry.latest | longDate }}</time> | Watch count: {{ entry.count }}</p>
+      </li>
+{% endmacro %}

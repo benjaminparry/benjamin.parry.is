@@ -1,0 +1,21 @@
+---
+layout: layouts/base.html
+---
+<article>
+  <h1>{{ title }}</h1>
+
+  <p><time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time></p>
+
+  {% if summary %}<p>{{ summary }}</p>{% endif %}
+
+  {{ content | safe }}
+
+  {% if tags %}
+    <h2>Tags</h2>
+    <ul>
+      {% for tag in tags %}
+        <li><a href="/tagging/{{ tag | tagSlug }}/">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>
