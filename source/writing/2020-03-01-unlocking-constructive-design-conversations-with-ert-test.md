@@ -7,7 +7,7 @@ tags:
     - Qualitative
     - Methods
     - Mixed Methods
-posse: "This technique helps us understand how stakeholders and users feel about the designs we create and gives us focus on what needs to change."
+summary: "This technique helps us understand how stakeholders and users feel about the designs we create and gives us focus on what needs to change."
 images:
   - "/assets/images/writing/2024/03/unlocking-constructive-design-conversations-with-ert-test-03.jpg"
 ---

@@ -1,6 +1,6 @@
 ---
 title: Notes from Andy Budd’s UserTesting Webinar
-posse: My notes from Andy Budd’s UserTesting webinar entitled Defeat the status quo - how to run the perfect digital project.
+summary: My notes from Andy Budd’s UserTesting webinar entitled Defeat the status quo - how to run the perfect digital project.
 tags:
   - "User Experience"
   - "Culture Change"

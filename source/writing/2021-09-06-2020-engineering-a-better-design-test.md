@@ -1,6 +1,6 @@
 ---
 title: "Engineering a better design test"
-posse: "How can we adapt our tools for better testing?"
+summary: "How can we adapt our tools for better testing?"
 tags:
   - "Research"
 published: true

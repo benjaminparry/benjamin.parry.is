@@ -1,6 +1,6 @@
 ---
 title: Productivity and the Feedback Loop
-posse: I was graciously asked by @alexduloz to write something about productivity for The Human In The Machine project @humanthemachine. Here are my thoughts.
+summary: I was graciously asked by @alexduloz to write something about productivity for The Human In The Machine project @humanthemachine. Here are my thoughts.
 tags:
   - "Productivity"
 published: true

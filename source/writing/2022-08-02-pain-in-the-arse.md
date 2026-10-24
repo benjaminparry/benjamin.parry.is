@@ -1,6 +1,6 @@
 ---
 title: "Pain in the arse"
-posse: "Pain in the arse – When life messes with your best-laid plans."
+summary: "Pain in the arse – When life messes with your best-laid plans."
 tags:
   - "Collaboration"
 published: true

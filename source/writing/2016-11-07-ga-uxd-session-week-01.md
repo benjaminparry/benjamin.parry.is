@@ -1,6 +1,6 @@
 ---
 title: "General Assembly - User Experience Design - Week 01"
-posse: "A round up of my first week on the User Experience Design course at General Assembly, London."
+summary: "A round up of my first week on the User Experience Design course at General Assembly, London."
 tags:
   - "User Experience"
   - "Career Progression"

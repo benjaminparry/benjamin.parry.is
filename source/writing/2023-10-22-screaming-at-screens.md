@@ -1,6 +1,6 @@
 ---
 title: "Screaming at screens"
-posse: "Screaming at screens and taking back control of your content."
+summary: "Screaming at screens and taking back control of your content."
 tags:
   - "Obsidian"
   - "Productivity"

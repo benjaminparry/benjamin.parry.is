@@ -1,7 +1,7 @@
 ---
 title: "Pool-side strategy"
 date: '2024-05-07'
-posse: Relaxing pool-side reading Dan Hill’s Dark Matter and Trojan Horses – A Strategic Design Vocabulary.
+summary: Relaxing pool-side reading Dan Hill’s Dark Matter and Trojan Horses – A Strategic Design Vocabulary.
 images:
   - "/assets/images/collecting/thoughts/2024/05/pool-side-strategy.jpg"
 ---

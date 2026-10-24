@@ -1,7 +1,7 @@
 ---
 title: "First day, first commute."
 date: '2023-01-03'
-posse: "My first day back into the Clearleft office was made all the more easier with an almost-off-road commute through the South Downs. Splendid!"
+summary: "My first day back into the Clearleft office was made all the more easier with an almost-off-road commute through the South Downs. Splendid!"
 ---
 
 My first day back into the Clearleft office was made all the more easier with an almost-off-road commute through the South Downs. Splendid!

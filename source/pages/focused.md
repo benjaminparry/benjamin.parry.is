@@ -1,6 +1,6 @@
 ---
 title: 'Focused'
-posse: 'My list of bookmarks.'
+summary: 'My list of bookmarks.'
 layout: 'layouts/base.html'
 permalink: '/focused/'
 section:

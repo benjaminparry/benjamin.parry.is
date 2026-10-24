@@ -1,7 +1,7 @@
 ---
 title: 'Homebrew Tags'
 date: '2019-04-17'
-posse: 'Twisting off the lid of my website and adding tags at Homebrew Website Club'
+summary: 'Twisting off the lid of my website and adding tags at Homebrew Website Club'
 tags: ['Indieweb', 'Taxonomy', 'Information Architecture']
 redirect_from: "/collecting/thoughts/2019/06/homebrew-tags/"
 ---

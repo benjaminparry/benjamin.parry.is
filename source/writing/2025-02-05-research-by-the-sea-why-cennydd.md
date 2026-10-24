@@ -6,7 +6,7 @@ tags:
     - 'Conference'
     - 'Research'
     - Ethics
-posse: "Learn more about why Cennydd is perfect for speaking at Research by the Sea."
+summary: "Learn more about why Cennydd is perfect for speaking at Research by the Sea."
 images:
   - "/assets/images/writing/2025/02/research-by-the-sea-cennydd.jpg"
 ---

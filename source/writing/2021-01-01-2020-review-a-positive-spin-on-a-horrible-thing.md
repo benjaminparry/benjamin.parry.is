@@ -1,6 +1,6 @@
 ---
 title: "2020 Review: a positive spin on a horrible thing"
-posse: "2020 has been a swine of a year. Rather than dwell on the negatives I wanted to share some of the positives."
+summary: "2020 has been a swine of a year. Rather than dwell on the negatives I wanted to share some of the positives."
 tags:
   - "Yearly Review"
   - "WILT"

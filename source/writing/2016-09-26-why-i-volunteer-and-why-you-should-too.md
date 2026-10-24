@@ -1,6 +1,6 @@
 ---
 title: Why I Volunteer And Why You Should Too
-posse: A retrospective piece on what I’ve gained from 3 years of volunteering for web/digital conferences.
+summary: A retrospective piece on what I’ve gained from 3 years of volunteering for web/digital conferences.
 tags:
   - "Conference"
   - "Career Progression"

@@ -1,6 +1,6 @@
 ---
 title: Inspiring, Inspired.
-posse: Some thoughts on giving back to the community.
+summary: Some thoughts on giving back to the community.
 published: true
 ---
 

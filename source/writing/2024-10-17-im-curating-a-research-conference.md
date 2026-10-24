@@ -1,6 +1,6 @@
 ---
 title: "I’m curating a research conference!"
-posse: "It’s official, I’m curating a 1-day #research conference for @Clearleft@mastodon.social! Read more about Research by the Sea happening Feb 2025 in Brighton."
+summary: "It’s official, I’m curating a 1-day #research conference for @Clearleft@mastodon.social! Read more about Research by the Sea happening Feb 2025 in Brighton."
 tags:
     - 'Research by the Sea'
     - 'Clearleft'

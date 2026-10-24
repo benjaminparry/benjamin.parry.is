@@ -1,7 +1,7 @@
 ---
 title: 'Homebrew Webify Top'
 date: '2019-07-25'
-posse: 'A long overdue, refreshing Homebrew to counter the current scorching heat'
+summary: 'A long overdue, refreshing Homebrew to counter the current scorching heat'
 tags: ['Indieweb']
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: How to setup a Raspberry Pi
-posse: A step-by-step guide for setting up your Raspberry Pi.
+summary: A step-by-step guide for setting up your Raspberry Pi.
 tags:
   - "Raspberry Pi"
 published: true

@@ -1,6 +1,6 @@
 ---
 title: "Where I get my podcasts"
-posse: "My workflow to solve the lack of openly accessible podcast audio files and RSS feeds."
+summary: "My workflow to solve the lack of openly accessible podcast audio files and RSS feeds."
 tags:
     - 'Open Source'
     - 'Self Hosting'

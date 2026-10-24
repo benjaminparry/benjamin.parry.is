@@ -1,6 +1,6 @@
 ---
 title: Running Jekyll with Mixture
-posse: Some tips on running Jekyll with Mixture.io.
+summary: Some tips on running Jekyll with Mixture.io.
 tags:
   - "Jekyll"
 published: true

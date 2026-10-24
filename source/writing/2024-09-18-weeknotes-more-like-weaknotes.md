@@ -1,6 +1,6 @@
 ---
 title: "Weeknotes? More like weak notes!"
-posse: "I’ve given up writing weeknotes. Introducing cycles."
+summary: "I’ve given up writing weeknotes. Introducing cycles."
 tags:
     - 'Weeknotes'
 ---

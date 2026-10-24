@@ -1,6 +1,6 @@
 ---
 title: "Trying to be helpful"
-posse: "Trying to helpful by passing on the help and advice gifted to me."
+summary: "Trying to helpful by passing on the help and advice gifted to me."
 tags: []
 published: true
 ---

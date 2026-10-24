@@ -1,6 +1,6 @@
 ---
 title: 'Responsive Day Out 2013'
-posse: 'My notes for Responsive Day Out 2013.'
+summary: 'My notes for Responsive Day Out 2013.'
 tags:
   - "Conference"
 published: true

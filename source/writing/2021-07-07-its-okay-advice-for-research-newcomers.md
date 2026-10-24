@@ -1,6 +1,6 @@
 ---
 title: "It’s okay: Advice for research newcomers"
-posse: "I recently responded to a community post asking for advice for settling nerves during a first time customer research activity."
+summary: "I recently responded to a community post asking for advice for settling nerves during a first time customer research activity."
 tags:
   - "Research"
   - "Note-taking"

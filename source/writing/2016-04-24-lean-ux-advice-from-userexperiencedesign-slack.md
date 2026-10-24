@@ -1,6 +1,6 @@
 ---
 title: Small Team Lean UX Advice From The userexperiencedesign.slack.com Community
-posse: Preserving some sound advice from the userexperiencedesign.slack.com community on small team Lean UX in a mature company with little/no previous user research.
+summary: Preserving some sound advice from the userexperiencedesign.slack.com community on small team Lean UX in a mature company with little/no previous user research.
 tags:
   - "Lean UX"
   - "User Experience"

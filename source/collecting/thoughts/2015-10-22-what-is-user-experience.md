@@ -1,7 +1,7 @@
 ---
 title: 'What is User Experience?'
 date: '2015-10-22'
-posse: "After some self-reflection this week, I’ve tried to come up with my own answer to the question “What is User Experience?”"
+summary: "After some self-reflection this week, I’ve tried to come up with my own answer to the question “What is User Experience?”"
 tags: ['User Experience']
 published: false
 ---

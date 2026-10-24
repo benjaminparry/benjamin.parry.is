@@ -1,6 +1,6 @@
 ---
 title: 5 steps to better research
-posse: Time and again, decisions made during a research project come back to haunt us. Square up to the usual suspects and take 5 steps toward delivering better research.
+summary: Time and again, decisions made during a research project come back to haunt us. Square up to the usual suspects and take 5 steps toward delivering better research.
 tags:
   - "Research"
   - "Planning"

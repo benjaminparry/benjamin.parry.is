@@ -1,6 +1,6 @@
 ---
 title: Testing WebMentions
-posse: Testing webmentions for Jeremy.
+summary: Testing webmentions for Jeremy.
 tags:
   - "Indieweb"
   - "Conference"

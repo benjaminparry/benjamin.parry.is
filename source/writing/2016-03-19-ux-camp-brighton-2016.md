@@ -1,6 +1,6 @@
 ---
 title: UX Camp Brighton 2016
-posse: Notes from UX Camp Brighton 2016 sessions
+summary: Notes from UX Camp Brighton 2016 sessions
 tags:
   - "User Experience"
   - "Conference"

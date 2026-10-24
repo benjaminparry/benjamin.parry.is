@@ -1,6 +1,6 @@
 ---
 title: 'Ground Zero'
-posse: 'Rebuilding my writing platform from the the ground up.'
+summary: 'Rebuilding my writing platform from the the ground up.'
 published: true
 ---
 

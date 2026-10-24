@@ -1,6 +1,6 @@
 ---
 title: "The magic of a PKM"
-posse: "The magic moments of using personal knowledge management software like Obsidian."
+summary: "The magic moments of using personal knowledge management software like Obsidian."
 tags:
   - "Obsidian"
   - "Productivity"

@@ -6,7 +6,7 @@ tags:
     - 'Clearleft'
     - 'Conference'
     - 'Research'
-posse: "Learn more about why Tamsin is perfect for speaking at Research by the Sea."
+summary: "Learn more about why Tamsin is perfect for speaking at Research by the Sea."
 syndication:
   - https://mastodon.social/@benjaminparry/113556196273558610
 images:
@@ -38,5 +38,3 @@ I’m delighted that Tamsin is joining us at [Research by the Sea](https://resea
 - Check out her own conference [Content Rising](https://contentrising.co.uk/) happening in June 2025.
 
 ![](/assets/images/writing/2024/11/research-by-the-sea-tamsin-bishton.jpg)
-
-

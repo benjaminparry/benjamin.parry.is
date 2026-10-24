@@ -1,6 +1,6 @@
 ---
 title: "Building on the idea of an IndieWeb zine"
-posse: "Riffing on @capjamesg@indieweb.social’s idea of a printed #IndieWeb zine."
+summary: "Riffing on @capjamesg@indieweb.social’s idea of a printed #IndieWeb zine."
 tags:
     - 'Indieweb'
     - 'Publishing'

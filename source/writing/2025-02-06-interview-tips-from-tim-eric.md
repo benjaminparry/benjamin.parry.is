@@ -1,6 +1,6 @@
 ---
 title: "Interview tips from Tim & Eric"
-posse: "Irreverent comedian duo Tim & Eric provide some timeless research interviewing advice amongst the anarchic trolling of this press interview clip."
+summary: "Irreverent comedian duo Tim & Eric provide some timeless research interviewing advice amongst the anarchic trolling of this press interview clip."
 tags:
     - Interview
     - Stakeholder Interviews

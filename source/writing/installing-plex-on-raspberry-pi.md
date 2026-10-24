@@ -1,6 +1,6 @@
 ---
 title:
-posse:
+summary:
 tags:
   - "Raspberry Pi"
   - "OpenMediaVault" 

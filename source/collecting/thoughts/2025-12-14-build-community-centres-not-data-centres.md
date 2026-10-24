@@ -9,5 +9,5 @@ tags:
     - Community
     - Civic Engagement
     - Environmentalism
-posse: "Build community centres, not data centres!"
+summary: "Build community centres, not data centres!"
 ---

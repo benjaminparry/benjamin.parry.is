@@ -1,7 +1,7 @@
 ---
 title: 'We Got Homebrew Covered'
 date: '2019-09-19'
-posse: 'An evening of beer @eleven_ty and music covers'
+summary: 'An evening of beer @eleven_ty and music covers'
 tags: ['Indieweb', 'Eleventy']
 ---
 

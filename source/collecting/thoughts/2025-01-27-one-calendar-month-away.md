@@ -2,7 +2,7 @@
 title: "One calendar month away"
 date: '2025-01-27'
 category: People
-posse: "The last 2 weeks have made it clear that people, culture and the planet should be at the top of our priority list. Join the ten empathic, future(s)-focused speakers and workshop facilitators at #ResearchByTheSea to find out how."
+summary: "The last 2 weeks have made it clear that people, culture and the planet should be at the top of our priority list. Join the ten empathic, future(s)-focused speakers and workshop facilitators at #ResearchByTheSea to find out how."
 tags:
     - Research by the Sea
 ---

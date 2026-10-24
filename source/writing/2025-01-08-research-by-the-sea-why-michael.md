@@ -5,7 +5,7 @@ tags:
     - 'Clearleft'
     - 'Conference'
     - 'Research'
-posse: "Learn more about why Michael is perfect for speaking at Research by the Sea."
+summary: "Learn more about why Michael is perfect for speaking at Research by the Sea."
 images:
   - "/assets/images/writing/2025/01/research-by-the-sea-michael-kibedi.jpg"
 ---
@@ -30,5 +30,3 @@ I'm delighted that Michael is joining us in Feb 2025 with his new talk – [The 
 - Subscribe to Michael’s newsletter [First & Fifteenth](https://uxmichaelco.substack.com/).
 
 ![](/assets/images/writing/2025/01/research-by-the-sea-michael-kibedi.jpg)
-
-

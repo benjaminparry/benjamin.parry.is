@@ -5,7 +5,7 @@ tags:
     - 'Indieweb Carnival'
     - 'Friction'
     - 'Ethics'
-posse: "My submission for January’s Indieweb Carnival on @vhbelvadi@indieweb.social’s selected topic of friction."
+summary: "My submission for January’s Indieweb Carnival on @vhbelvadi@indieweb.social’s selected topic of friction."
 ---
 
 > Within the realms of a company; don't exploit anyone, don't manufacture terrible awful products that go into landfill or are unsafe and hurt people, don't use exploit workers in factories…

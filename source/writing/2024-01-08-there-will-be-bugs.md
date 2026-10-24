@@ -1,6 +1,6 @@
 ---
 title: "There will be bugs"
-posse: "I rebuilt my old Jekyll website using Eleventy."
+summary: "I rebuilt my old Jekyll website using Eleventy."
 tags:
     - 'Indieweb'
     - 'Eleventy'
@@ -16,7 +16,7 @@ I want to give a huge shout out to Andy Bell for his [Learn Eleventy From Scratc
 
 ## What’s next?
 
-Ever since I heard about [POSSE](https://indieweb.org/POSSE) I’ve been gagging to get it working on this site. I’ve been going through the motions by occasionally using [Bridgy](https://brid.gy/about) and adding twoof-ready `posse:` descriptions to the frontmatter of all my posts. Now we’re officially rebuilt and deployed I’m going to start looking into Paul Robert Lloyd’s [Indiekit](https://getindiekit.com/).
+Ever since I heard about [POSSE](https://indieweb.org/POSSE) I’ve been gagging to get it working on this site. I’ve been going through the motions by occasionally using [Bridgy](https://brid.gy/about) and adding twoof-ready `summary:` descriptions to the frontmatter of all my posts. Now we’re officially rebuilt and deployed I’m going to start looking into Paul Robert Lloyd’s [Indiekit](https://getindiekit.com/).
 
 I’d also like to get a solution for images. Currently it’s a manual process and there’s likely a much better way to include, render, host and serve.
 

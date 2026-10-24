@@ -1,6 +1,6 @@
 ---
 title: Practical tips in running your first diary study - pt.1
-posse: Running a diary study can be tough work. Here are a few tips to start you off on the right foot.
+summary: Running a diary study can be tough work. Here are a few tips to start you off on the right foot.
 tags:
   - "Research"
   - "Diary Study"

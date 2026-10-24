@@ -1,6 +1,6 @@
 ---
 title: "Homebrewing - First Drop"
-posse: "Attending the inaugural Homebrew Website Club at 68 Middle Street Brighton"
+summary: "Attending the inaugural Homebrew Website Club at 68 Middle Street Brighton"
 tags:
   - "Indieweb"
 published: true

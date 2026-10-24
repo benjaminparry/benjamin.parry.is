@@ -1,7 +1,7 @@
 ---
 title: 'Homebrewing Again'
 date: '2017-11-15'
-posse: 'Homebrewing again - Attempting an automated POSSE webmention via brid.gy at tonight’s Homebrew Website Club'
+summary: 'Homebrewing again - Attempting an automated POSSE webmention via brid.gy at tonight’s Homebrew Website Club'
 tags: ['Indieweb']
 ---
 

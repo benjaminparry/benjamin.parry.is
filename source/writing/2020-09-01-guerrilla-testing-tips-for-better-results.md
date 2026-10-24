@@ -1,6 +1,6 @@
 ---
 title: Guerrilla Testing - Tips for better results
-posse: In my last post I described the merits of guerrilla testing compared with other research methods. In this follow up post I share some tips for getting better results.
+summary: In my last post I described the merits of guerrilla testing compared with other research methods. In this follow up post I share some tips for getting better results.
 tags:
   - "Guerrilla Testing"
   - "Research Method"

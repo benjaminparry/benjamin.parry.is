@@ -1,7 +1,7 @@
 ---
 title: 'Offline Homebrewing'
 date: '2019-03-21'
-posse: 'Going Offline - Adventures online/offline at the rebooted Homebrew Website Club @clearleft'
+summary: 'Going Offline - Adventures online/offline at the rebooted Homebrew Website Club @clearleft'
 tags: ['Indieweb', 'Offline']
 redirect_from: "/collecting/thoughts/2018/03/going-offline/"
 ---

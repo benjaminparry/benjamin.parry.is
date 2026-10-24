@@ -1,6 +1,6 @@
 ---
 title: "Movement and flow"
-posse: "My last minute submission for May’s #IndieWeb carnival hosted by @hamatti@mastodon.world on the theme of creative environments."
+summary: "My last minute submission for May’s #IndieWeb carnival hosted by @hamatti@mastodon.world on the theme of creative environments."
 tags:
     - 'Creativity'
     - 'Indieweb'

@@ -1,6 +1,6 @@
 ---
 title: Guerrilla Testing - What it is and when to use it
-posse: For some, guerrilla testing is a dirty word. Isn’t it about time we celebrated its strengths and use it when the time is right?
+summary: For some, guerrilla testing is a dirty word. Isn’t it about time we celebrated its strengths and use it when the time is right?
 tags:
   - "Guerrilla Testing"
   - "Research Method"

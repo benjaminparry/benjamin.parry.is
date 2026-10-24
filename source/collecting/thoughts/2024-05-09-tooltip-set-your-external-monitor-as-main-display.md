@@ -1,7 +1,7 @@
 ---
 title: "Tooltip: set your external monitor as main display #mac"
 date: '2024-05-09'
-posse: Do you use an external monitor as your main display with your Mac? Ever get tired of turning your neck to read notifications or other dialog windows on your laptop screen? Here’s how to fix that.
+summary: Do you use an external monitor as your main display with your Mac? Ever get tired of turning your neck to read notifications or other dialog windows on your laptop screen? Here’s how to fix that.
 images:
   - "/assets/images/collecting/thoughts/2024/05/tooltip-set-your-external-monitor-as-main-display.jpg"
 tags:

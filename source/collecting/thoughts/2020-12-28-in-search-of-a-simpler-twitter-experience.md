@@ -1,7 +1,7 @@
 ---
 title: "In search of a simpler Twitter experience"
 date: '2020-12-28'
-posse: "Inspired by @craigmod’s tweet about using Twitter’s search to improve the experience I had a bit of a play myself."
+summary: "Inspired by @craigmod’s tweet about using Twitter’s search to improve the experience I had a bit of a play myself."
 tags: ['WILT']
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Empty nests and bright eyed fledglings"
-posse: "Empty nests and bright eyed fledglings – My obligatory moving from Twitter to Mastodon post."
+summary: "Empty nests and bright eyed fledglings – My obligatory moving from Twitter to Mastodon post."
 tags: []
 published: true
 category: Technology

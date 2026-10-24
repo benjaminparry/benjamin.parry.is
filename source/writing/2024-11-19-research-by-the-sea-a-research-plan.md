@@ -1,6 +1,6 @@
 ---
 title: "Research by the Sea: A Research Plan"
-posse: "I’ve approached curating the Research by the Sea conference as I would a research project, with a research plan. Read more about what you’ll expect to learn during the two days in Feb 2025 at Research by the Sea."
+summary: "I’ve approached curating the Research by the Sea conference as I would a research project, with a research plan. Read more about what you’ll expect to learn during the two days in Feb 2025 at Research by the Sea."
 tags:
     - 'Research by the Sea'
     - 'Clearleft'

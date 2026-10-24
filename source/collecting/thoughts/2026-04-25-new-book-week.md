@@ -2,7 +2,7 @@
 title: "New book WEEK!"
 date: '2026-04-25T10:20:00'
 category: People
-posse: "My Near Future Laboratory book order arrived! …and thus completing my towering tsundoku pile."
+summary: "My Near Future Laboratory book order arrived! …and thus completing my towering tsundoku pile."
 tags:
     - Futures
     - Book

@@ -1,7 +1,7 @@
 ---
 title: 'Smartphone vs Dumbphone - where’s the middle ground?'
 date: '2017-03-03'
-posse: "Is going “full dumbphone” really necessary? Here’s my thoughts on dumbing down the smartphone"
+summary: "Is going “full dumbphone” really necessary? Here’s my thoughts on dumbing down the smartphone"
 tags: ['Technology']
 ---
 

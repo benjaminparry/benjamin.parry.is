@@ -1,6 +1,6 @@
 ---
 title: "Marking the homework of a twelve year old"
-posse: "AI, the design thinking process and the enthusiasm of a pre-teen."
+summary: "AI, the design thinking process and the enthusiasm of a pre-teen."
 tags:
   - "GAI"
   - "Design Thinking"
