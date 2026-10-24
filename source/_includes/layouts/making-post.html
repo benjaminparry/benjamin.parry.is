@@ -13,6 +13,10 @@ layout: layouts/base.html
 
   {{ content | safe }}
 
+  {% from "macros/related.html" import related %}
+  {{ related(collections.relatable, page) }}
+  {{ related(collections.relatable, page, { "limit": 5, "category": false, "featured": "only", "heading": "More on this topic" }) }}
+
   {% include "partials/tags.html" %}
 
   <p><a href="/making/">Back to Making</a></p>

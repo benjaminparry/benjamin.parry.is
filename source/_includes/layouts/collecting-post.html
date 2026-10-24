@@ -23,6 +23,10 @@ layout: layouts/base.html
 
   {{ content | safe }}
 
+  {% from "macros/related.html" import related %}
+  {{ related(collections.relatable, page) }}
+  {{ related(collections.relatable, page, { "limit": 5, "category": false, "featured": "only", "heading": "More on this topic" }) }}
+
   {% if tags %}
     <h2>Tags</h2>
     <ul>
