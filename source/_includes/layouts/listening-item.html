@@ -8,7 +8,7 @@ layout: layouts/base.html
   
   {% if artist %}<p>{{ artist }}</p>{% endif %}
 
-  <img src="{{ cover or ('/assets/images/listening/' ~ page.fileSlug ~ '.jpg') }}" alt="Cover of {{ title }}" width="200" height="300" decoding="async">
+  <img src="{{ cover | coverSrc('listening', page.fileSlug) }}" alt="Cover of {{ title }}" width="200" height="300" decoding="async">
 
   {% if award %}<p><strong>Award</strong></p>{% endif %}
 

@@ -116,3 +116,14 @@ export function activityCollections(listKey) {
 
   return { currently, byYear, inYear, beforeYear };
 }
+
+// Where a cover image is. `cover` in the front matter can be:
+//   (left out)              -> /assets/images/<slug>/<post-name>.jpg
+//   "new-games.jpg"         -> /assets/images/<slug>/new-games.jpg
+//   "/assets/..." or "https://..." -> used as written
+export function coverSrc(cover, slug, fileSlug) {
+  const value = String(cover ?? "").trim();
+  if (!value) return `/assets/images/${slug}/${fileSlug}.jpg`;
+  if (value.startsWith("/") || /^https?:\/\//.test(value)) return value;
+  return `/assets/images/${slug}/${value}`;
+}

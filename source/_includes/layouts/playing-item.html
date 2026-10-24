@@ -6,7 +6,7 @@ layout: layouts/base.html
 <article>
   <h1>{{ title }}</h1>
 
-  <img src="{{ cover or ('/assets/images/playing/' ~ page.fileSlug ~ '.jpg') }}" alt="Cover of {{ title }}" width="200" height="300" decoding="async">
+  <img src="{{ cover | coverSrc('playing', page.fileSlug) }}" alt="Cover of {{ title }}" width="200" height="300" decoding="async">
 
   {% if award %}<p><strong>Award</strong></p>{% endif %}
 

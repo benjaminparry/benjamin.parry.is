@@ -1,7 +1,7 @@
 {% macro playedEntry(entry) %}
   {% set typeLabels = { "video game": "🎮 Video game", "board game": "🎲 Board game", "card game": "🃏 Card game" } %}
   {% set post = entry.item.data %}
-  {% set cover = post.cover or ("/assets/images/playing/" ~ entry.item.fileSlug ~ ".jpg") %}
+  {% set cover = post.cover | coverSrc("playing", entry.item.fileSlug) %}
   <li>
     <img src="{{ cover }}" alt="Cover of {{ post.title }}" width="200" height="300" loading="lazy" decoding="async">
     <a href="{{ entry.item.url }}">{{ post.title }}</a>

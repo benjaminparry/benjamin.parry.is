@@ -2,7 +2,7 @@ import { currentlyWatching, allWatched, watchedByYear, watchedInYear, watchedBef
 import { slugify, yearOf, monthOf, newestFirst, writingYears, writingMonths, writingTags } from "./_config/writing.js";
 import { sections, collectionName, globFor, allGlob, collectingYears, collectingMonths, hostname } from "./_config/collecting.js";
 import { roots, rootGlob, yearsName, monthsName, rootYears, rootMonths } from "./_config/roots.js";
-import { activities, activityGlob, activityCollections } from "./_config/activity.js";
+import { activities, activityGlob, activityCollections, coverSrc } from "./_config/activity.js";
 import { related } from "./_config/related.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
@@ -142,6 +142,9 @@ export default function (eleventyConfig) {
 
   // "https://www.rowboat.net/product/" -> "rowboat.net"
   eleventyConfig.addFilter("hostname", hostname);
+
+  // post.cover | coverSrc("reading", post.fileSlug) -> the cover image for reading/playing/listening
+  eleventyConfig.addFilter("coverSrc", coverSrc);
 
   // pool | related(page, { limit: 3, tags: true, category: true, featured: "prefer" })
   // Used by macros/related.html

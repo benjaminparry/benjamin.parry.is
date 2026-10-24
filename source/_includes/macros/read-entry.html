@@ -1,7 +1,7 @@
 {% macro readEntry(entry) %}
   {% set typeLabels = { "book": "📖 Book", "audiobook": "🎧 Audiobook", "ebook": "📱 E-book" } %}
   {% set post = entry.item.data %}
-  {% set cover = post.cover or ("/assets/images/reading/" ~ entry.item.fileSlug ~ ".jpg") %}
+  {% set cover = post.cover | coverSrc("reading", entry.item.fileSlug) %}
   <li>
     <img src="{{ cover }}" alt="Cover of {{ post.title }}" width="200" height="300" loading="lazy" decoding="async">
     <a href="{{ entry.item.url }}">{{ post.title }}</a>

@@ -11,7 +11,7 @@ permalink: /playing/
   <h2 id="now-heading">Currently playing</h2>
   <ul>
     {% for item in collections.currentlyPlaying %}
-      {% set cover = item.data.cover or ("/assets/images/playing/" ~ item.fileSlug ~ ".jpg") %}
+      {% set cover = item.data.cover | coverSrc("playing", item.fileSlug) %}
       <li>
         <img src="{{ cover }}" alt="Cover of {{ item.data.title }}" width="200" height="300" decoding="async">
         <a href="{{ item.url }}">{{ item.data.title }}</a>

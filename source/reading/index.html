@@ -11,7 +11,7 @@ permalink: /reading/
   <h2 id="now-heading">Currently reading</h2>
   <ul>
     {% for item in collections.currentlyReading %}
-      {% set cover = item.data.cover or ("/assets/images/reading/" ~ item.fileSlug ~ ".jpg") %}
+      {% set cover = item.data.cover | coverSrc("reading", item.fileSlug) %}
       <li>
         <img src="{{ cover }}" alt="Cover of {{ item.data.title }}" width="200" height="300" decoding="async">
         <a href="{{ item.url }}">{{ item.data.title }}</a>
