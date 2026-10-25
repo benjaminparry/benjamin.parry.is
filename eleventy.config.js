@@ -15,9 +15,10 @@ const writingFiles = "source/writing/*.md";
 const asDate = (d) => (d instanceof Date ? d : new Date(d));
 
 // Every post that has tags or a category: writing, collecting, the root collections,
-// and reading/playing/listening. Watching items don't have tags (yet), so they are left out.
+// watching, and reading/playing/listening.
 const taggablePosts = (api) => [
   ...api.getFilteredByGlob(writingFiles),
+  ...api.getFilteredByGlob(watchingFiles),
   ...api.getFilteredByGlob(allGlob),
   ...roots.flatMap((root) => api.getFilteredByGlob(rootGlob(root.slug))),
   ...activities.flatMap((activity) => api.getFilteredByGlob(activityGlob(activity.slug))),
@@ -110,8 +111,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("collectingMonths", (api) =>
     collectingMonths(api.getFilteredByGlob(allGlob)));
 
-  // Tags across every post: writing, collecting, the root collections, and reading/playing/listening.
-  // One /tagging/{tag}/ page each. Watching items don't have tags (yet), so they are left out.
+  // Tags across every post: writing, collecting, the root collections, watching, and reading/playing/listening.
+  // One /tagging/{tag}/ page each.
   eleventyConfig.addCollection("allTags", (api) => writingTags(taggablePosts(api)));
 
   // Every post that can be suggested by the related content component (macros/related.html).

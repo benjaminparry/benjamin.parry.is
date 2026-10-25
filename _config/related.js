@@ -5,7 +5,7 @@
 // a tag and/or a category with it. Tags and categories are compared the way tag pages are:
 // "Research by the Sea" and "research by the sea" count as the same.
 
-import { slugify, newestFirst } from "./writing.js";
+import { slugify, newestFirst, postDate } from "./writing.js";
 
 // Used for any option you leave out
 export const defaults = {
@@ -77,7 +77,7 @@ export function related(pool = [], current = {}, options = {}) {
 //
 // Which day is set by the onThisDay option:
 //   false (the default)  nothing is returned
-//   true or "page"       the page's own date (page.date), or the `date` option for a page without one
+//   true or "page"       the page's own date (its sortDate for watching, reading and so on), or the `date` option for a page not in the pool
 //   "today"              the day the site is built (or the `now` option, which is there for testing)
 // The page itself is left out. Months and days are in UTC, like the rest of the site's dates.
 // featured: "only" and "prefer" work as they do for related(). tags and category don't apply here.
@@ -88,7 +88,7 @@ export function onThisDay(pool = [], current = {}, options = {}) {
   if (!mode || !limit) return [];
 
   const self = pool.find((post) => post.url === current.url);
-  const raw = mode === "today" ? (options.now ?? new Date()) : (current.date ?? self?.date ?? options.date);
+  const raw = mode === "today" ? (options.now ?? new Date()) : (self ? postDate(self) : (current.date ?? options.date));
   const day = raw ? new Date(raw) : null;
   if (!day || Number.isNaN(day.getTime())) return [];
 
@@ -96,7 +96,7 @@ export function onThisDay(pool = [], current = {}, options = {}) {
   const wanted = key(day);
 
   const matches = pool.filter((post) =>
-    post.url && post.url !== current.url && post.date && key(new Date(post.date)) === wanted &&
+    post.url && post.url !== current.url && (post.data?.sortDate ?? post.date) && key(postDate(post)) === wanted &&
     (featured !== "only" || isFeatured(post.data)));
 
   const featuredRank = (post) => (featured === "prefer" && isFeatured(post.data) ? 0 : 1);

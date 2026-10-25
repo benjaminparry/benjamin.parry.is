@@ -58,6 +58,15 @@ const isInProgress = (entry) => Boolean(entry.started) && !isComplete(entry);
 // The date a completed entry counts for
 const entryDate = (entry) => toDate(entry.finished ?? entry.date);
 
+// The date an item sorts by: its most recent completed entry, or if none is completed yet,
+// its most recent start. Returns undefined when there are no dates, so the post's own date is used.
+export function sortDateOf(entries = []) {
+  const done = entries.filter(isComplete).map(entryDate);
+  const started = entries.filter((e) => e.started).map((e) => toDate(e.started));
+  const dates = (done.length ? done : started).filter((d) => !Number.isNaN(d?.getTime()));
+  return dates.length ? new Date(Math.max(...dates)) : undefined;
+}
+
 // Returns the four collection builders for one activity.
 export function activityCollections(listKey) {
   const list = (item) => entriesOf(item.data, listKey);

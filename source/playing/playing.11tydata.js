@@ -2,7 +2,7 @@
 // Written as JavaScript (rather than playing.json like the collecting folders) because the list of
 // plays is worked out:
 // `activity` is the `played:` list from the front matter, or a top-level started / completed pair.
-import { entriesOf } from "../../_config/activity.js";
+import { entriesOf, sortDateOf } from "../../_config/activity.js";
 
 export default {
   layout: "layouts/playing-item.html",
@@ -13,5 +13,7 @@ export default {
   permalink: "/playing/{{ page.fileSlug }}/",
   eleventyComputed: {
     activity: (data) => entriesOf(data, "played"),
+    // What the post sorts by in tag pages and suggestions: its latest completed (or started) date
+    sortDate: (data) => sortDateOf(entriesOf(data, "played")),
   },
 };

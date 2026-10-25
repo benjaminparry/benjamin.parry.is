@@ -21,7 +21,12 @@ export const monthOf = (date) => String(date.getUTCMonth() + 1).padStart(2, "0")
 const monthName = (date) =>
   new Intl.DateTimeFormat("en-GB", { month: "long", timeZone: "UTC" }).format(date);
 
-export const newestFirst = (posts) => [...posts].sort((a, b) => b.date - a.date);
+// The date a post sorts by. Watching, reading, playing and listening posts have no date of their own:
+// their dates are in their watched / read / played / listened list, so they set `sortDate` from it
+// (see activity.js). Every other post uses its date.
+export const postDate = (post) => new Date(post.data?.sortDate ?? post.date);
+
+export const newestFirst = (posts) => [...posts].sort((a, b) => postDate(b) - postDate(a));
 
 // [{ month: "11", name: "November", count: 2 }, ...] newest first, for a list of posts
 function monthsOf(posts) {

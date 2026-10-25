@@ -2,7 +2,7 @@
 // Written as JavaScript (rather than reading.json like the collecting folders) because the list of
 // reads is worked out:
 // `activity` is the `read:` list from the front matter, or a top-level started / completed pair.
-import { entriesOf } from "../../_config/activity.js";
+import { entriesOf, sortDateOf } from "../../_config/activity.js";
 
 export default {
   layout: "layouts/reading-item.html",
@@ -13,5 +13,7 @@ export default {
   permalink: "/reading/{{ page.fileSlug }}/",
   eleventyComputed: {
     activity: (data) => entriesOf(data, "read"),
+    // What the post sorts by in tag pages and suggestions: its latest completed (or started) date
+    sortDate: (data) => sortDateOf(entriesOf(data, "read")),
   },
 };
