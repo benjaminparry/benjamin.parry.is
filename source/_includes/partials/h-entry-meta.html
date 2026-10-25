@@ -1,0 +1,16 @@
+{# Hidden microformats that go inside an <article class="h-entry">. Services that send and receive webmentions read these:
+   the permanent address of the post, who wrote it, and where else a copy was posted (`syndication` in the front matter). #}
+<a class="u-url" href="{{ page.url | absoluteUrl }}" hidden>Permalink</a>
+<span class="p-author h-card" hidden>
+  <a class="u-url u-uid" rel="author" href="{{ site.url }}/">{{ site.author.name }}</a>
+  <img class="u-photo" src="{{ site.author.photo | absoluteUrl }}" alt="{{ site.author.name }}">
+</span>
+{% if syndication %}
+  {% if syndication is string %}
+    <a class="u-syndication" rel="syndication" href="{{ syndication }}" hidden>{{ syndication | hostname }}</a>
+  {% else %}
+    {% for copy in syndication %}
+      <a class="u-syndication" rel="syndication" href="{{ copy }}" hidden>{{ copy | hostname }}</a>
+    {% endfor %}
+  {% endif %}
+{% endif %}

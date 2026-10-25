@@ -1,18 +1,18 @@
 ---
 layout: layouts/base.html
 ---
-<article>
-  <h1>{{ title }}</h1>
+<article class="h-entry">
+  <h1 class="p-name">{{ title }}</h1>
 
   <p>
-    <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    <time class="dt-published" datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
     in <a href="/collecting/{{ section }}/">{{ sectionTitle }}</a>
   </p>
 
-  {% if summary %}<p>{{ summary }}</p>{% endif %}
+  {% if summary %}<p class="p-summary">{{ summary }}</p>{% endif %}
 
   {% if bookmarkOf %}
-    <p>Bookmarked: <a href="{{ bookmarkOf }}" rel="external">{{ bookmarkOf | hostname }}</a></p>
+    <p>Bookmarked: <a class="u-bookmark-of" href="{{ bookmarkOf }}" rel="external">{{ bookmarkOf | hostname }}</a></p>
   {% endif %}
 
   {% if audio %}
@@ -21,18 +21,16 @@ layout: layouts/base.html
     </audio>
   {% endif %}
 
-  {{ content | safe }}
+  <div class="e-content">
+    {{ content | safe }}
+  </div>
 
-  {% if tags %}
-    <h2>Tags</h2>
-    <ul>
-      {% for tag in tags %}
-        <li><a href="/tagging/{{ tag | tagSlug }}/">{{ tag }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  {% include "partials/tags.html" %}
 
   {% from "macros/related.html" import related %}
   {{ related(collections.relatable, page, { "limit": 5, "category": false, "featured": "only", "heading": "More on this topic" }) }}
   {{ related(collections.relatable, page, { "onThisDay": true }) }}
+
+  {% include "partials/h-entry-meta.html" %}
+  {% include "partials/webmentions.html" %}
 </article>

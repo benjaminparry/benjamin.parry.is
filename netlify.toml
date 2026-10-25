@@ -1,0 +1,12 @@
+# How Netlify builds this site. Settings here override the same settings in the Netlify dashboard.
+# The build is what fetches incoming webmentions (see WEBMENTIONS.md), so it needs a Node version with fetch built in.
+
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Set in the Netlify dashboard, not here, because it is a secret:
+#   WEBMENTION_IO_TOKEN   your API key from https://webmention.io/settings

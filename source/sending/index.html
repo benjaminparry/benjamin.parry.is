@@ -1,0 +1,40 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.sending
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/sending/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Sending{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/feed.html" import feedItem %}
+{% from "macros/collecting.html" import pager %}
+{% from "macros/sending.html" import sendingNav %}
+
+<h1>Sending</h1>
+
+<p>Likes and replies I publish here, and send to the sites they are about as webmentions. <a href="/sending/feed.xml">Feed</a></p>
+
+{{ sendingNav(sendingSections, "") }}
+
+<nav aria-label="Browse sending by year">
+  <ul>
+    {% for group in collections.sendingYears %}
+      <li><a href="/sending/{{ group.year }}/">{{ group.year }}</a></li>
+    {% endfor %}
+    <li><a href="/tagging/">All tags</a></li>
+  </ul>
+</nav>
+
+<ul>
+  {% for post in posts %}
+    {{ feedItem(post, true) }}
+  {% else %}
+    <li>Nothing sent yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

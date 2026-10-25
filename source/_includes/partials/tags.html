@@ -3,7 +3,7 @@
   <h2>Tags</h2>
   <ul>
     {% for tag in tags %}
-      <li><a href="/tagging/{{ tag | tagSlug }}/">{{ tag }}</a></li>
+      <li><a class="p-category" href="/tagging/{{ tag | tagSlug }}/">{{ tag }}</a></li>
     {% endfor %}
   </ul>
 {% endif %}

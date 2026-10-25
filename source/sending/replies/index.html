@@ -1,0 +1,29 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.sendingReplies
+  size: 10
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/sending/replies/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Replies{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/feed.html" import feedItem %}
+{% from "macros/collecting.html" import pager %}
+{% from "macros/sending.html" import sendingNav %}
+
+<h1>Replies</h1>
+
+{{ sendingNav(sendingSections, "replies") }}
+
+<ul>
+  {% for post in posts %}
+    {{ feedItem(post, false) }}
+  {% else %}
+    <li>No replies yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

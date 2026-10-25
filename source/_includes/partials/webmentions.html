@@ -1,0 +1,10 @@
+{# The incoming webmentions for the current page. Switched on with `showWebmentions: true` in a post's front matter
+   or in a folder's data file, so each section or page can choose. Optional `webmentionOptions` (the macro's options)
+   can be set the same way, e.g.
+     webmentionOptions:
+       types: [in-reply-to, mention-of]
+       aliases: [/old/address/] #}
+{% if showWebmentions %}
+  {% from "macros/webmentions.html" import mentions %}
+  {{ mentions(webmentions, page, webmentionOptions) }}
+{% endif %}

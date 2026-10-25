@@ -1,0 +1,11 @@
+{# Links between /sending/ and its sections. current = the section slug, or "" for /sending/ #}
+{% macro sendingNav(sections, current) %}
+  <nav aria-label="Sending sections">
+    <ul>
+      <li><a href="/sending/"{% if current == "" %} aria-current="page"{% endif %}>All</a></li>
+      {% for s in sections %}
+        <li><a href="/sending/{{ s.slug }}/"{% if s.slug == current %} aria-current="page"{% endif %}>{{ s.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endmacro %}

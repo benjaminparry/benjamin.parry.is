@@ -1,5 +1,6 @@
 {
   "layout": "layouts/collecting-post.html",
+  "showWebmentions": true,
   "section": "thoughts",
   "sectionTitle": "Thoughts",
   "permalink": "/collecting/thoughts/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"

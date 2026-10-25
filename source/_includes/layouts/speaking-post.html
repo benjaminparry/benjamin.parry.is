@@ -6,16 +6,16 @@ layout: layouts/base.html
    Media front matter: bookmarkOf (the original), mirror (the copy hosted on this site). #}
 {% set typeLabels = { "event": "🎤 Event", "media": "🎙️ Media" } %}
 
-<article>
-  <h1>{{ title }}</h1>
+<article class="h-entry">
+  <h1 class="p-name">{{ title }}</h1>
 
   <p>
-    <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    <time class="dt-published" datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
     in <a href="/speaking/">Speaking</a>
     | {{ typeLabels[entryType] or entryType }}
   </p>
 
-  {% if summary %}<p>{{ summary }}</p>{% endif %}
+  {% if summary %}<p class="p-summary">{{ summary }}</p>{% endif %}
 
   {% if entryType == "event" %}
     {% include "partials/location.html" %}
@@ -43,9 +43,14 @@ layout: layouts/base.html
     {% endif %}
   {% endif %}
 
-  {{ content | safe }}
+  <div class="e-content">
+    {{ content | safe }}
+  </div>
 
   {% include "partials/tags.html" %}
+
+  {% include "partials/h-entry-meta.html" %}
+  {% include "partials/webmentions.html" %}
 
   <p><a href="/speaking/">Back to Speaking</a></p>
 </article>

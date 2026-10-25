@@ -1,5 +1,6 @@
 {
   "layout": "layouts/collecting-post.html",
+  "showWebmentions": true,
   "section": "cycles",
   "sectionTitle": "Cycles",
   "permalink": "/collecting/cycles/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"

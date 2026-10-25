@@ -1,0 +1,57 @@
+{# The incoming webmentions for a page: how many there are, then each one with who sent it, when, and a link to
+   the page that mentions this one. Shows nothing if there are none (unless showEmpty is set).
+
+   Usage, in any page or layout:
+     {% from "macros/webmentions.html" import mentions %}
+     {{ mentions(webmentions, page) }}
+     {{ mentions(webmentions, page, { "types": ["in-reply-to", "mention-of"], "heading": "Replies" }) }}
+
+   Or, in a layout, just include the partial and switch it on per section or per post with front matter:
+     {% include "partials/webmentions.html" %}      and      showWebmentions: true
+
+   The mentions (webmentions, fetched when the site is built) and the page are passed in because macros can't
+   see the page's own variables.
+
+   Options (all optional):
+     heading     the heading text. Default "Webmentions". Use "" for no visible heading.
+     types       only show these kinds: "like-of", "in-reply-to", "repost-of", "mention-of", "bookmark-of", "rsvp".
+                 Default: all of them.
+     aliases     other addresses this page has had, e.g. ["/old/address/"]. Mentions of those count too.
+     showContent true / false: show the text of replies and mentions. Default true.
+     showEmpty   true / false: show the section even when there are no mentions. Default false.
+
+   Quote the option names, as above, like the other macros here do. #}
+{% macro mentions(all, page, options) %}
+  {% set options = options or {} %}
+  {% set heading = options.heading if "heading" in options else "Webmentions" %}
+  {% set found = all | webmentionsFor(page.url, options) %}
+  {% set summary = found | webmentionSummary %}
+
+  {% if summary.total or options.showEmpty %}
+    <section class="webmentions" aria-label="{{ heading or 'Webmentions' }}">
+      {% if heading %}<h2>{{ heading }} ({{ summary.total }})</h2>{% endif %}
+
+      {% if summary.total %}
+        <p>{{ summary.total }} webmention{% if summary.total != 1 %}s{% endif %}: {{ summary.breakdown }}.</p>
+
+        <ol>
+          {% for mention in found %}
+            <li>
+              {% if mention.author.url %}<a href="{{ mention.author.url }}" rel="nofollow ugc">{{ mention.author.name }}</a>{% else %}{{ mention.author.name }}{% endif %}
+              {{ mention.verb }} this
+              {% if mention.date %}on <time datetime="{{ mention.date | isoDateTime }}">{{ mention.date | longDateTime }}</time>{% endif %}
+              {% if mention.url %}
+                <a href="{{ mention.url }}" rel="nofollow ugc">View the mention{% if mention.host %} on {{ mention.host }}{% endif %}</a>
+              {% endif %}
+              {% if options.showContent != false and mention.text %}
+                <blockquote>{{ mention.text }}</blockquote>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p>No webmentions yet.</p>
+      {% endif %}
+    </section>
+  {% endif %}
+{% endmacro %}

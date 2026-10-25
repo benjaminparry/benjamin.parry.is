@@ -4,6 +4,10 @@ import { sections, collectionName, globFor, allGlob, collectingYears, collecting
 import { roots, rootGlob, yearsName, monthsName, rootYears, rootMonths } from "./_config/roots.js";
 import { activities, activityGlob, activityCollections, coverSrc } from "./_config/activity.js";
 import { related, onThisDay } from "./_config/related.js";
+import { webmentionsFor, summariseWebmentions } from "./_config/webmentions.js";
+import { sections as sendingSections, collectionName as sendingName, globFor as sendingGlob, allGlob as sendingAllGlob, sendingYears, sendingMonths, stamp } from "./_config/sending.js";
+import { feedContent } from "./_config/feed.js";
+import site from "./source/_data/site.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
 const watchingFiles = "source/watching/*.md";
@@ -15,11 +19,12 @@ const writingFiles = "source/writing/*.md";
 const asDate = (d) => (d instanceof Date ? d : new Date(d));
 
 // Every post that has tags or a category: writing, collecting, the root collections,
-// watching, and reading/playing/listening.
+// sending, watching, and reading/playing/listening.
 const taggablePosts = (api) => [
   ...api.getFilteredByGlob(writingFiles),
   ...api.getFilteredByGlob(watchingFiles),
   ...api.getFilteredByGlob(allGlob),
+  ...api.getFilteredByGlob(sendingAllGlob),
   ...roots.flatMap((root) => api.getFilteredByGlob(rootGlob(root.slug))),
   ...activities.flatMap((activity) => api.getFilteredByGlob(activityGlob(activity.slug))),
 ];
@@ -101,6 +106,32 @@ export default function (eleventyConfig) {
       rootMonths(api.getFilteredByGlob(files)));
   }
 
+  // Sending collections: every post in source/sending/<section>/ (likes, replies)
+  eleventyConfig.addCollection("sending", (api) =>
+    newestFirst(api.getFilteredByGlob(sendingAllGlob)));
+
+  eleventyConfig.addCollection("sendingYears", (api) =>
+    sendingYears(api.getFilteredByGlob(sendingAllGlob)));
+
+  eleventyConfig.addCollection("sendingMonths", (api) =>
+    sendingMonths(api.getFilteredByGlob(sendingAllGlob)));
+
+  // One collection per section: collections.sendingLikes, collections.sendingReplies
+  for (const section of sendingSections) {
+    eleventyConfig.addCollection(sendingName(section.slug), (api) =>
+      newestFirst(api.getFilteredByGlob(sendingGlob(section.slug))));
+  }
+
+  // The posts in /feed.xml, newest first: everything with a date of its own
+  // (not watching, reading, playing or listening, whose dates are in lists)
+  eleventyConfig.addCollection("feedable", (api) =>
+    newestFirst([
+      ...api.getFilteredByGlob(writingFiles),
+      ...api.getFilteredByGlob(allGlob),
+      ...api.getFilteredByGlob(sendingAllGlob),
+      ...roots.flatMap((root) => api.getFilteredByGlob(rootGlob(root.slug))),
+    ]));
+
   // Collecting collections: every post in source/collecting/<section>/
   eleventyConfig.addCollection("collecting", (api) =>
     newestFirst(api.getFilteredByGlob(allGlob)));
@@ -128,6 +159,9 @@ export default function (eleventyConfig) {
   // The section list, for the navigation: {{ collectingSections }}
   eleventyConfig.addGlobalData("collectingSections", sections);
 
+  // The sending section list, for the navigation: {{ sendingSections }}
+  eleventyConfig.addGlobalData("sendingSections", sendingSections);
+
   // Available in every template as {{ currentYear }}
   eleventyConfig.addGlobalData("currentYear", () => new Date().getUTCFullYear());
 
@@ -135,6 +169,18 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("isoDate", (d) => asDate(d).toISOString().slice(0, 10));
   eleventyConfig.addFilter("longDate", (d) =>
     new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(asDate(d)));
+
+  // With the time: "2025-01-10T16:32:10.851Z" and "10 January 2025, 16:32 UTC"
+  eleventyConfig.addFilter("isoDateTime", (d) => asDate(d).toISOString());
+  eleventyConfig.addFilter("longDateTime", (d) =>
+    new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "UTC", timeZoneName: "short" }).format(asDate(d)));
+
+  // 2025-01-10T16:32:10Z -> "20250110163210": the end of /sending/likes/2025/01/like_20250110163210/
+  eleventyConfig.addFilter("stamp", stamp);
+
+  // "/writing/a-post/" -> "https://benjamin.parry.is/writing/a-post/"
+  eleventyConfig.addFilter("absoluteUrl", (path) =>
+    /^https?:\/\//i.test(path) ? path : `${site.url}${String(path).startsWith("/") ? "" : "/"}${path}`);
 
   // Used to build /writing/yyyy/mm/post-name/ and /tagging/tag-name/ URLs
   eleventyConfig.addFilter("yearOf", yearOf);
@@ -154,6 +200,16 @@ export default function (eleventyConfig) {
   // pool | onThisDay(page, { onThisDay: true, onThisDayLimit: 3 })
   // Used by macros/related.html
   eleventyConfig.addFilter("onThisDay", onThisDay);
+
+  // webmentions | webmentionsFor(page.url, { types: [...], aliases: [...] })  -> this page's mentions, newest first
+  // mentions | webmentionSummary                                             -> { total, breakdown }
+  // Used by macros/webmentions.html
+  eleventyConfig.addFilter("webmentionsFor", (mentions, pageUrl, options = {}) =>
+    webmentionsFor(mentions, pageUrl, { ...options, siteUrl: site.url }));
+  eleventyConfig.addFilter("webmentionSummary", summariseWebmentions);
+
+  // post | feedContent -> the HTML for a feed entry (used by partials/atom-feed.njk)
+  eleventyConfig.addFilter("feedContent", feedContent);
 }
 
 // Set template engines

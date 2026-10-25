@@ -82,6 +82,14 @@
 
 
 		</style>
+
+		{# Where other sites send webmentions to this one, and how to find the feed #}
+		<link rel="webmention" href="{{ site.webmention.endpoint }}">
+		<link rel="pingback" href="{{ site.webmention.pingback }}">
+		<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
+		{# Profiles that link back here: how you sign in to webmention.io #}
+		{% for profile in site.me %}<link rel="me" href="{{ profile }}">
+		{% endfor %}
 	</head>
 	<body>
 		{{ content | safe }}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+{# An Atom feed. Set these in the front matter of the page that includes it:
+     feedTitle       the feed's name
+     feedPath        where the feed is, e.g. /feed.xml
+     feedHome        the page the feed is for, e.g. / or /sending/
+     feedCollection  the name of the collection to list, e.g. "feedable" or "sending"
+   Links in entries are written out in full (xml:base), and the newest 25 posts are included.
+   webmention.app reads this to find new posts to send webmentions from. #}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}/">
+  <title>{{ feedTitle }}</title>
+  <link rel="self" type="application/atom+xml" href="{{ feedPath | absoluteUrl }}"/>
+  <link rel="alternate" type="text/html" href="{{ feedHome | absoluteUrl }}"/>
+  <id>{{ feedPath | absoluteUrl }}</id>
+  {% set feedPosts = collections[feedCollection] %}
+  {% if feedPosts.length %}<updated>{{ feedPosts[0].date | isoDateTime }}</updated>{% endif %}
+  <author>
+    <name>{{ site.author.name }}</name>
+    <uri>{{ site.url }}/</uri>
+  </author>
+  {% for post in feedPosts %}
+    {% if loop.index <= 25 %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link rel="alternate" type="text/html" href="{{ post.url | absoluteUrl }}"/>
+    <id>{{ post.url | absoluteUrl }}</id>
+    <published>{{ post.date | isoDateTime }}</published>
+    <updated>{{ post.date | isoDateTime }}</updated>
+    {% if post.data.summary %}<summary>{{ post.data.summary }}</summary>{% endif %}
+    <content type="html">{{ post | feedContent | escape }}</content>
+  </entry>
+    {% endif %}
+  {% endfor %}
+</feed>

@@ -3,15 +3,15 @@ layout: layouts/base.html
 ---
 {# An event I am attending (or attended).
    Front matter: start, end, and a location with name, streetAddress, locality, postalCode and countryName. #}
-<article>
-  <h1>{{ title }}</h1>
+<article class="h-entry">
+  <h1 class="p-name">{{ title }}</h1>
 
   <p>
-    <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    <time class="dt-published" datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
     in <a href="/attending/">Attending</a>
   </p>
 
-  {% if summary %}<p>{{ summary }}</p>{% endif %}
+  {% if summary %}<p class="p-summary">{{ summary }}</p>{% endif %}
 
   {% if start %}
     <p>
@@ -24,7 +24,9 @@ layout: layouts/base.html
 
   {% include "partials/location.html" %}
 
-  {{ content | safe }}
+  <div class="e-content">
+    {{ content | safe }}
+  </div>
 
   {% from "macros/related.html" import related %}
   {{ related(collections.relatable, page, { "limit": 5, "category": false, "featured": "only", "heading": "More on this topic" }) }}
@@ -32,6 +34,9 @@ layout: layouts/base.html
 
 
   {% include "partials/tags.html" %}
+
+  {% include "partials/h-entry-meta.html" %}
+  {% include "partials/webmentions.html" %}
 
   <p><a href="/attending/">Back to Attending</a></p>
 </article>
