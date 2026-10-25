@@ -1,5 +1,9 @@
 {% macro writingItem(post) %}
   <li>
+    {% if post.data.images and post.data.images.length %}
+    {# Decorative: the title link beside it names the post, so the alt text is empty #}
+    <img src="{{ post.data.images[0] }}" alt="" loading="lazy" decoding="async">
+    {% endif %}
     <a href="{{ post.url }}">{{ post.data.title }}</a>
     <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
     {% if post.data.summary %}<p>{{ post.data.summary }}</p>{% endif %}
