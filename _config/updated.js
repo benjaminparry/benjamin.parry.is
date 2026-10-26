@@ -16,7 +16,6 @@
 //
 // Every form gives the same result from updatesOf(): [{ date: Date, comment: "" }], newest first.
 
-import { postDate } from "./writing.js";
 
 const toDate = (value) => {
   // A bare number (updated: 2025) is not a date; new Date(2025) would be 1970
@@ -51,18 +50,25 @@ export function updatesOf(post) {
   return items.flatMap(readItem).sort((a, b) => b.date - a.date);
 }
 
+// The date a post was created: its own date (front matter `date`, or the date in its file name).
+// Unlike postDate() in writing.js this ignores `sortDate`, the watched / read / played / listened date.
+export const createdDate = (post) => new Date(post.date);
+
+// Posts newest first by created date only
+export const createdFirst = (posts) => [...posts].sort((a, b) => createdDate(b) - createdDate(a));
+
 // The date an entry is ordered by in a feed: its latest update when byUpdated is true
-// (a post with no updates falls back to its own date), otherwise its own date.
+// (a post with no updates falls back to its created date), otherwise its created date.
 export function feedDate(post, byUpdated) {
   const [latest] = byUpdated ? updatesOf(post) : [];
-  return latest ? latest.date : postDate(post);
+  return latest ? latest.date : createdDate(post);
 }
 
 // Posts with at least one update, most recently updated first
 export function updatedFirst(posts) {
   return posts
     .filter((post) => updatesOf(post).length > 0)
-    .sort((a, b) => feedDate(b, true) - feedDate(a, true) || postDate(b) - postDate(a));
+    .sort((a, b) => feedDate(b, true) - feedDate(a, true) || createdDate(b) - createdDate(a));
 }
 
 const titleCase = (text) => text.charAt(0).toUpperCase() + text.slice(1);

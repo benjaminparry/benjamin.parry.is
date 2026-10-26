@@ -172,8 +172,10 @@ Two feeds cover every post in every collection (writing, collecting, the root co
 
 | What | Page | Feed |
 | --- | --- | --- |
-| Newest first, by each post's own date | `/everything-everywhere-all-at-once/chronologically/` | `/everything-everywhere-all-at-once/chronologically/feed.xml` |
+| Newest first, by created date only | `/everything-everywhere-all-at-once/chronologically/` | `/everything-everywhere-all-at-once/chronologically/feed.xml` |
 | Most recently updated first | `/everything-everywhere-all-at-once/updated/` | `/everything-everywhere-all-at-once/updated/feed.xml` |
+
+The created date is the post's own `date` (front matter, or the date in its file name). Watching, reading, playing and listening posts have no `date` of their own, so give each one a `date:` if you want it to sit in the right place here; otherwise Eleventy uses the file's creation time, which on Netlify is the time of the build's checkout.
 
 The updated feed only lists posts that have an `updated:` value. Each entry is dated by its latest update and lists every update with its comment. `updated` can be written any of these ways:
 
