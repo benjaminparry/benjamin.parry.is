@@ -5,6 +5,9 @@ feedPath: /everything-everywhere-all-at-once/updated/feed.xml
 feedHome: /everything-everywhere-all-at-once/updated/
 feedCollection: everythingUpdated
 feedByUpdated: true
+# Wait for these posts to be rendered first: the feed uses their content
+eleventyImport:
+  collections: ["everythingUpdated"]
 eleventyExcludeFromCollections: true
 ---
 {% include "partials/atom-feed.njk" %}

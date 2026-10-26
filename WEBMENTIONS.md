@@ -191,6 +191,8 @@ updated:                             # short form: date, then comment
 
 Dates that can't be read (and bare numbers such as `updated: 2025`) are ignored. If you point webmention.app at the updated feed, an edited post moves to the top of it and its links are checked again; webmention.app only sends for entries it hasn't already sent, so use `limit=3` as in the setup above.
 
+Each feed template declares `eleventyImport: collections: [...]` in its front matter. Without it, Eleventy can render a feed before the posts it lists and fails with "Tried to use templateContent too early". Any new feed template needs the same line.
+
 The code is in `_config/updated.js`, `source/_includes/macros/everything.html` and `source/everything-everywhere-all-at-once/`.
 
 ## Choices that were made

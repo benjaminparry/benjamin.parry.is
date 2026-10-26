@@ -4,6 +4,9 @@ feedTitle: Benjamin Parry
 feedPath: /feed.xml
 feedHome: /
 feedCollection: feedable
+# Wait for these posts to be rendered first: the feed uses their content
+eleventyImport:
+  collections: ["feedable"]
 eleventyExcludeFromCollections: true
 ---
 {% include "partials/atom-feed.njk" %}

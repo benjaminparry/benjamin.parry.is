@@ -4,6 +4,9 @@ feedTitle: Benjamin Parry – Everything, newest first
 feedPath: /everything-everywhere-all-at-once/chronologically/feed.xml
 feedHome: /everything-everywhere-all-at-once/chronologically/
 feedCollection: everything
+# Wait for these posts to be rendered first: the feed uses their content
+eleventyImport:
+  collections: ["everything"]
 eleventyExcludeFromCollections: true
 ---
 {% include "partials/atom-feed.njk" %}
