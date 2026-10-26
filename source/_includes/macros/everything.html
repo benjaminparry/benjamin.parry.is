@@ -1,0 +1,35 @@
+{# One post in the site-wide lists under /everything-everywhere-all-at-once/. Works for every kind of post.
+   showUpdates: true in the "updated" list, which dates each post by its latest update and lists them all
+   with their comments. updates is that list (the page passes `post | updatesOf`). #}
+{% macro everythingItem(post, showUpdates, updates) %}
+  {% set part = post | partOf %}
+  {% set blurb = post.data.summary or post.data.proposal or post.data.posse %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    {% if showUpdates and updates.length %}
+      <time datetime="{{ updates[0].date | isoDate }}">Updated {{ updates[0].date | longDate }}</time>
+    {% else %}
+      <time datetime="{{ post | feedDate(false) | isoDate }}">{{ post | feedDate(false) | longDate }}</time>
+    {% endif %}
+    {% if part.title %}<a href="{{ part.url }}">{{ part.title }}</a>{% endif %}
+    {% if blurb %}<p>{{ blurb }}</p>{% endif %}
+    {% if showUpdates and updates.length %}
+      <p>First published <time datetime="{{ post | feedDate(false) | isoDate }}">{{ post | feedDate(false) | longDate }}</time>. Updates:</p>
+      <ul>
+        {% for update in updates %}
+          <li><time datetime="{{ update.date | isoDate }}">{{ update.date | longDate }}</time>{% if update.comment %}: {{ update.comment }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+{% endmacro %}
+
+{# Links between the two views. current = "chronologically" or "updated" #}
+{% macro everythingNav(current) %}
+  <nav aria-label="Everything, in two orders">
+    <ul>
+      <li><a href="/everything-everywhere-all-at-once/chronologically/"{% if current == "chronologically" %} aria-current="page"{% endif %}>Newest first</a></li>
+      <li><a href="/everything-everywhere-all-at-once/updated/"{% if current == "updated" %} aria-current="page"{% endif %}>Recently updated</a></li>
+    </ul>
+  </nav>
+{% endmacro %}

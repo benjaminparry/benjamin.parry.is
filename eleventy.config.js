@@ -7,6 +7,7 @@ import { related, onThisDay } from "./_config/related.js";
 import { webmentionsFor, summariseWebmentions } from "./_config/webmentions.js";
 import { sections as sendingSections, collectionName as sendingName, globFor as sendingGlob, allGlob as sendingAllGlob, sendingYears, sendingMonths, stamp } from "./_config/sending.js";
 import { feedContent } from "./_config/feed.js";
+import { updatesOf, feedDate, updatedFirst, partOf } from "./_config/updated.js";
 import site from "./source/_data/site.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
@@ -132,6 +133,12 @@ export default function (eleventyConfig) {
       ...roots.flatMap((root) => api.getFilteredByGlob(rootGlob(root.slug))),
     ]));
 
+  // The two site-wide feeds under /everything-everywhere-all-at-once/: every post in every collection.
+  // everything = newest first by the post's own date; everythingUpdated = only posts with an "updated"
+  // date, most recently updated first.
+  eleventyConfig.addCollection("everything", (api) => newestFirst(taggablePosts(api)));
+  eleventyConfig.addCollection("everythingUpdated", (api) => updatedFirst(taggablePosts(api)));
+
   // Collecting collections: every post in source/collecting/<section>/
   eleventyConfig.addCollection("collecting", (api) =>
     newestFirst(api.getFilteredByGlob(allGlob)));
@@ -210,6 +217,12 @@ export default function (eleventyConfig) {
 
   // post | feedContent -> the HTML for a feed entry (used by partials/atom-feed.njk)
   eleventyConfig.addFilter("feedContent", feedContent);
+
+  // The "updated" front matter as [{ date, comment }] newest first; the date a feed entry is ordered by;
+  // and which part of the site a post is in ({ title, url })
+  eleventyConfig.addFilter("updatesOf", updatesOf);
+  eleventyConfig.addFilter("feedDate", feedDate);
+  eleventyConfig.addFilter("partOf", partOf);
 }
 
 // Set template engines

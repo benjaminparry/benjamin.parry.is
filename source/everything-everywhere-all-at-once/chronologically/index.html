@@ -1,0 +1,30 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.everything
+  size: 20
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/everything-everywhere-all-at-once/chronologically/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Everything, newest first{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/everything.html" import everythingItem, everythingNav %}
+{% from "macros/collecting.html" import pager %}
+
+<h1>Everything, newest first</h1>
+
+<p>Every post from every part of this site, newest first. <a href="/everything-everywhere-all-at-once/chronologically/feed.xml">Feed</a></p>
+
+{{ everythingNav("chronologically") }}
+
+<ul>
+  {% for post in posts %}
+    {{ everythingItem(post, false) }}
+  {% else %}
+    <li>Nothing here yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

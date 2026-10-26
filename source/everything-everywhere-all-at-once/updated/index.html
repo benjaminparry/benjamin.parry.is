@@ -1,0 +1,30 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.everythingUpdated
+  size: 20
+  alias: posts
+  generatePageOnEmptyData: true
+permalink: "/everything-everywhere-all-at-once/updated/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Everything, recently updated{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/everything.html" import everythingItem, everythingNav %}
+{% from "macros/collecting.html" import pager %}
+
+<h1>Everything, recently updated</h1>
+
+<p>Posts I have changed since publishing them, most recently updated first, with what changed. <a href="/everything-everywhere-all-at-once/updated/feed.xml">Feed</a></p>
+
+{{ everythingNav("updated") }}
+
+<ul>
+  {% for post in posts %}
+    {{ everythingItem(post, true, post | updatesOf) }}
+  {% else %}
+    <li>Nothing has been updated yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

@@ -166,6 +166,33 @@ The collection, tags, year and month archives, feeds and the webmention.app feed
 
 ---
 
+## The site-wide feeds
+
+Two feeds cover every post in every collection (writing, collecting, the root collections, sending, watching, reading, playing, listening). Each has a paginated page (20 per page) and an Atom feed with the newest 25 entries, so either feed can be the one webmention.app reads.
+
+| What | Page | Feed |
+| --- | --- | --- |
+| Newest first, by each post's own date | `/everything-everywhere-all-at-once/chronologically/` | `/everything-everywhere-all-at-once/chronologically/feed.xml` |
+| Most recently updated first | `/everything-everywhere-all-at-once/updated/` | `/everything-everywhere-all-at-once/updated/feed.xml` |
+
+The updated feed only lists posts that have an `updated:` value. Each entry is dated by its latest update and lists every update with its comment. `updated` can be written any of these ways:
+
+```yaml
+updated: 2025-01-07                  # one date
+updated: [2025-01-07, 2025-03-02]    # several dates
+updated:                             # dates with comments ("note" works too)
+  - date: 2025-03-02
+    comment: Added the second half
+  - date: 2025-01-07
+    comment: Fixed a typo
+updated:                             # short form: date, then comment
+  - 2025-03-02: Added the second half
+```
+
+Dates that can't be read (and bare numbers such as `updated: 2025`) are ignored. If you point webmention.app at the updated feed, an edited post moves to the top of it and its links are checked again; webmention.app only sends for entries it hasn't already sent, so use `limit=3` as in the setup above.
+
+The code is in `_config/updated.js`, `source/_includes/macros/everything.html` and `source/everything-everywhere-all-at-once/`.
+
 ## Choices that were made
 
 **Receiving.** The mentions are fetched during the build and written into the page. No script runs for the reader. Alternatives: webmention.io's own embed script (needs JavaScript in the browser); committing the mentions into the repository with a scheduled GitHub Action (more moving parts for the same result).
