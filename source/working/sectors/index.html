@@ -1,0 +1,22 @@
+---
+layout: layouts/base.html
+permalink: /working/sectors/
+title: Sectors
+eleventyExcludeFromCollections: true
+---
+{% from "macros/working.html" import workingNav %}
+
+<h1>{{ title }}</h1>
+
+{{ workingNav("sectors") }}
+
+<ul>
+  {% for sector in collections.workingSectors %}
+    <li>
+      <a href="/working/sectors/{{ sector.slug }}/">{{ sector.name }}</a>
+      ({{ sector.projects.length }} project{% if sector.projects.length != 1 %}s{% endif %}{% if sector.organisations.length %}, {{ sector.organisations.length }} organisation{% if sector.organisations.length != 1 %}s{% endif %}{% endif %})
+    </li>
+  {% else %}
+    <li>No sectors yet.</li>
+  {% endfor %}
+</ul>

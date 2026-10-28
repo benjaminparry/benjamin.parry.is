@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/working-project.html",
+  "collection": "working",
+  "collectionTitle": "Working",
+  "permalink": "/working/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"
+}

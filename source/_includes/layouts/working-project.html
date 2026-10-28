@@ -1,0 +1,48 @@
+---
+layout: layouts/base.html
+---
+{% from "macros/working.html" import period, sectors %}
+{# The project with its engagement, client and sectors worked out (see _config/working.js) #}
+{% set project = collections.workingProjects | bySlug(page.fileSlug) %}
+<article class="h-entry">
+  <h1 class="p-name">{{ title }}</h1>
+
+  <p>
+    <time class="dt-published" datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    in <a href="/working/">Working</a>
+  </p>
+
+  {% if project %}
+    <dl>
+      <dt>Status</dt>
+      <dd>{% if project.current %}Current{% else %}Previous{% endif %}</dd>
+      <dt>When</dt>
+      <dd>{{ period(project) }}</dd>
+      {% if project.relationship %}
+        <dt>Working</dt>
+        <dd>
+          {% if project.engagement %}<a href="{{ project.engagement.url }}">{{ project.relationship }}</a>{% else %}{{ project.relationship }}{% endif %}
+        </dd>
+      {% endif %}
+      {% if project.employer %}<dt>Employer</dt><dd><a href="{{ project.employer.url }}">{{ project.employer.title }}</a></dd>{% endif %}
+      {% if project.client %}<dt>Client</dt><dd><a href="{{ project.client.url }}">{{ project.client.title }}</a></dd>{% endif %}
+    </dl>
+    {{ sectors(project.sector) }}
+  {% endif %}
+
+  {% if summary %}<p class="p-summary">{{ summary }}</p>{% endif %}
+
+  <div class="e-content">
+    {{ content | safe }}
+  </div>
+
+  {% include "partials/tags.html" %}
+
+  {% from "macros/related.html" import related %}
+  {{ related(collections.relatable, page, { "limit": 5, "category": false, "featured": "only", "heading": "More on this topic" }) }}
+
+  {% include "partials/h-entry-meta.html" %}
+  {% include "partials/webmentions.html" %}
+
+  <p><a href="/working/">Back to Working</a></p>
+</article>

@@ -1,0 +1,21 @@
+---
+layout: layouts/base.html
+permalink: /working/organisations/
+title: Organisations
+eleventyExcludeFromCollections: true
+---
+{% from "macros/working.html" import organisationItem, workingNav %}
+
+<h1>{{ title }}</h1>
+
+{{ workingNav("organisations") }}
+
+<p>Everywhere I have worked, and everyone I have worked for, A–Z.</p>
+
+<ul>
+  {% for org in collections.workingOrganisations %}
+    {{ organisationItem(org) }}
+  {% else %}
+    <li>Nothing here yet.</li>
+  {% endfor %}
+</ul>

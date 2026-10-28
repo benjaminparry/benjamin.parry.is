@@ -1,0 +1,43 @@
+---
+layout: layouts/base.html
+---
+{% from "macros/working.html" import period, projectItem, historyItem, sectors, workingNav %}
+{# An organisation: the jobs I had there, and every project for it or at it #}
+{% set org = collections.workingOrganisations | bySlug(page.fileSlug) %}
+<article>
+  <h1>{{ title }}</h1>
+
+  {{ workingNav("organisations") }}
+
+  {% if org %}
+    <p>
+      {% if org.isEmployer %}Employer{% endif %}{% if org.isEmployer and org.isClient %} and {% endif %}{% if org.isClient %}Client{% endif %}
+      {% if org.current %}· <strong>Current</strong>{% endif %}
+      {% if org.website %}· <a href="{{ org.website }}" rel="noopener">{{ org.website | hostname }}</a>{% endif %}
+    </p>
+    {% if org.summary %}<p>{{ org.summary }}</p>{% endif %}
+    {{ sectors(org.sector) }}
+  {% endif %}
+
+  <div>
+    {{ content | safe }}
+  </div>
+
+  {% if org and org.roles.length %}
+    <h2>Working here</h2>
+    <ul>
+      {% for role in org.roles %}{{ historyItem(role) }}{% endfor %}
+    </ul>
+  {% endif %}
+
+  <h2>Projects</h2>
+  <ul>
+    {% for project in org.projects %}
+      {{ projectItem(project) }}
+    {% else %}
+      <li>No projects yet.</li>
+    {% endfor %}
+  </ul>
+
+  <p><a href="/working/organisations/">All organisations</a></p>
+</article>

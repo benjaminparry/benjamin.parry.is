@@ -1,0 +1,25 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.workingMonths
+  size: 1
+  alias: group
+permalink: "/working/{{ group.year }}/{{ group.month }}/"
+eleventyComputed:
+  title: "Working in {{ group.name }} {{ group.year }}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/feed.html" import feedItem %}
+{% from "macros/working.html" import projectItem %}
+
+<h1>{{ title }}</h1>
+
+<ul>
+  {% for post in group.posts %}
+    {# The project with who it was for; a plain entry if it can't be found #}
+    {% set project = collections.workingProjects | bySlug(post.fileSlug) %}
+    {% if project %}{{ projectItem(project) }}{% else %}{{ feedItem(post) }}{% endif %}
+  {% endfor %}
+</ul>
+
+<p><a href="/working/{{ group.year }}/">All of {{ group.year }}</a></p>

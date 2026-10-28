@@ -7,6 +7,7 @@ import { related, onThisDay } from "./_config/related.js";
 import { webmentionsFor, summariseWebmentions } from "./_config/webmentions.js";
 import { sections as sendingSections, collectionName as sendingName, globFor as sendingGlob, allGlob as sendingAllGlob, sendingYears, sendingMonths, stamp } from "./_config/sending.js";
 import { feedContent } from "./_config/feed.js";
+import { buildWork, bySlug } from "./_config/working.js";
 import { adjacentPosts } from "./_config/adjacent.js";
 import { pageWindowFor } from "./_config/pager.js";
 import { updatesOf, feedDate, updatedFirst, partOf } from "./_config/updated.js";
@@ -141,6 +142,30 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("everything", (api) => newestFirst(taggablePosts(api)));
   eleventyConfig.addCollection("everythingUpdated", (api) => updatedFirst(taggablePosts(api)));
 
+  // /working/: projects are the posts in source/working/ (the "working" root collection above).
+  // The organisations, the working history and the sectors are worked out from them and from
+  //   source/working/organisations/*.md   and   source/working/history/*.md
+  // See _config/working.js and WORKING.md. Each collection is a list of plain views, not Eleventy items.
+  const warned = new Set();
+  const workModel = (api) => {
+    const work = buildWork({
+      organisations: api.getFilteredByGlob("source/working/organisations/*.md"),
+      engagements: api.getFilteredByGlob("source/working/history/*.md"),
+      projects: api.getFilteredByGlob(rootGlob("working")),
+    }, new Date());
+    for (const message of work.problems) {
+      if (!warned.has(message)) { warned.add(message); console.warn(`[working] ${message}`); }
+    }
+    return work;
+  };
+  eleventyConfig.addCollection("workingOrganisations", (api) => workModel(api).organisations);   // A-Z
+  eleventyConfig.addCollection("workingHistory", (api) => workModel(api).engagements);            // newest first
+  eleventyConfig.addCollection("workingProjects", (api) => workModel(api).projects);              // newest first
+  eleventyConfig.addCollection("workingSectors", (api) => workModel(api).sectors);                // A-Z
+  eleventyConfig.addCollection("workingCurrent", (api) => workModel(api).current);                // working on now
+  eleventyConfig.addCollection("workingPrevious", (api) => workModel(api).previous);
+  eleventyConfig.addCollection("workingFeatured", (api) => workModel(api).featured);
+
   // Collecting collections: every post in source/collecting/<section>/
   eleventyConfig.addCollection("collecting", (api) =>
     newestFirst(api.getFilteredByGlob(allGlob)));
@@ -227,6 +252,13 @@ export default function (eleventyConfig) {
 
   // Which page numbers the pagination shows: {{ pagination | pageWindow(3) }} -> [1, 2, 3, null, 28, 29, 30]
   eleventyConfig.addFilter("pageWindow", pageWindowFor);
+
+  // Find one view by its slug: {% set org = collections.workingOrganisations | bySlug(page.fileSlug) %}
+  eleventyConfig.addFilter("bySlug", bySlug);
+
+  // "March 2024" (UTC, so a date never shifts in British Summer Time)
+  eleventyConfig.addFilter("monthYear", (d) =>
+    new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric", timeZone: "UTC" }).format(asDate(d)));
 
   eleventyConfig.addFilter("updatesOf", updatesOf);
   eleventyConfig.addFilter("feedDate", feedDate);

@@ -70,10 +70,11 @@ export function writingMonths(posts) {
 // One entry per tag, alphabetical:
 //   [{ name: "Data", slug: "data", posts: [...] }]
 // "Data" and "data" on different posts become the same tag (same slug).
+// A post's `sector` (working projects) counts as tags too, so a sector is also found under /tagging/.
 export function writingTags(posts) {
   const tags = new Map();
   for (const post of newestFirst(posts)) {
-    for (const name of [].concat(post.data.tags ?? [])) {   // accepts a list or a single string
+    for (const name of [].concat(post.data.tags ?? [], post.data.sector ?? [])) {   // accepts a list or a single string
       const slug = slugify(name);
       if (!slug) continue;
       if (!tags.has(slug)) tags.set(slug, { name: String(name).trim(), slug, posts: [] });

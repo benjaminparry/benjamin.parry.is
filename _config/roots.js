@@ -1,4 +1,4 @@
-// Helpers for the root-level collections (speaking, celebrating, attending, now, making).
+// Helpers for the root-level collections (speaking, celebrating, attending, now, making, working).
 // Plain JavaScript with no Eleventy code in it, so it is easy to test on its own.
 //
 // Posts live in source/<slug>/ and are named with their date:
@@ -16,6 +16,7 @@ export const roots = [
   { slug: "attending", title: "Attending" },
   { slug: "now", title: "Now" },
   { slug: "making", title: "Making" },
+  { slug: "working", title: "Working" },   // projects; the people and places behind them are in working.js
 ];
 
 export const rootGlob = (slug) => `source/${slug}/*.md`;

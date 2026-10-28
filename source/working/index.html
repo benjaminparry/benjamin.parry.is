@@ -1,0 +1,59 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.workingProjects
+  size: 10
+  alias: projects
+  generatePageOnEmptyData: true
+permalink: "/working/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "Working{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/working.html" import projectItem, workingNav %}
+{% from "macros/collecting.html" import pager %}
+
+<h1>Working</h1>
+
+{{ workingNav("projects") }}
+
+{% if pagination.pageNumber == 0 %}
+  {# The spotlight: what I am working on now, and previous projects I want to point out #}
+  {% set featuredBefore = collections.workingFeatured | rejectattr("current") %}
+  {% if collections.workingCurrent.length %}
+    <section aria-labelledby="working-now">
+      <h2 id="working-now">Working on now</h2>
+      <ul>
+        {% for project in collections.workingCurrent %}{{ projectItem(project) }}{% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+  {% if featuredBefore.length %}
+    <section aria-labelledby="working-featured">
+      <h2 id="working-featured">Featured</h2>
+      <ul>
+        {% for project in featuredBefore %}{{ projectItem(project) }}{% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+{% endif %}
+
+<nav aria-label="Browse working by year">
+  <ul>
+    {% for group in collections.workingYears %}
+      <li><a href="/working/{{ group.year }}/">{{ group.year }}</a></li>
+    {% endfor %}
+    <li><a href="/tagging/">All tags</a></li>
+  </ul>
+</nav>
+
+<h2>All projects</h2>
+<ul>
+  {% for project in projects %}
+    {{ projectItem(project) }}
+  {% else %}
+    <li>No projects yet.</li>
+  {% endfor %}
+</ul>
+
+{{ pager(pagination, page.url) }}

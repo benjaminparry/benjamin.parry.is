@@ -1,0 +1,74 @@
+{# Building blocks for /working/. They take the views from _config/working.js (collections.workingProjects,
+   workingHistory, workingOrganisations, workingSectors), not Eleventy posts. #}
+
+{# "March 2017 – March 2024 (7 years)" or "July 2025 – present (1 year 3 months)". x = any project or role view. #}
+{% macro period(x) %}
+  <time datetime="{{ x.start | isoDate }}">{{ x.start | monthYear }}</time>
+  –
+  {% if x.current %}present{% else %}<time datetime="{{ x.end | isoDate }}">{{ x.end | monthYear }}</time>{% endif %}
+  ({{ x.duration }})
+{% endmacro %}
+
+{# Sector names, each linking to its sector page #}
+{% macro sectors(names) %}
+  {% if names and names.length %}
+    <ul aria-label="Sectors">
+      {% for name in names %}<li><a href="/working/sectors/{{ name | tagSlug }}/">{{ name }}</a></li>{% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{# One project in a list. showRelationship: false where the page already says who it was for. #}
+{% macro projectItem(p, showRelationship) %}
+  {% from "macros/working.html" import period, sectors %}
+  <li>
+    <a href="{{ p.url }}">{{ p.title }}</a>
+    {% if p.current %}<strong>Current</strong>{% endif %}
+    {% if p.featured %}<span>★ Featured</span>{% endif %}
+    {% if showRelationship != false and p.relationship %}<span>{{ p.relationship }}</span>{% endif %}
+    <span>{{ period(p) }}</span>
+    {% if p.summary %}<p>{{ p.summary }}</p>{% endif %}
+    {{ sectors(p.sector) }}
+  </li>
+{% endmacro %}
+
+{# One stretch of working life in the history #}
+{% macro historyItem(e) %}
+  {% from "macros/working.html" import period %}
+  <li>
+    <a href="{{ e.url }}">{{ e.employerName }}</a>
+    {% if e.role %}<span>{{ e.role }}</span>{% endif %}
+    <span>{{ e.typeLabel }}</span>
+    {% if e.current %}<strong>Current</strong>{% endif %}
+    <span>{{ period(e) }}</span>
+    {% if e.summary %}<p>{{ e.summary }}</p>{% endif %}
+    {% if e.projects.length %}
+      <p>{{ e.projects.length }} project{% if e.projects.length != 1 %}s{% endif %}{% if e.clients.length %}, for
+        {% for client in e.clients %}<a href="{{ client.url }}">{{ client.title }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</p>
+    {% endif %}
+  </li>
+{% endmacro %}
+
+{# One organisation in a list: what it has been to me (employer, client or both) #}
+{% macro organisationItem(o) %}
+  {% from "macros/working.html" import sectors %}
+  <li>
+    <a href="{{ o.url }}">{{ o.title }}</a>
+    {% if o.current %}<strong>Current</strong>{% endif %}
+    <span>{% if o.isEmployer %}Employer{% endif %}{% if o.isEmployer and o.isClient %} and {% endif %}{% if o.isClient %}Client{% endif %}</span>
+    <span>{{ o.projects.length }} project{% if o.projects.length != 1 %}s{% endif %}</span>
+    {{ sectors(o.sector) }}
+  </li>
+{% endmacro %}
+
+{# Links between the parts of /working/. current: "projects", "history", "organisations" or "sectors" #}
+{% macro workingNav(current) %}
+  <nav aria-label="Working">
+    <ul>
+      <li><a href="/working/"{% if current == "projects" %} aria-current="page"{% endif %}>Projects</a></li>
+      <li><a href="/working/history/"{% if current == "history" %} aria-current="page"{% endif %}>History</a></li>
+      <li><a href="/working/organisations/"{% if current == "organisations" %} aria-current="page"{% endif %}>Organisations</a></li>
+      <li><a href="/working/sectors/"{% if current == "sectors" %} aria-current="page"{% endif %}>Sectors</a></li>
+    </ul>
+  </nav>
+{% endmacro %}

@@ -1,0 +1,21 @@
+---
+layout: layouts/base.html
+permalink: /working/history/
+title: Working history
+eleventyExcludeFromCollections: true
+---
+{% from "macros/working.html" import historyItem, workingNav %}
+
+<h1>{{ title }}</h1>
+
+{{ workingNav("history") }}
+
+<p>Where I have worked, newest first, and how.</p>
+
+<ol>
+  {% for job in collections.workingHistory %}
+    {{ historyItem(job) }}
+  {% else %}
+    <li>Nothing here yet.</li>
+  {% endfor %}
+</ol>

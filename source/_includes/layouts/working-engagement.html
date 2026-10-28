@@ -1,0 +1,44 @@
+---
+layout: layouts/base.html
+---
+{% from "macros/working.html" import period, projectItem, workingNav %}
+{# One stretch of working life, with the projects done during it #}
+{% set job = collections.workingHistory | bySlug(page.fileSlug) %}
+<article>
+  <h1>{{ title }}</h1>
+
+  {{ workingNav("history") }}
+
+  {% if job %}
+    <dl>
+      <dt>{% if job.employer %}Employer{% else %}Working{% endif %}</dt>
+      <dd>{% if job.employer %}<a href="{{ job.employer.url }}">{{ job.employer.title }}</a>{% else %}{{ job.employerName }}{% endif %}</dd>
+      <dt>How</dt><dd>{{ job.typeLabel }}</dd>
+      {% if job.role %}<dt>Role</dt><dd>{{ job.role }}</dd>{% endif %}
+      <dt>When</dt><dd>{{ period(job) }}</dd>
+    </dl>
+    {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
+  {% endif %}
+
+  <div>
+    {{ content | safe }}
+  </div>
+
+  {% if job and job.clients.length %}
+    <h2>Worked for</h2>
+    <ul>
+      {% for client in job.clients %}<li><a href="{{ client.url }}">{{ client.title }}</a></li>{% endfor %}
+    </ul>
+  {% endif %}
+
+  <h2>Projects</h2>
+  <ul>
+    {% for project in job.projects %}
+      {{ projectItem(project) }}
+    {% else %}
+      <li>No projects here yet.</li>
+    {% endfor %}
+  </ul>
+
+  <p><a href="/working/history/">Back to history</a></p>
+</article>

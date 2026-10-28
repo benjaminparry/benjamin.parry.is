@@ -1,0 +1,37 @@
+---
+layout: layouts/base.html
+pagination:
+  data: collections.workingSectors
+  size: 1
+  alias: sector
+permalink: "/working/sectors/{{ sector.slug }}/"
+eleventyComputed:
+  title: "Working in {{ sector.name }}"
+eleventyExcludeFromCollections: true
+---
+{% from "macros/working.html" import projectItem, workingNav %}
+
+<h1>{{ title }}</h1>
+
+{{ workingNav("sectors") }}
+
+{% if sector.organisations.length %}
+  <h2>Organisations</h2>
+  <ul>
+    {% for org in sector.organisations %}<li><a href="{{ org.url }}">{{ org.title }}</a></li>{% endfor %}
+  </ul>
+{% endif %}
+
+<h2>Projects</h2>
+<ul>
+  {% for project in sector.projects %}
+    {{ projectItem(project) }}
+  {% else %}
+    <li>No projects yet.</li>
+  {% endfor %}
+</ul>
+
+<p>
+  {% if collections.allTags | bySlug(sector.slug) %}Also tagged <a href="/tagging/{{ sector.slug }}/">{{ sector.name }}</a> across the site. {% endif %}
+  <a href="/working/sectors/">All sectors</a>
+</p>
