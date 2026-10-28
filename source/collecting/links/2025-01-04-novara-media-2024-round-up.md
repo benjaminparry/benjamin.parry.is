@@ -8,7 +8,6 @@ tags:
   - Technology
   - Consumerism
   - Regenerative
-updated: 2025-01-04T14:44:36.662Z
 ---
 
 I’ve grown very fond of the Novara Media journalists. I particularly liked Ash Sarkar’s closing hopes for 2025.

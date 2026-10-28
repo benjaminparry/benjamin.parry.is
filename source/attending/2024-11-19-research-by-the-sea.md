@@ -10,7 +10,6 @@ location:
   locality: Brighton
   countryName: UK
   postalCode: BN1 1UG
-updated: 2024-11-19T16:43:18.486Z
 ---
 
 I curated a research conference, it’s going to be ace! Hope to see your there! [https://researchbythesea.com/](https://researchbythesea.com/)

@@ -6,7 +6,6 @@ category: Technology
 tags: LLM
 syndication:
   - https://mastodon.social/@benjaminparry/113560049163552860
-updated: 2024-11-28T10:13:56.707Z
 ---
 
 Kirby doing it’s best LLM impression by inhaling the content in this blog post, presumably without permission.

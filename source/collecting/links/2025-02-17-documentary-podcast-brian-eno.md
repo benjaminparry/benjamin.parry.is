@@ -9,7 +9,6 @@ tags:
   - Flow
   - Technology
   - Music
-updated: 2025-02-17T09:56:18.113Z
 ---
 
 A fascinating window into Brian Eno’s design process and using his work for social good.

@@ -8,7 +8,6 @@ tags:
   - Ethics
 syndication:
   - https://mastodon.social/@benjaminparry/113764074520722288
-updated: 2025-01-03T11:00:16.786Z
 ---
 
 A fascinating talk about the state of AI and the role of ethics to navigate the potential benefit and harm it could bring.
