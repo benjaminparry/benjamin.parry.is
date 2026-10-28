@@ -7,7 +7,7 @@ import { related, onThisDay } from "./_config/related.js";
 import { webmentionsFor, summariseWebmentions } from "./_config/webmentions.js";
 import { sections as sendingSections, collectionName as sendingName, globFor as sendingGlob, allGlob as sendingAllGlob, sendingYears, sendingMonths, stamp } from "./_config/sending.js";
 import { feedContent } from "./_config/feed.js";
-import { updatesOf, feedDate, updatedFirst, createdFirst, partOf } from "./_config/updated.js";
+import { updatesOf, feedDate, updatedFirst, partOf } from "./_config/updated.js";
 import site from "./source/_data/site.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
@@ -134,9 +134,9 @@ export default function (eleventyConfig) {
     ]));
 
   // The two site-wide feeds under /everything-everywhere-all-at-once/: every post in every collection.
-  // everything = newest first by created date only (not sortDate); everythingUpdated = only posts with an "updated"
+  // everything = newest first by the post's own date; everythingUpdated = only posts with an "updated"
   // date, most recently updated first.
-  eleventyConfig.addCollection("everything", (api) => createdFirst(taggablePosts(api)));
+  eleventyConfig.addCollection("everything", (api) => newestFirst(taggablePosts(api)));
   eleventyConfig.addCollection("everythingUpdated", (api) => updatedFirst(taggablePosts(api)));
 
   // Collecting collections: every post in source/collecting/<section>/
