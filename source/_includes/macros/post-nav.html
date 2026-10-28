@@ -1,0 +1,46 @@
+{# Links to the previous and next post in a collection, each with the post's title and summary.
+   previous = the post before this one (older), next = the post after it (newer). The oldest post has no
+   previous link and the newest has no next link: a link is only shown if there is a post to go to.
+   Nothing at all is shown for a post that isn't in the collection, or when it is the only one.
+
+   Usage, in any post layout:
+     {% from "macros/post-nav.html" import postNav %}
+     {{ postNav(collections.writing, page) }}
+     {{ postNav(collections.writing, page, { "label": "More writing", "previous": "Older", "next": "Newer" }) }}
+
+   The collection and the page are passed in because macros can't see the page's own variables.
+   Use the collection the post belongs to: collections.writing, collections.collectingLinks and so on.
+
+   Options (all optional, quote the names like the other macros here):
+     label      the accessible name of the navigation. Default "More posts".
+     previous   the text above the previous link. Default "Previous post".
+     next       the text above the next link. Default "Next post".
+     summary    true / false: show each post's summary. Default true. #}
+{% macro postNav(pool, page, options) %}
+  {% set adjacent = pool | adjacentPosts(page) %}
+  {% if adjacent.previous or adjacent.next %}
+    {% set opts = options or {} %}
+    <nav aria-label="{{ opts.label or 'More posts' }}">
+      <ul>
+        {% if adjacent.previous %}
+          <li>
+            <a href="{{ adjacent.previous.url }}" rel="prev">
+              <span>{{ opts.previous or "Previous post" }}</span>
+              <strong>{{ adjacent.previous.data.title }}</strong>
+              {% if adjacent.previous.data.summary and opts.summary != false %}<span>{{ adjacent.previous.data.summary }}</span>{% endif %}
+            </a>
+          </li>
+        {% endif %}
+        {% if adjacent.next %}
+          <li>
+            <a href="{{ adjacent.next.url }}" rel="next">
+              <span>{{ opts.next or "Next post" }}</span>
+              <strong>{{ adjacent.next.data.title }}</strong>
+              {% if adjacent.next.data.summary and opts.summary != false %}<span>{{ adjacent.next.data.summary }}</span>{% endif %}
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
+{% endmacro %}

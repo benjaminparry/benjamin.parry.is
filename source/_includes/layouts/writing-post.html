@@ -14,6 +14,9 @@ layout: layouts/base.html
 
   {% include "partials/tags.html" %}
 
+  {% from "macros/post-nav.html" import postNav %}
+  {{ postNav(collections.writing, page, { "label": "More writing" }) }}
+
   {% from "macros/related.html" import related %}
   {{ related(collections.relatable, page, { "limit": 5, "category": false, "featured": "only", "heading": "More on this topic" }) }}
   {{ related(collections.relatable, page, { "onThisDay": true }) }}
