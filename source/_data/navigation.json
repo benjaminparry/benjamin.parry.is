@@ -149,6 +149,20 @@
       "divider": true
     }
   ],
+  "senary": [
+    {
+      "label": "Everthing Everywhere All At Once",
+      "decoration": "🕳️",
+      "url": "/everything-everywhere-all-at-once/",
+      "divider": true
+    },
+    {
+      "label": "Chronologically",
+      "decoration": "⬇️",
+      "url": "/everything-everywhere-all-at-once/chronologically/",
+      "divider": false
+    }
+  ],
   "elsewhere": [
     {
       "label": "Mastodon",

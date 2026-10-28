@@ -41,6 +41,14 @@
     {% endfor %}
 </ul>
 
+<ul>
+    {% for item in navigation.senary %}
+    <li>
+        <a href="{{ item.url }}">{{ item.label }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
 
 {% from 'macros/pullquote.njk' import pullquote %}
 
