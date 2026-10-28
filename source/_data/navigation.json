@@ -161,6 +161,12 @@
       "decoration": "⬇️",
       "url": "/everything-everywhere-all-at-once/chronologically/",
       "divider": false
+    },
+    {
+      "label": "Updated",
+      "decoration": "🔀",
+      "url": "/everything-everywhere-all-at-once/updated/",
+      "divider": false
     }
   ],
   "elsewhere": [
