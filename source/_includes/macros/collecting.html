@@ -31,16 +31,23 @@
 {% endmacro %}
 
 {# Previous / numbered pages / Next. Only shown when there is more than one page.
-   pagination and the current url are passed in because macros can't see the page's own variables. #}
-{% macro pager(pagination, currentUrl) %}
+   limit is how many page numbers to show at each end; with more than limit * 2 pages the middle is
+   shortened to "…" (1 2 3 … 28 29 30), always keeping the current page and its neighbours.
+   pagination is passed in because macros can't see the page's own variables. currentUrl is not used any more
+   (the current page comes from pagination) but is still accepted so existing calls keep working. #}
+{% macro pager(pagination, currentUrl, limit=3) %}
   {% if pagination.hrefs.length > 1 %}
     <nav aria-label="Pagination">
       <ul>
         {% if pagination.href.previous %}
           <li><a href="{{ pagination.href.previous }}" rel="prev">Previous</a></li>
         {% endif %}
-        {% for href in pagination.hrefs %}
-          <li><a href="{{ href }}" aria-label="Page {{ loop.index }}"{% if href == currentUrl %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+        {% for n in pagination | pageWindow(limit) %}
+          {% if n %}
+            <li><a href="{{ pagination.hrefs[n - 1] }}" aria-label="Page {{ n }}"{% if n == pagination.pageNumber + 1 %} aria-current="page"{% endif %}>{{ n }}</a></li>
+          {% else %}
+            <li aria-hidden="true">…</li>
+          {% endif %}
         {% endfor %}
         {% if pagination.href.next %}
           <li><a href="{{ pagination.href.next }}" rel="next">Next</a></li>

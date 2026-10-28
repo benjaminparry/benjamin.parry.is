@@ -11,6 +11,7 @@ eleventyComputed:
 eleventyExcludeFromCollections: true
 ---
 {% from "macros/writing-list-item.html" import writingItem %}
+{% from "macros/collecting.html" import pager %}
 
 <h1>Writing</h1>
 
@@ -30,18 +31,4 @@ eleventyExcludeFromCollections: true
   {% endfor %}
 </ul>
 
-{% if pagination.hrefs.length > 1 %}
-  <nav aria-label="Pagination">
-    <ul>
-      {% if pagination.href.previous %}
-        <li><a href="{{ pagination.href.previous }}" rel="prev">Previous</a></li>
-      {% endif %}
-      {% for href in pagination.hrefs %}
-        <li><a href="{{ href }}" aria-label="Page {{ loop.index }}"{% if href == page.url %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
-      {% endfor %}
-      {% if pagination.href.next %}
-        <li><a href="{{ pagination.href.next }}" rel="next">Next</a></li>
-      {% endif %}
-    </ul>
-  </nav>
-{% endif %}
+{{ pager(pagination, page.url) }}

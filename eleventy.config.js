@@ -7,6 +7,7 @@ import { related, onThisDay } from "./_config/related.js";
 import { webmentionsFor, summariseWebmentions } from "./_config/webmentions.js";
 import { sections as sendingSections, collectionName as sendingName, globFor as sendingGlob, allGlob as sendingAllGlob, sendingYears, sendingMonths, stamp } from "./_config/sending.js";
 import { feedContent } from "./_config/feed.js";
+import { pageWindowFor } from "./_config/pager.js";
 import { updatesOf, feedDate, updatedFirst, partOf } from "./_config/updated.js";
 import site from "./source/_data/site.js";
 
@@ -220,6 +221,9 @@ export default function (eleventyConfig) {
 
   // The "updated" front matter as [{ date, comment }] newest first; the date a feed entry is ordered by;
   // and which part of the site a post is in ({ title, url })
+  // Which page numbers the pagination shows: {{ pagination | pageWindow(3) }} -> [1, 2, 3, null, 28, 29, 30]
+  eleventyConfig.addFilter("pageWindow", pageWindowFor);
+
   eleventyConfig.addFilter("updatesOf", updatesOf);
   eleventyConfig.addFilter("feedDate", feedDate);
   eleventyConfig.addFilter("partOf", partOf);
