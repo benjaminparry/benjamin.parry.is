@@ -1,12 +1,13 @@
 {# Building blocks for /working/. They take the views from _config/working.js (collections.workingProjects,
    workingHistory, workingOrganisations, workingSectors), not Eleventy posts. #}
 
-{# "March 2017 – March 2024 (7 years)" or "July 2025 – present (1 year 3 months)". x = any project or role view. #}
+{# "March 2017 – March 2024 (7 years)", "June 2023 – July 2023 (8 weeks)", "July 2025 – present (1 year 3 months)" or just
+   "January 2019" when I only know when it started. x = any project or history view. The dates are only as precise
+   as the front matter ("2017" stays "2017"). #}
 {% macro period(x) %}
-  <time datetime="{{ x.start | isoDate }}">{{ x.start | monthYear }}</time>
-  –
-  {% if x.current %}present{% else %}<time datetime="{{ x.end | isoDate }}">{{ x.end | monthYear }}</time>{% endif %}
-  ({{ x.duration }})
+  {% if x.startLabel %}<time datetime="{{ x.startIso }}">{{ x.startLabel }}</time>{% endif %}
+  {% if x.current %}– present{% elif x.endLabel and x.endLabel != x.startLabel %}– <time datetime="{{ x.endIso }}">{{ x.endLabel }}</time>{% endif %}
+  {% if x.duration %}({{ x.duration }}){% endif %}
 {% endmacro %}
 
 {# Sector names, each linking to its sector page #}
@@ -40,6 +41,7 @@
     {% if e.role %}<span>{{ e.role }}</span>{% endif %}
     <span>{{ e.typeLabel }}</span>
     {% if e.current %}<strong>Current</strong>{% endif %}
+    {% if e.inferred %}<span title="Worked out from the projects below until there is a history file for it">dates from projects</span>{% endif %}
     <span>{{ period(e) }}</span>
     {% if e.summary %}<p>{{ e.summary }}</p>{% endif %}
     {% if e.projects.length %}

@@ -25,7 +25,7 @@ eleventyExcludeFromCollections: true
 <ul>
   {% for post in group.posts %}
     {# The project with who it was for; a plain entry if it can't be found #}
-    {% set project = collections.workingProjects | bySlug(post.fileSlug) %}
+    {% set project = collections.workingProjects | byUrl(post.url) %}
     {% if project %}{{ projectItem(project) }}{% else %}{{ feedItem(post) }}{% endif %}
   {% endfor %}
 </ul>

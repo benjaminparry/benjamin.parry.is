@@ -1,0 +1,11 @@
+---
+layout: layouts/working-organisation.html
+pagination:
+  data: collections.workingOrganisations
+  size: 1
+  alias: org
+permalink: "/working/organisations/{{ org.slug }}/"
+eleventyComputed:
+  title: "{{ org.title }}"
+eleventyExcludeFromCollections: true
+---

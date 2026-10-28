@@ -1,0 +1,11 @@
+---
+layout: layouts/working-engagement.html
+pagination:
+  data: collections.workingHistory
+  size: 1
+  alias: job
+permalink: "/working/history/{{ job.slug }}/"
+eleventyComputed:
+  title: "{{ job.title }}"
+eleventyExcludeFromCollections: true
+---

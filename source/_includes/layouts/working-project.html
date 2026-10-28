@@ -3,12 +3,12 @@ layout: layouts/base.html
 ---
 {% from "macros/working.html" import period, sectors %}
 {# The project with its engagement, client and sectors worked out (see _config/working.js) #}
-{% set project = collections.workingProjects | bySlug(page.fileSlug) %}
+{% set project = collections.workingProjects | byUrl(page.url) %}
 <article class="h-entry">
   <h1 class="p-name">{{ title }}</h1>
 
   <p>
-    <time class="dt-published" datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time>
+    {% if project %}<time class="dt-published" datetime="{{ project.startIso }}">{{ project.startLabel }}</time>{% endif %}
     in <a href="/working/">Working</a>
   </p>
 
@@ -30,11 +30,19 @@ layout: layouts/base.html
     {{ sectors(project.sector) }}
   {% endif %}
 
+  {% if project and project.image %}
+    <img class="u-photo" src="{{ project.image }}" alt="{{ project.imageAlt }}" loading="lazy" decoding="async">
+  {% endif %}
+
   {% if summary %}<p class="p-summary">{{ summary }}</p>{% endif %}
 
   <div class="e-content">
     {{ content | safe }}
   </div>
+
+  {% if project and project.caseStudy %}
+    <p><a class="u-url" href="{{ project.caseStudy.url }}" rel="noopener">{{ project.caseStudy.label }}</a></p>
+  {% endif %}
 
   {% include "partials/tags.html" %}
 

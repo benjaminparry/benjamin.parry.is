@@ -32,8 +32,8 @@ export const newestFirst = (posts) => [...posts].sort((a, b) => postDate(b) - po
 function monthsOf(posts) {
   const months = new Map();
   for (const post of newestFirst(posts)) {
-    const month = monthOf(post.date);
-    if (!months.has(month)) months.set(month, { month, name: monthName(post.date), count: 0 });
+    const month = monthOf(postDate(post));
+    if (!months.has(month)) months.set(month, { month, name: monthName(postDate(post)), count: 0 });
     months.get(month).count++;
   }
   return [...months.values()];
@@ -44,7 +44,7 @@ function monthsOf(posts) {
 export function writingYears(posts) {
   const years = new Map();
   for (const post of newestFirst(posts)) {
-    const year = yearOf(post.date);
+    const year = yearOf(postDate(post));
     if (!years.has(year)) years.set(year, []);
     years.get(year).push(post);
   }
@@ -58,10 +58,11 @@ export function writingYears(posts) {
 export function writingMonths(posts) {
   const months = new Map();
   for (const post of newestFirst(posts)) {   // newest first, so the Map is already in order
-    const year = yearOf(post.date);
-    const month = monthOf(post.date);
+    const when = postDate(post);   // its sortDate where it has one (working projects: when they started)
+    const year = yearOf(when);
+    const month = monthOf(when);
     const key = `${year}-${month}`;
-    if (!months.has(key)) months.set(key, { year, month, name: monthName(post.date), posts: [] });
+    if (!months.has(key)) months.set(key, { year, month, name: monthName(when), posts: [] });
     months.get(key).posts.push(post);
   }
   return [...months.values()];

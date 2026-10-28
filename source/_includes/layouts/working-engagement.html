@@ -2,8 +2,7 @@
 layout: layouts/base.html
 ---
 {% from "macros/working.html" import period, projectItem, workingNav %}
-{# One stretch of working life, with the projects done during it #}
-{% set job = collections.workingHistory | bySlug(page.fileSlug) %}
+{# One stretch of working life, with the projects done during it. job comes from the page that generates it (working-pages/history/entry.html) #}
 <article>
   <h1>{{ title }}</h1>
 
@@ -19,10 +18,6 @@ layout: layouts/base.html
     </dl>
     {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
   {% endif %}
-
-  <div>
-    {{ content | safe }}
-  </div>
 
   {% if job and job.clients.length %}
     <h2>Worked for</h2>

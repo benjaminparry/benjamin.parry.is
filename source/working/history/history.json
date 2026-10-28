@@ -1,6 +1,0 @@
-{
-  "layout": "layouts/working-engagement.html",
-  "collection": "working-history",
-  "collectionTitle": "Working history",
-  "permalink": "/working/history/{{ page.fileSlug }}/"
-}

@@ -1,6 +1,0 @@
-{
-  "layout": "layouts/working-organisation.html",
-  "collection": "working-organisations",
-  "collectionTitle": "Organisations",
-  "permalink": "/working/organisations/{{ page.fileSlug }}/"
-}

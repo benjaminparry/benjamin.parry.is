@@ -2,8 +2,7 @@
 layout: layouts/base.html
 ---
 {% from "macros/working.html" import period, projectItem, historyItem, sectors, workingNav %}
-{# An organisation: the jobs I had there, and every project for it or at it #}
-{% set org = collections.workingOrganisations | bySlug(page.fileSlug) %}
+{# An organisation: the jobs I had there, and every project for it or at it. org comes from the page that generates it (working-pages/organisations/entry.html) #}
 <article>
   <h1>{{ title }}</h1>
 
@@ -18,10 +17,6 @@ layout: layouts/base.html
     {% if org.summary %}<p>{{ org.summary }}</p>{% endif %}
     {{ sectors(org.sector) }}
   {% endif %}
-
-  <div>
-    {{ content | safe }}
-  </div>
 
   {% if org and org.roles.length %}
     <h2>Working here</h2>

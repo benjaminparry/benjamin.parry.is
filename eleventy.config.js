@@ -7,7 +7,7 @@ import { related, onThisDay } from "./_config/related.js";
 import { webmentionsFor, summariseWebmentions } from "./_config/webmentions.js";
 import { sections as sendingSections, collectionName as sendingName, globFor as sendingGlob, allGlob as sendingAllGlob, sendingYears, sendingMonths, stamp } from "./_config/sending.js";
 import { feedContent } from "./_config/feed.js";
-import { buildWork, bySlug } from "./_config/working.js";
+import { buildWork, bySlug, byUrl } from "./_config/working.js";
 import { adjacentPosts } from "./_config/adjacent.js";
 import { pageWindowFor } from "./_config/pager.js";
 import { updatesOf, feedDate, updatedFirst, partOf } from "./_config/updated.js";
@@ -253,12 +253,10 @@ export default function (eleventyConfig) {
   // Which page numbers the pagination shows: {{ pagination | pageWindow(3) }} -> [1, 2, 3, null, 28, 29, 30]
   eleventyConfig.addFilter("pageWindow", pageWindowFor);
 
-  // Find one view by its slug: {% set org = collections.workingOrganisations | bySlug(page.fileSlug) %}
+  // Find one view by its slug: {% set org = collections.workingOrganisations | bySlug("clearleft") %}
   eleventyConfig.addFilter("bySlug", bySlug);
-
-  // "March 2024" (UTC, so a date never shifts in British Summer Time)
-  eleventyConfig.addFilter("monthYear", (d) =>
-    new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric", timeZone: "UTC" }).format(asDate(d)));
+  // ... or by its url: {% set project = collections.workingProjects | byUrl(page.url) %}
+  eleventyConfig.addFilter("byUrl", byUrl);
 
   eleventyConfig.addFilter("updatesOf", updatesOf);
   eleventyConfig.addFilter("feedDate", feedDate);
