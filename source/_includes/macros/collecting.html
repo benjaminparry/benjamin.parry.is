@@ -6,7 +6,7 @@
   <li>
     {% if post.data.images and post.data.images.length %}
       {# Decorative: the title link beside it names the post, so the alt text is empty #}
-      <img src="{{ post.data.images[0] }}" alt="" width="200" height="300" loading="lazy" decoding="async">
+      <img src="{{ post.data.images[0] }}" alt=""  loading="lazy" decoding="async">
     {% endif %}
     <a href="{{ post.url }}">{{ post.data.title }}</a>
     <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
@@ -21,7 +21,7 @@
 {# Links between /collecting/ and its sections. current = the section slug, or "" for /collecting/ #}
 {% macro sectionNav(sections, current) %}
   <nav aria-label="Collecting sections">
-    <ul>
+    <ul class="inline-list">
       <li><a href="/collecting/"{% if current == "" %} aria-current="page"{% endif %}>All</a></li>
       {% for s in sections %}
         <li><a href="/collecting/{{ s.slug }}/"{% if s.slug == current %} aria-current="page"{% endif %}>{{ s.title }}</a></li>
@@ -38,7 +38,7 @@
 {% macro pager(pagination, currentUrl, limit=3) %}
   {% if pagination.hrefs.length > 1 %}
     <nav aria-label="Pagination">
-      <ul>
+      <ul class="inline-list">
         {% if pagination.href.previous %}
           <li><a href="{{ pagination.href.previous }}" rel="prev">Previous</a></li>
         {% endif %}

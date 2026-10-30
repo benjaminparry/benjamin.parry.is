@@ -7,7 +7,7 @@ layout: layouts/base.html
 <article>
   <h1>{{ title }}</h1>
 
-  <img src="{{ poster or ('/assets/images/watching/' ~ page.fileSlug ~ '.jpg') }}" alt="Poster for {{ title }}" width="200" height="300" decoding="async">
+  <img src="{{ poster or ('/assets/images/watching/' ~ page.fileSlug ~ '.jpg') }}" alt="Poster for {{ title }}"  decoding="async">
 
   {% if award %}<p><strong>Award</strong></p>{% endif %}
 

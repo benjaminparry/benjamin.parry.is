@@ -14,7 +14,7 @@ eleventyExcludeFromCollections: true
 <h1>{{ title }}</h1>
 
 <nav aria-label="Months in {{ group.year }}">
-  <ul>
+  <ul class="inline-list">
     {% for m in group.months %}
       <li><a href="/now/{{ group.year }}/{{ m.month }}/">{{ m.name }}</a> ({{ m.count }})</li>
     {% endfor %}

@@ -4,7 +4,7 @@
       {% set popcorn = post.review.popcorn %}
       {% set poster = post.poster or ("/assets/images/watching/" ~ entry.item.fileSlug ~ ".jpg") %}
       <li>
-        <img src="{{ poster }}" alt="Poster for {{ post.title }}" width="200" height="300" loading="lazy" decoding="async">
+        <img src="{{ poster }}" alt="Poster for {{ post.title }}"  loading="lazy" decoding="async">
         <a href="{{ entry.item.url }}">{{ post.title }}</a>
         {% if post.award %}<p>🏆 Award</p>{% endif %}
         {% if post.review %}

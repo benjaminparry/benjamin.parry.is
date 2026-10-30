@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
 {{ sendingNav(sendingSections, "") }}
 
 <nav aria-label="Browse sending by year">
-  <ul>
+  <ul class="inline-list">
     {% for group in collections.sendingYears %}
       <li><a href="/sending/{{ group.year }}/">{{ group.year }}</a></li>
     {% endfor %}

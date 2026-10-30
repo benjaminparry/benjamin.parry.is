@@ -1,7 +1,7 @@
 {# The tags on a post, each linking to its /tagging/ page. Shows nothing when a post has no tags. #}
 {% if tags %}
   <h2>Tags</h2>
-  <ul>
+  <ul class="inline-list">
     {% for tag in tags %}
       <li><a class="p-category" href="/tagging/{{ tag | tagSlug }}/">{{ tag }}</a></li>
     {% endfor %}

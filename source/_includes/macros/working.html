@@ -66,7 +66,7 @@
 {# Links between the parts of /working/. current: "projects", "history", "organisations" or "sectors" #}
 {% macro workingNav(current) %}
   <nav aria-label="Working">
-    <ul>
+    <ul class="inline-list">
       <li><a href="/working/"{% if current == "projects" %} aria-current="page"{% endif %}>Projects</a></li>
       <li><a href="/working/history/"{% if current == "history" %} aria-current="page"{% endif %}>History</a></li>
       <li><a href="/working/organisations/"{% if current == "organisations" %} aria-current="page"{% endif %}>Organisations</a></li>

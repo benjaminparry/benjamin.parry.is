@@ -1,0 +1,124 @@
+{
+	"events": [
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-09-19",
+            "time": "19:00",
+            "organiser": "UXup",
+            "name": "UXup Autumn: content design and strategy",
+            "location": "in-person",
+            "url": "https://www.eventbrite.co.uk/e/uxup-autumn-content-design-and-strategy-tickets-1003719531137?aff=oddtdtcreator"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-06-11",
+            "time": "13:00",
+            "organiser": "Clearleft",
+            "name": "Service design online panel",
+            "location": "remote",
+            "url": "https://clearleft.com/does-a-great-customer-experience-require-a-great-employee-experience"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-06-06",
+            "time": "19:00",
+            "organiser": "UXup",
+            "name": "UXup Summer and 5th Birthday Bash!",
+            "location": "in-person",
+            "url": "https://www.eventbrite.co.uk/e/uxup-summer-and-5th-birthday-bash-tickets-899158887437?aff=oddtdtcreator"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-05-30",
+            "time": "17:00",
+            "organiser": "Rally UXR",
+            "name": "AMA with Steve: What makes a mature research practice?",
+            "location": "online",
+            "url": "https://app.getcontrast.io/register/rally-uxr-ama-with-steve-what-makes-a-mature-research-practice"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-05-29",
+            "time": "16:00",
+            "organiser": "d.MBA",
+            "name": "Ups and Downs of Design Entrepreneurship: The Dunning-Kruger Effect in Design",
+            "location": "online",
+            "url": "https://d.mba/webinars/ups-and-downs-of-design-entrepreneurship-the-dunning-kruger-effect-in-design"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-05-24",
+            "time": "13:00",
+            "organiser": "Steps Collective",
+            "name": "Regenerative Narratives and Language",
+            "location": "online",
+            "url": "https://lu.ma/2ffwgx5v"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-05-22",
+            "time": "19:00",
+            "organiser": "IndieWeb",
+            "name": "Homebrew Website Club Europe/London",
+            "location": "online",
+            "url": "https://events.indieweb.org/2024/05/homebrew-website-club-europe-london-1UvVxccFFGsb"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-05-17",
+            "time": "12:00",
+            "organiser": "Research Thing",
+            "name": "Global Accessibility Awareness Day",
+            "location": "online",
+            "url": "https://www.meetup.com/researchthing/events/300992765"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-05-15",
+            "time": "19:00",
+            "organiser": "IndieWeb",
+            "name": "Homebrew Website Club Europe/London",
+            "location": "online",
+            "url": "https://events.indieweb.org/2024/05/homebrew-website-club-europe-london-HJs8USwnq2Ie"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-05-09",
+            "time": "16:00",
+            "organiser": "11tyConf",
+            "name": "International Symposium on Making Web Sites Real Good",
+            "location": "online",
+            "url": "https://conf.11ty.dev/"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "volunteer",
+            "date": "2024-04-27",
+            "time": "10:00",
+            "organiser": "UX Camp Brighton",
+            "name": "UX Camp Brighton’s annual un-conference",
+            "location": "in-person",
+            "url": "https://www.uxcampbrighton.org/"
+        },
+        {
+            "rsvp": "yes",
+            "attendingAs": "attendee",
+            "date": "2024-03-21",
+            "time": "19:00",
+            "organiser": "UXup",
+            "name": "Exploring UX Research",
+            "location": "in-person",
+            "url": "https://www.eventbrite.co.uk/e/exploring-ux-research-tickets-852111206557?aff=oddtdtcreator"
+        }
+	]
+}

@@ -80,6 +80,17 @@
   scroll-margin-block: 5ex;
 		}
 
+		/* TEMP */
+		/* Inline list */
+		.inline-list > li {
+		display: inline-block;
+		}
+		/* Page width girdle */
+		.squish {
+    		max-width: 600px;
+    		margin: 0 auto;
+		}
+
 
 		</style>
 
@@ -92,9 +103,12 @@
 		{% endfor %}
 	</head>
 	<body>
-		{{ content | safe }}
-	    <nav>
-		{% include "partials/navigation.html" %}
-		</nav>
+	    <div class="squish">
+    	    {% include "partials/top-navigation.html" %}
+    		{{ content | safe }}
+    	    <nav>
+    		{% include "partials/bottom-navigation.html" %}
+    		</nav>
+		</div>
 	</body>
 </html>

@@ -1,0 +1,11 @@
+<p>Clients:</p>
+
+<ol>
+  {% for item in collections.working %}
+  <li>
+    <ul>
+      <li>{{ item.data.client }}</li>
+    </ul>
+  </li>
+  {% endfor %}
+</ol>

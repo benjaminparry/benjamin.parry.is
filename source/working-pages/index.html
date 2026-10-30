@@ -39,7 +39,7 @@ eleventyExcludeFromCollections: true
 {% endif %}
 
 <nav aria-label="Browse working by year">
-  <ul>
+  <ul class="inline-list">
     {% for group in collections.workingYears %}
       <li><a href="/working/{{ group.year }}/">{{ group.year }}</a></li>
     {% endfor %}

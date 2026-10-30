@@ -3,7 +3,7 @@
   {% set post = entry.item.data %}
   {% set cover = post.cover | coverSrc("playing", entry.item.fileSlug) %}
   <li>
-    <img src="{{ cover }}" alt="Cover of {{ post.title }}" width="200" height="300" loading="lazy" decoding="async">
+    <img src="{{ cover }}" alt="Cover of {{ post.title }}"  loading="lazy" decoding="async">
     <a href="{{ entry.item.url }}">{{ post.title }}</a>
     {% if post.award %}<p>🏆 Award</p>{% endif %}
     {% if post.rating_emoji %}

@@ -16,7 +16,7 @@ eleventyExcludeFromCollections: true
 <h1>Writing</h1>
 
 <nav aria-label="Browse writing">
-  <ul>
+  <ul class="inline-list">
     {% for group in collections.writingYears %}
       <li><a href="/writing/{{ group.year }}/">{{ group.year }}</a></li>
     {% endfor %}

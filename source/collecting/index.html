@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
 {{ sectionNav(collectingSections, "") }}
 
 <nav aria-label="Browse collecting by year">
-  <ul>
+  <ul class="inline-list">
     {% for group in collections.collectingYears %}
       <li><a href="/collecting/{{ group.year }}/">{{ group.year }}</a></li>
     {% endfor %}

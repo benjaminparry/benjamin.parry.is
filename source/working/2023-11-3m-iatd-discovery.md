@@ -1,0 +1,21 @@
+---
+title: 'IATD discovery'
+client: '3M'
+sector:
+  - 'Manufacturing and Engineering'
+employer: 'Clearleft'
+duration: '8 weeks'
+date: '2023-12'
+posse: 'A wonderful project with the best people.'
+tags:
+cta: 'Learn more (could also be custom)'
+displayOrder: 1
+displayType: 'ommit'
+featured: false
+hero:
+  image: '/assets/images/open-university-logo.jpg'
+  imageAlt: 'Poop'
+permalink: false
+---
+
+Content here

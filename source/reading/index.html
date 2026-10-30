@@ -13,7 +13,7 @@ permalink: /reading/
     {% for item in collections.currentlyReading %}
       {% set cover = item.data.cover | coverSrc("reading", item.fileSlug) %}
       <li>
-        <img src="{{ cover }}" alt="Cover of {{ item.data.title }}" width="200" height="300" decoding="async">
+        <img src="{{ cover }}" alt="Cover of {{ item.data.title }}"  decoding="async">
         <a href="{{ item.url }}">{{ item.data.title }}</a>
       </li>
     {% else %}
@@ -24,7 +24,7 @@ permalink: /reading/
 
 <section aria-labelledby="done-heading">
   <h2 id="done-heading">Read this year</h2>
-  <ul>
+  <ul class="inline-list">
     {% for entry in collections.readThisYear %}
       {{ readEntry(entry) }}
     {% else %}

@@ -20,7 +20,7 @@ eleventyExcludeFromCollections: true
 <p>A snapshot of what I’m doing now. Part of the <a href="https://nownownow.com/about" rel="external">NowNowNow</a> group.</p>
 
 <nav aria-label="Browse now by year">
-  <ul>
+  <ul class="inline-list">
     {% for group in collections.nowYears %}
       <li><a href="/now/{{ group.year }}/">{{ group.year }}</a></li>
     {% endfor %}

@@ -13,7 +13,7 @@ permalink: /watching/
     {% for item in collections.currentlyWatching %}
       {% set poster = item.data.poster or ("/assets/images/watching/" ~ item.fileSlug ~ ".jpg") %}
       <li>
-        <img src="{{ poster }}" alt="Poster for {{ item.data.title }}" width="200" height="300" decoding="async">
+        <img src="{{ poster }}" alt="Poster for {{ item.data.title }}"  decoding="async">
         <a href="{{ item.url }}">{{ item.data.title }}</a>
       </li>
     {% else %}
@@ -24,7 +24,7 @@ permalink: /watching/
 
 <section aria-labelledby="watched-heading">
   <h2 id="watched-heading">Watched this year</h2>
-  <ul>
+  <ul class="inline-list">
     {% for entry in collections.watchedThisYear %}
       {{ watchedEntry(entry) }}
     {% else %}

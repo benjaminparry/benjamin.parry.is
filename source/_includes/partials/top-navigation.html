@@ -1,0 +1,10 @@
+
+<a href="/">Benjamin Parry</a>
+
+<ul class="inline-list">
+    {% for item in navigation.primary %}
+    <li>
+        <a href="{{ item.url }}"><span>{{ item.decoration }}</span> {{ item.label }}</a>
+    </li>
+    {% endfor %}
+</ul>

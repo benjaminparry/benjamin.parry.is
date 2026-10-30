@@ -21,7 +21,7 @@
   {% if adjacent.previous or adjacent.next %}
     {% set opts = options or {} %}
     <nav aria-label="{{ opts.label or 'More posts' }}">
-      <ul>
+      <ul class="inline-list">
         {% if adjacent.previous %}
           <li>
             <a href="{{ adjacent.previous.url }}" rel="prev">

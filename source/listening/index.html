@@ -13,7 +13,7 @@ permalink: /listening/
     {% for item in collections.currentlyListening %}
       {% set cover = item.data.cover | coverSrc("listening", item.fileSlug) %}
       <li>
-        <img src="{{ cover }}" alt="Cover of {{ item.data.title }}" width="200" height="300" decoding="async">
+        <img src="{{ cover }}" alt="Cover of {{ item.data.title }}"  decoding="async">
         <a href="{{ item.url }}">{{ item.data.title }}</a>
       </li>
     {% else %}

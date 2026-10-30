@@ -2,7 +2,7 @@
   <li>
     {% if post.data.images and post.data.images.length %}
     {# Decorative: the title link beside it names the post, so the alt text is empty #}
-    <img src="{{ post.data.images[0] }}" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="{{ post.data.images[0] }}" alt=""  loading="lazy" decoding="async">
     {% endif %}
     <a href="{{ post.url }}">{{ post.data.title }}</a>
     <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
