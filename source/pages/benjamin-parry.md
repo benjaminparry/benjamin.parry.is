@@ -16,10 +16,11 @@ My name is Benjamin Parry. I live is Lewes, East Sussex, UK.
 - [Japanophile](/tagging/japan),
 - mountain bike rider,
 - cold water swimmer,
+- fermenter,
 - bread baker.
 
 ## Find out more about me
 
 - A [user manual](/benjamin-parry/user-manual/) for working with me.
 - [What I’m doing now](/now/).
-- [Get in contact](/contactable/).
+- How to [get in contact](/contactable/).
