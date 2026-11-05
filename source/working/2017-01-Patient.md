@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: 'duration'
 date: '2017-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: "https://clearleft.com/work/patient-vision"
 cta: 'Read the case study'

@@ -1,10 +1,10 @@
 ---
-title: 'OneWed #2'
+title: 'OneWeb #2'
 client: 'Queen Mary University of London'
 employer: 'Clearleft'
 duration: 'duration'
 date: '2020-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: ""
 cta: 'Read the case study'

@@ -15,6 +15,6 @@ displayType:
 featured: true
 hero:
   image: '/assets/images/clearleft.jpg'
-  imageAlt: 'Poop'
+  imageAlt: ''
 permalink: false
 ---

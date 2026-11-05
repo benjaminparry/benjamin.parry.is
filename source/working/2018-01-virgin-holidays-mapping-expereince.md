@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '12 weeks'
 date: '2018-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: "https://clearleft.com/work/virgin-holidays-experience-map"
 cta: 'Read the case study'

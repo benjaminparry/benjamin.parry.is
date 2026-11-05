@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '12 weeks'
 date: '2020-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: "https://clearleft.com/work/malvern-panalytical"
 cta: 'Read the case study'

@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '17 weeks'
 date: '2019-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: "https://clearleft.com/work/esprit-ski"
 cta: 'Read the case study'

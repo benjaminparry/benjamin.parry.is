@@ -17,5 +17,3 @@ hero:
   imageAlt: 'Poop'
 permalink: false
 ---
-
-I was invited to speak on the Fast Forward podcast about the study. https://fastforward.podbean.com/e/fast-forward-episode-2-future-supermarkets-scan-purchase-for-maximum-score/

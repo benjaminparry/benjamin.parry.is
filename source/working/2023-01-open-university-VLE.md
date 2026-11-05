@@ -17,5 +17,3 @@ hero:
   imageAlt: 'Poop'
 permalink: false
 ---
-
-Content here

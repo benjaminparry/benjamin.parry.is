@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '4 months'
 date: '2020-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: "https://clearleft.com/work/incisive-media"
 cta: 'Read the case study'

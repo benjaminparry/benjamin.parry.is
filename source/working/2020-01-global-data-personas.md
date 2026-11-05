@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '13 weeks'
 date: '2020-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: "https://clearleft.com/work/globaldata-persona-research"
 cta: 'Read the case study'

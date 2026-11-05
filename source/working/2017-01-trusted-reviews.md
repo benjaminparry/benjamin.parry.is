@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '6 weeks'
 date: '2017-03'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: "https://clearleft.com/work/trusted-reviews"
 cta: 'Read the case study'

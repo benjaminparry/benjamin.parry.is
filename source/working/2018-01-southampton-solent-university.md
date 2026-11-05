@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: 'duration'
 date: '2018-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: ""
 cta: 'Read the case study'

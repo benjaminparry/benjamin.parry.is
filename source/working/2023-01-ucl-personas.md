@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: 'duration'
 date: '2023-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: "https://clearleft.com/work/understanding-your-audience-with-research-driven-personas"
 cta: 'Read the case study'

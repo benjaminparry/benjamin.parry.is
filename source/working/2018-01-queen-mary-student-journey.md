@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '6 months'
 date: '2018-01'
-posse: 'Posse.'
+summary: ''
 tags:
 caseStudyURL: "https://clearleft.com/work/queen-mary-university"
 cta: 'Read the case study'
