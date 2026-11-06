@@ -261,6 +261,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("updatesOf", updatesOf);
   eleventyConfig.addFilter("feedDate", feedDate);
   eleventyConfig.addFilter("partOf", partOf);
+
 }
 
 // Set template engines

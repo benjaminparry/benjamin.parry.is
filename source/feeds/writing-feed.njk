@@ -1,0 +1,12 @@
+---
+permalink: /writing/feed.xml
+feedTitle: Benjamin Parry – Writing
+feedPath: /writing/feed.xml
+feedHome: /writing/
+feedCollection: writing
+# Wait for these posts to be rendered first: the feed uses their content
+eleventyImport:
+  collections: ["writing"]
+eleventyExcludeFromCollections: true
+---
+{% include "partials/atom-feed.njk" %}

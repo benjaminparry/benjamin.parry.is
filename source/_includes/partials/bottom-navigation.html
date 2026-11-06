@@ -38,7 +38,27 @@
     {% endfor %}
 </ul>
 
+<div class="callout callout--info">
+    <p><strong>A note from the website content author:</strong></p>
+    <p>Unless stated, the contents of this website has been written without the use of generative artificial intelligence (GAI) or any large language models (LLM).</p>
+    <p>Let it be known that <strong>I do not give consent</strong> for any content on this website to be used to train LLMs. This message will remain on this website until there is a reliable way to exclude content like this from LLM training data sets.</p>
+    <p>
+        Benjamin Parry – <time datetime="2024-05-20T08:36:41Z">20th May 2024</time>
+    </p>
+</div>
 
-{% from 'macros/pullquote.njk' import pullquote %}
-
-{{ pullquote(summary) }}
+<p>
+	<small>
+	<!-- TODO: add year function and time built -->
+	© 2013 - 2026
+    <span class="h-card"><img class="u-photo" height="15px" width="15px" src="/assets/images/profile/benjamin-parry-300x300.jpg" alt=""> <a href="/" class="url u-url p-name" rel="me">Benjamin Parry</a></span> – <a href="https://www.11ty.dev/">Built using Eleventy</a>, <a href="https://github.com/benjaminparry/" rel="me">hosted on Github</a> and <a href="https://www.netlify.com">Netlify</a>. Last build <time datetime="{{ global.builtAt }}">{{ global.builtAt }}</time>.
+	</small>
+</p>
+<div class="text-centered">
+    <p style="margin-bottom: 0;"><small>Proudly part of the <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍</small></p>
+    <p style="margin-top: 0;">
+        <small>
+            <a href="https://xn--sr8hvo.ws/previous">« previous website</a> <a href="https://xn--sr8hvo.ws/next">next website »</a>
+        </small>
+    </p>
+</div>

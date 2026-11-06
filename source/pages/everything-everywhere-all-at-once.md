@@ -2,8 +2,6 @@
 title: 'Everything Everywhere All At Once'
 layout: 'layouts/base.html'
 permalink: '/everything-everywhere-all-at-once/'
-section:
-    - utopia
 ---
 
 ## Benjamin parry is…
@@ -41,6 +39,7 @@ section:
 - [Offline](/offline/) – A list of pages stored locally when you are offline.
 - [Everthing Everywhere All At Once](/everything-everywhere-all-at-once/) – This page, a sitemap of sorts.
   - [Chronologically](/everything-everywhere-all-at-once/chronologically/) – A chronological firehose of content posted to this website.
+  - [Updated](/everything-everywhere-all-at-once/updated/) – A resurfacing old content, recently updated.
 
 ## Everything
 

@@ -15,7 +15,7 @@ layout: layouts/base.html
   {% if project %}
     <dl>
       <dt>Status</dt>
-      <dd>{% if project.current %}Current{% else %}Previous{% endif %}</dd>
+      <dd>{% if project.current %}Ongoing{% else %}Complete{% endif %}</dd>
       <dt>When</dt>
       <dd>{{ period(project) }}</dd>
       {% if project.relationship %}

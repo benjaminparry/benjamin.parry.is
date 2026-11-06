@@ -2,7 +2,7 @@
 title: 'Basket building discovery'
 client: 'Waitrose & Partners'
 sector:
-  - 'Events'
+  - 'Retail'
 employer: 'Waitrose & Partners'
 duration: '9 months'
 date: '2025-04'

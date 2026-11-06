@@ -1,5 +1,5 @@
 ---
-title: 'Podcasts I’m subscribed to'
+title: 'Podcasts I subscribe to'
 date: '2024-10-21'
 summary: 'A list of podcasts I’m subscribed to.'
 updated: '2025-09-07'

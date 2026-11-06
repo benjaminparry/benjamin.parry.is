@@ -2,7 +2,7 @@
 title: 'Water Sector Digital Twin Discovery'
 client: '!!! client !!!'
 sector:
-  - 'Events'
+  - 'Services'
 employer: 'Polar Insight'
 duration: '!!! {n} weeks !!!'
 date: '2025-02'
