@@ -1,0 +1,58 @@
+---
+permalink: /collecting/podcasts/feed.rss
+# The folder's data file gives every file in it the post layout: a feed is not a page
+layout: false
+podcastTitle: Benjamin Parry – Podcasts
+podcastDescription: Podcast episodes I want to revisit and take notes on, collected on benjamin.parry.is.
+podcastHome: /collecting/podcasts/
+podcastPath: /collecting/podcasts/feed.rss
+# Apple Podcasts wants a square image of at least 1400 x 1400. Most other apps accept any size.
+podcastImage: /assets/images/profile/benjamin-parry-300x300.jpg
+podcastCategory: Society & Culture
+podcastLanguage: en-gb
+# Wait for these posts to be rendered first: the feed uses their content
+eleventyImport:
+  collections: ["collectingPodcasts"]
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{# A podcast feed: RSS 2.0 plus the iTunes tags that podcast apps read.
+   An episode is a post in source/collecting/podcasts/ with an "audio:" address in its front matter;
+   posts without one are left out, because an episode with nothing to play is no use to a podcast app.
+   The audio is hosted by the original show, so its file size is not known when the site is built: length="0". #}
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ podcastTitle }}</title>
+    <link>{{ podcastHome | absoluteUrl }}</link>
+    <description>{{ podcastDescription }}</description>
+    <language>{{ podcastLanguage }}</language>
+    <atom:link rel="self" type="application/rss+xml" href="{{ podcastPath | absoluteUrl }}"/>
+    <lastBuildDate>{{ builtAt | rfc822 }}</lastBuildDate>
+    <itunes:author>{{ site.author.name }}</itunes:author>
+    <itunes:summary>{{ podcastDescription }}</itunes:summary>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="{{ podcastImage | absoluteUrl }}"/>
+    <itunes:category text="{{ podcastCategory }}"/>
+    <image>
+      <url>{{ podcastImage | absoluteUrl }}</url>
+      <title>{{ podcastTitle }}</title>
+      <link>{{ podcastHome | absoluteUrl }}</link>
+    </image>
+    {% for post in collections.collectingPodcasts %}
+      {% if post.data.audio %}
+    <item>
+      <title>{{ post.data.title }}</title>
+      <link>{{ post.url | absoluteUrl }}</link>
+      <guid isPermaLink="true">{{ post.url | absoluteUrl }}</guid>
+      <pubDate>{{ post.date | rfc822 }}</pubDate>
+      {% if post.data.summary %}<description>{{ post.data.summary }}</description>{% endif %}
+      <content:encoded>{{ post | feedContent | escape }}</content:encoded>
+      <enclosure url="{{ post.data.audio }}" length="0" type="{{ post.data.audio | audioType }}"/>
+    </item>
+      {% endif %}
+    {% endfor %}
+  </channel>
+</rss>

@@ -47,7 +47,7 @@ images:
   - I **wrote** [{{ collections.writing[0].data.title }}]({{ collections.writing[0].url }}),
   - I **made** [{{ collections.making[0].data.title }}]({{ collections.making[0].url }}),
   - I collected:
-    - my most recent **cycle** [{{ collections.cycles[0].data.title }}]({{ collections.cycles[0].url }}),
-    - my **thoughts** about [{{ collections.thoughts[0].data.title }}]({{ collections.thoughts[0].url }}),
-    - an interesting **link** about [{{ collections.links[0].data.title }}]({{ collections.links[0].url }}).
-    - an interesting **podcast** about [{{ collections.podcasts[0].data.title }}]({{ collections.podcasts[0].url }}).
+    - my most recent **cycle** [{{ collections.collectingCycles[0].data.title }}]({{ collections.collectingCycles[0].url }}),
+    - my **thoughts** about [{{ collections.collectingThoughts[0].data.title }}]({{ collections.collectingThoughts[0].url }}),
+    - an interesting **link** about [{{ collections.collectingLinks[0].data.title }}]({{ collections.collectingLinks[0].url }}).
+    - an interesting **podcast** about [{{ collections.collectingPodcasts[0].data.title }}]({{ collections.collectingPodcasts[0].url }}).

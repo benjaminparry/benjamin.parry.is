@@ -7,6 +7,8 @@ import { related, onThisDay } from "./_config/related.js";
 import { webmentionsFor, summariseWebmentions } from "./_config/webmentions.js";
 import { sections as sendingSections, collectionName as sendingName, globFor as sendingGlob, allGlob as sendingAllGlob, sendingYears, sendingMonths, stamp } from "./_config/sending.js";
 import { feedContent } from "./_config/feed.js";
+import { audioType, rfc822 } from "./_config/podcast.js";
+import { builtDateTime } from "./_config/built.js";
 import { buildWork, bySlug, byUrl } from "./_config/working.js";
 import { adjacentPosts } from "./_config/adjacent.js";
 import { pageWindowFor } from "./_config/pager.js";
@@ -39,11 +41,20 @@ export default function (eleventyConfig) {
   eleventyConfig.setInputDirectory('source');
   eleventyConfig.setOutputDirectory('build');
 
-  // Set directories to pass through to build directory
-  eleventyConfig.addPassthroughCopy('source/assets/images');
-  eleventyConfig.addPassthroughCopy('source/assets/audio');   // mirrored talks and podcasts
-  eleventyConfig.addPassthroughCopy('source/assets/video');
-  eleventyConfig.addPassthroughCopy('source/assets/other');   // e.g. the vCard
+  // Files to copy straight to the build folder, by file type. Only these types are copied, so a
+  // stray Markdown or Nunjucks file inside source/assets/ can never end up on the live site.
+  // To copy a new type of file, add its extension to the right list.
+  const assetTypes = {
+    images: ["jpg", "jpeg", "png", "gif", "webp", "avif", "svg", "ico", "webmanifest", "xml"],
+    audio: ["mp3", "m4a", "ogg"],   // mirrored talks and podcasts
+    video: ["mp4", "webm"],
+    other: ["vcf"],                 // e.g. the vCard
+  };
+  for (const [folder, extensions] of Object.entries(assetTypes)) {
+    for (const extension of extensions) {
+      eleventyConfig.addPassthroughCopy(`source/assets/${folder}/**/*.${extension}`);
+    }
+  }
 
   // Watching collections
   eleventyConfig.addCollection("currentlyWatching", (api) =>
@@ -196,6 +207,10 @@ export default function (eleventyConfig) {
   // The sending section list, for the navigation: {{ sendingSections }}
   eleventyConfig.addGlobalData("sendingSections", sendingSections);
 
+  // When the site was built, as a date: {{ builtAt | builtDateTime }} and {{ builtAt | isoDateTime }}
+  // (a function, so it is worked out again on every rebuild while you are running --serve)
+  eleventyConfig.addGlobalData("builtAt", () => new Date());
+
   // Available in every template as {{ currentYear }}
   eleventyConfig.addGlobalData("currentYear", () => new Date().getUTCFullYear());
 
@@ -208,6 +223,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("isoDateTime", (d) => asDate(d).toISOString());
   eleventyConfig.addFilter("longDateTime", (d) =>
     new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "UTC", timeZoneName: "short" }).format(asDate(d)));
+
+  // The build time for people: "Thu 5th November 2026 at 14:55" (UK time)
+  eleventyConfig.addFilter("builtDateTime", builtDateTime);
 
   // 2025-01-10T16:32:10Z -> "20250110163210": the end of /sending/likes/2025/01/like_20250110163210/
   eleventyConfig.addFilter("stamp", stamp);
@@ -241,6 +259,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("webmentionsFor", (mentions, pageUrl, options = {}) =>
     webmentionsFor(mentions, pageUrl, { ...options, siteUrl: site.url }));
   eleventyConfig.addFilter("webmentionSummary", summariseWebmentions);
+
+  // The podcast feed: "https://example.com/ep.mp3?x=1" | audioType -> "audio/mpeg"; a date | rfc822 -> "Sat, 09 May 2026 00:00:00 GMT"
+  eleventyConfig.addFilter("audioType", audioType);
+  eleventyConfig.addFilter("rfc822", rfc822);
 
   // post | feedContent -> the HTML for a feed entry (used by partials/atom-feed.njk)
   eleventyConfig.addFilter("feedContent", feedContent);

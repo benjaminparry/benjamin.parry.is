@@ -1,0 +1,14 @@
+---
+permalink: /collecting/thoughts/feed.xml
+# The folder's data file gives every file in it the post layout: a feed is not a page
+layout: false
+feedTitle: Benjamin Parry – Thoughts
+feedPath: /collecting/thoughts/feed.xml
+feedHome: /collecting/thoughts/
+feedCollection: collectingThoughts
+# Wait for these posts to be rendered first: the feed uses their content
+eleventyImport:
+  collections: ["collectingThoughts"]
+eleventyExcludeFromCollections: true
+---
+{% include "partials/atom-feed.njk" %}
