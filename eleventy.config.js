@@ -2,7 +2,8 @@ import { currentlyWatching, allWatched, watchedByYear, watchedInYear, watchedBef
 import { slugify, yearOf, monthOf, newestFirst, writingYears, writingMonths, writingTags } from "./_config/writing.js";
 import { sections, collectionName, globFor, allGlob, collectingYears, collectingMonths, hostname } from "./_config/collecting.js";
 import { roots, rootGlob, yearsName, monthsName, rootYears, rootMonths } from "./_config/roots.js";
-import { activities, activityGlob, activityCollections, coverSrc } from "./_config/activity.js";
+import { activities, activityGlobs, activityCollections, coverSrc } from "./_config/activity.js";
+import { performancesOf, recordingsBy, artistPage } from "./_config/artists.js";
 import { related, onThisDay } from "./_config/related.js";
 import { webmentionsFor, summariseWebmentions } from "./_config/webmentions.js";
 import { sections as sendingSections, collectionName as sendingName, globFor as sendingGlob, allGlob as sendingAllGlob, sendingYears, sendingMonths, stamp } from "./_config/sending.js";
@@ -24,6 +25,9 @@ const writingFiles = "source/writing/*.md";
 // Tolerates a Date or a date written as text ("2026-01-02")
 const asDate = (d) => (d instanceof Date ? d : new Date(d));
 
+// The posts in one or more globs: pick(api, ["source/a/*.md", "source/b/*.md"])
+const pick = (api, globs) => [].concat(globs).flatMap((glob) => api.getFilteredByGlob(glob));
+
 // Every post that has tags or a category: writing, collecting, the root collections,
 // sending, watching, and reading/playing/listening.
 const taggablePosts = (api) => [
@@ -32,7 +36,7 @@ const taggablePosts = (api) => [
   ...api.getFilteredByGlob(allGlob),
   ...api.getFilteredByGlob(sendingAllGlob),
   ...roots.flatMap((root) => api.getFilteredByGlob(rootGlob(root.slug))),
-  ...activities.flatMap((activity) => api.getFilteredByGlob(activityGlob(activity.slug))),
+  ...activities.flatMap((activity) => pick(api, activityGlobs(activity.slug))),
 ];
 
 export default function (eleventyConfig) {
@@ -77,21 +81,31 @@ export default function (eleventyConfig) {
   // Reading, playing and listening collections: the same four as watching, one set per activity
   // e.g. collections.currentlyReading, readThisYear, readPreviousYears, readYears
   for (const activity of activities) {
-    const files = activityGlob(activity.slug);
+    const files = activityGlobs(activity.slug);   // listening includes the artists
     const build = activityCollections(activity.listKey);
 
     eleventyConfig.addCollection(activity.names.currently, (api) =>
-      build.currently(api.getFilteredByGlob(files)));
+      build.currently(pick(api, files)));
 
     eleventyConfig.addCollection(activity.names.thisYear, (api) =>
-      build.inYear(api.getFilteredByGlob(files), new Date().getUTCFullYear()));
+      build.inYear(pick(api, files), new Date().getUTCFullYear()));
 
     eleventyConfig.addCollection(activity.names.previousYears, (api) =>
-      build.beforeYear(api.getFilteredByGlob(files), new Date().getUTCFullYear()));
+      build.beforeYear(pick(api, files), new Date().getUTCFullYear()));
 
     eleventyConfig.addCollection(activity.names.years, (api) =>
-      build.byYear(api.getFilteredByGlob(files)));
+      build.byYear(pick(api, files)));
   }
+
+  // Listening, split in two:
+  //   listeningRecorded: the recorded music in source/listening/ (newest first)
+  //   listeningArtists:  the artists in source/listening/artists/, A-Z. Each has live performances in its front matter.
+  eleventyConfig.addCollection("listeningRecorded", (api) =>
+    newestFirst(api.getFilteredByGlob("source/listening/*.md")));
+
+  eleventyConfig.addCollection("listeningArtists", (api) =>
+    api.getFilteredByGlob("source/listening/artists/*.md")
+      .sort((a, b) => String(a.data.title).localeCompare(String(b.data.title), "en-GB")));
 
   // Writing collections
   eleventyConfig.addCollection("writing", (api) =>
@@ -244,6 +258,14 @@ export default function (eleventyConfig) {
 
   // post.cover | coverSrc("reading", post.fileSlug) -> the cover image for reading/playing/listening
   eleventyConfig.addFilter("coverSrc", coverSrc);
+
+  // Artists and their recordings (see _config/artists.js):
+  //   performances | performancesOf                 -> the live performances, newest first
+  //   collections.listeningRecorded | recordingsBy(page.fileSlug) -> the recordings by that artist
+  //   "Goat (jp)" | artistPage(collections.listeningArtists)       -> that artist's page, if there is one
+  eleventyConfig.addFilter("performancesOf", (performances) => performancesOf({ performances }));
+  eleventyConfig.addFilter("recordingsBy", recordingsBy);
+  eleventyConfig.addFilter("artistPage", artistPage);
 
   // pool | related(page, { limit: 3, tags: true, category: true, featured: "prefer" })
   // Used by macros/related.html

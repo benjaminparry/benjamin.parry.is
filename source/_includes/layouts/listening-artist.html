@@ -1,0 +1,54 @@
+---
+layout: layouts/base.html
+---
+{# An artist: the live performances, then the recordings of theirs in the listening feed #}
+<article>
+  <h1>{{ title }}</h1>
+
+  {% if cover %}
+    <img src="{{ cover | coverSrc('listening', page.fileSlug) }}" alt="Photo from seeing {{ title }} live" decoding="async">
+  {% endif %}
+
+  {{ content | safe }}
+
+  {% set shows = performances | performancesOf %}
+  {% if shows.length %}
+    <section aria-labelledby="live-heading">
+      <h2 id="live-heading">Seen live</h2>
+      <ol>
+        {% for show in shows %}
+          <li>
+            <time datetime="{{ show.date | isoDate }}">{{ show.date | longDate }}</time>
+            {% if show.venue %} – {{ show.venue }}{% endif %}
+            {% if show.award %}<strong>🏆 Award</strong>{% endif %}
+            {% if show.rating %}<p>{{ show.rating }}/5</p>{% endif %}
+            {% if show.comment %}<p>{{ show.comment }}</p>{% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  {% endif %}
+
+  {% set recordings = collections.listeningRecorded | recordingsBy(page.fileSlug) %}
+  {% if recordings.length %}
+    <section aria-labelledby="recorded-heading">
+      <h2 id="recorded-heading">Recorded</h2>
+      <ul>
+        {% for record in recordings %}
+          <li>
+            <img src="{{ record.data.cover | coverSrc('listening', record.fileSlug) }}" alt="Cover of {{ record.data.title }}" loading="lazy" decoding="async">
+            <a href="{{ record.url }}">{{ record.data.title }}</a>
+            {% if record.data.rating %}<span>{{ record.data.rating }}/5</span>{% endif %}
+            {% if record.data.sortDate %}
+              <time datetime="{{ record.data.sortDate | isoDate }}">{{ record.data.sortDate | longDate }}</time>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% include "partials/tags.html" %}
+
+  <p><a href="/listening/artists/">All artists</a> · <a href="/listening/">Back to Listening</a></p>
+</article>

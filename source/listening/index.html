@@ -26,7 +26,7 @@ permalink: /listening/
   <h2 id="done-heading">Listened to this year</h2>
   <ul>
     {% for entry in collections.listenedThisYear %}
-      {{ listenedEntry(entry) }}
+      {{ listenedEntry(entry, collections.listeningArtists) }}
     {% else %}
       <li>Nothing listened to yet this year.</li>
     {% endfor %}
@@ -56,4 +56,4 @@ permalink: /listening/
 </section>
 {% endif %}
 
-<p><a href="/tagging/">All tags</a></p>
+<p><a href="/listening/artists/">All artists</a> · <a href="/tagging/">All tags</a></p>

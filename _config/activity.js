@@ -33,10 +33,18 @@ export const activities = [
     title: "Listening",
     listKey: "listened",
     names: { currently: "currentlyListening", thisYear: "listenedThisYear", previousYears: "listenedPreviousYears", years: "listenedYears" },
+    // Live performances live in source/listening/artists/. Their dates join the same lists (see artists.js).
+    extraGlobs: ["source/listening/artists/*.md"],
   },
 ];
 
 export const activityGlob = (slug) => `source/${slug}/*.md`;
+
+// Every glob that holds posts for an activity: its own folder, plus any extras (listening: the artists)
+export const activityGlobs = (slug) => [
+  activityGlob(slug),
+  ...(activities.find((activity) => activity.slug === slug)?.extraGlobs ?? []),
+];
 
 const toDate = (value) => (value ? new Date(value) : null); // accepts a Date or "2026-01-02"
 
@@ -82,11 +90,11 @@ export function activityCollections(listKey) {
   };
 
   // One entry per item for every year it was completed, grouped by year (newest year first):
-  //   [{ year: 2026, entries: [{ item, latest, count }, ...], awarded: [...], others: 3 }, { year: 2025, ... }]
+  //   [{ year: 2026, entries: [{ item, latest, lastEntry, count, award }, ...], awarded: [...], others: 3 }, ...]
   //
-  // - awarded: the entries whose post has an `award`
+  // - awarded: the entries with an `award` (the post's own, or one on an entry from that year)
   // - others:  how many entries are not awarded (entries minus awarded)
-  // - latest:  the item's most recent completed entry *within that year*
+  // - latest:  the item's most recent completed entry *within that year* (lastEntry is that entry itself)
   // - count:   every completed entry, ever (all years)
   const byYear = (items) => {
     const years = new Map();
@@ -95,23 +103,27 @@ export function activityCollections(listKey) {
       const done = list(item).filter(isComplete);
       if (!done.length) continue;
 
+      // year -> the latest entry in that year, and its date
       const latestPerYear = new Map();
       for (const entry of done) {
         const date = entryDate(entry);
         const year = date.getUTCFullYear();
-        if (!latestPerYear.has(year) || date > latestPerYear.get(year)) latestPerYear.set(year, date);
+        if (!latestPerYear.has(year) || date > latestPerYear.get(year).date) latestPerYear.set(year, { date, entry });
       }
 
-      for (const [year, latest] of latestPerYear) {
+      for (const [year, { date, entry }] of latestPerYear) {
         if (!years.has(year)) years.set(year, []);
-        years.get(year).push({ item, latest, count: done.length });
+        // An entry has an award if the whole post does, or if an entry that year (a gig, say) does
+        const award = Boolean(item.data.award) ||
+          done.some((e) => e.award && entryDate(e).getUTCFullYear() === year);
+        years.get(year).push({ item, latest: date, lastEntry: entry, count: done.length, award });
       }
     }
 
     return [...years]
       .map(([year, entries]) => {
         entries.sort((a, b) => b.latest - a.latest);
-        const awarded = entries.filter((entry) => entry.item.data.award);
+        const awarded = entries.filter((entry) => entry.award);
         return { year, entries, awarded, others: entries.length - awarded.length };
       })
       .sort((a, b) => b.year - a.year);

@@ -8,6 +8,8 @@ export default {
   layout: "layouts/listening-item.html",
   collection: "listening",
   collectionTitle: "Listening",
+  // Recorded music. Artists (source/listening/artists/) are "live": see listened-entry.html
+  listeningKind: "recorded",
   // The dates that matter are in the listened list, not the file name, so feeds don't show a post date
   showDate: false,
   permalink: "/listening/{{ page.fileSlug }}/",

@@ -1,0 +1,6 @@
+{# "(2 performances, 1 recording)" beside an artist in the artists list #}
+{% macro artistCounts(artist, recorded) %}
+  {% set shows = artist.data.performances | performancesOf %}
+  {% set recordings = recorded | recordingsBy(artist.fileSlug) %}
+  <span>({{ shows.length }} performance{% if shows.length != 1 %}s{% endif %}, {{ recordings.length }} recording{% if recordings.length != 1 %}s{% endif %})</span>
+{% endmacro %}

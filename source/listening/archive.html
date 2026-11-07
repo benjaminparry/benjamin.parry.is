@@ -15,8 +15,8 @@ eleventyExcludeFromCollections: true
 
 <ul>
   {% for entry in group.entries %}
-    {{ listenedEntry(entry) }}
+    {{ listenedEntry(entry, collections.listeningArtists) }}
   {% endfor %}
 </ul>
 
-<p><a href="/listening/">Back to Listening</a></p>
+<p><a href="/listening/">Back to Listening</a> · <a href="/listening/artists/">All artists</a></p>
