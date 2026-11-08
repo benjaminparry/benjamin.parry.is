@@ -1,72 +1,93 @@
-{% if bashoDate %} {% set basho = bashoDate %} {% endif %}
-<ol>
-    {%- for basho in basho.basho -%}
-    <li><a href="#{{ basho.month | slug }}">{{ basho.month }}</a></li>
-    {%- endfor -%}
-</ol>
-{%- for basho in basho.basho %}
-<h2 id="{{ basho.month | slug }}">{{ basho.month }} Tournament</h2>
-<ul>
-    <li>📍 {{ basho.city }}</li>
-    <li>
-        🏟️
-        <a
-            href="https://www.google.com/maps/@35.6970848,139.7937749,2a,75y,239.39h,73.01t/data=!3m7!1e1!3m5!1s9IzZ-Cm13q7ovNCEL-auSQ!2e0!3e2!7i13312!8i6656?entry=ttu"
-            >{{ basho.venue }}</a
-        >
-    </li>
-    <li>
-        📆 {{ basho.startDate }} » {{ basho.endDate }}
-    </li>
-    <li>
-        {%- for bingo in basho.sumokaboom -%} 🪪 Sumo Kaboom bingo ID:
-        <a href="{{ bingo.cardURL }}">{{ bingo.cardID }}</a>
-        {%- endfor -%}
-    </li>
-</ul>
-<ul class="grid grid--5 bingo-card reset-list">
-    {%- for rikishi in basho.rikishi -%}
-    <li class="rikishi rikishi--{%- for total in rikishi.total %}{% if total.win > 7 %}kachi-koshi{% elseif total.lose > 7 %}make-koshi{% else %}no-result-yet{% endif %}{%- endfor -%}{% if rikishi.saiko %} rikishi--saiko{% endif %}{% if rikishi.retired %} rikishi--retired{% endif %}{% if rikishi.absent %} rikishi--absent{% endif %}">
-        <p class="reset-heading rikishi__name">{{ rikishi.name }}</p>
-        <div class="rikishi__photo">
-            <img
-                src="/assets/images/making/sumo-bingo-cards/rikishi/{{ rikishi.name | slug }}.jpg"
-                alt=""
-            />
-        </div>
-        <!-- Score -->
-        <p class="rikishi__score">
-            {%- for total in rikishi.total -%}{% if total.win %}{{total.win}}{%
-            endif %}{% if total.lose %} / {{total.lose}}{% endif %}{% if
-            total.forfeit %} / {{total.forfeit}}{% endif %}{% if total.playoff
-            %} ({{total.playoff}}){% endif %}{%- endfor -%}
-        </p>
-        <!-- Results daily -->
-        <ol class="grid grid--15 reset-list results results--daily">
-            {%- for result in rikishi.results -%}
-            <li
-                class="result result--{% if result == 'l' %}lose{% elseif result == 'w' %}win{% elseif result == 'f' %}forfeit{% elseif result == 'r' %}retire{% else %}pending{% endif %}"
-            >
-                <div class="off-screen">
-                    {% if result == "l" %}Lose{% endif %}{% if result == "w"
-                    %}Win{% endif %}{% if result == "f" %}Forfeit{% endif %}
-                </div>
-            </li>
-            {%- endfor -%}
-        </ol>
-        <!-- Results sorted -->
-        <ol class="grid grid--5 reset-list results results--sorted">
-            {%- for result in rikishi.results -%}
-            <li class="result result--{% if result == 'l' %}lose{% endif %}{% if result == 'w' %}win{% endif %}{% if result == 'f' %}forfeit{% endif %}{% if result == 'r' %}retire{% endif %}"
-            >
-                <div class="off-screen">
-                    {% if result == "l" %}Lose{% endif %}{% if result == "w"
-                    %}Win{% endif %}{% if result == "f" %}Forfeit{% endif %}
-                </div>
-            </li>
-            {%- endfor -%}
-        </ol>
-    </li>
-    {%- endfor -%}
-</ul>
-{%- endfor -%}
+{# The sumo bingo cards for one year. The page sets `bashoYear: 2025` in its front matter; the data is one file
+   for each basho in source/_data/basho/ (see _config/sumo.js for the format). Totals, squares and bingo lines
+   are all worked out from the daily results. #}
+{% set cards = basho | bashoInYear(bashoYear) | bashoViews %}
+
+{% if cards.length %}
+  <nav aria-label="Tournaments in {{ bashoYear }}">
+    <ol>
+      {% for card in cards %}
+        <li><a href="#basho-{{ card.id }}">{{ card.month }}</a></li>
+      {% endfor %}
+    </ol>
+  </nav>
+
+  <p class="bingo-legend">
+    Each tournament has a 5 × 5 card of rikishi, read left to right, top to bottom.
+    A rikishi with 8 wins is a winning square (kachi-koshi) and one with 8 losses is a losing square (make-koshi).
+    One who pulls out injured, is absent or retires is out, so can’t win or lose.
+    Five winning or five losing squares in a row, across, down or corner to corner, is a bingo.
+  </p>
+{% endif %}
+
+{% for card in cards %}
+  <section aria-labelledby="basho-{{ card.id }}">
+    <h2 id="basho-{{ card.id }}">{{ card.month }} Tournament</h2>
+
+    <ul>
+      {% if card.city %}<li><span aria-hidden="true">📍</span> <span class="off-screen">City: </span>{{ card.city }}</li>{% endif %}
+      {% if card.venue %}
+        <li>
+          <span aria-hidden="true">🏟️</span> <span class="off-screen">Venue: </span>
+          {% if card.venueUrl %}<a href="{{ card.venueUrl }}">{{ card.venue }}</a>{% else %}{{ card.venue }}{% endif %}
+        </li>
+      {% endif %}
+      <li>
+        <span aria-hidden="true">📆</span> <span class="off-screen">Dates: </span>
+        <time datetime="{{ card.startDate | isoDate }}">{{ card.startDate | longDate }}</time> »
+        <time datetime="{{ card.endDate | isoDate }}">{{ card.endDate | longDate }}</time>
+      </li>
+      {% if card.sumokaboom %}
+        <li><span aria-hidden="true">🪪</span> Sumo Kaboom bingo ID: <a href="{{ card.sumokaboom.url }}">{{ card.sumokaboom.id }}</a></li>
+      {% endif %}
+    </ul>
+
+    <p class="bingo-result">
+      {% if card.lines.length %}
+        <strong>Bingo!</strong>
+        {% for line in card.lines %}{{ line.label | capitalize }}{% if not loop.last %}, {% else %}. {% endif %}{% endfor %}
+      {% endif %}
+      {{ card.totals.winning }} winning, {{ card.totals.losing }} losing, {{ card.totals.out }} out, {{ card.totals.pending }} still to be decided.
+    </p>
+
+    <ol class="grid grid--5 bingo-card reset-list" aria-label="{{ card.month }} {{ bashoYear }} bingo card">
+      {% for square in card.squares %}
+        <li class="rikishi rikishi--{{ square.stateClass }}{% if square.yusho %} rikishi--saiko{% endif %}{% if square.state == 'out' %} rikishi--absent{% endif %}{% if square.record.retired %} rikishi--retired{% endif %}">
+          <p class="reset-heading rikishi__name">
+            {{ square.name }}
+            {% if square.yusho %}<span aria-hidden="true">🏆</span><span class="off-screen">, tournament winner</span>{% endif %}
+          </p>
+
+          <div class="rikishi__photo">
+            <img src="/assets/images/making/sumo-bingo-cards/rikishi/{{ square.id }}.jpg" alt="" loading="lazy" decoding="async">
+          </div>
+
+          {# The score is read out in words; the numbers are for the eye #}
+          <p class="rikishi__score">
+            <span class="off-screen">{{ square.scoreWords }}{% if square.playoff !== null %}, {{ square.playoff }} playoff win{% if square.playoff != 1 %}s{% endif %}{% endif %}. </span>
+            <span aria-hidden="true">{{ square.score }}</span>
+          </p>
+
+          {# A word and a symbol as well as a colour, so the state doesn't depend on seeing red and green #}
+          <p class="rikishi__state">
+            {% if square.state == 'kachi-koshi' %}<span aria-hidden="true">✓</span> Winning
+            {% elif square.state == 'make-koshi' %}<span aria-hidden="true">✕</span> Losing
+            {% elif square.state == 'out' %}<span aria-hidden="true">–</span> Out
+            {% else %}<span class="off-screen">Still to be decided</span>{% endif %}
+          </p>
+
+          {% if square.daily %}
+            <div class="grid grid--15 results results--daily" role="img" aria-label="Day by day: {{ square.dailyWords }}">
+              {% for day in square.daily %}<span class="result result--{{ day.className }}"></span>{% endfor %}
+            </div>
+          {% endif %}
+
+          {# Wins from the left, losses from the right, days to come in between, days out from the middle #}
+          <div class="record-bar" aria-hidden="true">
+            {% for cell in square.bar %}<span class="record-bar__cell record-bar__cell--{{ cell }}"></span>{% endfor %}
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+{% endfor %}

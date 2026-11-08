@@ -1,0 +1,100 @@
+/* Sumo bingo cards (partials/sumo-bingo-card.html).
+   Self-contained. If your stylesheet already styles .rikishi, .results and .grid, keep yours and take only the parts
+   marked NEW: .rikishi__state, .record-bar, .bingo-result and .bingo-legend. */
+
+:root {
+  --sumo-win: #3f7a32;          /* winning squares and wins */
+  --sumo-win-bg: #d3e4cc;
+  --sumo-lose: #8a3030;         /* losing squares and losses */
+  --sumo-lose-bg: #e6cfcf;
+  --sumo-out: #3a3a3a;          /* out: pulled out, absent or retired */
+  --sumo-out-bg: #d0d0d0;
+  --sumo-gold: #c8941c;         /* the basho winner */
+  --sumo-gold-bg: #ecd69a;
+  --sumo-ink: #1f1f1f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sumo-win: #7cc26d;  --sumo-win-bg: #1f3a1b;
+    --sumo-lose: #e08080; --sumo-lose-bg: #3d1f1f;
+    --sumo-out: #bdbdbd;  --sumo-out-bg: #2c2c2c;
+    --sumo-gold: #e3b341; --sumo-gold-bg: #4a3a12;
+    --sumo-ink: #f0f0f0;
+  }
+}
+
+/* ---- the card ---- */
+.bingo-card {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  list-style: none;
+  margin: 1rem 0 2rem;
+  padding: 0;
+  border: 1px solid var(--sumo-out);
+}
+.rikishi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+  color: var(--sumo-ink);
+  border: 1px solid color-mix(in srgb, var(--sumo-out) 40%, transparent);
+  background: transparent;
+}
+.rikishi--kachi-koshi { background: var(--sumo-win-bg);  border: 2px solid var(--sumo-win); }
+.rikishi--make-koshi  { background: var(--sumo-lose-bg); border: 2px solid var(--sumo-lose); }
+.rikishi--absent,
+.rikishi--retired     { background: var(--sumo-out-bg);  border: 2px solid var(--sumo-out); }
+.rikishi--saiko       { background: var(--sumo-gold-bg); border: 2px solid var(--sumo-gold); font-weight: 700; }
+
+.rikishi p { margin: 0; }
+.rikishi__name { font-size: 0.875rem; overflow-wrap: break-word; }
+.rikishi__photo img { display: block; width: 5.25rem; max-width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.rikishi__score { font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+
+/* NEW: the state in words and a symbol, so it never depends on telling red from green */
+.rikishi__state { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* ---- day by day, left to right (win, loss, win, win ...) ---- */
+.results {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  width: 100%;
+  height: 0.5rem;
+  gap: 0;
+}
+.result { display: block; height: 100%; }
+.result--win     { background: var(--sumo-win); }
+.result--lose    { background: repeating-linear-gradient(135deg, var(--sumo-lose) 0 2px, transparent 2px 4px); box-shadow: inset 0 0 0 1px var(--sumo-lose); }
+.result--forfeit,
+.result--retire  { background: var(--sumo-out); }
+.result--pending { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--sumo-out) 40%, transparent); }
+
+/* NEW: wins from the left, losses from the right, days still to come between, days out from the middle */
+.record-bar {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  width: 100%;
+  height: 0.75rem;
+  border-block: 1px solid color-mix(in srgb, var(--sumo-out) 50%, transparent);
+}
+.record-bar__cell { display: block; height: 100%; }
+.record-bar__cell--win  { background: var(--sumo-win); }
+.record-bar__cell--loss { background: repeating-linear-gradient(135deg, var(--sumo-lose) 0 2px, transparent 2px 4px); box-shadow: inset 0 0 0 1px var(--sumo-lose); }
+.record-bar__cell--out  { background: var(--sumo-out); }
+
+/* NEW */
+.bingo-result { font-weight: 600; }
+.bingo-legend { max-width: 60ch; }
+
+/* ---- small screens: keep the 5 x 5 shape, drop the extras ---- */
+@media (max-width: 40em) {
+  .rikishi__photo, .results { display: none; }
+  .rikishi__name, .rikishi__score { font-size: 0.6rem; }
+  .rikishi__state { font-size: 0.6rem; letter-spacing: 0; }
+}
+/* printing keeps the colours' pattern but not the background */
+@media print { .rikishi { break-inside: avoid; } }

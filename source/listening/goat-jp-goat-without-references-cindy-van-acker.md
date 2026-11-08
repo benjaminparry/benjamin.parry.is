@@ -1,5 +1,5 @@
 ---
-title: " Without References/Cindy Van Acker"
+title: "Without References/Cindy Van Acker"
 listened:
   - started: 2026-11-01
 artist: "Goat (jp)"

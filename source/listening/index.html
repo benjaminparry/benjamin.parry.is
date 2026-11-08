@@ -14,7 +14,7 @@ permalink: /listening/
       {% set cover = item.data.cover | coverSrc("listening", item.fileSlug) %}
       <li>
         <img src="{{ cover }}" alt="Cover of {{ item.data.title }}"  decoding="async">
-        <a href="{{ item.url }}">{{ item.data.title }}</a>
+        <a href="{{ item.url }}">{{ item.data.title }}</a> by <a href="/listening/artists/{{ item.data.artist | slugify }}">{{ item.data.artist}}</a>
       </li>
     {% else %}
       <li>Nothing at the moment.</li>

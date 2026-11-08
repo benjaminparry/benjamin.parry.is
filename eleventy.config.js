@@ -4,6 +4,7 @@ import { sections, collectionName, globFor, allGlob, collectingYears, collecting
 import { roots, rootGlob, yearsName, monthsName, rootYears, rootMonths } from "./_config/roots.js";
 import { activities, activityGlobs, activityCollections, coverSrc } from "./_config/activity.js";
 import { performancesOf, recordingsBy, artistPage } from "./_config/artists.js";
+import { bashoInYear, bashoView, problemsWith } from "./_config/sumo.js";
 import { related, onThisDay } from "./_config/related.js";
 import { webmentionsFor, summariseWebmentions } from "./_config/webmentions.js";
 import { sections as sendingSections, collectionName as sendingName, globFor as sendingGlob, allGlob as sendingAllGlob, sendingYears, sendingMonths, stamp } from "./_config/sending.js";
@@ -52,7 +53,8 @@ export default function (eleventyConfig) {
     images: ["jpg", "jpeg", "png", "gif", "webp", "avif", "svg", "ico", "webmanifest", "xml"],
     audio: ["mp3", "m4a", "ogg"],   // mirrored talks and podcasts
     video: ["mp4", "webm"],
-    other: ["vcf"],                 // e.g. the vCard
+    css: ["css"],
+    other: ["vcf"],               // e.g. the vCard
   };
   for (const [folder, extensions] of Object.entries(assetTypes)) {
     for (const extension of extensions) {
@@ -258,6 +260,16 @@ export default function (eleventyConfig) {
 
   // post.cover | coverSrc("reading", post.fileSlug) -> the cover image for reading/playing/listening
   eleventyConfig.addFilter("coverSrc", coverSrc);
+
+  // Sumo bingo cards (see _config/sumo.js and source/_data/basho/):
+  //   basho | bashoInYear(2025)   -> that year's basho files, in date order
+  //   ... | bashoViews            -> each one ready to show: squares, totals, bingo lines (warns about bad data)
+  eleventyConfig.addFilter("bashoInYear", bashoInYear);
+  eleventyConfig.addFilter("bashoViews", (list) =>
+    list.map((basho) => {
+      for (const problem of problemsWith(basho)) console.warn(`[sumo] ${basho.id}: ${problem}`);
+      return bashoView(basho);
+    }));
 
   // Artists and their recordings (see _config/artists.js):
   //   performances | performancesOf                 -> the live performances, newest first
