@@ -51,7 +51,7 @@
     </p>
 
     <ol class="grid grid--5 bingo-card reset-list" aria-label="{{ card.month }} {{ bashoYear }} bingo card">
-      {% for square in card.squares %}
+      {%- for square in card.squares -%}
         <li class="rikishi rikishi--{{ square.stateClass }}{% if square.yusho %} rikishi--saiko{% endif %}{% if square.state == 'out' %} rikishi--absent{% endif %}{% if square.record.retired %} rikishi--retired{% endif %}">
           <p class="reset-heading rikishi__name">
             {{ square.name }}
@@ -87,7 +87,7 @@
             {% for cell in square.bar %}<span class="record-bar__cell record-bar__cell--{{ cell }}"></span>{% endfor %}
           </div>
         </li>
-      {% endfor %}
+      {%- endfor -%}
     </ol>
   </section>
 {% endfor %}
