@@ -1,86 +1,81 @@
-{# The sumo bingo cards for one year. The page sets `bashoYear: 2025` in its front matter; the data is one file
+{#- The sumo bingo cards for one year. The page sets `bashoYear: 2025` in its front matter; the data is one file
    for each basho in source/_data/basho/ (see _config/sumo.js for the format). Totals, squares and bingo lines
-   are all worked out from the daily results. #}
-{% set cards = basho | bashoInYear(bashoYear) | bashoViews %}
+   are all worked out from the daily results. -#}
+{%- set cards = basho | bashoInYear(bashoYear) | bashoViews -%}
 
-{% if cards.length %}
+{%- if cards.length -%}
   <nav aria-label="Tournaments in {{ bashoYear }}">
     <ol>
-      {% for card in cards %}
+      {%- for card in cards -%}
         <li><a href="#basho-{{ card.id }}">{{ card.month }}</a></li>
-      {% endfor %}
+      {%- endfor -%}
     </ol>
   </nav>
-{% endif %}
+{%- endif -%}
 
-{% for card in cards %}
+{%- for card in cards -%}
   <section aria-labelledby="basho-{{ card.id }}">
     <h2 id="basho-{{ card.id }}">{{ card.month }} Tournament</h2>
 
     <ul>
-      {% if card.city %}<li><span aria-hidden="true">📍</span> <span class="off-screen">City: </span>{{ card.city }}</li>{% endif %}
-      {% if card.venue %}
+      {%- if card.city -%}<li><span aria-hidden="true">📍</span> <span class="off-screen">City: </span>{{ card.city }}</li>{%- endif -%}
+      {%- if card.venue -%}
         <li>
           <span aria-hidden="true">🏟️</span> <span class="off-screen">Venue: </span>
-          {% if card.venueUrl %}<a href="{{ card.venueUrl }}">{{ card.venue }}</a>{% else %}{{ card.venue }}{% endif %}
+          {%- if card.venueUrl -%}<a href="{{ card.venueUrl }}">{{ card.venue }}</a>{%- else -%}{{ card.venue }}{%- endif -%}
         </li>
-      {% endif %}
+      {%- endif -%}
       <li>
         <span aria-hidden="true">📆</span> <span class="off-screen">Dates: </span>
         <time datetime="{{ card.startDate | isoDate }}">{{ card.startDate | longDate }}</time> »
         <time datetime="{{ card.endDate | isoDate }}">{{ card.endDate | longDate }}</time>
       </li>
-      {% if card.sumokaboom %}
+      {%- if card.sumokaboom -%}
         <li><span aria-hidden="true">🪪</span> Sumo Kaboom bingo ID: <a href="{{ card.sumokaboom.url }}">{{ card.sumokaboom.id }}</a></li>
-      {% endif %}
+      {%- endif -%}
     </ul>
 
     <p class="bingo-result">
-      {% if card.lines.length %}
+      {%- if card.lines.length -%}
         <strong>Bingo!</strong>
-        {% for line in card.lines %}{{ line.label | capitalize }}{% if not loop.last %}, {% else %}. {% endif %}{% endfor %}
-      {% endif %}
+        {%- for line in card.lines -%}{{ line.label | capitalize }}{%- if not loop.last -%}, {%- else -%}. {%- endif -%}{%- endfor -%}
+      {%- endif -%}
       {{ card.totals.winning }} winning, {{ card.totals.losing }} losing, {{ card.totals.out }} out, {{ card.totals.pending }} still to be decided.
     </p>
 
     <ol class="grid grid--5 bingo-card reset-list" aria-label="{{ card.month }} {{ bashoYear }} bingo card">
       {%- for square in card.squares -%}
-        <li class="rikishi rikishi--{{ square.stateClass }}{% if square.yusho %} rikishi--saiko{% endif %}{% if square.state == 'out' %} rikishi--absent{% endif %}{% if square.record.retired %} rikishi--retired{% endif %}">
+        <li class="rikishi rikishi--{{ square.stateClass }}{%- if square.yusho -%} rikishi--saiko{%- endif -%}{%- if square.state == 'out' -%} rikishi--absent{%- endif -%}{%- if square.record.retired -%} rikishi--retired{%- endif -%}">
           <p class="reset-heading rikishi__name">
             {{ square.name }}
-            {% if square.yusho %}<span aria-hidden="true">🏆</span><span class="off-screen">, tournament winner</span>{% endif %}
+            {%- if square.yusho -%}<span aria-hidden="true">🏆</span><span class="off-screen">, tournament winner</span>{%- endif -%}
           </p>
-
           <div class="rikishi__photo">
             <img src="/assets/images/making/sumo-bingo-cards/rikishi/{{ square.id }}.jpg" alt="" loading="lazy" decoding="async">
           </div>
-
-          {# The score is read out in words; the numbers are for the eye #}
+          {#- The score is read out in words; the numbers are for the eye -#}
           <p class="rikishi__score">
-            <span class="off-screen">{{ square.scoreWords }}{% if square.playoff !== null %}, {{ square.playoff }} playoff win{% if square.playoff != 1 %}s{% endif %}{% endif %}. </span>
+            <span class="off-screen">{{ square.scoreWords }}{%- if square.playoff !== null -%}, {{ square.playoff }} playoff win{%- if square.playoff != 1 -%}s{%- endif -%}{%- endif -%}. </span>
             <span aria-hidden="true">{{ square.score }}</span>
           </p>
-
-          {# A word and a symbol as well as a colour, so the state doesn't depend on seeing red and green #}
-          <p class="rikishi__state">
-            {% if square.state == 'kachi-koshi' %}<span aria-hidden="true">✓</span> Winning
-            {% elif square.state == 'make-koshi' %}<span aria-hidden="true">✕</span> Losing
-            {% elif square.state == 'out' %}<span aria-hidden="true">–</span> Out
-            {% else %}<span class="off-screen">Still to be decided</span>{% endif %}
+          {#- A word and a symbol as well as a colour, so the state doesn't depend on seeing red and green -#}
+          <p class="rikishi__state off-screen">
+            {%- if square.state == 'kachi-koshi' -%}Kachi-koshi!
+            {%- elif square.state == 'make-koshi' -%}Make-koshi!
+            {%- elif square.state == 'out' -%}<span aria-hidden="true">–</span> Out
+            {%- else -%}<span class="off-screen">Still to be decided</span>{%- endif -%}
           </p>
-
-          {% if square.daily %}
+          {%- if square.daily -%}
             <div class="grid grid--15 results results--daily" role="img" aria-label="Day by day: {{ square.dailyWords }}">
-              {% for day in square.daily %}<span class="result result--{{ day.className }}"></span>{% endfor %}
+              {%- for day in square.daily -%}<span class="result result--{{ day.className }}"></span>{%- endfor -%}
             </div>
-          {% endif %}
-
-          {# Wins from the left, losses from the right, days to come in between, days out from the middle #}
+          {%- endif -%}
+          {#- Wins from the left, losses from the right, days to come in between, days out from the middle -#}
           <div class="record-bar" aria-hidden="true">
-            {% for cell in square.bar %}<span class="record-bar__cell record-bar__cell--{{ cell }}"></span>{% endfor %}
+            {%- for cell in square.bar -%}<span class="record-bar__cell record-bar__cell--{{ cell }}"></span>{%- endfor -%}
           </div>
         </li>
       {%- endfor -%}
     </ol>
   </section>
-{% endfor %}
+{%- endfor -%}
