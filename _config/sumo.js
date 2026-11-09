@@ -232,12 +232,14 @@ export function parseHeading(text = "") {
   return { id: `${match[1]}-${String(month).padStart(2, "0")}`, day: Number(match[3]) };
 }
 
-// Fold a newly fetched day-by-day string into what is already saved. A saved result is never changed:
-// only days still "-" are filled in. Disagreements are reported, not applied.
-export function mergeResults(saved = "", incoming = "", days = 15) {
+// Fold a newly fetched day-by-day string into what is already saved. By default a saved result is never changed:
+// only days still "-" are filled in, and disagreements are reported. With { force: true } the fetched result wins
+// (listed in `overwritten`). A fetched "-" never erases anything, forced or not.
+export function mergeResults(saved = "", incoming = "", days = 15, { force = false } = {}) {
   const have = String(saved).padEnd(days, "-");
   const got = String(incoming).padEnd(days, "-");
   const conflicts = [];
+  const overwritten = [];
   let changed = false;
   const merged = [...have].map((current, i) => {
     if (got[i] === "-" || got[i] === current) return current;
@@ -245,10 +247,15 @@ export function mergeResults(saved = "", incoming = "", days = 15) {
       changed = true;
       return got[i];
     }
+    if (force) {
+      changed = true;
+      overwritten.push({ day: i + 1, saved: current, incoming: got[i] });
+      return got[i];
+    }
     conflicts.push({ day: i + 1, saved: current, incoming: got[i] });
     return current;
   });
-  return { results: merged.join(""), changed, conflicts };
+  return { results: merged.join(""), changed, conflicts, overwritten };
 }
 
 // May a fetched page be written into this basho's file? Only if the page is for the same basho and today is
@@ -261,4 +268,80 @@ export function mayUpdate(basho, heading, now = new Date()) {
   const end = toDate(basho.end).getTime() + 2 * 86_400_000;   // through the day after the final day
   if (now.getTime() < start || now.getTime() >= end) return { ok: false, reason: `${basho.id} is not in progress` };
   return { ok: true };
+}
+
+// ---- For the importer: turning what sumo-api.com sends back into the results strings above ----
+// https://www.sumo-api.com/api-guide   GET /api/basho/:bashoId/banzuke/Makuuchi
+// Each rikishi in "east" and "west" has a "record": one entry per day, in order, e.g. { "result": "win", ... }
+
+// "2025-07" -> "202507" (how the API names a basho)
+export const apiBashoId = (id = "") => String(id).replace("-", "");
+
+// What the API calls a day, and the character it becomes. A "fusen win" is a win because the opponent pulled out.
+export const API_RESULTS = { win: "w", loss: "l", "fusen win": "w", "fusen loss": "f", absent: "a" };
+
+// How many days of a basho have finished, going by the clock in Japan (day 1 is the start date).
+// Makuuchi bouts end by about 18:00 JST, so a day counts as finished from 18:30 that evening.
+export function completedDays(basho, now = new Date()) {
+  const days = basho.days ?? 15;
+  const jst = new Date(toDate(now).getTime() + 9 * 3_600_000);            // shift so the UTC fields read as Japan time
+  const today = Date.UTC(jst.getUTCFullYear(), jst.getUTCMonth(), jst.getUTCDate());
+  const [year, month, day] = String(basho.start).slice(0, 10).split("-").map(Number);
+  const dayNumber = Math.round((today - Date.UTC(year, month - 1, day)) / 86_400_000) + 1;   // 1 on the opening day
+  const afterBouts = jst.getUTCHours() * 60 + jst.getUTCMinutes() >= 18 * 60 + 30;
+  const finished = afterBouts ? dayNumber : dayNumber - 1;
+  return Math.min(Math.max(finished, 0), days);
+}
+
+// One rikishi's "record" -> "wwlf aaa..." Days after `through` stay "-" because nobody has fought them yet:
+// the API may well show an unplayed day as "absent", so only the clock can tell the two apart.
+export function fromApiRecord(record = [], through = 15, days = 15) {
+  const unknown = [];
+  const chars = [];
+  for (let i = 0; i < days; i++) {
+    const entry = record[i];
+    if (!entry || i >= through) { chars.push("-"); continue; }
+    const code = API_RESULTS[entry.result];
+    if (!code) unknown.push({ day: i + 1, result: entry.result });
+    chars.push(code ?? "-");
+  }
+  return { results: chars.join(""), unknown };
+}
+
+// Everything in a banzuke response, ready to merge: { id, api, name, rank, results, unknown }[]
+export function fromBanzuke(response = {}, through = 15, days = 15) {
+  return [...(response.east ?? []), ...(response.west ?? [])].map((r) => ({
+    id: rikishiId(r.shikonaEn),
+    api: r.rikishiID,
+    name: r.shikonaEn,
+    rank: r.rank,
+    ...fromApiRecord(r.record, through, days),
+  }));
+}
+
+// Totals-only entries ("record": { wins: 6, losses: 4 }, taken part-way through a basho) can be checked against the
+// daily results: the first (wins + losses) fought days should add up to the same totals.
+export function checkTotals(saved = {}, results = "") {
+  const played = num(saved.wins) + num(saved.losses);
+  const first = [...results].slice(0, played);
+  // a day lost by default (f) was not one of the totals, so look further along until `played` fought days are found
+  const fought = [];
+  for (const c of results) { if (c === "w" || c === "l") fought.push(c); if (fought.length === played) break; }
+  const wins = fought.filter((c) => c === "w").length;
+  const losses = fought.filter((c) => c === "l").length;
+  return { ok: fought.length === played && wins === num(saved.wins) && losses === num(saved.losses), wins, losses, first: first.length };
+}
+
+// "2026-11" -> the second Sunday of that month, "2026-11-08": when a basho normally starts
+export function secondSunday(id = "") {
+  const [year, month] = String(id).split("-").map(Number);
+  const first = new Date(Date.UTC(year, month - 1, 1));
+  const toSunday = (7 - first.getUTCDay()) % 7;           // days from the 1st to the first Sunday
+  return new Date(Date.UTC(year, month - 1, 1 + toSunday + 7)).toISOString().slice(0, 10);
+}
+
+// "2026-11-08" + 14 -> "2026-11-22"
+export function addDays(date = "", count = 0) {
+  const [year, month, day] = String(date).split("-").map(Number);
+  return new Date(Date.UTC(year, month - 1, day + count)).toISOString().slice(0, 10);
 }

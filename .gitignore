@@ -23,3 +23,8 @@ source/_includes/css
 
 # Local Netlify folder
 .netlify
+
+#
+# Folders
+#
+.cache/sumo-api/
