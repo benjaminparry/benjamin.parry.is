@@ -1,5 +1,6 @@
 {
   "layout": "layouts/writing-post.html",
   "showWebmentions": true,
-  "permalink": "/writing/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/"
+  "permalink": "/writing/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/",
+  "headingAnchors": true
 }

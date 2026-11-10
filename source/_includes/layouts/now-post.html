@@ -13,7 +13,7 @@ layout: layouts/base.html
   {% if posse %}<p class="p-summary">{{ posse }}</p>{% endif %}
 
   <div class="e-content">
-    {{ content | safe }}
+    {{ content | headingAnchors(headingAnchors, anchors) | safe }}
   </div>
 
   {% include "partials/tags.html" %}

@@ -1,0 +1,65 @@
+/* Heading anchors (see _config/anchors.js). Paste into the <style> in layouts/base.html, or include this file there. */
+
+/* Text for screen readers that nobody needs to see */
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The heading and its link side by side. The heading wraps its own text; the link stays beside the first line. */
+.heading-anchor-group {
+  display: flex;
+  align-items: first baseline;
+  column-gap: 0.35em;
+}
+.heading-anchor-group > :is(h1, h2, h3, h4, h5, h6) {
+  min-inline-size: 0;
+  text-wrap: pretty;           /* "balance" would leave a gap between a wrapped heading and its link */
+}
+
+.heading-anchor {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 1.5rem;     /* a big enough target to tap or click (WCAG 2.2: at least 24 × 24 px) */
+  min-block-size: 1.5rem;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.75;               /* still over 4.5:1 on the page background */
+}
+.heading-anchor:hover,
+.heading-anchor:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
+.heading-anchor:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Where there is a mouse, keep the page calm: show the link when the heading is hovered or the link has focus.
+   Touch screens and keyboards never rely on hover, so there the link is always showing. */
+@media (hover: hover) {
+  .heading-anchor { opacity: 0; }
+  .heading-anchor-group:hover .heading-anchor,
+  .heading-anchor-group:focus-within .heading-anchor { opacity: 1; }
+}
+
+/* Say which heading was linked to without relying on colour */
+.heading-anchor-group > :target {
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
+}
+
+@media (forced-colors: active) {
+  .heading-anchor { opacity: 1; }
+}
+@media print {
+  .heading-anchor { display: none; }
+}

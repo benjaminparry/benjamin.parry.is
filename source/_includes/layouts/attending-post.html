@@ -25,7 +25,7 @@ layout: layouts/base.html
   {% include "partials/location.html" %}
 
   <div class="e-content">
-    {{ content | safe }}
+    {{ content | headingAnchors(headingAnchors, anchors) | safe }}
   </div>
 
   {% from "macros/related.html" import related %}

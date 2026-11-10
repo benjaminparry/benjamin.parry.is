@@ -15,6 +15,7 @@ import { buildWork, bySlug, byUrl } from "./_config/working.js";
 import { adjacentPosts } from "./_config/adjacent.js";
 import { pageWindowFor } from "./_config/pager.js";
 import { updatesOf, feedDate, updatedFirst, partOf } from "./_config/updated.js";
+import { addHeadingAnchors } from "./_config/anchors.js";
 import site from "./source/_data/site.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
@@ -317,6 +318,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("updatesOf", updatesOf);
   eleventyConfig.addFilter("feedDate", feedDate);
   eleventyConfig.addFilter("partOf", partOf);
+
+  // Heading anchors
+  eleventyConfig.addFilter("headingAnchors", addHeadingAnchors);
 
 }
 

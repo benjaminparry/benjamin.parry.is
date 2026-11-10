@@ -37,7 +37,7 @@ layout: layouts/base.html
   {% if summary %}<p class="p-summary">{{ summary }}</p>{% endif %}
 
   <div class="e-content">
-    {{ content | safe }}
+    {{ content | headingAnchors(headingAnchors, anchors) | safe }}
   </div>
 
   {% if project and project.caseStudy %}

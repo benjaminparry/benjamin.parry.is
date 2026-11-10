@@ -31,7 +31,7 @@ layout: layouts/base.html
   {% endif %}
 
   <div class="e-content">
-    {{ content | safe }}
+    {{ content | headingAnchors(headingAnchors, anchors) | safe }}
   </div>
 
   {% include "partials/tags.html" %}
