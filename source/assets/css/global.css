@@ -1,0 +1,43 @@
+/*
+// LISTS
+*/
+
+.list {
+
+}
+
+.list--flatten {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list--post-feed {
+}
+
+.card {
+
+}
+
+.card--post {
+    margin-bottom: 1rem;
+
+}
+
+.card--post__image {
+    width: 70%;
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+}
+
+.card--post a {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.card--post time {
+    font-size: smaller;
+    font-family: monospace;
+}
+
+.card--post p {
+}

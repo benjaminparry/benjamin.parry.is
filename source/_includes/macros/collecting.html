@@ -3,7 +3,7 @@
 {% macro collectingItem(post, showSection) %}
   {# Ideas have a proposal rather than a summary #}
   {% set blurb = post.data.summary or post.data.proposal %}
-  <li>
+  <li class="card card--post">
     {% if post.data.images and post.data.images.length %}
       {# Decorative: the title link beside it names the post, so the alt text is empty #}
       <img src="{{ post.data.images[0] }}" alt=""  loading="lazy" decoding="async">

@@ -1,6 +1,6 @@
 ---
 title: "My new festive habit"
-summary: "From now on, around the festive period or shortly afterwards, I’m going to give back to the open source developers that have made life more productive and less intrusive. The first of which is @paulrobertlloyd@mastodon.social’s Indiekit, the utterly superb IndieWeb server. #OpenSource #IndieWeb #Reciprocity"
+summary: "Sprinkling some festive cheer every year by giving back to those open source folks who’s work I use on a day-to-day basis."
 tags:
     - 'Open Source'
     - 'Indieweb'

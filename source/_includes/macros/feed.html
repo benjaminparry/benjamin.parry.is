@@ -3,10 +3,10 @@
 {% macro feedItem(post, showCollection) %}
   {% set typeLabels = { "event": "🎤 Event", "media": "🎙️ Media" } %}
   {% set blurb = post.data.summary or post.data.posse %}
-  <li>
+  <li class="card card--post">
     {% if post.data.image and post.data.image[0] == "/" %}
       {# Decorative: the title link beside it names the post, so the alt text is empty #}
-      <img src="{{ post.data.image }}" alt=""  loading="lazy" decoding="async">
+      <img class="card--post__image" src="{{ post.data.image }}" alt=""  loading="lazy" decoding="async">
     {% endif %}
     <a href="{{ post.url }}">{{ post.data.title }}</a>
     {% if post.data.showDate != false %}

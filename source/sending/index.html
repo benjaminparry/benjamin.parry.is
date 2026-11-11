@@ -29,7 +29,7 @@ eleventyExcludeFromCollections: true
   </ul>
 </nav>
 
-<ul>
+<ul class="list list--flatten list--post-feed">
   {% for post in posts %}
     {{ feedItem(post, true) }}
   {% else %}

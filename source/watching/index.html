@@ -9,7 +9,7 @@ permalink: /watching/
 
 <section aria-labelledby="now-heading">
   <h2 id="now-heading">Currently watching</h2>
-  <ul>
+  <ul class="list list--flatten list--post-feed">
     {% for item in collections.currentlyWatching %}
       {% set poster = item.data.poster or ("/assets/images/watching/" ~ item.fileSlug ~ ".jpg") %}
       <li>

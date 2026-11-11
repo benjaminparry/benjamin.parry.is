@@ -19,7 +19,7 @@ eleventyExcludeFromCollections: true
 
 {{ sectionNav(collectingSections, "thoughts") }}
 
-<ul>
+<ul class="list list--flatten list--post-feed">
   {% for post in posts %}
     {{ collectingItem(post, false) }}
   {% else %}

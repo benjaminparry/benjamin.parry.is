@@ -18,7 +18,7 @@ eleventyExcludeFromCollections: true
 
 {{ sendingNav(sendingSections, "likes") }}
 
-<ul>
+<ul class="list list--flatten list--post-feed">
   {% for post in posts %}
     {{ feedItem(post, false) }}
   {% else %}

@@ -16,7 +16,7 @@ eleventyExcludeFromCollections: true
 
 {{ sectionNav(collectingSections, "cycles") }}
 
-<ul>
+<ul class="list list--flatten list--post-feed">
   {% for post in posts %}
     {{ collectingItem(post, false) }}
   {% else %}

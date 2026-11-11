@@ -9,7 +9,7 @@ permalink: /playing/
 
 <section aria-labelledby="now-heading">
   <h2 id="now-heading">Currently playing</h2>
-  <ul>
+  <ul class="list list--flatten list--post-feed">
     {% for item in collections.currentlyPlaying %}
       {% set cover = item.data.cover | coverSrc("playing", item.fileSlug) %}
       <li>
