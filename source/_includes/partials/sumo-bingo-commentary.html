@@ -1,0 +1,56 @@
+{#- The commentary under one bingo card: how it stands, what could still happen and what can't. Used inside the
+    loop over `cards` in sumo-bingo-card.html, so `card` is the basho being shown. All the working out is in
+    _config/sumo.js (bashoOutlook). There are no blank lines in the output on purpose: in a Markdown page a blank
+    line ends an HTML block, and the lines after it would turn into stray paragraphs. -#}
+{%- set outlook = card.outlook -%}
+<section class="bingo-commentary" aria-labelledby="watch-{{ card.id }}">
+<h3 id="watch-{{ card.id }}">Bingo watch</h3>
+<p class="bingo-commentary__headline"><strong>{{ outlook.headline }}</strong></p>
+{%- for paragraph in outlook.paragraphs %}
+<p>{{ paragraph }}</p>
+{%- endfor %}
+{%- if outlook.status != 'finished' %}
+{%- if outlook.watch.length %}
+<h4>Results to watch</h4>
+<ul>
+{%- for item in outlook.watch %}
+<li>{{ item.text }}</li>
+{%- endfor %}
+</ul>
+{%- endif %}
+{%- if outlook.aliveShown.length %}
+<h4>Lines still possible</h4>
+<ul>
+{%- for text in outlook.aliveShown %}
+<li>{{ text }}</li>
+{%- endfor %}
+</ul>
+{%- endif %}
+{%- if outlook.impossible.length or outlook.oneWay.length %}
+<h4>Lines that can’t happen</h4>
+<ul>
+{%- for item in outlook.impossible %}
+<li>{{ item.text }}</li>
+{%- endfor %}
+{%- for item in outlook.oneWay %}
+<li>{{ item.text }}</li>
+{%- endfor %}
+</ul>
+{%- endif %}
+<p class="bingo-commentary__note">The chances are a rough guide. Each undecided rikishi is given a chance of finishing with 8 wins, from the days they have left and how they have done so far, and the squares are treated as separate. Opponents, who fights whom and injuries aren’t taken into account.</p>
+{%- endif %}
+<details class="bingo-commentary__lines">
+<summary>All {{ outlook.table.length }} lines</summary>
+<table>
+<caption class="off-screen">Every line on the {{ card.month }} card, and whether it can still be a winning or a losing bingo</caption>
+<thead>
+<tr><th scope="col">Line</th><th scope="col">Squares</th><th scope="col">As a winning line</th><th scope="col">As a losing line</th></tr>
+</thead>
+<tbody>
+{%- for row in outlook.table %}
+<tr><th scope="row">{{ row.label }}</th><td>{{ row.names }}</td><td>{{ row.winning }}</td><td>{{ row.losing }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</details>
+</section>

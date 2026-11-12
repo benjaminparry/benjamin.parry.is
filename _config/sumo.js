@@ -144,7 +144,7 @@ export function problemsWith(basho) {
 }
 
 // Everything a template needs to show one basho
-export function bashoView(basho) {
+export function bashoView(basho, now = new Date()) {
   const days = basho.days ?? 15;
   const startDate = toDate(basho.start);
   const rikishi = basho.rikishi ?? {};
@@ -179,6 +179,7 @@ export function bashoView(basho) {
   });
 
   const lines = bingoLines(squares.map((square) => square.state));
+  const outlook = bashoOutlook(basho, squares, now);
   const count = (state) => squares.filter((square) => square.state === state).length;
 
   return {
@@ -193,6 +194,7 @@ export function bashoView(basho) {
     yusho: basho.yusho,
     squares,
     lines,
+    outlook,
     totals: { winning: count("kachi-koshi"), losing: count("make-koshi"), out: count("out"), pending: count("pending") },
   };
 }
@@ -344,4 +346,276 @@ export function secondSunday(id = "") {
 export function addDays(date = "", count = 0) {
   const [year, month, day] = String(date).split("-").map(Number);
   return new Date(Date.UTC(year, month - 1, day + count)).toISOString().slice(0, 10);
+}
+
+// ---- Watching the bingo lines: which can still happen, how likely they are, and what to watch ----
+//
+// Every line is five squares in a row. It is a bingo when all five are winning (kachi-koshi) or all five are
+// losing (make-koshi). So each line is checked twice, once as a winning line and once as a losing line:
+//   complete    all five squares already are what's needed
+//   alive       none of the five rules it out, and some are still to be decided
+//   impossible  one square already rules it out: for a winning line a square that is losing or out, for a
+//               losing line a square that is winning or out. An "out" (injured, absent, retired) square can
+//               never be either, so it kills the line both ways.
+//
+// How likely: each undecided square gets the chance it ends with 8 wins, from the days it has left and how it
+// has been doing (see winChance). The squares are treated as independent, so the numbers are a rough guide, not
+// odds. The chance of "any bingo" is worked out exactly from those numbers with inclusion and exclusion over
+// the lines, so overlapping lines are not counted twice.
+
+export const BINGO_LINES = LINES;
+
+const capital = (text) => text.charAt(0).toUpperCase() + text.slice(1);
+export const lineLabel = (line) => (line.direction === "diagonal" ? `Diagonal, ${line.name}` : `${capital(line.direction)} ${line.number}`);
+
+// P(at least k wins from n bouts when each is won with chance p)
+export function binomialAtLeast(n, p, k) {
+  if (k <= 0) return 1;
+  if (k > n) return 0;
+  let total = 0;
+  let choose = 1;                                           // n choose 0
+  for (let i = 0; i <= n; i++) {
+    if (i >= k) total += choose * p ** i * (1 - p) ** (n - i);
+    choose = (choose * (n - i)) / (i + 1);
+  }
+  return Math.min(Math.max(total, 0), 1);
+}
+
+// The chance a rikishi wins one of their remaining bouts: their results so far, pulled towards an even chance by
+// a prior worth 8 bouts, so one good or bad day doesn't swing it. Kept away from 0 and 1.
+export function winChance(record, prior = 4) {
+  const played = record.wins + record.losses;
+  return Math.min(Math.max((record.wins + prior) / (played + 2 * prior), 0.1), 0.9);
+}
+
+// One square: how likely each ending is
+//   kachi  chance it ends winning (8 wins)   make  chance it ends losing (8 losses)
+export function squareOutlook(record, state, days = 15) {
+  if (state === "kachi-koshi") return { kachi: 1, make: 0, left: 0, winsToGo: 0, lossesToGo: 0 };
+  if (state === "make-koshi") return { kachi: 0, make: 1, left: 0, winsToGo: 0, lossesToGo: 0 };
+  if (state === "out") return { kachi: 0, make: 0, left: 0, winsToGo: 0, lossesToGo: 0 };
+  const needed = winsNeeded(days);
+  const left = record.pending;
+  const winsToGo = Math.max(needed - record.wins, 0);
+  const lossesToGo = Math.max(needed - record.losses, 0);
+  const p = winChance(record);
+  return { kachi: binomialAtLeast(left, p, winsToGo), make: binomialAtLeast(left, 1 - p, lossesToGo), left, winsToGo, lossesToGo, p };
+}
+
+const TARGET = { winning: "kachi-koshi", losing: "make-koshi" };
+const WHY = {
+  winning: { "make-koshi": "is already losing", out: "is out of the tournament" },
+  losing: { "kachi-koshi": "is already winning", out: "is out of the tournament" },
+};
+
+// One line, one direction
+export function lineChecks(line, squares, type) {
+  const cells = line.cells.map((index) => squares[index]);
+  const target = TARGET[type];
+  const blockers = cells.filter((s) => s.state !== target && s.state !== "pending").map((s) => ({ name: s.name, index: s.index, why: WHY[type][s.state] }));
+  const have = cells.filter((s) => s.state === target);
+  const open = cells.filter((s) => s.state === "pending");
+  const status = blockers.length ? "impossible" : open.length ? "alive" : "complete";
+  const key = type === "winning" ? "kachi" : "make";
+  const chance = status === "impossible" ? 0 : open.reduce((p, s) => p * s.outlook[key], 1);
+  return {
+    type,
+    status,
+    chance,
+    blockers,
+    have: have.map((s) => s.name),
+    open: open.map((s) => ({
+      name: s.name,
+      index: s.index,
+      left: s.outlook.left,
+      needs: type === "winning" ? s.outlook.winsToGo : s.outlook.lossesToGo,
+      chance: s.outlook[key],
+    })),
+  };
+}
+
+// The chance that at least one of the events happens, exactly (given independent squares).
+// events: { cells: [square index], type: "winning" | "losing" }; chanceOf(index, type) is that square's chance of
+// being what the line needs. Inclusion and exclusion over sets of lines; a set that needs one square to be both
+// winning and losing is impossible, so that branch stops there.
+export function chanceOfAny(events, chanceOf) {
+  let total = 0;
+  const need = new Map();
+  (function walk(from, count, p) {
+    for (let i = from; i < events.length; i++) {
+      const event = events[i];
+      const added = [];
+      let q = p;
+      let consistent = true;
+      for (const cell of event.cells) {
+        const already = need.get(cell);
+        if (already === undefined) { need.set(cell, event.type); added.push(cell); q *= chanceOf(cell, event.type); }
+        else if (already !== event.type) { consistent = false; break; }
+      }
+      if (consistent && q > 0) {
+        total += count % 2 === 0 ? q : -q;
+        walk(i + 1, count + 1, q);
+      }
+      for (const cell of added) need.delete(cell);
+    }
+  })(0, 0, 1);
+  return Math.min(Math.max(total, 0), 1);
+}
+
+// "about 24%", "under 1%", "over 99%"
+export function percent(p) {
+  if (p <= 0) return "0%";
+  if (p < 0.005) return "under 1%";
+  if (p >= 1) return "100%";
+  if (p > 0.995) return "over 99%";
+  return `${Math.round(p * 100)}%`;
+}
+
+// "about 24%", but "under 1%" and "over 99%" are already vague, so no "about" in front of them
+export const about = (p) => (/^\d/.test(percent(p)) && percent(p) !== "100%" ? `about ${percent(p)}` : percent(p));
+
+const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
+const listOf = (items) => (items.length <= 1 ? items.join("") : `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`);
+
+function needsText(open, type) {
+  const word = type === "winning" ? "win" : "loss";
+  const parts = open.map((o) => (o.needs >= o.left
+    ? `${o.name} must ${type === "winning" ? "win" : "lose"} all ${o.left} remaining bout${o.left === 1 ? "" : "s"}`
+    : `${o.name} needs ${plural(o.needs, word).replace("losss", "losses")} from ${plural(o.left, "bout")}`));
+  return listOf(parts);
+}
+
+// "a, b, c and 2 more"
+const upTo = (items, max) => (items.length <= max ? listOf(items) : `${listOf(items.slice(0, max))} and ${items.length - max} more`);
+// "Finishing winning takes the chance of a bingo from 31% to 85%; finishing losing takes it to 9%."
+function movement(base, winning, losing) {
+  const part = (after, word) => (Math.abs(after - base) < 0.01 ? `${word} barely changes it (${percent(after)})` : `${word} takes it ${after > base ? "up" : "down"} to ${percent(after)}`);
+  return `The chance of a bingo is ${percent(base)} now. ${capital(part(winning, "finishing winning"))}; ${part(losing, "finishing losing")}.`;
+}
+
+// Everything the commentary box shows. `squares` are the views made in bashoView (state, record, name, index).
+export function bashoOutlook(basho, squares, now = new Date()) {
+  const days = basho.days ?? 15;
+  const fought = Math.max(0, ...squares.map((s) => s.record.wins + s.record.losses + s.record.forfeits + s.record.retired));
+  const clock = completedDays(basho, now);
+  const status = clock >= days ? "finished" : fought === 0 ? "upcoming" : "live";
+
+  for (const square of squares) square.outlook = squareOutlook(square.record, square.state, days);
+
+  const lines = BINGO_LINES.map((line) => {
+    const winning = lineChecks(line, squares, "winning");
+    const losing = lineChecks(line, squares, "losing");
+    const states = [winning.status, losing.status];
+    return {
+      label: lineLabel(line),
+      cells: line.cells,
+      names: line.cells.map((i) => squares[i].name),
+      winning,
+      losing,
+      status: states.includes("complete") ? "complete" : states.includes("alive") ? "alive" : "impossible",
+    };
+  });
+
+  const events = lines.flatMap((l) => [l.winning, l.losing].filter((c) => c.status !== "impossible").map((c) => ({ cells: l.cells, type: c.type, label: l.label })));
+  const chanceOf = (index, type) => squares[index].outlook[type === "winning" ? "kachi" : "make"];
+  const winningEvents = events.filter((e) => e.type === "winning");
+  const losingEvents = events.filter((e) => e.type === "losing");
+
+  const result = { status, played: fought, left: days - fought, days, lines };
+  const done = lines.filter((l) => l.status === "complete");
+  result.bingos = done.flatMap((l) => [l.winning, l.losing].filter((c) => c.status === "complete").map((c) => `${l.label} (${c.type})`));
+
+  // ---- finished: say how it ended, don't predict ----
+  const undecided = squares.filter((s) => s.state === "pending").length;
+  if (status === "finished") {
+    const best = lines
+      .flatMap((l) => [l.winning, l.losing].map((c) => ({ label: l.label, type: c.type, have: c.have.length, blockers: c.blockers })))
+      .sort((a, b) => b.have - a.have)[0];
+    result.headline = result.bingos.length ? `Bingo! ${listOf(result.bingos)}.` : "No bingo this time.";
+    result.paragraphs = [];
+    if (!result.bingos.length && best) result.paragraphs.push(`The closest was ${best.label.toLowerCase()} as a ${best.type} line, with ${best.have} of 5 squares${best.blockers.length ? `. ${listOf(best.blockers.map((b) => b.name))} stopped it` : ""}.`);
+    if (undecided) result.paragraphs.push(`${plural(undecided, "square")} ${undecided === 1 ? "has" : "have"} no final result in the data yet, so this may not be the final answer.`);
+    return finish(result, squares, lines);
+  }
+
+  // ---- upcoming and live: predict ----
+  const any = chanceOfAny(events, chanceOf);
+  result.chance = { any, winning: chanceOfAny(winningEvents, chanceOf), losing: chanceOfAny(losingEvents, chanceOf) };
+  const alive = lines.filter((l) => l.status === "alive").flatMap((l) => [l.winning, l.losing].filter((c) => c.status === "alive").map((c) => ({ ...c, label: l.label })));
+  alive.sort((a, b) => b.chance - a.chance);
+  result.alive = alive.map((c) => ({
+    label: c.label,
+    type: c.type,
+    chance: c.chance,
+    chanceText: percent(c.chance),
+    text:
+      `${c.label}, ${c.type}: ${c.have.length ? `${listOf(c.have)} ${c.have.length === 1 ? "is" : "are"} already ${c.type}. ` : ""}` +
+      `${needsText(c.open, c.type)}. Chance: ${about(c.chance)}.`,
+  }));
+
+  const likely = result.alive.filter((a) => a.chance >= 0.01).slice(0, 5);
+  const rest = result.alive.length - likely.length;
+  result.aliveShown = [...likely.map((a) => a.text), ...(rest ? [`${plural(rest, "other line")} ${rest === 1 ? "is" : "are"} still possible but ${rest === 1 ? "has" : "have"} under a 1% chance each. See the table below.`] : [])];
+
+  const dead = lines.filter((l) => l.status === "impossible");
+  result.impossible = dead.map((l) => {
+    const names = [...new Set([...l.winning.blockers, ...l.losing.blockers].map((b) => b.name))];
+    const reasons = [...new Map([...l.winning.blockers, ...l.losing.blockers].map((b) => [b.name, `${b.name} ${b.why}`])).values()];
+    return { label: l.label, text: `${l.label} can no longer be a bingo: ${listOf(reasons)}.`, names };
+  });
+  result.oneWay = lines
+    .filter((l) => (l.winning.status === "impossible") !== (l.losing.status === "impossible") && l.status !== "complete")
+    .map((l) => {
+      const closed = l.winning.status === "impossible" ? l.winning : l.losing;
+      const open = closed === l.winning ? l.losing : l.winning;
+      return { label: l.label, text: `${l.label} can no longer be a ${closed.type} line (${listOf(closed.blockers.map((b) => `${b.name} ${b.why}`))}) but is still possible as a ${open.type} one.` };
+    });
+
+  // ---- results to watch: the squares whose ending moves the chance of any bingo the most ----
+  const base = any;
+  const live = new Set(alive.flatMap((c) => c.open.map((o) => o.index)));
+  result.watch = [...live]
+    .map((index) => {
+      const square = squares[index];
+      const pinned = (win) => (cell, type) => (cell === index ? ((type === "winning") === win ? 1 : 0) : chanceOf(cell, type));
+      const ifWin = chanceOfAny(events, pinned(true));
+      const ifLose = chanceOfAny(events, pinned(false));
+      const types = new Map();
+      for (const c of alive.filter((c) => c.open.some((o) => o.index === index))) types.set(c.label.toLowerCase(), [...(types.get(c.label.toLowerCase()) ?? []), c.type]);
+      const through = [...types].map(([label, kinds]) => `${label} (${kinds.join(" or ")})`);
+      return { index, name: square.name, ifWin, ifLose, swing: Math.abs(ifWin - ifLose), through, left: square.outlook.left, winsToGo: square.outlook.winsToGo };
+    })
+    .filter((w) => w.swing >= 0.01)
+    .sort((a, b) => b.swing - a.swing)
+    .slice(0, 4)
+    .map((w) => ({
+      ...w,
+      text:
+        `${w.name} (${w.winsToGo >= w.left ? `must win all ${w.left}` : `needs ${plural(w.winsToGo, "more win")} from ${plural(w.left, "bout")}`}; in ${upTo(w.through, 3)}). ` +
+        movement(base, w.ifWin, w.ifLose),
+    }));
+
+  const winningLeft = lines.filter((l) => l.winning.status !== "impossible").length;
+  const losingLeft = lines.filter((l) => l.losing.status !== "impossible").length;
+  result.headline = result.bingos.length
+    ? `Bingo! ${listOf(result.bingos)}.`
+    : status === "upcoming"
+      ? `Not started. The chance of a bingo over the tournament is ${about(any)}.`
+      : `${plural(result.left, "day")} to go. The chance of a bingo by day ${days} is ${about(any)} (a winning line ${percent(result.chance.winning)}, a losing line ${percent(result.chance.losing)}).`;
+  result.paragraphs = [
+    `${plural(lines.length - dead.length, "line")} of ${lines.length} can still be a bingo: ${winningLeft} as a winning line and ${losingLeft} as a losing line. ${dead.length ? `${plural(dead.length, "line")} ${dead.length === 1 ? "is" : "are"} out of the running both ways.` : "None is out of the running yet."}`,
+  ];
+  return finish(result, squares, lines);
+}
+
+// Mark the squares worth watching, and give the table of all twelve lines
+function finish(result, squares, lines) {
+  const watch = new Set((result.watch ?? []).map((w) => w.index));
+  for (const square of squares) square.watch = watch.has(square.index);
+  const cell = (c) =>
+    c.status === "complete" ? "Bingo" :
+    c.status === "impossible" ? `Impossible: ${listOf([...new Set(c.blockers.map((b) => `${b.name} ${b.why}`))])}` :
+    `Possible, ${about(c.chance)}`;
+  result.table = lines.map((l) => ({ label: l.label, names: l.names.join(", "), winning: cell(l.winning), losing: cell(l.losing), status: l.status }));
+  return result;
 }

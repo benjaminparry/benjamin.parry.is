@@ -1,0 +1,21 @@
+/* ---- Bingo watch (the commentary under a card) ---- */
+.bingo-commentary {
+  margin-block-start: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid currentColor;
+  border-radius: 0.5rem;
+  max-width: 60ch;
+}
+.bingo-commentary h3 { margin-block: 0 0.5rem; }
+.bingo-commentary h4 { margin-block: 1rem 0.25rem; font-size: 1em; }
+.bingo-commentary ul { margin-block: 0.25rem; padding-inline-start: 1.25rem; }
+.bingo-commentary li + li { margin-block-start: 0.5rem; }
+.bingo-commentary__headline { margin-block: 0 0.5rem; }
+.bingo-commentary__note { font-size: 0.85em; margin-block-start: 1rem; }
+.bingo-commentary__lines { margin-block-start: 1rem; }
+.bingo-commentary__lines summary { cursor: pointer; font-weight: 600; }
+.bingo-commentary table { border-collapse: collapse; margin-block-start: 0.5rem; font-size: 0.85em; width: 100%; }
+.bingo-commentary th, .bingo-commentary td { border: 1px solid currentColor; padding: 0.25rem 0.4rem; text-align: start; vertical-align: top; }
+/* A square worth watching: a dashed outline as well as the words read out, so it never depends on colour alone */
+.rikishi--watch { outline: 3px dashed currentColor; outline-offset: -3px; }
+@media (forced-colors: active) { .bingo-commentary { border-color: CanvasText; } }
