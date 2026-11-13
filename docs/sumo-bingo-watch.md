@@ -43,8 +43,36 @@ A basho that has finished by the Japan clock gets no prediction, just how it end
    ```njk
    {% if square.watch %}<span class="off-screen">. One to watch for a bingo.</span>{% endif %}
    ```
+   To mark squares on a line that can no longer be a bingo, add this to the same class list:
+   ```njk
+   {% if square.noBingo %} rikishi--no-bingo{% endif %}
+   ```
 5. Add the contents of `sumo-bingo-watch.css` to your sumo bingo stylesheet.
 6. Run `node scripts/watch-test.mjs`.
+
+## `bingo-card--active` and `bingo-card--inactive`
+
+The card's `<ol>` gets one of these. **Active** is any basho that hasn't finished: not started yet, or in progress. **Inactive** is one whose last day's bouts are over (from 18:30 on day 15 in Japan, when the makuuchi bouts have ended). `card.status` is `"upcoming"`, `"live"` or `"finished"`, and `card.active` is true or false.
+
+```njk
+<ol class="grid grid--5 bingo-card bingo-card--{{ 'active' if card.active else 'inactive' }} reset-list" ...>
+```
+
+The class is worked out when the site is built, so it changes on the next build after a basho ends. A scheduled rebuild around the end of each basho (about 10:30 UK time on the last Sunday) would keep it right without you doing anything.
+
+## `rikishi--no-bingo`
+
+A square gets this class when it is part of at least one line that can no longer be a bingo in either direction. Every square sits on two or three lines (its row, its column and sometimes a diagonal), so mid-basho most squares will have it. Three numbers are on each square if you want something stricter:
+
+| Property | Meaning |
+| --- | --- |
+| `square.noBingo` | on at least one dead line (the class) |
+| `square.deadLines` | how many of its lines are dead |
+| `square.liveLines` | how many of its lines can still be a bingo |
+
+For squares with no bingo chance left at all, use `{% if square.liveLines == 0 %}`.
+
+The default style is a dotted frame and a small ⊘ in the corner, so it doesn't depend on colour. The text keeps full contrast, so it is not faded.
 
 ## Accessibility
 

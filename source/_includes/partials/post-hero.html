@@ -1,0 +1,2 @@
+{#- The hero image at the top of a post. Set `media.hero` in the front matter (src, alt, caption, source). -#}
+{%- if mediaSet.hero -%}{{ mediaSet.hero | figureHtml({ hero: true }) | safe }}{%- endif -%}

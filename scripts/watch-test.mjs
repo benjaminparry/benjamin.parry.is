@@ -32,6 +32,13 @@ near(v.outlook.lines[0].winning.chance, 1 / 32, 1e-9, "a fresh line is 1 in 32 e
 eq(v.outlook.lines.every((l) => l.status === "alive"), true, "all twelve alive at the start");
 eq(v.outlook.lines.length, 12, "12 lines: 5 rows, 5 columns, 2 diagonals");
 
+// active until the last day is over, then inactive
+eq([v.status, v.active], ["upcoming", true], "before the start: active");
+eq(s.bashoView(make({ r1: "wwl------------" }), midBasho).active, true, "mid-basho: active");
+eq(s.bashoView(make({ r1: "wwl------------" }), new Date("2026-11-22T05:00:00Z")).active, true, "day 15 bouts not over yet (14:00 in Japan)");
+eq([s.bashoView(make(), new Date("2026-11-22T10:00:00Z")).status, s.bashoView(make(), new Date("2026-11-22T10:00:00Z")).active], ["finished", false], "after day 15 (19:00 in Japan): inactive");
+eq(s.bashoView(make(), new Date("2027-01-01T00:00:00Z")).active, false, "long after: inactive");
+
 // a bingo: first row all winning
 v = s.bashoView(make({ r1: W, r2: W, r3: W, r4: W, r5: W }), midBasho);
 eq(v.lines.length, 1, "the existing bingo check still finds it");
@@ -48,6 +55,18 @@ eq(v.outlook.lines.find((l) => l.label === "Diagonal, top left to bottom right")
 eq(v.outlook.lines.find((l) => l.label === "Row 1").status, "alive", "other rows live");
 eq(v.outlook.impossible.length, 3, "three lines gone both ways");
 ok(v.outlook.impossible.find((i) => i.label === "Row 2").text.includes("R7 is out of the tournament"), "sentence names the rikishi");
+
+// squares on an impossible line are marked. r7 (row 2, column 2, diagonal) is out, so those three lines are dead
+const flagged = (view) => view.squares.filter((q) => q.noBingo).map((q) => q.name).sort();
+v = s.bashoView(make({ r7: "wwf------------" }), midBasho);
+eq(v.squares[6].noBingo, true, "the out square is on dead lines");
+eq(v.squares[0].noBingo, true, "r1 is on the dead diagonal");
+eq(v.squares[7].noBingo, true, "r8 is in row 2");
+eq(v.squares[4].noBingo, false, "r5 (row 1, column 5, the other diagonal) is on no dead line");
+eq(v.squares[4].deadLines + v.squares[4].liveLines, 3, "r5 is on three lines");
+eq(flagged(v).length, 13, "row 2 + column 2 + diagonal share r7 and the crossings: 13 squares");
+v = s.bashoView(make(), new Date("2026-11-01T00:00:00Z"));
+eq(v.squares.some((q) => q.noBingo), false, "nothing is marked before the start");
 
 // a winning square kills the line as a losing line only
 v = s.bashoView(make({ r1: W }), midBasho);

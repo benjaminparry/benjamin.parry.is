@@ -132,3 +132,12 @@ h5 {
     margin: 1rem 2rem 2rem -20%;
     float: left;
 }
+
+
+/*
+// SUMO BINGO
+*/
+
+ .bingo-card--active .rikishi--no-bingo {
+    opacity: 0.5;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Preview</title><style>body{background:#232626;color:#d9d9d9;font-family:sans-serif;font-size:18px;line-height:1.5;max-width:40rem;margin:0 auto;padding:1rem}a{color:#d9d9d9}/* Post pictures (see _config/images.js). Paste into the <style> in layouts/base.html, or include this file there. */
+
+.off-screen {                         /* text for screen readers only (skip if you already have this) */
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.post-image { margin-block: 1.5rem; }
+.post-image img { display: block; max-inline-size: 100%; block-size: auto; }
+.post-image figcaption { margin-block-start: 0.5rem; font-size: 0.875em; }
+.post-image__source { white-space: nowrap; }
+.post-image:target { outline: 3px solid currentColor; outline-offset: 4px; }    /* the one a link points to */
+
+/* The orientation class decides how much room a picture gets. Tall pictures would otherwise fill the screen. */
+.post-image--portrait { max-inline-size: 24rem; }
+.post-image--square { max-inline-size: 32rem; }
+
+/* The hero, at the top of the post */
+.post-hero { margin-block: 1rem 1.5rem; }
+.post-hero img { inline-size: 100%; }
+.post-hero.post-image--portrait { max-inline-size: 24rem; }
+.post-hero.post-image--square { max-inline-size: 32rem; }
+
+/* The gallery: a grid of thumbnails that each link to the full-size picture. No JavaScript. */
+.post-gallery { margin-block: 1.5rem; }
+.post-gallery__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.post-gallery .post-image { margin: 0; max-inline-size: none; }
+.post-gallery .post-image--portrait { grid-row: span 1; }
+.post-gallery img { inline-size: 100%; }
+.post-gallery__link { display: block; }
+.post-gallery__link:hover img { outline: 3px solid currentColor; outline-offset: 2px; }
+.post-gallery__link:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+
+@media print { .post-gallery__list { grid-template-columns: repeat(3, 1fr); } }
+</style></head><body><article><h1>A post with pictures</h1><p><time>12 November 2026</time></p><figure class="post-image post-image--landscape post-hero"><img src="/assets/images/wide.webp" alt="A teal banner" width="640" height="360" class="u-photo" fetchpriority="high" decoding="async"><figcaption>The hero image caption <span class="post-image__source">Source: <a href="https://www.example.com/photo" rel="noopener">example.com</a></span></figcaption></figure><div class="e-content"><p>Intro paragraph with <strong>bold</strong> text. It is a normal paragraph in a post so you can see the picture sitting in the flow of the text around it.</p>
+<figure class="post-image post-image--portrait" id="figure-phone"><img src="/assets/images/phone-portrait.jpg" alt="A phone photo, taken sideways" width="600" height="800" loading="lazy" decoding="async"><figcaption>A portrait photo from a phone</figcaption></figure>
+<p>More text after the portrait photo, which is limited in width so it doesn't fill the screen.</p>
+<figure class="post-image post-image--landscape" id="figure-wide"><img src="/assets/images/landscape.jpg" alt="A red landscape picture" width="800" height="600" loading="lazy" decoding="async"><figcaption>A landscape picture <span class="post-image__source">Source: <a href="https://unsplash.com/photos/abc" rel="noopener">unsplash.com</a></span></figcaption></figure>
+<h2>A heading</h2>
+<figure class="post-image post-image--square" id="figure-sq"><img src="/assets/images/square.gif" alt="A yellow square" width="400" height="400" loading="lazy" decoding="async"></figure>
+<p>Gallery below, built from every supporting image:</p>
+<section class="post-gallery" aria-label="Image gallery"><ul class="post-gallery__list" role="list"><li class="post-gallery__item"><figure class="post-image post-image--portrait"><a class="post-gallery__link" href="/assets/images/phone-portrait.jpg"><span class="off-screen">View full size: </span><img src="/assets/images/phone-portrait.jpg" alt="A phone photo, taken sideways" width="600" height="800" loading="lazy" decoding="async"></a><figcaption>A portrait photo from a phone</figcaption></figure></li><li class="post-gallery__item"><figure class="post-image post-image--landscape"><a class="post-gallery__link" href="/assets/images/landscape.jpg"><span class="off-screen">View full size: </span><img src="/assets/images/landscape.jpg" alt="A red landscape picture" width="800" height="600" loading="lazy" decoding="async"></a><figcaption>A landscape picture <span class="post-image__source">Source: <a href="https://unsplash.com/photos/abc" rel="noopener">unsplash.com</a></span></figcaption></figure></li><li class="post-gallery__item"><figure class="post-image post-image--square"><a class="post-gallery__link" href="/assets/images/square.gif"><span class="off-screen">View full size: </span><img src="/assets/images/square.gif" alt="A yellow square" width="400" height="400" loading="lazy" decoding="async"></a></figure></li><li class="post-gallery__item"><figure class="post-image post-image--portrait"><a class="post-gallery__link" href="/assets/images/portrait.png"><span class="off-screen">View full size: A decorative portrait</span><img src="/assets/images/portrait.png" alt="" width="300" height="500" loading="lazy" decoding="async"></a><figcaption>A decorative portrait</figcaption></figure></li><li class="post-gallery__item"><figure class="post-image post-image--landscape"><a class="post-gallery__link" href="/assets/images/wide.avif"><span class="off-screen">View full size: </span><img src="/assets/images/wide.avif" alt="A grey panorama" width="500" height="250" loading="lazy" decoding="async"></a></figure></li></ul></section>
+</div></article></body></html>

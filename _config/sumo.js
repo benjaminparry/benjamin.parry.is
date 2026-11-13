@@ -195,6 +195,9 @@ export function bashoView(basho, now = new Date()) {
     squares,
     lines,
     outlook,
+    // "upcoming", "live" or "finished". A basho is active until its last day's bouts are over (18:30 in Japan)
+    status: outlook.status,
+    active: outlook.status !== "finished",
     totals: { winning: count("kachi-koshi"), losing: count("make-koshi"), out: count("out"), pending: count("pending") },
   };
 }
@@ -515,6 +518,15 @@ export function bashoOutlook(basho, squares, now = new Date()) {
       status: states.includes("complete") ? "complete" : states.includes("alive") ? "alive" : "impossible",
     };
   });
+
+  // Every square on a line that can no longer be a bingo (either way) is marked, for `rikishi--no-bingo`.
+  // `deadLines` and `liveLines` say how many of its lines (of 2 or 3) are gone, and how many can still happen.
+  for (const square of squares) {
+    const through = lines.filter((l) => l.cells.includes(square.index));
+    square.deadLines = through.filter((l) => l.status === "impossible").length;
+    square.liveLines = through.filter((l) => l.status !== "impossible").length;
+    square.noBingo = square.deadLines > 0;
+  }
 
   const events = lines.flatMap((l) => [l.winning, l.losing].filter((c) => c.status !== "impossible").map((c) => ({ cells: l.cells, type: c.type, label: l.label })));
   const chanceOf = (index, type) => squares[index].outlook[type === "winning" ? "kachi" : "make"];

@@ -10,12 +10,11 @@ layout: layouts/base.html
 
   {% if summary %}<p class="p-summary">{{ summary }}</p>{% endif %}
 
-  <!--TODO: Add some logic here to determin the orientation of an image -->
-  <!--TODO: Also do this for feed images -->
-    {% if images %}
+    <!--{% if images %}
     <img class="post__image post__image--intro" src="{{ images[0] }}" alt="{{ images[0].alt }}"> <a href="{{ images[0].source }}">image source</a>
-    {% endif %}
+    {% endif %}-->
 
+     {% include "partials/post-hero.html" %}
   <div class="e-content">
     {{ content | headingAnchors(headingAnchors, anchors) | safe }}
   </div>

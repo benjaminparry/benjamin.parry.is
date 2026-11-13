@@ -1,0 +1,18 @@
+{#- Open Graph and Twitter card tags, so a link to a post shows its picture on social sites. For a post with
+    `media.social` (or, failing that, a hero or feed image). Goes inside <head>. Pages with no picture get nothing. -#}
+{%- if mediaSet.social.length -%}
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:url" content="{{ page.url | absoluteUrl }}">
+{% if title %}<meta property="og:title" content="{{ title }}">{% endif %}
+{% if summary %}<meta property="og:description" content="{{ summary }}">{% endif %}
+{% for image in mediaSet.social %}
+<meta property="og:image" content="{{ image.abs }}">
+{% if image.type %}<meta property="og:image:type" content="{{ image.type }}">{% endif %}
+{% if image.width %}<meta property="og:image:width" content="{{ image.width }}"><meta property="og:image:height" content="{{ image.height }}">{% endif %}
+{% if image.alt %}<meta property="og:image:alt" content="{{ image.alt }}">{% endif %}
+{% endfor %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ mediaSet.social[0].abs }}">
+{% if mediaSet.social[0].alt %}<meta name="twitter:image:alt" content="{{ mediaSet.social[0].alt }}">{% endif %}
+{%- endif -%}

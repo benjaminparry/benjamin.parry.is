@@ -1,0 +1,6 @@
+{#- All of a post's `media.images` as a gallery after the post. Set `media.gallery: true` in the front matter.
+    To put a gallery somewhere in the text instead, use {% gallery %} in the post. -#}
+{%- if mediaSet.gallery and mediaSet.images.length -%}
+<h2 id="gallery">Gallery</h2>
+{{ mediaSet.images | galleryHtml | safe }}
+{%- endif -%}

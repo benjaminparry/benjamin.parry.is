@@ -19,3 +19,15 @@
 /* A square worth watching: a dashed outline as well as the words read out, so it never depends on colour alone */
 .rikishi--watch { outline: 3px dashed currentColor; outline-offset: -3px; }
 @media (forced-colors: active) { .bingo-commentary { border-color: CanvasText; } }
+
+/* A square on a line that can no longer be a bingo (see the "Lines that can't happen" list under the card).
+   A dotted frame and a small ⊘ in the corner, so it doesn't depend on colour. Text stays at full contrast. */
+.rikishi--no-bingo { position: relative; box-shadow: inset 0 0 0 3px transparent; border-style: dotted; }
+.rikishi--no-bingo::after {
+  content: "⊘";
+  position: absolute;
+  inset-block-start: 0.15rem;
+  inset-inline-end: 0.3rem;
+  font-size: 1.1em;
+  line-height: 1;
+}
