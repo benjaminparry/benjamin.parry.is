@@ -172,3 +172,16 @@ figure {
  .bingo-card--active .rikishi--no-bingo {
     opacity: 0.5;
 }
+
+
+/*
+// ARTICLE / MAIN CONTENT
+*/
+
+.e-content {
+
+}
+
+.e-content::after {
+    content: "🌸";
+}
