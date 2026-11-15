@@ -96,14 +96,16 @@ h5 {
 .card--media-log {
 }
 
+.card--media-listen,
 .card--media-watch {
     margin-bottom: var(--space-m);
 }
 
+.card--media-listen img,
 .card--media-watch img {
     width: 49%;
     float: left;
-
+    clear: both;
 }
 
 .card__details {
@@ -179,9 +181,21 @@ figure {
 */
 
 .e-content {
-
+    padding-bottom: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    position: relative;
 }
 
 .e-content::after {
     content: "🌸";
+    position: absolute;
+    width: 100%;
+    display: block;
+    bottom: 0;
+    text-align:center;
+    font-size: var(--step--0);
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: var(--step--0) 0;
+    padding-top: 4px;
 }
