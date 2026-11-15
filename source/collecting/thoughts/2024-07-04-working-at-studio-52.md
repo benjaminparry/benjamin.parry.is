@@ -20,4 +20,6 @@ pictures:
       # alt: describe this image
 ---
 
+{% figure "feed" %}
+
 {% gallery %}

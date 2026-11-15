@@ -282,11 +282,15 @@ export function feedImageHtml(feed) {
   return `<p><img src="${escape(feed.abs)}" alt="${escape(feed.alt)}"${sizeAttributes(feed)}></p>`;
 }
 
+// Finds a picture by name: one of pictures.images, or the reserved names "hero" and "feed" (a real id of the same name wins)
+export const findImage = (set, id) => set?.byId?.[id] ?? (id === "hero" || id === "feed" ? set?.[id] : undefined);
+
 // ---- Eleventy ----
 
 export function addImages(eleventyConfig, options = {}) {
   Object.assign(settings, options);
   // {% figure "id" %}   one of the post's `pictures.images`
+  // {% figure "hero" %}, {% figure "feed" %}   the post's hero or feed picture again, with its own alt text, caption and source
   // {% figure { src: "/assets/images/x.jpg", alt: "..." } %}   or one written out right here
   eleventyConfig.addShortcode("figure", function (target, mediaSet) {
     const set = mediaSet ?? this?.ctx?.mediaSet ?? this?.page?.mediaSet;
@@ -298,9 +302,9 @@ export function addImages(eleventyConfig, options = {}) {
       if (image && !image.hasAlt) console.warn(`[media] ${where}: figure ${image.src} has no alt text`);
       return figureHtml(image);
     }
-    const image = set?.byId?.[target];
+    const image = findImage(set, target);
     if (!image) {
-      console.warn(`[media] ${where}: {% figure "${target}" %} has no matching image in media.images${set ? "" : " (no image data for this page; pass it in: {% figure \"" + target + "\", mediaSet %})"}`);
+      console.warn(`[media] ${where}: {% figure "${target}" %} has no matching image in pictures.images (or pictures.hero / pictures.feed)${set ? "" : " (no image data for this page; pass it in: {% figure \"" + target + "\", mediaSet %})"}`);
       return `<!-- no image "${escape(target)}" -->`;
     }
     return figureHtml(image);
@@ -308,11 +312,17 @@ export function addImages(eleventyConfig, options = {}) {
 
   // {% gallery %}   every image in `pictures.images`
   // {% gallery "one", "two" %}   just these, in this order
-  eleventyConfig.addShortcode("gallery", function (...ids) {
-    const set = this?.ctx?.mediaSet ?? this?.page?.mediaSet;
+  // {% gallery %}   all of the post's supporting images (those not marked gallery: false)
+  // {% gallery "a", "b" %}   just those, in that order
+  // {% gallery "a", "b", mediaSet %}   the same, passing the post's data in by hand if the shortcode can't see it
+  eleventyConfig.addShortcode("gallery", function (...args) {
+    const given = args.length && args[args.length - 1] && typeof args[args.length - 1] === "object" ? args[args.length - 1] : undefined;
+    // Nunjucks hands a bare {% gallery %} one empty string, so ignore anything that isn't a name
+    const ids = (given ? args.slice(0, -1) : args).filter((id) => typeof id === "string" ? id.trim() !== "" : id != null);
+    const set = given ?? this?.ctx?.mediaSet ?? this?.page?.mediaSet;
     const where = this?.page?.inputPath ?? "a post";
     if (!set) { console.warn(`[media] ${where}: {% gallery %} has no image data for this page`); return "<!-- no gallery -->"; }
-    const chosen = ids.length ? ids.map((id) => set.byId[id] ?? console.warn(`[media] ${where}: gallery: no image "${id}"`)).filter(Boolean) : set.images.filter((i) => i.gallery);
+    const chosen = ids.length ? ids.map((id) => findImage(set, id) ?? console.warn(`[media] ${where}: gallery: no image "${id}"`)).filter(Boolean) : set.images.filter((i) => i.gallery);
     return galleryHtml(chosen);
   });
 
