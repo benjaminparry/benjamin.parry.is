@@ -6,8 +6,9 @@ tags:
     - 'Conference'
     - 'Research'
 summary: "Learn more about why Michael is perfect for speaking at Research by the Sea."
-images:
-  - "/assets/images/writing/2025/01/research-by-the-sea-michael-kibedi.jpg"
+pictures:
+  feed:
+    src: "/assets/images/writing/2025/01/research-by-the-sea-michael-kibedi.jpg"
 ---
 
 Over the past decade or so, the wave of digital transformation has converted old and broken processes into connected and efficient systems.

@@ -93,29 +93,47 @@ h5 {
 
 }
 
+.card--media-log {
+}
+
+.card--media-watch {
+    margin-bottom: var(--space-m);
+}
+
+.card--media-watch img {
+    width: 49%;
+    float: left;
+
+}
+
+.card__details {
+    float: right;
+    width: 49%;
+}
+
 .card--post {
     margin-bottom: 2.5rem;
 
 }
 
 .card--post__image {
-    width: 70%;
+    /*width: 70%;*/
     margin-bottom: 1rem;
 }
 
-.card--post a {
+.card__title {
     font-weight: bold;
-    font-size: larger;
+    font-size: var(--step-2);
 }
 
-.card--post time {
+.timestamp {
     font-size: smaller;
     font-family: monospace;
 }
 
 .card--post p {
-    margin-left: 1rem;
-    margin-top: 1rem;
+    /*margin-left: 1rem;
+    margin-top: 1rem;*/
 }
 
 
@@ -123,13 +141,26 @@ h5 {
 // POSTS
 */
 
-.post__image {
-
+.p-summary {
+    font-style: italic;
+    margin-bottom: var(--space-l);
 }
 
-.post__image--intro {
+/*
+// TEMP
+*/
+figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.post-image figcaption {
+    font-size: smaller;
+}
+
+.post-hero.post-image--portrait {
     width: 50%;
-    margin: 1rem 2rem 2rem -20%;
+    margin: 0.4rem 2rem 2rem -11%;
     float: left;
 }
 

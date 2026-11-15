@@ -1,11 +1,14 @@
 {% macro writingItem(post) %}
+  {% set feed = post.data.mediaSet.feed %}
   <li class="card card--post">
-    {% if post.data.images and post.data.images.length %}
+    <a class="card__title" href="{{ post.url }}">{{ post.data.title }}</a>
+    {% if feed %}
     {# Decorative: the title link beside it names the post, so the alt text is empty #}
-    <img class="card--post__image" src="{{ post.data.images[0] }}" alt=""  loading="lazy" decoding="async">
+    <img class="card--post__image card--post__image--{{ feed.orientation }}"
+         src="{{ feed.src }}"{{ feed.sizeAttrs | safe }}
+         alt="" loading="lazy" decoding="async">
     {% endif %}
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-    <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
+    <time class="timestamp" datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
     {% if post.data.summary %}<p>{{ post.data.summary }}</p>{% endif %}
   </li>
 {% endmacro %}

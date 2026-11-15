@@ -5,8 +5,14 @@ summary: I spent this afternoon with some lovely people folding origami and chat
 tags:
   - 'Origami'
   - 'Japnanese'
-images:
-  - "/assets/images/collecting/thoughts/2024/05/may-origami-fold-01.jpg"
-  - "/assets/images/collecting/thoughts/2024/05/may-origami-fold-02.jpg"
-  - "/assets/images/collecting/thoughts/2024/05/may-origami-fold-03.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2024/05/may-origami-fold-01.jpg"
+  images:
+    - id: may-origami-fold-02
+      src: "/assets/images/collecting/thoughts/2024/05/may-origami-fold-02.jpg"
+      # alt: describe this image
+    - id: may-origami-fold-03
+      src: "/assets/images/collecting/thoughts/2024/05/may-origami-fold-03.jpg"
+      # alt: describe this image
 ---

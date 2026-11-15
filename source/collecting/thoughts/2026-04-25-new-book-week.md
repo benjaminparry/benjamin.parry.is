@@ -7,6 +7,7 @@ tags:
     - Futures
     - Book
     - Design Fiction
-images:
-  - "/assets/images/collecting/thoughts/2026/04/new-book-week-01.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2026/04/new-book-week-01.jpg"
 ---

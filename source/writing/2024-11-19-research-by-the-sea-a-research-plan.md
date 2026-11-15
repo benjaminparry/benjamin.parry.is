@@ -6,6 +6,15 @@ tags:
     - 'Clearleft'
     - 'Conference'
     - 'Research'
+pictures:
+  hero:
+    src: "/assets/images/writing/2024/11/uehara-konen-waves.jpg"
+    # alt: describe this image
+    caption: "Ocean Waves, by Uehara Konen"
+    source: "https://ukiyo-e.org/image/loc/01826v"
+  feed:
+    src: "/assets/images/writing/2024/11/uehara-konen-ocean-waves.jpg"
+    source: "https://ukiyo-e.org/image/loc/01829v"
 ---
 
 ## Background and context

@@ -10,8 +10,9 @@ tags:
     - Behavioural Insights
     - Research by the Sea
     - Design
-images:
-  - "/assets/images/collecting/thoughts/2025/01/prototyping-self-expression.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2025/01/prototyping-self-expression.jpg"
 ---
 
 Sketching out some ideas for making the [Research by the Sea](https://researchbythesea.com/) lanyard something that attendees might want to keep for later rather than throw away.

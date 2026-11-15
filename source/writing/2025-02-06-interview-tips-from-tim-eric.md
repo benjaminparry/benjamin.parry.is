@@ -7,8 +7,9 @@ tags:
     - Research
 category:
     - 'People'
-images:
-    - "/assets/images/writing/2025/02/interview-tips-from-tim-eric.jpg"
+pictures:
+  feed:
+    src: "/assets/images/writing/2025/02/interview-tips-from-tim-eric.jpg"
 ---
 
 <div class="embed-wrapper">

@@ -6,9 +6,14 @@ tags:
     - 'Clearleft'
     - 'Conference'
     - 'Research'
-images:
-  - "/assets/images/writing/2024/11/hamonshu-wave-ripple-design-02.jpg"
-  - "/assets/images/writing/2024/11/hamonshu-wave-ripple-design-01.jpg"
+pictures:
+  feed:
+    src: "/assets/images/writing/2024/11/hamonshu-wave-ripple-design-02.jpg"
+  hero:
+    src: "/assets/images/writing/2024/11/hamonshu-wave-ripple-design-01.jpg"
+    # alt: describe this image
+    caption: "Hamonshu: A Japanese Book of Wave and Ripple Designs (1903) by Mori Yūzan"
+    source: "https://publicdomainreview.org/collection/hamonshu-a-japanese-book-of-wave-and-ripple-designs-1903/"
 ---
 
 Over the last few weeks Clearleft have been teasing out some social media posts about a new 1-day research conference happening in late February 2025. If you’re on their mailing list you’ve likely received an email with the announcement too.

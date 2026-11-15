@@ -7,8 +7,9 @@ tags:
     - 'Research'
     - Ethics
 summary: "Learn more about why Cennydd is perfect for speaking at Research by the Sea."
-images:
-  - "/assets/images/writing/2025/02/research-by-the-sea-cennydd.jpg"
+pictures:
+  feed:
+    src: "/assets/images/writing/2025/02/research-by-the-sea-cennydd.jpg"
 ---
 
 I feel sorry for anyone tasked with writing a talk about ethics in digital technology in early 2025. The smorgasbord of negative examples are enough to make anyone feel nauseous and light-headed. If the menu doesn’t trigger your gag reflexes, then I’m afraid to say, you might have taken the wrong pill.

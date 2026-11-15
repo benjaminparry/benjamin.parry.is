@@ -6,6 +6,7 @@ summary: "Nothing like a new book being delivered. Thanks for the recommendation
 tags:
     - Research
     - Book
-images:
-  - "/assets/images/collecting/thoughts/2026/04/new-book-day-01.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2026/04/new-book-day-01.jpg"
 ---

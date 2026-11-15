@@ -8,6 +8,16 @@ tags:
     - Research
 category:
     - 'People'
+pictures:
+  hero:
+    src: "/assets/images/writing/2025/11/1926-japanese-pictorial-board-game-sugoroku-map-of-the-world.jpg"
+    # alt: describe this image
+    caption: "1926 Japanese pictorial board game sugoroku map of the world"
+    source: "https://commons.wikimedia.org/wiki/File:1926_Japanese_pictorial_board_game_sugoroku_map_of_the_world.jpg"
+  feed:
+    src: "/assets/images/writing/2025/11/1932-japanese-pictorial-world-map-game-board.jpg"
+    source: "https://commons.wikimedia.org/wiki/File:1932_Japanese_pictorial_world_map_game_board.jpg"
+  
 ---
 
 The weekend before last my two friends and I were resting in a warm and cosy lounge reflecting on the previous four hours hiking over the South Downs National Park. As we were feasting on homemade soup, bread, cheese and obscenely strong hot chocolate, our conversation was rudely interrupted by the hiking app announcing we were off course. “Well yeah… thanks Columbus!”

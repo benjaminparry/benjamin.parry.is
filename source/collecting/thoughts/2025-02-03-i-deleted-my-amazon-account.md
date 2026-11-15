@@ -6,6 +6,7 @@ tags:
     - Big Tech Exorcism
     - Technology
 summary: Continuing the slow process of Big Tech Exorcism™. This time Bezos’ nightmare factory is up for the chop.
-images:
-  - "/assets/images/collecting/thoughts/2025/02/i-deleted-my-amazon-account-01.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2025/02/i-deleted-my-amazon-account-01.jpg"
 ---

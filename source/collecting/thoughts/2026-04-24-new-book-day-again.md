@@ -7,6 +7,7 @@ tags:
     - Research
     - Service Design
     - Book
-images:
-  - "/assets/images/collecting/thoughts/2026/04/new-book-day-again-01.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2026/04/new-book-day-again-01.jpg"
 ---

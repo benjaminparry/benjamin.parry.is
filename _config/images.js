@@ -3,11 +3,25 @@
 //
 // This file has no Eleventy code in it except `addImages` at the bottom, so it can be tested on its own.
 // It reads each image's size from the file itself, so a post only needs the address of the picture. The size
-// gives every <img> a width and height (the page doesn't jump about as images load) and the orientation class:
+// gives every <img> a width and height (unless you turn that off in `settings` below) and the orientation class:
 // landscape, portrait or square.
 
 import { readFileSync, openSync, readSync, closeSync, statSync, existsSync } from "node:fs";
 import { join, extname, basename } from "node:path";
+
+// ---- settings ----
+
+// The one place to change how pictures are written out. Can also be set from the config:
+//   addImages(eleventyConfig, { sizeAttributes: false });
+export const settings = {
+  // true: every <img> gets width="" and height="" (the page doesn't jump about as pictures load).
+  // false: leave them off. The orientation class is still added, because it comes from the file, not from these.
+  sizeAttributes: false,
+};
+
+// width="800" height="600" (with a leading space), or nothing when the setting is off or the size is unknown
+const sizeAttributes = (image) =>
+  settings.sizeAttributes && image?.width && image?.height ? ` width="${image.width}" height="${image.height}"` : "";
 
 // ---- reading an image's size from its first bytes ----
 
@@ -162,6 +176,7 @@ export function describeImage(spec, { root = "source", siteUrl = "", problems = 
     width,
     height,
     orientation,
+    sizeAttrs: sizeAttributes({ width, height }),      // for templates: {{ image.sizeAttrs | safe }}
     type: MIME[extension],
     found,
   };
@@ -171,7 +186,7 @@ export function describeImage(spec, { root = "source", siteUrl = "", problems = 
 
 // `data` is the post's data (front matter plus everything inherited). Front matter looks like:
 //
-//   media:
+//   pictures:
 //     hero:     { src, alt, caption, source }
 //     feed:     { src }
 //     social:   [ { src, alt }, ... ]
@@ -180,7 +195,7 @@ export function describeImage(spec, { root = "source", siteUrl = "", problems = 
 //
 // A post that only has the older `images:` list keeps working: the first one is its feed image.
 export function resolveMedia(data = {}, { root = "source", warn = (message) => console.warn(message) } = {}) {
-  const media = data.media && typeof data.media === "object" ? data.media : {};
+  const media = data.pictures && typeof data.pictures === "object" && !Array.isArray(data.pictures) ? data.pictures : {};
   const legacy = Array.isArray(data.images) ? data.images : [];
   if (!Object.keys(media).length && !legacy.length) return undefined;
 
@@ -238,8 +253,7 @@ function captionHtml(image) {
 }
 
 function imgHtml(image, extra = "") {
-  const size = image.width && image.height ? ` width="${image.width}" height="${image.height}"` : "";
-  return `<img src="${escape(image.src)}" alt="${escape(image.alt)}"${size}${extra}>`;
+  return `<img src="${escape(image.src)}" alt="${escape(image.alt)}"${sizeAttributes(image)}${extra}>`;
 }
 
 // One picture with its caption and source. No blank lines in what it gives back, so it can sit in a Markdown post.
@@ -265,14 +279,14 @@ export function galleryHtml(images = [], { label = "Image gallery" } = {}) {
 // For the Atom feed: the feed image at the top of an entry
 export function feedImageHtml(feed) {
   if (!feed) return "";
-  const size = feed.width && feed.height ? ` width="${feed.width}" height="${feed.height}"` : "";
-  return `<p><img src="${escape(feed.abs)}" alt="${escape(feed.alt)}"${size}></p>`;
+  return `<p><img src="${escape(feed.abs)}" alt="${escape(feed.alt)}"${sizeAttributes(feed)}></p>`;
 }
 
 // ---- Eleventy ----
 
-export function addImages(eleventyConfig) {
-  // {% figure "id" %}   one of the post's `media.images`
+export function addImages(eleventyConfig, options = {}) {
+  Object.assign(settings, options);
+  // {% figure "id" %}   one of the post's `pictures.images`
   // {% figure { src: "/assets/images/x.jpg", alt: "..." } %}   or one written out right here
   eleventyConfig.addShortcode("figure", function (target, mediaSet) {
     const set = mediaSet ?? this?.ctx?.mediaSet ?? this?.page?.mediaSet;
@@ -292,7 +306,7 @@ export function addImages(eleventyConfig) {
     return figureHtml(image);
   });
 
-  // {% gallery %}   every image in `media.images`
+  // {% gallery %}   every image in `pictures.images`
   // {% gallery "one", "two" %}   just these, in this order
   eleventyConfig.addShortcode("gallery", function (...ids) {
     const set = this?.ctx?.mediaSet ?? this?.page?.mediaSet;

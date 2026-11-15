@@ -7,6 +7,7 @@ tags:
   - 'Accessibility'
   - 'Diversity Inclusion'
   - 'Workshop'
-images:
-  - "/assets/images/collecting/thoughts/2024/05/research-thing-global-accessibility-awareness-day.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2024/05/research-thing-global-accessibility-awareness-day.jpg"
 ---

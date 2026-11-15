@@ -2,7 +2,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { imageSize, sizeOfFile, orientationOf, describeImage, resolveMedia, figureHtml, galleryHtml, feedImageHtml, addImages } from "../_config/images.js";
+import { imageSize, sizeOfFile, orientationOf, describeImage, resolveMedia, figureHtml, galleryHtml, feedImageHtml, addImages, settings } from "../_config/images.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, "fixtures");
@@ -49,7 +49,7 @@ const warnings = [];
 const data = {
   site: { url: "https://site.test" },
   page: { inputPath: "./source/writing/a-post.md" },
-  media: {
+  pictures: {
     hero: { src: "/assets/images/wide.webp", alt: "A teal banner", caption: "The banner", source: "https://example.com/banner" },
     feed: "/assets/images/square.gif",
     images: [
@@ -69,10 +69,10 @@ eq(set.socialFromFallback, true, "and says it is a fallback");
 eq(set.feed.src, "/assets/images/square.gif", "feed image");
 ok(warnings.length === 1 && warnings[0].includes("images[3] (portrait): add alt text") && warnings[0].includes("a-post.md"), "one warning: the picture with no alt text, naming the post");
 
-data.media.social = [{ src: "/assets/images/landscape.jpg", alt: "Share one" }, { src: "/assets/images/wide.webp", alt: "Share two" }];
+data.pictures.social = [{ src: "/assets/images/landscape.jpg", alt: "Share one" }, { src: "/assets/images/wide.webp", alt: "Share two" }];
 set = resolveMedia(data, { root, warn: () => {} });
 eq(set.social.length, 2, "two social images");
-const small = resolveMedia({ ...data, media: { social: [{ src: "/assets/images/square.gif", alt: "tiny" }] } }, { root, warn: () => {} });
+const small = resolveMedia({ ...data, pictures: { social: [{ src: "/assets/images/square.gif", alt: "tiny" }] } }, { root, warn: () => {} });
 ok(small.problems.some((p) => p.includes("only 400px wide")), "a small social image is flagged");
 ok(!set.problems.some((p) => p.includes("only")), "big enough ones are not");
 
@@ -120,6 +120,23 @@ ok(warned.length === 2 && warned[0].includes('no matching image'), "and both say
 eq((shortcodes.gallery.call(withData).match(/<li /g) || []).length, 4, "{% gallery %} shows all");
 eq((shortcodes.gallery.call(withData, "phone", "landscape").match(/<li /g) || []).length, 2, "{% gallery \"phone\", \"landscape\" %} just those");
 ok(shortcodes.gallery.call(withData, "phone", "landscape").indexOf("phone-portrait") < shortcodes.gallery.call(withData, "phone", "landscape").indexOf("landscape.jpg"), "in the order given");
+
+// the size-attributes setting
+const sample = set.byId.phone;
+has(sample.sizeAttrs, ' width="600" height="800"', "sizeAttrs is ready to drop into a template");
+settings.sizeAttributes = false;
+lacks(figureHtml(sample), "width=", "setting off: no width on a figure");
+lacks(figureHtml(sample), "height=", "setting off: no height on a figure");
+lacks(galleryHtml([sample]), "width=", "setting off: none in the gallery");
+lacks(feedImageHtml({ ...sample, abs: "https://x/y.jpg" }), "width=", "setting off: none in the feed");
+eq(describeImage({ src: "/assets/images/phone-portrait.jpg" }, { root, siteUrl: "" }).sizeAttrs, "", "setting off: sizeAttrs is empty");
+has(figureHtml(sample), "post-image--portrait", "setting off: orientation class stays");
+settings.sizeAttributes = true;
+has(figureHtml(sample), 'width="600" height="800"', "setting back on");
+const registered = { shortcodes: {}, addShortcode() {}, addFilter() {} };
+addImages(registered, { sizeAttributes: false });
+eq(settings.sizeAttributes, false, "addImages(eleventyConfig, { sizeAttributes: false }) turns it off");
+settings.sizeAttributes = true;
 
 console.log(`${n - bad} of ${n} passed`);
 process.exit(bad ? 1 : 0);

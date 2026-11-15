@@ -2,6 +2,10 @@
 title: "First day, first commute."
 date: '2023-01-03'
 summary: "My first day back into the Clearleft office was made all the more easier with an almost-off-road commute through the South Downs. Splendid!"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2023/01/fist-day-first-commute.jpeg"
+    alt: "A mountain bike resting against a sea-weathered dilapidated wooden door to an under-arch building on Brighton seafront."
 ---
 
 My first day back into the Clearleft office was made all the more easier with an almost-off-road commute through the South Downs. Splendid!

@@ -6,6 +6,7 @@ tags:
   - Personal Knowledge Management
   - Professional Development
 summary: I’ve collected a few card decks and books over the years. This year I’ve made a new habit of making time in my day to pick one concept from each, summarise and link in my Obsidian vault.
-images:
-  - "/assets/images/collecting/thoughts/2025/02/pick-a-card-01.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2025/02/pick-a-card-01.jpg"
 ---

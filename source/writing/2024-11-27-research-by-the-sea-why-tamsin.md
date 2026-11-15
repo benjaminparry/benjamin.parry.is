@@ -9,8 +9,9 @@ tags:
 summary: "Learn more about why Tamsin is perfect for speaking at Research by the Sea."
 syndication:
   - https://mastodon.social/@benjaminparry/113556196273558610
-images:
-  - "/assets/images/writing/2024/11/research-by-the-sea-tamsin-bishton.jpg"
+pictures:
+  feed:
+    src: "/assets/images/writing/2024/11/research-by-the-sea-tamsin-bishton.jpg"
 ---
 
 There’s a moment during the design of a research study that always gives me pause for thought. The tension between three variables: the research goals, the duration of the session and the experience of the participant.

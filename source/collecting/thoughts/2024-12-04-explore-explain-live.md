@@ -7,6 +7,7 @@ tags:
     - Dataviz
     - Storytelling
     - Data
-images:
-    - "/assets/images/collecting/thoughts/2024/12/explore-explain-live-01.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2024/12/explore-explain-live-01.jpg"
 ---

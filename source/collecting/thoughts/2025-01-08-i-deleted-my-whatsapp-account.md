@@ -6,6 +6,7 @@ summary: After hearing about Zacebook’s CEO M. Fuckerberg’s move to align hi
 tags:
     - Big Tech Exorcism
     - Technology
-images:
-  - "/assets/images/collecting/thoughts/2025/01/i-deleted-my-whatsapp-account-01.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2025/01/i-deleted-my-whatsapp-account-01.jpg"
 ---

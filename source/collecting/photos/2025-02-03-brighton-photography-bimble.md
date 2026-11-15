@@ -5,8 +5,9 @@ category: Environment
 tags:
     - Photography
 summary: A bimble about Brighton seafront with Al Power, Paul Robert Lloyd and a camera.
-images:
-  - "/assets/images/collecting/photos/2025/02/20250201-photo-bimble-07.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/photos/2025/02/20250201-photo-bimble-07.jpg"
 ---
 
 A bimble about Brighton seafront with Al Power, Paul Robert Lloyd and a camera each.

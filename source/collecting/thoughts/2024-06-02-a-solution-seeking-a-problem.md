@@ -8,11 +8,19 @@ tags:
   - "Creativity"
   - "Machine Learning"
   - "Technology"
-images:
-  - "/assets/images/collecting/thoughts/2024/06/a-solution-seeking-a-problem-01.jpg"
-  - "/assets/images/collecting/thoughts/2024/06/a-solution-seeking-a-problem-02.jpg"
-  - "/assets/images/collecting/thoughts/2024/06/a-solution-seeking-a-problem-03.jpg"
-  - "/assets/images/collecting/thoughts/2024/06/a-solution-seeking-a-problem-04.jpg"
+pictures:
+  feed:
+    src: "/assets/images/collecting/thoughts/2024/06/a-solution-seeking-a-problem-01.jpg"
+  images:
+    - id: a-solution-seeking-a-problem-02
+      src: "/assets/images/collecting/thoughts/2024/06/a-solution-seeking-a-problem-02.jpg"
+      # alt: describe this image
+    - id: a-solution-seeking-a-problem-03
+      src: "/assets/images/collecting/thoughts/2024/06/a-solution-seeking-a-problem-03.jpg"
+      # alt: describe this image
+    - id: a-solution-seeking-a-problem-04
+      src: "/assets/images/collecting/thoughts/2024/06/a-solution-seeking-a-problem-04.jpg"
+      # alt: describe this image
 ---
 
 

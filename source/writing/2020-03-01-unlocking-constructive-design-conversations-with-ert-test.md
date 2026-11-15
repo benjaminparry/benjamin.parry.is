@@ -8,8 +8,9 @@ tags:
     - Methods
     - Mixed Methods
 summary: "This technique helps us understand how stakeholders and users feel about the designs we create and gives us focus on what needs to change."
-images:
-  - "/assets/images/writing/2024/03/unlocking-constructive-design-conversations-with-ert-test-03.jpg"
+pictures:
+  feed:
+    src: "/assets/images/writing/2024/03/unlocking-constructive-design-conversations-with-ert-test-03.jpg"
 ---
 
 Techniques like the [20-second gut test](https://clearleft.com/posts/tiny-lesson-the-20-second-gut-test) help us to move our designs forward quickly and efficiently. It provides stakeholder consensus on the visual designs that best reflect their brand. But how do we know if the people using our products agree?

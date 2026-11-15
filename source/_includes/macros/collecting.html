@@ -4,12 +4,15 @@
   {# Ideas have a proposal rather than a summary #}
   {% set blurb = post.data.summary or post.data.proposal %}
   <li class="card card--post">
-    {% if post.data.images and post.data.images.length %}
-      {# Decorative: the title link beside it names the post, so the alt text is empty #}
-      <img src="{{ post.data.images[0] }}" alt=""  loading="lazy" decoding="async">
+    <a class="card__title" href="{{ post.url }}">{{ post.data.title }}</a>
+    {% set feed = post.data.mediaSet.feed %}
+    {% if feed %}
+    {# Decorative: the title link beside it names the post, so the alt text is empty #}
+    <img class="card--post__image card--post__image--{{ feed.orientation }}"
+            src="{{ feed.src }}"{{ feed.sizeAttrs | safe }}
+            alt="" loading="lazy" decoding="async">
     {% endif %}
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-    <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
+    <time class="timestamp" datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
     {% if showSection and post.data.sectionTitle %}
       <a href="/collecting/{{ post.data.section }}/">{{ post.data.sectionTitle }}</a>
     {% endif %}
