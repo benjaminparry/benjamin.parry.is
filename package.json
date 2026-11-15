@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"start": "eleventy --serve --quiet",
+		"start": "SHOW_DRAFTS=1 npx eleventy --serve --quiet",
 		"build": "eleventy"
 	},
 	"type": "module",

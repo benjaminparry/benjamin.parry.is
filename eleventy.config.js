@@ -18,6 +18,7 @@ import { updatesOf, feedDate, updatedFirst, partOf } from "./_config/updated.js"
 import { addHeadingAnchors } from "./_config/anchors.js";
 import site from "./source/_data/site.js";
 import { addImages } from "./_config/images.js";
+import { addDrafts } from "./_config/drafts.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
 const watchingFiles = "source/watching/*.md";
@@ -325,6 +326,8 @@ export default function (eleventyConfig) {
 
   // Post images
   addImages(eleventyConfig);
+  // Drafts
+  addDrafts(eleventyConfig);
 
 }
 
