@@ -5,6 +5,7 @@
 // So a like or a reply has to have the link it is about *inside* its feed entry.
 
 import { updatesOf } from "./updated.js";
+import { feedImageHtml } from "./images.js";
 
 const escapeHtml = (text) =>
   String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -27,5 +28,5 @@ export function feedContent(post, showUpdates = false) {
       `<li>${u.date.toISOString().slice(0, 10)}${u.comment ? `: ${escapeHtml(u.comment)}` : ""}</li>`);
     lead.push(`<p>Updated:</p><ul>${items.join("")}</ul>`);
   }
-  return lead.join("") + (post.templateContent ?? "");
+  return feedImageHtml(data.mediaSet?.feed) + lead.join("") + (post.templateContent ?? "");
 }

@@ -2,5 +2,6 @@
   "layout": "layouts/writing-post.html",
   "showWebmentions": true,
   "permalink": "/writing/{{ page.date | yearOf }}/{{ page.date | monthOf }}/{{ page.fileSlug }}/",
-  "headingAnchors": true
+  "headingAnchors": true,
+  "ogType": "article"
 }

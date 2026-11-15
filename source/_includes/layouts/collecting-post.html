@@ -11,6 +11,8 @@ layout: layouts/base.html
 
   {% if summary %}<p class="p-summary">{{ summary }}</p>{% endif %}
 
+  {% include "partials/post-hero.html" %}
+
   {% if bookmarkOf %}
     <p>Bookmarked: <a class="u-bookmark-of" href="{{ bookmarkOf }}" rel="external">{{ bookmarkOf | hostname }}</a></p>
   {% endif %}
@@ -24,6 +26,8 @@ layout: layouts/base.html
   <div class="e-content">
     {{ content | headingAnchors(headingAnchors, anchors) | safe }}
   </div>
+
+  {% include "partials/post-gallery.html" %}
 
   {% include "partials/tags.html" %}
 

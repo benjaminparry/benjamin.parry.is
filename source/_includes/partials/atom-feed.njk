@@ -27,6 +27,8 @@
     <published>{{ post | feedDate(false) | isoDateTime }}</published>
     <updated>{{ post | feedDate(feedByUpdated) | isoDateTime }}</updated>
     {% if post.data.summary %}<summary>{{ post.data.summary }}</summary>{% endif %}
+    {% set feedImage = post.data.mediaSet.feed %}
+    {% if feedImage and feedImage.type %}<link rel="enclosure" type="{{ feedImage.type }}" href="{{ feedImage.abs }}"/>{% endif %}
     <content type="html">{{ post | feedContent(feedByUpdated) | escape }}</content>
   </entry>
     {% endif %}
