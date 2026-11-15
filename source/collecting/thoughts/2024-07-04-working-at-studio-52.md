@@ -19,3 +19,5 @@ pictures:
       src: "/assets/images/collecting/thoughts/2024/07/working-at-studio-52-05.jpg"
       # alt: describe this image
 ---
+
+{% gallery %}
