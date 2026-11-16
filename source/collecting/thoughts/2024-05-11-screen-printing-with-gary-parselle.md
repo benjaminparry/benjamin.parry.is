@@ -12,4 +12,10 @@ pictures:
     - id: screen-printing-with-gary-parselle-03
       src: "/assets/images/collecting/thoughts/2024/05/screen-printing-with-gary-parselle-03.jpg"
       # alt: describe this image
+tags:
+  - Art
 ---
+
+{% figure "feed" %}
+
+{% gallery %}

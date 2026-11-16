@@ -12,3 +12,5 @@ tags:
   - 'Research'
   - 'Solution Space'
 ---
+
+{% figure "feed" %}

@@ -7,3 +7,5 @@ pictures:
   feed:
     src: "/assets/images/collecting/thoughts/2024/07/wilding-film-01.jpg"
 ---
+
+{% figure "feed" %}

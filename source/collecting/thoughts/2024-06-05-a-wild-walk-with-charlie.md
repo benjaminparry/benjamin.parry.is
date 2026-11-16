@@ -19,3 +19,7 @@ pictures:
       src: "/assets/images/collecting/thoughts/2024/06/a-wild-walk-with-charlie-05.jpg"
       # alt: describe this image
 ---
+
+{% figure "feed" %}
+
+{% gallery %}
