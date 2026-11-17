@@ -1,0 +1,45 @@
+# POSSE: send opted-in posts to Mastodon, Bluesky and LinkedIn, then commit the new links back. See docs/posse.md.
+name: POSSE
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"      # looks for new posts every half hour (GitHub can be a few minutes late)
+  workflow_dispatch:             # Actions tab > POSSE > Run workflow, to send right now
+
+# One run at a time, so two runs can never send the same post
+concurrency:
+  group: posse
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  posse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Send new posts
+        run: node scripts/posse.mjs --post
+        env:
+          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          LINKEDIN_AUTHOR: ${{ secrets.LINKEDIN_AUTHOR }}
+          LINKEDIN_TOKEN_EXPIRES: ${{ secrets.LINKEDIN_TOKEN_EXPIRES }}
+      # Runs even if one network failed, so the links to the ones that worked are never lost
+      - name: Save the new links
+        if: always()
+        run: |
+          git config user.name "posse"
+          git config user.email "posse@users.noreply.github.com"
+          git add source
+          if git diff --cached --quiet; then echo "No new links."; exit 0; fi
+          git commit -m "POSSE: add syndication links"
+          git pull --rebase origin main
+          git push origin HEAD:main
