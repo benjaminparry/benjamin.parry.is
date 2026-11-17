@@ -1,7 +1,7 @@
 // One function per network. Each takes what it needs, returns { url, notes } (the address of the new post, and
 // anything worth saying), and throws an Error saying what went wrong. A `fetch` can be passed in for testing.
 // Secrets are only ever sent to the network they belong to and are never put in an error message.
-import { linkFacets, escapeLinkedIn, shorten } from "./posse.js";
+import { linkFacets, tagFacets, escapeLinkedIn, shorten } from "./posse.js";
 
 async function call(fetchFn, url, options, what) {
   const reply = await fetchFn(url, options);
@@ -42,7 +42,7 @@ export async function postMastodon({ instance, token, text, language, visibility
 }
 
 // ---- Bluesky ----  https://docs.bsky.app/docs/tutorials/creating-a-post  (an app password, not your main one)
-export async function postBluesky({ service = "https://bsky.social", identifier, password, text, link, image, language }, fetchFn = fetch) {
+export async function postBluesky({ service = "https://bsky.social", identifier, password, text, link, image, language, hashtags = [] }, fetchFn = fetch) {
   const base = service.replace(/\/+$/, "");
   const json = { "Content-Type": "application/json" };
   const session = await (await call(fetchFn, `${base}/xrpc/com.atproto.server.createSession`, { method: "POST", headers: json, body: JSON.stringify({ identifier, password }) }, "Bluesky sign-in")).json();
@@ -63,7 +63,7 @@ export async function postBluesky({ service = "https://bsky.social", identifier,
     text,
     createdAt: new Date().toISOString(),
     ...(language ? { langs: [language] } : {}),
-    facets: linkFacets(text, link.url),
+    facets: [...linkFacets(text, link.url), ...tagFacets(text, hashtags)].sort((a, b) => a.index.byteStart - b.index.byteStart),
     embed: { $type: "app.bsky.embed.external", external },
   };
   const made = await (await call(fetchFn, `${base}/xrpc/com.atproto.repo.createRecord`, { method: "POST", headers: { ...auth, ...json }, body: JSON.stringify({ repo: session.did, collection: "app.bsky.feed.post", record }) }, "Bluesky post")).json();
@@ -74,7 +74,8 @@ export async function postBluesky({ service = "https://bsky.social", identifier,
 
 // ---- LinkedIn ----  https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api
 // The Posts API doesn't read the page, so the card's title, description and picture are sent by us.
-export async function postLinkedIn({ token, author, version = "202610", text, link, image }, fetchFn = fetch) {
+// hashtags go in as LinkedIn's own {hashtag|\#|Tag} markup, because a bare # has to be escaped there
+export async function postLinkedIn({ token, author, version = "202610", text, link, image, hashtags = [] }, fetchFn = fetch) {
   const headers = { Authorization: `Bearer ${token}`, "Linkedin-Version": version, "X-Restli-Protocol-Version": "2.0.0" };
   const json = { ...headers, "Content-Type": "application/json" };
   const notes = [];
@@ -94,7 +95,7 @@ export async function postLinkedIn({ token, author, version = "202610", text, li
     headers: json,
     body: JSON.stringify({
       author,
-      commentary: escapeLinkedIn(text),
+      commentary: escapeLinkedIn(text) + (hashtags.length ? `\n\n${hashtags.map((tag) => `{hashtag|\\#|${tag}}`).join(" ")}` : ""),
       visibility: "PUBLIC",
       distribution: { feedDistribution: "MAIN_FEED", targetEntities: [], thirdPartyDistributionChannels: [] },
       content: { article },

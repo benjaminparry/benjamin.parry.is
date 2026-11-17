@@ -34,6 +34,7 @@ syndicate: true                    # every network that is switched on
 syndicate: [mastodon, bluesky]     # or just these
 syndicate: false                   # or leave it out: nothing is sent
 syndicateText: "Written just for the social post."   # optional: replaces the title and summary
+syndicateHashtags: false           # optional: no hashtags on this one
 ```
 
 You can set it for a whole folder in its data file (`thoughts.json`: `"syndicate": ["mastodon", "bluesky"]`). Posts are only sent once they are live on the site, and only if all of these are true:
@@ -54,6 +55,31 @@ Editing a post later does **not** change the copies, and nothing is sent twice.
 | LinkedIn | Title and summary (the link is the card) | A link card with title, summary and picture. Picture must be JPG, PNG or GIF |
 
 The picture is the post's first `pictures.social` image, then its hero, then its feed image. A long summary is shortened at a word with "…". The link is never cut. If a picture can't be used the post still goes out without it, and the run says so.
+
+## Hashtags
+
+A post's `tags:` and `category:` become hashtags, tags first, up to 5 (change `max`):
+
+| Front matter | Hashtag |
+| --- | --- |
+| `Ethics` | `#Ethics` |
+| `AI`, `LLM` | `#AI`, `#LLM` (as written) |
+| `Research by the Sea` | `#ResearchByTheSea` |
+| `Service Design` | `#ServiceDesign` |
+| `Non-fiction` | `#NonFiction` |
+| `UX design` | `#UXDesign` |
+
+Several words are joined in CamelCase, with a capital on each word, so screen readers can read them. Capitals already inside a word are kept. Punctuation is dropped, repeats are removed whatever their case, and a tag with no letters in it (a year, say) is skipped.
+
+They go on their own line before the link. If the post is too long, the summary is shortened first, then hashtags are dropped from the end, and the title and link are kept. Bluesky and LinkedIn get them marked up in their own way, so they are clickable there too. On LinkedIn they come last.
+
+To change it, add this to `source/_data/posse.js` (without it, hashtags are on with a maximum of 5):
+
+```js
+  hashtags: { enabled: true, max: 5 },
+```
+
+Tags are sent exactly as you wrote them, so a typo in a tag or category (for example "Enviroment") will go out as a hashtag.
 
 ## Setting it up
 
@@ -120,4 +146,4 @@ A first safe test: set `syndicate: [mastodon]` on one new post, deploy, run the 
 node scripts/posse-test.mjs
 ```
 
-80 checks against a pretend internet: the words and limits, Bluesky's byte offsets with emoji, LinkedIn escaping, the front matter edit, each network's requests, and whole runs (nothing sent twice, one network failing, missing secrets, old posts, expired token).
+114 checks against a pretend internet: the words and limits, hashtags, Bluesky's byte offsets with emoji, LinkedIn escaping, the front matter edit, each network's requests, and whole runs (nothing sent twice, one network failing, missing secrets, old posts, expired token).

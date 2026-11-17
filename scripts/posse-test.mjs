@@ -1,7 +1,7 @@
 import { mkdtempSync, writeFileSync, readFileSync, mkdirSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { wantedNetworks, unknownNetworks, networkOf, alreadyOn, posseItems, compose, mastodonLength, graphemes, linkFacets, escapeLinkedIn, shorten, addSyndication } from "../_config/posse.js";
+import { hashtag, hashtagsOf, tagFacets, wantedNetworks, unknownNetworks, networkOf, alreadyOn, posseItems, compose, mastodonLength, graphemes, linkFacets, escapeLinkedIn, shorten, addSyndication } from "../_config/posse.js";
 import { postMastodon, postBluesky, postLinkedIn } from "../_config/posse-networks.js";
 import { run } from "./posse.mjs";
 import { authorizeUrl, expiryDate } from "./posse-linkedin-auth.mjs";
@@ -226,6 +226,66 @@ n = net(); quiet.length = 0; result = await run({ items: [liItem], config, env: 
 check("a LinkedIn token about to expire is warned about", quiet.join("\n").includes("runs out in 3 days"));
 result = await run({ items: [liItem], config, env: { ...env, LINKEDIN_TOKEN_EXPIRES: "2026-11-01" }, root, now, only: ["linkedin"], post: true, fetchFn: net(), log() {} });
 check("an expired LinkedIn token fails and sends nothing", result.failed === 1 && result.results[0].detail.includes("ran out"));
+
+
+// ---- hashtags ----
+eq("one word stays as it is", hashtag("Ethics"), "Ethics");
+eq("an acronym stays as it is", [hashtag("AI"), hashtag("LLM"), hashtag("GAI")], ["AI", "LLM", "GAI"]);
+eq("several words become CamelCase", hashtag("Research by the Sea"), "ResearchByTheSea");
+eq("two words", hashtag("User Experience"), "UserExperience");
+eq("lower case words get capitals", hashtag("service design"), "ServiceDesign");
+eq("capitals inside a word are kept", hashtag("UX design"), "UXDesign");
+eq("hyphens and underscores split words", [hashtag("non-fiction"), hashtag("climate_change")], ["NonFiction", "ClimateChange"]);
+eq("punctuation is dropped", hashtag("Diversity & Inclusion!"), "DiversityInclusion");
+eq("apostrophes don't split a word", hashtag("Don't panic"), "DontPanic");
+eq("accents are kept", hashtag("café culture"), "CaféCulture");
+eq("a tag with no letters is skipped", [hashtag("2026"), hashtag("---"), hashtag(""), hashtag(undefined)], [undefined, undefined, undefined, undefined]);
+eq("a very long tag is skipped", hashtag("x".repeat(80)), undefined);
+eq("tags then category", hashtagsOf({ tags: ["Weeknotes", "User Experience"], category: "Technology" }), ["Weeknotes", "UserExperience", "Technology"]);
+eq("a single tag string and a category list", hashtagsOf({ tags: "LLM", category: ["People"] }), ["LLM", "People"]);
+eq("repeats are removed whatever their case", hashtagsOf({ tags: ["Research", "research", "RESEARCH"], category: "Research" }), ["Research"]);
+eq("empty and missing are fine", [hashtagsOf({}), hashtagsOf({ tags: [], category: undefined }), hashtagsOf(undefined)], [[], [], []]);
+eq("limited to max", hashtagsOf({ tags: ["a1", "b1", "c1", "d1", "e1", "f1", "g1"] }, { max: 3 }), ["a1", "b1", "c1"]);
+const withTags = posseItems({ feedable: [post("/t/", { title: "T", syndicate: true, tags: ["Indieweb", "Service Design"], category: "Technology" }), post("/u/", { title: "U", syndicate: true, tags: ["X"], syndicateHashtags: false }, "2026-11-15T10:00:00Z")] }, { feeds: ["feedable"] }, { url: "https://s.test" });
+eq("posse.json carries the hashtags", withTags.items.find((i) => i.title === "T").hashtags, ["Indieweb", "ServiceDesign", "Technology"]);
+check("syndicateHashtags: false leaves them off", !("hashtags" in withTags.items.find((i) => i.title === "U")));
+const noTags = posseItems({ feedable: [post("/t/", { title: "T", syndicate: true, tags: ["A1"] })] }, { feeds: ["feedable"], hashtags: { enabled: false } }, { url: "https://s.test" });
+check("hashtags can be switched off in posse.js", !("hashtags" in noTags.items[0]));
+eq("max in posse.js is used", posseItems({ feedable: [post("/t/", { title: "T", syndicate: true, tags: ["A1", "B1", "C1"] })] }, { feeds: ["feedable"], hashtags: { max: 2 } }, { url: "https://s.test" }).items[0].hashtags, ["A1", "B1"]);
+
+const tagged = compose(item, { limit: 500, hashtags: ["Indieweb", "ServiceDesign"] });
+eq("hashtags sit between the summary and the link", tagged, "A title\n\nA summary of the post.\n\n#Indieweb #ServiceDesign\n\nhttps://benjamin.parry.is/writing/2026/11/a-post/");
+eq("no hashtags, no extra line", compose(item, { limit: 500, hashtags: [] }), compose(item, { limit: 500 }));
+const tightTags = compose(long, { limit: 300, hashtags: ["Indieweb", "ServiceDesign"] });
+check("a long summary gives way and the hashtags stay", graphemes(tightTags) <= 300 && tightTags.includes("#Indieweb #ServiceDesign") && tightTags.endsWith(item.url) && tightTags.startsWith("A title\n\n"));
+const dropTags = compose({ ...item, title: "T".repeat(120), summary: "" }, { limit: 190, hashtags: ["AlphaBeta", "GammaDelta", "EpsilonZeta", "EtaTheta"] });
+check("when the title would be cut, hashtags are dropped from the end instead", graphemes(dropTags) <= 190 && dropTags.startsWith("T".repeat(120)) && !dropTags.includes("…") && dropTags.includes("#AlphaBeta") && !dropTags.includes("#GammaDelta"));
+check("Mastodon counts the hashtags too", mastodonLength(compose(long, { limit: 500, measure: mastodonLength, hashtags: ["Indieweb", "Ethics"] })) <= 500);
+check("a custom text still gets the hashtags", compose({ ...item, text: "Mine" }, { limit: 300, hashtags: ["Ethics"] }).includes("Mine\n\n#Ethics\n\nhttps://"));
+
+const tagText = "Café 🎌\n\n#Indieweb #ServiceDesign\n\nhttps://x.test/a/";
+const tf = tagFacets(tagText, ["Indieweb", "ServiceDesign", "Absent"]);
+const tagBytes = new TextEncoder().encode(tagText);
+eq("tag facets cover the # and the tag, in bytes", tf.map((f) => new TextDecoder().decode(tagBytes.slice(f.index.byteStart, f.index.byteEnd))), ["#Indieweb", "#ServiceDesign"]);
+eq("and name the tag without the #", tf.map((f) => [f.features[0].$type, f.features[0].tag]), [["app.bsky.richtext.facet#tag", "Indieweb"], ["app.bsky.richtext.facet#tag", "ServiceDesign"]]);
+eq("a # that isn't one of the tags is not marked", tagFacets("#Other and #Indieweb", ["Indieweb"]).length, 1);
+
+f = bsky();
+await postBluesky({ identifier: "me.bsky.social", password: "PW", text: tagText, link: { url: "https://x.test/a/", title: "T" }, hashtags: ["Indieweb", "ServiceDesign"] }, f);
+const withFacets = JSON.parse(f.seen.find((c) => c.url.endsWith("createRecord")).body).record.facets;
+eq("Bluesky gets two tag facets and a link facet, in order", withFacets.map((x) => x.features[0].$type.split("#")[1]), ["tag", "tag", "link"]);
+const li2 = fake([{ at: "https://api.linkedin.com/rest/posts", reply: { status: 201, headers: { "x-restli-id": "urn:li:share:3" } } }]);
+await postLinkedIn({ token: "t", author: "a", text: "Title (x)", link: { url: "https://x.test/", title: "T" }, hashtags: ["Indieweb", "ServiceDesign"] }, li2);
+eq("LinkedIn gets its own hashtag markup after the escaped words", JSON.parse(li2.seen.at(-1).body).commentary, "Title \\(x\\)\n\n{hashtag|\\#|Indieweb} {hashtag|\\#|ServiceDesign}");
+
+const tagRoot = mkdtempSync(join(tmpdir(), "posse-tags-"));
+mkdirSync(join(tagRoot, "source/h"), { recursive: true }); writeFileSync(join(tagRoot, "source/h/index.md"), fm("syndicate: true\n"));
+const hItem = { url: "https://s.test/h/", title: "H", summary: "Sum", date: "2026-11-16T09:00:00Z", file: "./source/h/index.md", syndicate: ["mastodon", "bluesky", "linkedin"], syndication: [], hashtags: ["Ethics", "ServiceDesign"] };
+const tn = net();
+const tagRun = await run({ items: [hItem], config, env, root: tagRoot, now, post: true, fetchFn: tn, log() {} });
+check("a whole run carries the hashtags to every network", tagRun.sent === 3 && JSON.parse(tn.seen.find((c) => c.url.includes("/statuses")).body).status.includes("#Ethics #ServiceDesign") && JSON.parse(tn.seen.find((c) => c.url.endsWith("/rest/posts")).body).commentary.includes("{hashtag|\\#|Ethics}"));
+const preview = []; await run({ items: [{ ...hItem, syndication: [] }], config, env, root: tagRoot, now, log: (m) => preview.push(m) });
+check("the preview shows the hashtags for each network", preview.filter((l) => l.includes("#Ethics #ServiceDesign")).length >= 3);
 
 // ---- LinkedIn sign-in helper ----
 const url = new URL(authorizeUrl("CID", "STATE"));

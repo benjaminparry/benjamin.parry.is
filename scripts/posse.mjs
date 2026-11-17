@@ -62,17 +62,20 @@ export async function run({ items, config, env = {}, fetchFn = fetch, root = "."
       }
 
       const measure = network === "mastodon" ? mastodonLength : graphemes;
-      const text = compose(item, { limit: settings.limit ?? 300, measure, includeUrl: network !== "linkedin" });
+      const hashtags = item.hashtags ?? [];
+      // LinkedIn gets its hashtags as markup added at the end, so leave room for them
+      const room = network === "linkedin" ? hashtags.map((tag) => `#${tag}`).join(" ").length + 2 : 0;
+      const text = compose(item, { limit: (settings.limit ?? 300) - room, measure, includeUrl: network !== "linkedin", hashtags: network === "linkedin" ? [] : hashtags });
       const link = { url: item.url, title: item.title || item.url, description: item.summary };
 
-      if (!post) { record(item, network, "would send", `${measure(text)} characters${item.image ? ", with picture" : ""}\n${text.replace(/^/gm, "      | ")}`); continue; }
+      if (!post) { record(item, network, "would send", `${measure(text)} characters${item.image ? ", with picture" : ""}\n${(network === "linkedin" && hashtags.length ? `${text}\n\n${hashtags.map((tag) => `#${tag}`).join(" ")}` : text).replace(/^/gm, "      | ")}`); continue; }
 
       try {
         const sent = network === "mastodon"
           ? await postMastodon({ instance: settings.instance, token: env.MASTODON_TOKEN, text, language: config.language, visibility: settings.visibility, key: createHash("sha256").update(`${item.url}|mastodon`).digest("hex") }, fetchFn)
           : network === "bluesky"
-            ? await postBluesky({ service: settings.service, identifier: settings.identifier, password: env.BLUESKY_APP_PASSWORD, text, link, image: item.image, language: config.language }, fetchFn)
-            : await postLinkedIn({ token: env.LINKEDIN_TOKEN, author: env.LINKEDIN_AUTHOR, version: settings.version, text, link, image: item.image }, fetchFn);
+            ? await postBluesky({ service: settings.service, identifier: settings.identifier, password: env.BLUESKY_APP_PASSWORD, text, link, image: item.image, language: config.language, hashtags }, fetchFn)
+            : await postLinkedIn({ token: env.LINKEDIN_TOKEN, author: env.LINKEDIN_AUTHOR, version: settings.version, text, link, image: item.image, hashtags }, fetchFn);
         writeFileSync(file, addSyndication(readFileSync(file, "utf8"), sent.url));
         item.syndication.push(sent.url);
         record(item, network, "sent", sent.url);

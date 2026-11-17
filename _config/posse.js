@@ -28,6 +28,30 @@ export function networkOf(url, config = {}) {
 export const alreadyOn = (syndication, network, config) =>
   (Array.isArray(syndication) ? syndication : syndication ? [syndication] : []).some((url) => networkOf(url, config) === network);
 
+// ---- hashtags from a post's tags: and category: ----
+// "Research" stays "#Research". Several words are run together in CamelCase: "Research by the Sea" becomes
+// "#ResearchByTheSea". Punctuation is dropped and capitals inside a word are kept ("UX design"
+// becomes "#UXDesign"). A tag with no letters in it (a year, say) can't be a hashtag and is skipped.
+export function hashtag(tag) {
+  const words = String(tag ?? "").replace(/['’`]/g, "").split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+  if (!words.length) return undefined;
+  const joined = words.length === 1 ? words[0] : words.map((word) => word[0].toUpperCase() + word.slice(1)).join("");
+  return /\p{L}/u.test(joined) && joined.length <= 60 ? joined : undefined;
+}
+
+export function hashtagsOf(data, { max = 5 } = {}) {
+  const list = (value) => (Array.isArray(value) ? value : value ? [value] : []);
+  const seen = new Set();
+  const tags = [];
+  for (const tag of [...list(data?.tags), ...list(data?.category)]) {
+    const clean = hashtag(tag);
+    if (!clean || seen.has(clean.toLowerCase())) continue;
+    seen.add(clean.toLowerCase());
+    tags.push(clean);
+  }
+  return tags.slice(0, max);
+}
+
 // ---- /posse.json: the posts that have asked to be syndicated (see source/posse.json.njk) ----
 export function posseItems(collections, posse, site) {
   const seen = new Map();
@@ -49,6 +73,7 @@ export function posseItems(collections, posse, site) {
       syndicate,
       ...(unknown.length ? { unknown } : {}),
       syndication: [].concat(data.syndication ?? []),
+      ...(posse.hashtags?.enabled !== false && data.syndicateHashtags !== false ? { hashtags: hashtagsOf(data, { max: posse.hashtags?.max ?? 5 }) } : {}),
       ...(data.syndicateText ? { text: String(data.syndicateText) } : {}),
       ...(picture?.abs ? { image: { url: picture.abs, alt: picture.alt ?? "", type: picture.type ?? "", width: picture.width, height: picture.height } } : {}),
     });
@@ -64,24 +89,30 @@ export const graphemes = (text) => [...segmenter.segment(text)].length;
 // Mastodon counts every link as 23 characters, whatever its length
 export const mastodonLength = (text) => graphemes(text.replace(/https?:\/\/\S+/g, "x".repeat(23)));
 
-// Title, a blank line, the summary, and (if wanted) a blank line and the link. If it is too long the summary is
-// shortened first, at a word, with "…". The link is never cut.
-export function compose(item, { limit, measure = graphemes, includeUrl = true }) {
+// Title, a blank line, the summary, a blank line, the hashtags, a blank line and the link. If it is too long the
+// summary is shortened first, at a word, with "…". Then hashtags are dropped from the end. The title and the link
+// are never cut (unless the title alone is too long).
+export function compose(item, { limit, measure = graphemes, includeUrl = true, hashtags = [] }) {
   const body = item.text ?? [item.title, item.summary].filter(Boolean).join("\n\n");
-  const suffix = includeUrl ? `\n\n${item.url}` : "";
-  const whole = (b) => (b + suffix).trim();
-  if (measure(whole(body)) <= limit) return whole(body);
-  const parts = [...segmenter.segment(body)].map((s) => s.segment);
-  let keep = Math.max(0, limit - measure(suffix) - 1);
-  let out = "";
-  for (; keep >= 0; keep--) {
-    out = parts.slice(0, keep).join("");
-    const cut = out.lastIndexOf(" ");
-    if (cut > out.length * 0.5) out = out.slice(0, cut);
-    out = out.replace(/[\s.,;:!?\-–—]+$/, "") + "…";
-    if (measure(whole(out)) <= limit) break;
+  const lead = item.text ?? item.title ?? "";
+  for (let n = hashtags.length; n >= 0; n--) {
+    const tagLine = hashtags.slice(0, n).map((tag) => `#${tag}`).join(" ");
+    const suffix = [tagLine, includeUrl ? item.url : ""].filter(Boolean).map((part) => `\n\n${part}`).join("");
+    const whole = (b) => (b + suffix).trim();
+    if (measure(whole(body)) <= limit) return whole(body);
+    if (n > 0 && limit - measure(suffix) < measure(lead) + 1) continue;      // the title wouldn't fit whole: fewer hashtags
+    const parts = [...segmenter.segment(body)].map((s) => s.segment);
+    let keep = Math.max(0, limit - measure(suffix) - 1);
+    let out = "";
+    for (; keep >= 0; keep--) {
+      out = parts.slice(0, keep).join("");
+      const cut = out.lastIndexOf(" ");
+      if (cut > out.length * 0.5) out = out.slice(0, cut);
+      out = out.replace(/[\s.,;:!?\-–—]+$/, "") + "…";
+      if (measure(whole(out)) <= limit) break;
+    }
+    return whole(out);
   }
-  return whole(out);
 }
 
 // Bluesky wants the position of each link in bytes (UTF-8), not characters
@@ -91,6 +122,19 @@ export function linkFacets(text, url) {
   const encoder = new TextEncoder();
   const byteStart = encoder.encode(text.slice(0, at)).length;
   return [{ index: { byteStart, byteEnd: byteStart + encoder.encode(url).length }, features: [{ $type: "app.bsky.richtext.facet#link", uri: url }] }];
+}
+
+// Bluesky also wants each hashtag marked: the range covers the "#", the tag itself doesn't include it
+export function tagFacets(text, hashtags) {
+  const encoder = new TextEncoder();
+  const known = new Set(hashtags);
+  const facets = [];
+  for (const match of text.matchAll(/#([\p{L}\p{N}_]+)/gu)) {
+    if (!known.has(match[1])) continue;
+    const byteStart = encoder.encode(text.slice(0, match.index)).length;
+    facets.push({ index: { byteStart, byteEnd: byteStart + encoder.encode(match[0]).length }, features: [{ $type: "app.bsky.richtext.facet#tag", tag: match[1] }] });
+  }
+  return facets;
 }
 
 // LinkedIn reads these characters as formatting, so each needs a backslash
