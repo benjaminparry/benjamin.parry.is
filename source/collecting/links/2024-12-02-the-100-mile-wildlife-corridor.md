@@ -2,7 +2,7 @@
 date: 2024-12-02T11:28:31.535Z
 title: The 100 Mile Wildlife Corridor
 bookmarkOf: https://www.bbc.co.uk/sounds/play/m00237zj
-category: Enviroment
+category: Environment
 tags:
   - Rewilding
   - Environmentalism
