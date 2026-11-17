@@ -3,7 +3,7 @@ name: POSSE
 
 on:
   schedule:
-    - cron: "*/30 * * * *"      # looks for new posts every half hour (GitHub can be a few minutes late)
+    - cron: "7,37 * * * *"      # looks for new posts every half hour (GitHub can be a few minutes late)
   workflow_dispatch:             # Actions tab > POSSE > Run workflow, to send right now
 
 # One run at a time, so two runs can never send the same post
