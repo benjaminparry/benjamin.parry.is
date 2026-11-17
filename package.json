@@ -1,7 +1,8 @@
 {
 	"scripts": {
 		"start": "SHOW_DRAFTS=1 npx eleventy --serve --quiet",
-		"build": "eleventy"
+		"build": "eleventy",
+		"posse": "node scripts/posse.mjs"
 	},
 	"type": "module",
 	"dependencies": {

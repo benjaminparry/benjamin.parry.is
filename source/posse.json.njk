@@ -1,0 +1,5 @@
+---
+permalink: /posse.json
+eleventyExcludeFromCollections: true
+---
+{{ collections | posseItems(posse, site) | dump(2) | safe }}
