@@ -12,6 +12,9 @@ pictures:
   feed:
     src: "/assets/images/collecting/links/2026/11/webbed-briefs-why-is-everything-binary.jpg"
 syndicate: [mastodon, bluesky]
+syndication:
+  - https://mastodon.social/@benjaminparry/117634211728871466
+  - https://bsky.app/profile/benjamin.parry.is/post/3n2k4qat5rs2h
 ---
 
 Bangin’ ender.
