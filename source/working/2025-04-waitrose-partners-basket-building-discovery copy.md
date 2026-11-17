@@ -6,7 +6,7 @@ sector:
 employer: 'Waitrose & Partners'
 duration: '9 months'
 date: '2025-04'
-posse: '.'
+summary: '.'
 tags:
 caseStudyURL: ""
 cta: ''

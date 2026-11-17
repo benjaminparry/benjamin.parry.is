@@ -1,4 +1,4 @@
-// POSSE: Publish (on your) Own Site, Syndicate Elsewhere. Settings for scripts/posse.mjs. See docs/posse.md.
+// posse: Publish (on your) Own Site, Syndicate Elsewhere. Settings for scripts/posse.mjs. See docs/posse.md.
 // Secrets (tokens, passwords) are NOT kept here. They are GitHub secrets.
 export default {
   // Which feeds to look in: the names of Eleventy collections. "feedable" is everything in /feed.xml.

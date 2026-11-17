@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '14 weeks'
 date: '2019-08'
-posse: 'Intersting methodolgy, toxic leadership.'
+summary: 'Intersting methodolgy, toxic leadership.'
 tags:
 caseStudyURL: "https://clearleft.com/work/omnichannel-retail"
 cta: 'Read the case study'

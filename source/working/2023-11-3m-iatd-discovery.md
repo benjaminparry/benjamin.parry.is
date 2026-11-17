@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '8 weeks'
 date: '2023-12'
-posse: 'A wonderful project with the best people.'
+summary: 'A wonderful project with the best people.'
 tags:
 cta: 'Learn more (could also be custom)'
 displayOrder: 1

@@ -6,7 +6,7 @@ sector:
 employer: 'Polar Insight'
 duration: '!!! {n} weeks !!!'
 date: '2025-02'
-posse: '.'
+summary: '.'
 tags:
 caseStudyURL: ""
 cta: ''

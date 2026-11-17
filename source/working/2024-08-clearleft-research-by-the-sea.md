@@ -6,7 +6,7 @@ sector:
 employer: 'Clearleft'
 duration: '2 weeks'
 date: '2024-08'
-posse: '.'
+summary: '.'
 tags:
 caseStudyURL: ""
 cta: ''
