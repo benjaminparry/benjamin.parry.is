@@ -21,7 +21,7 @@ export default {
   bluesky: {
     enabled: true,
     service: "https://bsky.social",
-    identifier: "benjaminparry.bsky.social",           // your handle, e.g. "yourname.bsky.social"
+    identifier: "benjamin.parry.is",           // your handle, e.g. "yourname.bsky.social"
     limit: 300,
   },
 
