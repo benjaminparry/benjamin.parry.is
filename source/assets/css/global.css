@@ -54,6 +54,14 @@ body {
 }
 
 /*
+// PARAGRAPHS
+*/
+
+p {
+    font-size: var(--step-0);
+}
+
+/*
 // HEADINGS
 */
 h1 {
@@ -160,12 +168,16 @@ figure {
     font-size: smaller;
 }
 
-.post-hero.post-image--portrait {
-    width: 50%;
-    margin: 0.4rem 2rem 2rem -11%;
-    float: left;
-}
 
+@media (min-width: 600px) {
+
+    .post-hero.post-image--portrait {
+        width: 45%;
+        margin: 0.4rem 2rem 1rem 0;
+        float: left;
+    }
+
+}
 
 /*
 // SUMO BINGO
@@ -204,3 +216,61 @@ blockquote {
     font-weight: bold;
     font-style: italic;
 }
+
+
+
+/*
+// CARDS
+*/
+
+/*
+// POSTS
+*/
+
+/* Post pictures (see _config/images.js). Paste into the <style> in layouts/base.html, or include this file there. */
+
+.off-screen {                         /* text for screen readers only (skip if you already have this) */
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.post-image { margin: 1.5rem 0; }
+.post-image img { display: block; max-inline-size: 100%; block-size: auto; }
+.post-image figcaption { margin-block-start: 0.5rem; font-size: 0.875em; }
+.post-image__source { white-space: nowrap; }
+.post-image:target { outline: 3px solid currentColor; outline-offset: 4px; }    /* the one a link points to */
+
+/* The orientation class decides how much room a picture gets. Tall pictures would otherwise fill the screen. */
+.post-image--portrait { max-inline-size: 24rem; }
+.post-image--square { max-inline-size: 32rem; }
+
+/* The hero, at the top of the post */
+.post-hero { margin: 1rem 0 1.5rem; }
+.post-hero img { inline-size: 100%; }
+.post-hero.post-image--portrait { max-inline-size: 24rem; }
+.post-hero.post-image--square { max-inline-size: 32rem; }
+
+/* The gallery: a grid of thumbnails that each link to the full-size picture. No JavaScript. */
+.post-gallery { margin-block: 1.5rem; }
+.post-gallery__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.post-gallery .post-image { margin: 0; max-inline-size: none; }
+.post-gallery .post-image--portrait { grid-row: span 1; }
+.post-gallery img { inline-size: 100%; }
+.post-gallery__link { display: block; }
+.post-gallery__link:hover img { outline: 3px solid currentColor; outline-offset: 2px; }
+.post-gallery__link:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+
+@media print { .post-gallery__list { grid-template-columns: repeat(3, 1fr); } }

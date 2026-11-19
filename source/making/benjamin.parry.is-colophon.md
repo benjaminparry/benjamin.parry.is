@@ -8,7 +8,9 @@ tags:
 summary: 'I made built website. This is the Colophon.'
 ---
 
-## Styleguide
+# Styleguide
+
+## Markdown elements
 
 ### Headings
 
@@ -41,13 +43,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scripta sane et multa e
 
 [Click here!](#) [NO! Click here!](#)
 
-### Quotes
+### Blockquote
 
 > Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen: It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee.
 >
 > – Agent Cooper, Twin Peaks
-
-<p class="pullquote">Hey! I’ve pulled this sentence out because it’s important. You should probably pay attention to it.</p>
 
 ### Emphasis
 
@@ -60,21 +60,60 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scripta sane et multa e
 
 ![A fluffy bunny rabbit](/assets/images/colophon/colophon.webp)
 
-### Video
-
-<div class="embed-wrapper">
-<iframe src="https://www.youtube-nocookie.com/embed/6vib77CUxNM?si=EStChuRfmAIXFMEw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-
 ### Code
 
 `Kill all humans!`
 
 `` `Kill all humans!` ``
 
-### Other elements
 
-### Componenents
+### Separators
+
+---
+
+## Extended syntax
+
+### Tables
+
+| Title | Rating |
+| - | - |
+| Alien Romulus | 0 |
+
+### Strike through
+
+~~I shop at Amazon.~~
+
+### Code blocks
+
+```
+<p>
+  Screw you guys I’m going <a href="/">home</a>
+</p>
+```
+---
+
+## Components
+
+### Pull quote
+
+<p class="pullquote">Hey! I’ve pulled this sentence out because it’s important. You should probably pay attention to it.</p>
+
+### Video
+
+<div class="embed-wrapper">
+<iframe src="https://www.youtube-nocookie.com/embed/6vib77CUxNM?si=EStChuRfmAIXFMEw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+### Cards
+
+### Post
+
+<div class="card card--post">
+    <a class="card__title" href="#">A post with a feed image</a>
+    <img class="card--post__image card--post__image--landscape" src="/assets/images/writing/2024/11/uehara-konen-ocean-waves.jpg" alt="" loading="lazy" decoding="async">
+    <time class="timestamp" datetime="2024-4.5-34">34 Smarch 2024</time>
+    <p>A summary of what the post is about. It should be limited to the length of a social media post.</p>
+</div>
 
 ---
 
@@ -82,10 +121,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scripta sane et multa e
 
 - Generating with [Eleventy](https://www.11ty.dev/)
 - Controlling versions with [Github](https://github.com/)
-- Publishing and syndicating with:
-    - [Indiekit](https://getindiekit.com/)
-    - [Railway.app](https://railway.app/)
-    - [EchoFeed](https://echofeed.app)
 - Webmentioning with:
     - [Bridgy](https://brid.gy/)
     - [Webmention.app](https://webmention.app/)
