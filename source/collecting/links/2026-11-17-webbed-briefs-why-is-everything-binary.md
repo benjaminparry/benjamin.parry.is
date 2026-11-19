@@ -9,8 +9,12 @@ tags:
   - Technology
   - Design
 pictures:
+  hero:
+    src: "/assets/images/collecting/links/2026/11/webbed-briefs-why-is-everything-binary.jpg"
+    alt: "A black and white glitched venn diagram with the labels developers, unicorns and designers."
   feed:
     src: "/assets/images/collecting/links/2026/11/webbed-briefs-why-is-everything-binary.jpg"
+    alt: "A black and white glitched venn diagram with the labels developers, unicorns and designers."
 syndicate: [mastodon, bluesky]
 syndication:
   - https://mastodon.social/@benjaminparry/117634211728871466

@@ -199,3 +199,8 @@ figure {
     padding: var(--step--0) 0;
     padding-top: 4px;
 }
+
+blockquote {
+    font-weight: bold;
+    font-style: italic;
+}
