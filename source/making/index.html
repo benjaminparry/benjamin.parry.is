@@ -18,9 +18,10 @@ eleventyExcludeFromCollections: true
 <nav aria-label="Browse making by year">
   <ul class="inline-list">
     {% for group in collections.makingYears %}
-      <li><a href="/making/{{ group.year }}/">{{ group.year }}</a></li>
+      <li>
+          <a href="/making/{{ group.year }}/">{{ group.year }}</a>
+      </li>
     {% endfor %}
-    <li><a href="/tagging/">All tags</a></li>
   </ul>
 </nav>
 

@@ -109,7 +109,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scripta sane et multa e
 ### Post
 
 <div class="card card--post">
-    <a class="card__title" href="#">A post with a feed image</a>
+    <a class="card__title" href="#">A post with an accompanying  feed image</a>
     <img class="card--post__image card--post__image--landscape" src="/assets/images/writing/2024/11/uehara-konen-ocean-waves.jpg" alt="" loading="lazy" decoding="async">
     <time class="timestamp" datetime="2024-4.5-34">34 Smarch 2024</time>
     <p>A summary of what the post is about. It should be limited to the length of a social media post.</p>
