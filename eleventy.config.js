@@ -20,6 +20,7 @@ import site from "./source/_data/site.js";
 import { addImages } from "./_config/images.js";
 import { addDrafts } from "./_config/drafts.js";
 import { posseItems } from "./_config/posse.js";
+import { addPullquote } from "./_config/pullquote.js";
 
 // Every Markdown file directly inside source/watching/ is a watched item
 const watchingFiles = "source/watching/*.md";
@@ -329,6 +330,8 @@ export default function (eleventyConfig) {
   addImages(eleventyConfig);
   // Drafts
   addDrafts(eleventyConfig);
+  // Pullquote
+  addPullquote(eleventyConfig);
 
   // POSSE: the list of posts to send to Mastodon, Bluesky and LinkedIn (source/posse.json.njk, scripts/posse.mjs)
   eleventyConfig.addFilter("posseItems", posseItems);

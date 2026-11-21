@@ -1,0 +1,43 @@
+{# Pull quote. Two uses, chosen by whether you pass "by" or "url":
+
+   1. Repeating text from the same article (visual styling only). Pass no "by" and no "url".
+      Output: <div class="pullquote pullquote--repeat" aria-hidden="true">. A plain div, not an aside or blockquote:
+      it is not a quotation of another source and not a separate landmark. aria-hidden stops screen readers reading
+      the same words twice. Set "duplicate": false if the text is NOT already in the post, so it is read out.
+
+   2. Quoting someone else. Pass "by" and/or "url".
+      Output: <figure><blockquote cite="url"><p>..</p></blockquote><figcaption>..</figcaption></figure>.
+      Fully accessible, never hidden. With a url the caption is a link, its text being by, or options.source, or "Source".
+
+   In a post (Markdown), import once:
+
+     {% from "macros/pullquote.html" import pullquote %}
+
+     {% call pullquote() %}Text from this post, HTML allowed.{% endcall %}
+     {% call pullquote(by="Name", url="https://example.com/") %}Someone else's words.{% endcall %}
+     {{ pullquote("Plain text, escaped", by="Name", options={ "align": "right" }) }}
+
+   Several paragraphs (quotations only): set "paragraphs": true, then write your own <p> tags, with no blank lines
+   between them (a blank line ends the HTML block in Markdown):
+
+     {% call pullquote(by="Name", options={ "paragraphs": true }) %}
+     <p>First paragraph.</p>
+     <p>Second paragraph.</p>
+     {% endcall %}
+
+   options (quote the keys): "paragraphs": true, "align": left | right | center, "duplicate": false, "source": "link text", "class": "x"
+   No blank lines inside the text: in Markdown a blank line ends the HTML block. #}
+{% macro pullquote(text, by, url, options) -%}
+{%- set o = options or {} -%}
+{%- set body = (caller() if caller else text) | trim -%}
+{%- if by or url -%}
+<figure class="pullquote{% if o.align %} pullquote--{{ o.align }}{% endif %}{% if o.class %} {{ o.class }}{% endif %}">
+  <blockquote{% if url %} cite="{{ url }}"{% endif %}>{% if o.paragraphs %}{{ body }}{% else %}<p>{{ body }}</p>{% endif %}</blockquote>
+  <figcaption>{% if url %}<a href="{{ url }}">{{ by or o.source or "Source" }}</a>{% else %}{{ by }}{% endif %}</figcaption>
+</figure>
+{%- else -%}
+<div class="pullquote pullquote--repeat{% if o.align %} pullquote--{{ o.align }}{% endif %}{% if o.class %} {{ o.class }}{% endif %}"{% if o.duplicate != false %} aria-hidden="true"{% endif %}>
+  <p>{{ body }}</p>
+</div>
+{%- endif -%}
+{%- endmacro %}

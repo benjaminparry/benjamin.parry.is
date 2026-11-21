@@ -274,3 +274,34 @@ blockquote {
 .post-gallery__link:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
 
 @media print { .post-gallery__list { grid-template-columns: repeat(3, 1fr); } }
+
+
+/*
+// PULLQUOTE
+*/
+
+
+/* Pull quote: see source/_includes/macros/pullquote.html. Used on a div (repeat) and a figure (quotation). */
+.pullquote {
+  margin-block: 1.5rem;
+  margin-inline: 0;
+  padding-inline-start: 1rem;
+  border-inline-start: 0.25rem solid currentColor;
+  font-size: 1.25em;
+  line-height: 1.35;
+}
+.pullquote blockquote { margin: 0; padding: 0; border: 0; }
+.pullquote p { margin: 0; }
+.pullquote p::before { content: "\201C" / ""; }   /* the "" after the slash keeps it out of screen readers */
+.pullquote p:last-of-type::after { content: "\201D" / ""; }
+.pullquote p + p { margin-block-start: 0.75em; }
+.pullquote figcaption { margin-block-start: 0.5rem; font-size: 0.8em; }
+.pullquote figcaption::before { content: "\2014\00a0"; }
+
+.pullquote--center { text-align: center; border-inline-start: 0; padding-inline-start: 0; border-block: 0.25rem solid currentColor; padding-block: 1rem; }
+
+@media (min-width: 45rem) {
+  .pullquote--left  { float: inline-start; inline-size: 40%; margin-inline: 0 1.5rem; }
+  .pullquote--right { float: inline-end;   inline-size: 40%; margin-inline: 1.5rem 0; }
+}
+@media print { .pullquote { break-inside: avoid; } }

@@ -5,11 +5,11 @@ tags:
     - 'Indieweb Carnival'
     - 'Friction'
     - 'Ethics'
+    - 'UX'
 summary: "My submission for January’s Indieweb Carnival on @vhbelvadi@indieweb.social’s selected topic of friction."
 ---
 
-> Within the realms of a company; don't exploit anyone, don't manufacture terrible awful products that go into landfill or are unsafe and hurt people, don't use exploit workers in factories…
-> – Camilla and Jason Iftakhar, Swifty Scooters
+{% pullquote "Camilla and Jason Iftakhar, Swifty Scooters", "https://youtu.be/oZVkk7EDuyU?si=74E13QAesH9DJEMx" %}Within the realms of a company; don't exploit anyone, don't manufacture terrible awful products that go into landfill or are unsafe and hurt people, don't use exploit workers in factories…{% endpullquote %}
 
 A heartfelt manifesto from Camilla and Jason Iftakhar, the founders of design-led company Swifty Scooters. In [their podcast](https://www.youtube.com/watch?v=oZVkk7EDuyU) they explain how their brand values drive every aspect of their company; product design, product experience, customer service, staff satisfaction and environmental impact.
 
@@ -21,8 +21,7 @@ I’m absolutely gutted for them. At this difficult time, I hope they recognise,
 
 Camilla and Jason’s admirable approach is almost a challenge to the [Unobtainable Triangle](https://en.wikipedia.org/wiki/Project_management_triangle). Their unwavering resistance to compromise, ensuring their processes and products aren’t exploitative, and yet still delivering a “superior experience”.
 
-> Quality design and quality process allows you to execute and deliver a quality product which delivers a superior experience (that people fall in love with)
-> – [Jason Iftakhar](https://www.youtube.com/watch?v=oZVkk7EDuyU&t=968s)
+{% pullquote "Jason Iftakhar", "https://www.youtube.com/watch?v=oZVkk7EDuyU&t=968s" %}Quality design and quality process allows you to execute and deliver a quality product which delivers a superior experience (that people fall in love with){% endpullquote %}
 
 Jason’s emphasis on experience is an interesting one. As designers of products and services, whether physical or digital, we focus on improving the end experience. UX designers have been rallying the cry of “Don’t Make Me Think” since 2000. The pursuit of ease and simplicity has mostly in good faith, *mostly*.
 
@@ -32,7 +31,7 @@ As an Amazon customer, you no longer have to think. From one-click payments, sel
 
 By some defiance of logic, Amazon are able to sell quality like-for-like products cheaper than any other retailer and have them delivered to your door the same day.
 
-<p class="pullquote">I suppose the established belief behind the phrase “Quality, Speed, Cost: pick two” was yet another one of Jeff’s ’opportunities‘.</p>
+I suppose the established belief behind the phrase “Quality, Speed, Cost: pick two” was yet another one of Jeff’s ’opportunities‘.
 
 Too good to be true, huh?
 
