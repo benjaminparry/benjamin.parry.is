@@ -6,14 +6,14 @@ pagination:
   alias: group
 permalink: "/tagging/{{ group.slug }}/"
 eleventyComputed:
-  title: "Tagged: {{ group.name }}"
+  title: "{{ group.name }}"
 eleventyExcludeFromCollections: true
 ---
 {% from "macros/writing-list-item.html" import writingItem %}
 {% from "macros/collecting.html" import collectingItem %}
 {% from "macros/feed.html" import feedItem %}
 
-<h1>{{ title }}</h1>
+<h1>Tagging: <span class="iconify iconify--tag">{{ title }}</span></h1>
 
 <ul>
   {% for post in group.posts %}

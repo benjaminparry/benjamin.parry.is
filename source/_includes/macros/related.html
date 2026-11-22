@@ -45,7 +45,7 @@
     {% if list.posts.length %}
       <aside aria-label="{{ list.heading or list.label }}">
         {% if list.heading %}<h2>{{ list.heading }}</h2>{% endif %}
-        <ul>
+        <ul class="list list--flatten">
           {% for post in list.posts %}
             {% if post.data.section %}
               {{ collectingItem(post, true) }}

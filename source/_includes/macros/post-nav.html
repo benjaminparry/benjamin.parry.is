@@ -21,23 +21,23 @@
   {% if adjacent.previous or adjacent.next %}
     {% set opts = options or {} %}
     <nav aria-label="{{ opts.label or 'More posts' }}">
-      <ul>
+      <ul class="list list--flatten grid grid--1-1">
         {% if adjacent.previous %}
-          <li>
-            <a href="{{ adjacent.previous.url }}" rel="prev">
-              <span>{{ opts.previous or "Previous post" }}</span>
-              <strong>{{ adjacent.previous.data.title }}</strong>
-              {% if adjacent.previous.data.summary and opts.summary != false %}<span>{{ adjacent.previous.data.summary }}</span>{% endif %}
-            </a>
+          <li class="grid__item">
+              <div class="card">
+                <p>{{ opts.previous or "« Previous post" }}</p>
+                <a class="card__title" href="{{ adjacent.previous.url }}" rel="prev">{{ adjacent.previous.data.title }}</a>
+                {% if adjacent.previous.data.summary and opts.summary != false %}<p>{{ adjacent.previous.data.summary }}</p>{% endif %}
+              </div>
           </li>
         {% endif %}
         {% if adjacent.next %}
-          <li>
-            <a href="{{ adjacent.next.url }}" rel="next">
-              <span>{{ opts.next or "Next post" }}</span>
-              <strong>{{ adjacent.next.data.title }}</strong>
-              {% if adjacent.next.data.summary and opts.summary != false %}<span>{{ adjacent.next.data.summary }}</span>{% endif %}
-            </a>
+          <li class="grid__item">
+              <div class="card">
+                <p>{{ opts.next or "Next post »" }}</p>
+                <a class="card__title" href="{{ adjacent.next.url }}" rel="next">{{ adjacent.next.data.title }}</a>
+                {% if adjacent.next.data.summary and opts.summary != false %}<p>{{ adjacent.next.data.summary }}</p>{% endif %}
+              </div>
           </li>
         {% endif %}
       </ul>

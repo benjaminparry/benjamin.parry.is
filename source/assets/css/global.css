@@ -4,6 +4,7 @@
 body {
     background-color: #20211d;
     background-color: #25251f;
+    font-size: var(--step-0);
 }
 
 
@@ -58,7 +59,7 @@ body {
 */
 
 p {
-    font-size: var(--step-0);
+
 }
 
 /*
@@ -96,6 +97,18 @@ h5 {
 
 .list--post-feed {
 }
+
+.inline-list--tags a {
+    display: inline-block;
+    position: relative;
+}
+.inline-list--tags a::before {
+    content: "#";
+}
+
+/*
+// CARDS
+*/
 
 .card {
 
@@ -206,8 +219,8 @@ figure {
     bottom: 0;
     text-align:center;
     font-size: var(--step--0);
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px dashed #d9d9d9;
+    border-bottom: 1px dashed #d9d9d9;
     padding: var(--step--0) 0;
     padding-top: 4px;
 }
@@ -305,3 +318,91 @@ blockquote {
   .pullquote--right { float: inline-end;   inline-size: 40%; margin-inline: 1.5rem 0; }
 }
 @media print { .pullquote { break-inside: avoid; } }
+
+
+
+/*
+// LINKS
+*/
+
+.link {
+
+}
+
+.inline-list .link {
+    display: inline-block;
+    margin-right: var(--space-3xs);
+}
+
+.link--icon {
+    position: relative;
+    padding-left: calc(1em + var(--space-3xs)) ;
+}
+
+.link__icon {
+    font-size: inherit;
+    position: absolute;
+    left: 0;
+    padding-top: 1px;
+}
+
+/*
+// FOOTER
+*/
+
+.footer {
+
+}
+
+.footer--site {
+    margin-top: var(--space-l);
+    padding-top: var(--space-l);
+    border-top: 1px solid #d9d9d9;
+}
+
+
+/*
+// CALLOUT
+*/
+
+.callout {
+
+}
+
+.callout--info {
+    padding-left: var(--space-2xs);
+    border-left: var(--space-3xs) solid #d9d9d9;
+    margin: var(--space-l) 0;
+    font-style: italic;
+    font-size: var(--step--1);
+}
+
+
+/*
+// GRID
+*/
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+}
+.grid--1-1 {
+    grid-column: 2;
+}
+.grid--1-1 .grid__item {
+    width: 50%;
+    padding: var(--space-xs);
+}
+
+
+/*
+// ICONS
+*/
+
+.iconify {
+
+}
+
+.iconify--tag::before {
+    content: "#";
+}

@@ -6,7 +6,9 @@ watched:
     context: sofa
 review:
   popcorn: 3
-  extra: ""
-  comment: "a ."
+  extra: "🎨"
+  comment: "a palette of green paint for some heavy-handed ghost painting."
 award: false
 ---
+
+ Not a typical choice for Halloween movie night but I went with it. Of it’s time.

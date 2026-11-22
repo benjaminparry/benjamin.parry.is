@@ -3,7 +3,7 @@
 {% macro listenedEntry(entry, artists) %}
   {% set typeLabels = { "album": "💿 Album", "track": "🎵 Track", "podcast": "🎙️ Podcast", "audiobook": "🎧 Audiobook" } %}
   {% set post = entry.item.data %}
-  <li>
+  <li class="grid__item">
     {% if post.listeningKind == "live" %}
       {# An artist: the cover is optional, and the review belongs to the latest performance that year #}
       {% if post.cover %}

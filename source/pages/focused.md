@@ -9,7 +9,7 @@ section:
 
 A place for my regular visited websites and some meaningful distractions.
 
-<ul class="reset-list grid grid--5 targets">
+<ul class="reset-list">
     {%- for website in focused.websites -%}
     <li class="target"><a href="{{ website.url }}">{{ website.name }}</a></li>
     {% endfor %}
