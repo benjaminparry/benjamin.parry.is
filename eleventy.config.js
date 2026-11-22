@@ -1,4 +1,4 @@
-import { currentlyWatching, allWatched, watchedByYear, watchedInYear, watchedBeforeYear } from "./_config/watching.js";
+import { currentlyWatching, allWatched, watchSummary, watchedByYear, watchedInYear, watchedBeforeYear } from "./_config/watching.js";
 import { slugify, yearOf, monthOf, newestFirst, writingYears, writingMonths, writingTags } from "./_config/writing.js";
 import { sections, collectionName, globFor, allGlob, collectingYears, collectingMonths, hostname } from "./_config/collecting.js";
 import { roots, rootGlob, yearsName, monthsName, rootYears, rootMonths } from "./_config/roots.js";
@@ -326,6 +326,9 @@ export default function (eleventyConfig) {
 
   // Heading anchors
   eleventyConfig.addFilter("headingAnchors", addHeadingAnchors);
+
+  // Watching summary
+  eleventyConfig.addFilter("watchSummary", watchSummary);
 
   // Post images
   addImages(eleventyConfig);

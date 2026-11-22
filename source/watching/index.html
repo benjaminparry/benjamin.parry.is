@@ -9,15 +9,21 @@ permalink: /watching/
 
 <section aria-labelledby="now-heading">
   <h2 style="display: block;clear: both;" id="now-heading">Currently watching</h2>
-  <ul class="list list--flatten list--post-feed grid grid--1">
+  <ul class="list list--flatten list--post-feed">
     {% for item in collections.currentlyWatching %}
       {% set poster = item.data.poster or ("/assets/images/watching/" ~ item.fileSlug ~ ".jpg") %}
-      <li class="grid__item">
-          <div class="card card--media-log card--media-watch">
-            <img class="card__image" src="{{ poster }}" alt="Poster for {{ item.data.title }}" decoding="async">
-            <div class="card__details">
-                <a class="card__title" href="{{ item.url }}">{{ item.data.title }}</a>
-            </div>
+      <li class="">
+          <div class="card card--media-log card--media-watch grid">
+              <div class="grid grid--1-1">
+                  <div class="grid__item">
+                      <img class="card__image" src="{{ poster }}" alt="Poster for {{ item.data.title }}" decoding="async">
+                  </div>
+                  <div class="grid__item">
+                    <div class="card__details">
+                        <a class="card__title" href="{{ item.url }}">{{ item.data.title }}</a>
+                    </div>
+                  </div>
+              </div>
           </div>
       </li>
     {% else %}

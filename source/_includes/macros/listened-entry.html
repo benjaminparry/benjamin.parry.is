@@ -3,31 +3,39 @@
 {% macro listenedEntry(entry, artists) %}
   {% set typeLabels = { "album": "💿 Album", "track": "🎵 Track", "podcast": "🎙️ Podcast", "audiobook": "🎧 Audiobook" } %}
   {% set post = entry.item.data %}
-  <li class="grid__item">
+  <li class="grid grid--1-1">
     {% if post.listeningKind == "live" %}
       {# An artist: the cover is optional, and the review belongs to the latest performance that year #}
       {% if post.cover %}
-        <img src="{{ post.cover | coverSrc("listening", entry.item.fileSlug) }}" alt="Photo from seeing {{ post.title }} live" loading="lazy" decoding="async">
+        <div class="grid__item">
+            <img src="{{ post.cover | coverSrc("listening", entry.item.fileSlug) }}" alt="Photo from seeing {{ post.title }} live" loading="lazy" decoding="async">
+        </div>
       {% endif %}
-      <a href="{{ entry.item.url }}">{{ post.title }}</a>
-      {% if entry.award %}<p>🏆 Award</p>{% endif %}
-      {% if entry.lastEntry.rating %}<p>{{ entry.lastEntry.rating }}/5</p>{% endif %}
-      <p>🎤 Live | Last seen: <time datetime="{{ entry.latest | isoDate }}">{{ entry.latest | longDate }}</time>{% if entry.lastEntry.venue %} at {{ entry.lastEntry.venue }}{% endif %} | Times seen: {{ entry.count }}</p>
+        <div class="grid__item">
+          <a class="card__title" href="{{ entry.item.url }}">{{ post.title }}</a>
+          {% if entry.award %}<p>🏆 Award</p>{% endif %}
+          {% if entry.lastEntry.rating %}<p>{{ entry.lastEntry.rating }}/5</p>{% endif %}
+          <p>🎤 Live | Last seen: <time datetime="{{ entry.latest | isoDate }}">{{ entry.latest | longDate }}</time>{% if entry.lastEntry.venue %} at {{ entry.lastEntry.venue }}{% endif %} | Times seen: {{ entry.count }}</p>
+        </div>
     {% else %}
       {% set cover = post.cover | coverSrc("listening", entry.item.fileSlug) %}
-      <img src="{{ cover }}" alt="Cover of {{ post.title }}"  loading="lazy" decoding="async">
-      <a href="{{ entry.item.url }}">{{ post.title }}</a>
-      {% if post.artist %}
-        {% set artistFile = post.artist | artistPage(artists) %}
-        <span>{% if artistFile %}<a href="{{ artistFile.url }}">{{ post.artist }}</a>{% else %}{{ post.artist }}{% endif %}</span>
-      {% endif %}
-      {% if entry.award %}<p>🏆 Award</p>{% endif %}
-      {% if post.rating_emoji %}
-        <p>{{ post.rating_emoji }}{% if post.rating_prose %} – {{ post.rating_prose }}{% endif %}</p>
-      {% elif post.rating %}
-        <p>{{ post.rating }}/5</p>
-      {% endif %}
-      <p>{% if post.media %}{{ typeLabels[post.media] or post.media }} | {% endif %}Last listened: <time datetime="{{ entry.latest | isoDate }}">{{ entry.latest | longDate }}</time> | Times listened: {{ entry.count }}</p>
+        <div class="grid__item">
+            <img src="{{ cover }}" alt="Cover of {{ post.title }}"  loading="lazy" decoding="async">
+        </div>
+        <div class="grid__item">
+          <a class="card__title" href="{{ entry.item.url }}">{{ post.title }}</a>
+          {% if post.artist %}
+            {% set artistFile = post.artist | artistPage(artists) %}
+            <span>{% if artistFile %}<a href="{{ artistFile.url }}">{{ post.artist }}</a>{% else %}{{ post.artist }}{% endif %}</span>
+          {% endif %}
+          {% if entry.award %}<p>🏆 Award</p>{% endif %}
+          {% if post.rating_emoji %}
+            <p>{{ post.rating_emoji }}{% if post.rating_prose %} – {{ post.rating_prose }}{% endif %}</p>
+          {% elif post.rating %}
+            <p>{{ post.rating }}/5</p>
+          {% endif %}
+          <p>{% if post.media %}{{ typeLabels[post.media] or post.media }} | {% endif %}Last listened: <time datetime="{{ entry.latest | isoDate }}">{{ entry.latest | longDate }}</time> | Times listened: {{ entry.count }}</p>
+        </div>
     {% endif %}
   </li>
 {% endmacro %}

@@ -122,17 +122,17 @@ h5 {
     margin-bottom: var(--space-m);
 }
 
-.card--media-listen img,
+/*.card--media-listen img,
 .card--media-watch img {
     width: 49%;
     float: left;
     clear: both;
-}
+}*/
 
-.card__details {
+/*.card__details {
     float: right;
     width: 49%;
-}
+}*/
 
 .card--post {
     margin-bottom: 2.5rem;

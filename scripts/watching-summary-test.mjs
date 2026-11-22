@@ -1,0 +1,15 @@
+import { watchSummary, allWatched, currentlyWatching } from "../_config/watching.js";
+let n = 0, ok = 0;
+const check = (name, c) => { n++; if (c) ok++; else console.log("FAIL", name); };
+const d = (s) => new Date(s);
+const s1 = watchSummary([{ date: d("2026-11-21") }]);
+check("one watch", s1.count === 1 && s1.latest.toISOString().slice(0, 10) === "2026-11-21");
+const s2 = watchSummary([{ date: "2024-10-30" }, { date: "2026-06-30" }, { started: "2026-07-01" }]);
+check("rewatch: latest and count, in-progress ignored", s2.count === 2 && s2.latest.toISOString().slice(0, 10) === "2026-06-30");
+check("series counts by finished date", watchSummary([{ started: "2025-02-01", finished: "2025-03-10" }]).latest.toISOString().slice(0, 10) === "2025-03-10");
+check("nothing completed is null", watchSummary([{ started: "2026-09-01" }]) === null && watchSummary([]) === null && watchSummary(undefined) === null);
+const items = [{ data: { watched: [{ date: "2025-01-01" }] } }, { data: { watched: [{ date: "2026-01-01" }, { date: "2025-06-01" }] } }, { data: {} }, { data: { watched: [{ started: "2026-09-01" }] } }];
+const all = allWatched(items);
+check("allWatched unchanged: newest first, item and counts kept", all.length === 2 && all[0].item === items[1] && all[0].count === 2 && all[1].count === 1 && all[0].latest instanceof Date);
+check("currentlyWatching unchanged", currentlyWatching(items).length === 1);
+console.log(`${ok} of ${n} passed`); process.exit(ok === n ? 0 : 1);

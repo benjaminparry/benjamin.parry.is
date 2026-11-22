@@ -3,6 +3,7 @@ layout: layouts/base.html
 ---
 
 {% set typeLabels = { "film": "🎞️ Film", "tv": "📺 TV", "theatre": "🎭 Theatre", "sofa": "📺", "cinema": "🎦" } %}
+{% set summary = watched | watchSummary %}
 
 <article>
   <h1>{{ title }}</h1>
@@ -11,7 +12,7 @@ layout: layouts/base.html
 
   {% if award %}<p><strong>Award</strong></p>{% endif %}
 
-  <p>{{ typeLabels[media] or media }} | Last watched: <time datetime="">???</time> | Watch count: {{ count }}</p>
+  <p>{{ typeLabels[media] or media }}{% if summary %} | Last watched: <time datetime="{{ summary.latest | isoDate }}">{{ summary.latest | longDate }}</time> | Watch count: {{ summary.count }}{% endif %}</p>
 
   {% if review %}
   <p>

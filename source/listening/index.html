@@ -9,15 +9,19 @@ permalink: /listening/
 
 <section aria-labelledby="now-heading">
   <h2 style="display: block;clear: both; margin-top: 18px;" id="now-heading">Currently listening to</h2>
-  <ul class="list list--flatten list--post-feed grid grid--1-1">
+  <ul class="list list--flatten list--post-feed">
     {% for item in collections.currentlyListening %}
       {% set cover = item.data.cover | coverSrc("listening", item.fileSlug) %}
-      <li class="grid__item">
-          <div class="card card--media-log card--media-listen">
-            <img class="card__image" src="{{ cover }}" alt="Cover of {{ item.data.title }}" decoding="async">
-            <div class="card__details">
-                <a class="card__title" href="{{ item.url }}">{{ item.data.title }}</a> by <a href="/listening/artists/{{ item.data.artist | slugify }}">{{ item.data.artist}}</a>
-            </div>
+      <li class="card card--media-log card--media-listen">
+          <div class="grid grid--1-1">
+              <div class="grid__item">
+                  <img class="card__image" src="{{ cover }}" alt="Cover of {{ item.data.title }}" decoding="async">
+              </div>
+              <div class="grid__item">
+                <div class="card__details">
+                    <a class="card__title" href="{{ item.url }}">{{ item.data.title }}</a> by <a href="/listening/artists/{{ item.data.artist | slugify }}">{{ item.data.artist}}</a>
+                </div>
+              </div>
           </div>
       </li>
     {% else %}
@@ -28,7 +32,7 @@ permalink: /listening/
 
 <section aria-labelledby="done-heading">
   <h2 style="display: block;clear: both; margin-top: 18px;" id="done-heading">Listened to this year</h2>
-  <ul>
+  <ul class="list list--flatten list--post-feed">
     {% for entry in collections.listenedThisYear %}
       {{ listenedEntry(entry, collections.listeningArtists) }}
     {% else %}

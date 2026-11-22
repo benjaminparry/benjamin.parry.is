@@ -27,6 +27,14 @@ export function currentlyWatching(items) {
     .sort((a, b) => latestStart(b) - latestStart(a));
 }
 
+// Last watched date and how many times, for one item's `watched` list.
+// Returns null if nothing has been completed yet (for example a series still being watched).
+export function watchSummary(watched) {
+  const done = (watched ?? []).filter(isComplete);
+  if (!done.length) return null;
+  return { latest: new Date(Math.max(...done.map(watchDate))), count: done.length };
+}
+
 export function allWatched(items) {
   const summaries = [];
 
