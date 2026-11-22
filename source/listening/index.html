@@ -19,7 +19,8 @@ permalink: /listening/
               </div>
               <div class="grid__item">
                 <div class="card__details">
-                    <a class="card__title" href="{{ item.url }}">{{ item.data.title }}</a> by <a href="/listening/artists/{{ item.data.artist | slugify }}">{{ item.data.artist}}</a>
+                    {% set artistFile = item.data.artist | artistPage(collections.listeningArtists) %}
+                    <a class="card__title" href="{{ item.url }}">{{ item.data.title }}</a>{% if item.data.artist %} by {% if artistFile %}<a href="{{ artistFile.url }}">{{ item.data.artist }}</a>{% else %}{{ item.data.artist }}{% endif %}{% endif %}
                 </div>
               </div>
           </div>
