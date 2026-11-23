@@ -42,7 +42,7 @@ export function stamp(date) {
 
 // A title for a post that doesn't have one: "Liked a post by Jeremy Keith", "Replied to adactio.com"
 export function defaultTitle(data) {
-  if (data.likeOf) return data.author ? `Liked a post by ${data.author}` : `Liked ${hostOf(data.likeOf) || "a post"}`;
+  if (data.likeOf) return data.author ? `${data.likeTitle} by ${data.author} ` : `Liked ${hostOf(data.likeOf) || "a post"}`;
   if (data.inReplyTo) return `Replied to ${hostOf(data.inReplyTo) || "a post"}`;
   if (data.repostOf) return `Reposted ${hostOf(data.repostOf) || "a post"}`;
   if (data.bookmarkOf) return `Bookmarked ${hostOf(data.bookmarkOf) || "a page"}`;
