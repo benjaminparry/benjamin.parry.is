@@ -5,6 +5,7 @@ tags:
   - 'Sumo'
 summary: 'My sumo bingo cards for 2026. '
 date: '2026-01-11T08:20:14'
+updated: 2026-11-22
 bashoYear: 2026
 ---
 {% include "partials/sumo-bingo-card.html" %}

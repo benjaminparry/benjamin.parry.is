@@ -13,8 +13,14 @@ permalink: /playing/
     {% for item in collections.currentlyPlaying %}
       {% set cover = item.data.cover | coverSrc("playing", item.fileSlug) %}
       <li>
-        <img src="{{ cover }}" alt="Cover of {{ item.data.title }}"  decoding="async">
-        <a href="{{ item.url }}">{{ item.data.title }}</a>
+          <div class="grid grid--1-1">
+        	<div class="grid__item">
+             <img src="{{ cover }}" alt="Cover of {{ item.data.title }}"  decoding="async">
+         </div>
+        	<div class="grid__item">
+             <a class="card__title" href="{{ item.url }}">{{ item.data.title }}</a>
+         </div>
+          </div>
       </li>
     {% else %}
       <li>Nothing at the moment.</li>
