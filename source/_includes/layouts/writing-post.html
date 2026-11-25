@@ -19,6 +19,9 @@ layout: layouts/base.html
 
   {% include "partials/tags.html" %}
 
+  {% include "partials/h-entry-meta.html" %}
+  {% include "partials/webmentions.html" %}
+
   {% from "macros/post-nav.html" import postNav %}
   {{ postNav(collections.writing, page, { "label": "More writing" }) }}
 
@@ -26,6 +29,4 @@ layout: layouts/base.html
   {{ related(collections.relatable, page, { "limit": 5, "category": false, "featured": "only", "heading": "More on this topic" }) }}
   {{ related(collections.relatable, page, { "onThisDay": true }) }}
 
-  {% include "partials/h-entry-meta.html" %}
-  {% include "partials/webmentions.html" %}
 </article>

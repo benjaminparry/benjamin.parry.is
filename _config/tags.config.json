@@ -1,0 +1,173 @@
+{
+  "minUses": 2,
+  "ignore": [
+    "cycles",
+    "weeknotes",
+    "yearly-review"
+  ],
+  "aliases": {
+    "ai": [
+      "artificial intelligence"
+    ],
+    "gai": [
+      "generative ai",
+      "genai",
+      "gen ai"
+    ],
+    "llm": [
+      "large language model"
+    ],
+    "jtbd": [
+      "jobs to be done",
+      "job to be done"
+    ],
+    "job-stories": [
+      "job story"
+    ],
+    "user-experience": [
+      "ux"
+    ],
+    "ux": [
+      "user experience"
+    ],
+    "accessibility": [
+      "a11y",
+      "screen reader",
+      "assistive technology",
+      "keyboard navigation",
+      "colour contrast",
+      "color contrast"
+    ],
+    "indieweb": [
+      "indie web",
+      "indiewebcamp"
+    ],
+    "diversity-inclusion": [
+      "diversity and inclusion",
+      "dei"
+    ],
+    "dataviz": [
+      "data visualisation",
+      "data visualization"
+    ],
+    "personal-knowledge-management": [
+      "pkm"
+    ],
+    "note-taking": [
+      "note taking",
+      "notetaking"
+    ],
+    "climate-change": [
+      "climate crisis",
+      "global warming"
+    ],
+    "environmentalism": [
+      "environmentalist",
+      "environmental"
+    ],
+    "research-library": [
+      "research libraries"
+    ],
+    "usability": [
+      "usability testing",
+      "usability test"
+    ],
+    "open-source": [
+      "opensource"
+    ],
+    "interview": [
+      "user interview",
+      "interviewing"
+    ],
+    "qualitative": [
+      "qualitative research"
+    ],
+    "quantitative": [
+      "quantitative research"
+    ],
+    "workshop": [
+      "workshops"
+    ]
+  },
+  "onlyIn": {
+    "working": [
+      "manufacturing-and-engineering",
+      "technology-and-software",
+      "media-and-publishing",
+      "retail",
+      "finance",
+      "government",
+      "healthcare",
+      "financial-services",
+      "services",
+      "events"
+    ]
+  },
+  "overlaps": [
+    [
+      "UX",
+      "User Experience"
+    ],
+    [
+      "Methods",
+      "Research Method"
+    ],
+    [
+      "Metric",
+      "Measurement"
+    ],
+    [
+      "Remote",
+      "Remote Research"
+    ],
+    [
+      "Presentation",
+      "Presenting",
+      "Public Speaking"
+    ],
+    [
+      "Stakeholder Interview",
+      "Interview"
+    ],
+    [
+      "Systems",
+      "Systems Thinking"
+    ],
+    [
+      "Machine Learning",
+      "AI"
+    ],
+    [
+      "GAI",
+      "AI",
+      "LLM"
+    ],
+    [
+      "Behavioral",
+      "Behavioural Insights",
+      "Behavioural Economics"
+    ],
+    [
+      "Event",
+      "Events",
+      "Conference",
+      "Unconference"
+    ],
+    [
+      "Quantative",
+      "Quantitative"
+    ],
+    [
+      "Culture",
+      "Culture Change"
+    ],
+    [
+      "Analytics",
+      "Analysis"
+    ],
+    [
+      "Self Hosting",
+      "Raspberry Pi"
+    ]
+  ]
+}

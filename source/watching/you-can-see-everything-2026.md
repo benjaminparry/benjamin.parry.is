@@ -5,9 +5,9 @@ watched:
   - date: 2026-11-21
     context: cinema
 review:
-  popcorn: 4
-  extra: "🤯"
-  comment: "an exploded brain."
+  popcorn: 5
+  extra: "🔱"
+  comment: "a fork to scramble your brain."
 award: false
 ---
 

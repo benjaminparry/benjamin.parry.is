@@ -1,0 +1,12 @@
+id = "tag-suggest"
+name = "Tag Suggest"
+description = "Suggests tags for posts in an Eleventy site while you write the front matter."
+version = "0.1.0"
+schema_version = 1
+authors = ["Benjamin Parry"]
+repository = "https://github.com/benjaminparry/benjamin.parry.is"
+
+# Runs scripts/tag-lsp.mjs from the site you have open. In any other project it does nothing.
+[language_servers.tag-suggest]
+name = "Tag Suggest"
+languages = ["Markdown"]
